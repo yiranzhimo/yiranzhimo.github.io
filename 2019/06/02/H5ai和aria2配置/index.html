@@ -1,23 +1,433 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是h5ai的设置和对aria2的设置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5ai和aria2配置">
+<meta property="og:url" content="https://zhigengniao.club/2019/06/02/H5ai%E5%92%8Caria2%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是h5ai的设置和对aria2的设置。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-06-02T04:14:33.000Z">
+<meta property="article:modified_time" content="2020-04-21T15:14:04.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="H5ai">
+<meta property="article:tag" content="Aria2">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhigengniao.club/2019/06/02/H5ai%E5%92%8Caria2%E9%85%8D%E7%BD%AE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>H5ai和aria2配置 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2019/06/02/H5ai%E5%92%8Caria2%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          H5ai和aria2配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-02 12:14:33" itemprop="dateCreated datePublished" datetime="2019-06-02T12:14:33+08:00">2019-06-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-21 23:14:04" itemprop="dateModified" datetime="2020-04-21T23:14:04+08:00">2020-04-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sever/" itemprop="url" rel="index"><span itemprop="name">Sever</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是h5ai的设置<br>和对aria2的设置。</p>
+<a id="more"></a>
+<h1 id="h5ai配置"><a href="#h5ai配置" class="headerlink" title="h5ai配置"></a>h5ai配置</h1><h2 id="h5ai功能设置"><a href="#h5ai功能设置" class="headerlink" title="h5ai功能设置"></a>h5ai功能设置</h2><p>这些设置都是在h5ai的默认设置文件中进行修改即可。<br>默认设置文件路径为：<br><code>_h5ai/private/conf/options.json</code></p>
+<h2 id="设置默认语言"><a href="#设置默认语言" class="headerlink" title="设置默认语言"></a>设置默认语言</h2><p>在配置文件中搜索l10n找到设置，将en改为zh-cn即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;l10n&quot;: &#123;</span><br><span class="line">     &quot;enabled&quot;: true,</span><br><span class="line">     &quot;lang&quot;: &quot;zh-cn&quot;,</span><br><span class="line">     &quot;useBrowserLang&quot;: true</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="开启文件搜索功能"><a href="#开启文件搜索功能" class="headerlink" title="开启文件搜索功能"></a>开启文件搜索功能</h3><p>在配置文件中搜索search，将false改为true。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;search&quot;: &#123;</span><br><span class="line">     &quot;enabled&quot;: true,</span><br><span class="line">     &quot;advanced&quot;: true,</span><br><span class="line">     &quot;debounceTime&quot;: 300,</span><br><span class="line">     &quot;ignorecase&quot;: true</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="多文件下载支援设置"><a href="#多文件下载支援设置" class="headerlink" title="多文件下载支援设置"></a>多文件下载支援设置</h3><h4 id="在配置文件中搜索select，将false改为true。"><a href="#在配置文件中搜索select，将false改为true。" class="headerlink" title="在配置文件中搜索select，将false改为true。"></a>在配置文件中搜索select，将false改为true。</h4><p>之后h5ai在点击文件的时是选中文件，下载的按钮在左上角。<br>如果要下载文件呢，可以点击文件名字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;select&quot;: &#123;</span><br><span class="line">     &quot;enabled&quot;: true,</span><br><span class="line">     &quot;clickndrag&quot;: true,</span><br><span class="line">     &quot;checkboxes&quot;: true</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="在配置文件中搜索download，将false改为true"><a href="#在配置文件中搜索download，将false改为true" class="headerlink" title="在配置文件中搜索download，将false改为true"></a>在配置文件中搜索download，将false改为true</h4><p>设置打包文件的格式为zip，而不是默认的tar的话，需要将php-tar改为shell-zip。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;download&quot;: &#123;</span><br><span class="line">    &quot;enabled&quot;: true,</span><br><span class="line">    &quot;type&quot;: &quot;shell-zip&quot;,</span><br><span class="line">    &quot;packageName&quot;: null,</span><br><span class="line">    &quot;alwaysVisible&quot;: false</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="二维码下载"><a href="#二维码下载" class="headerlink" title="二维码下载"></a>二维码下载</h4><p>可以通过扫码的方式下载文件。<br>在配置文件中搜索info，将false改为true，这里要修改两处。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;info&quot;: &#123;</span><br><span class="line">    &quot;enabled&quot;: true,</span><br><span class="line">    &quot;show&quot;: true,</span><br><span class="line">    &quot;qrcode&quot;: true,</span><br><span class="line">    &quot;qrFill&quot;: &quot;#999&quot;,</span><br><span class="line">    &quot;qrBack&quot;: &quot;#fff&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="设置登录密码"><a href="#设置登录密码" class="headerlink" title="设置登录密码"></a>设置登录密码</h2><p>在BT面板左侧的“文件”中打开<br><code>/网站根目录/_h5ai/public</code><br>编辑里面的index.php。<br>1、在头部&lt; ?php的下一行，增加<br><code>auth();</code></p>
+<p>2、在底部增加<br><code>function auth () &#123; $valid_passwords = array (&quot;账号&quot; =&gt; &quot;密码&quot;); $valid_users = array_keys($valid_passwords); $user = $_SERVER[&#39;PHP_AUTH_USER&#39;]; $pass = $_SERVER[&#39;PHP_AUTH_PW&#39;]; $validated = (in_array($user, $valid_users)) &amp;&amp; ($pass == $valid_passwords[$user]); if (!$validated) &#123; header(&#39;WWW-Authenticate: Basic realm=&quot;My Realm&quot;&#39;); header(&#39;HTTP/1.0 401 Unauthorized&#39;); die (&quot;Not authorized&quot;); &#125; &#125;</code><br><em>注意</em>：<br>账号和密码可以随便填。</p>
+<h2 id="部分文件加密"><a href="#部分文件加密" class="headerlink" title="部分文件加密"></a>部分文件加密</h2><h3 id="安装htpasswd工具"><a href="#安装htpasswd工具" class="headerlink" title="安装htpasswd工具"></a>安装htpasswd工具</h3><h4 id="输入命令，进行安装："><a href="#输入命令，进行安装：" class="headerlink" title="输入命令，进行安装："></a>输入命令，进行安装：</h4><p><code>yum  -y install httpd-tools</code></p>
+<h4 id="设置用户名和密码"><a href="#设置用户名和密码" class="headerlink" title="设置用户名和密码"></a>设置用户名和密码</h4><p>把用户名、密码保存到指定文件中：(coderschool为用户名，可以自行更改)<br>输入：<br><code>htpasswd -c /usr/local/nginx/htpasswd coderschool</code><br>出现：<br><code>New password: </code><br>在输入密码时，不会有显示的。<br>需要再次输入：<br><code>Re-type new password: </code><br>到这就okay了。<br><code>Adding password for user coderschool</code></p>
+<h4 id="修改nginx配置文件"><a href="#修改nginx配置文件" class="headerlink" title="修改nginx配置文件"></a>修改nginx配置文件</h4><p>修改网站的nginx的配置文件，<br>在最后加上代码。<br><code>location ~ /me &#123;         auth_basic           &quot;site&quot;;         auth_basic_user_file /usr/local/nginx/htpasswd;         &#125;</code><br>/me为设置的目录名称，<br>“site”为返回的注释。</p>
+<h4 id="重启lnmp即可"><a href="#重启lnmp即可" class="headerlink" title="重启lnmp即可"></a>重启lnmp即可</h4><h1 id="aria2"><a href="#aria2" class="headerlink" title="aria2"></a>aria2</h1><h2 id="aria2命令"><a href="#aria2命令" class="headerlink" title="aria2命令"></a>aria2命令</h2><p>进入下载脚本的目录并运行脚本：<code>./aria2.sh</code><br>启动：<code>service aria2 start</code><br>停止：<code>service aria2 stop</code><br>重启：<code>service aria2 restart</code><br>查看状态：<code>service aria2 status</code><br>配置文件：<code>/root/.aria2/aria2.conf</code><br>下载目录：<code>/usr/local/caddy/www/aria2/Download</code><br>（该目录为Github下载安装的，而备用地址下载的默认为<code>/usr/local/caddy/www/file</code>）</p>
+<h2 id="添加BTtracker"><a href="#添加BTtracker" class="headerlink" title="添加BTtracker"></a>添加BTtracker</h2><p>实现加速下载BT种子。</p>
+<h3 id="确认Aria2安装路径"><a href="#确认Aria2安装路径" class="headerlink" title="确认Aria2安装路径"></a>确认Aria2安装路径</h3><p>为：<code>/root/aria2</code><br>如果不是的话，首先通过find命令找到路径<br>再通过mv命令将它移动到目录下。<br>Aria2配置文件路径：<code>/root/.aria2/aria2.conf</code></p>
+<h3 id="关停aria2服务"><a href="#关停aria2服务" class="headerlink" title="关停aria2服务"></a>关停aria2服务</h3><p>输入命令：<br><code>service aria2 stop</code></p>
+<h3 id="创建Aria2-bt-tracker列表更新脚本"><a href="#创建Aria2-bt-tracker列表更新脚本" class="headerlink" title="创建Aria2 bt-tracker列表更新脚本"></a>创建Aria2 bt-tracker列表更新脚本</h3><p><code>vi /root/trackers-list-aria2.sh</code><br>内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list&#x3D;&#96;wget -qO- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ngosang&#x2F;trackerslist&#x2F;master&#x2F;trackers_all.txt|awk NF|sed &quot;:a;N;s&#x2F;\n&#x2F;,&#x2F;g;ta&quot;&#96;</span><br><span class="line">if [ -z &quot;&#96;grep &quot;bt-tracker&quot; &#x2F;root&#x2F;.aria2&#x2F;aria2.conf&#96;&quot; ]; then</span><br><span class="line">    sed -i &#39;$a bt-tracker&#x3D;&#39;$&#123;list&#125; &#x2F;root&#x2F;.aria2&#x2F;aria2.conf</span><br><span class="line">    echo add......</span><br><span class="line">else</span><br><span class="line">    sed -i &quot;s@bt-tracker.*@bt-tracker&#x3D;$list@g&quot; &#x2F;root&#x2F;.aria2&#x2F;aria2.conf</span><br><span class="line">    echo update......</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h3 id="授权脚本"><a href="#授权脚本" class="headerlink" title="授权脚本"></a>授权脚本</h3><p>输入命令：<br><code>chmod +x /root/trackers-list-aria2.sh</code></p>
+<h3 id="启动aria2"><a href="#启动aria2" class="headerlink" title="启动aria2"></a>启动aria2</h3><p>输入命令：<code>service aria2 start</code></p>
+<p>之后打开AriaNG查看BT tracker服务器列表。<br>参考来源：<br><a target="_blank" rel="noopener" href="https://www.tok9.com/archives/374/">H5ai 完整安装及使用教程</a><br><a target="_blank" rel="noopener" href="https://www.moerats.com/archives/125/">h5ai设置登录密码</a><br><a target="_blank" rel="noopener" href="https://www.longlan.net/2018/09/11/10396/">h5ai使用nginx加密目录配置</a><br><a target="_blank" rel="noopener" href="http://man.linuxde.net/htpasswd">htpasswd命令语法</a><br><a target="_blank" rel="noopener" href="https://www.bt.cn/btcode.html">BT面板Linux命令</a><br><a target="_blank" rel="noopener" href="https://www.moerats.com/archives/251/">aria2命令操作</a><br><a target="_blank" rel="noopener" href="https://www.5yun.org/16436.html">Aria2自动更新BT Tracker服务器列表</a><br><a target="_blank" rel="noopener" href="https://www.feng.ee/aria2-trackers-auto-update.html">Aria2 bt-tracker跟踪服务器列表自动更新</a><br><a target="_blank" rel="noopener" href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html">crontab定时任务命令</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/H5ai/" rel="tag"># H5ai</a>
+              <a href="/tags/Aria2/" rel="tag"># Aria2</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/06/02/%E7%94%A8VPS-aria2-h5ai%E6%90%AD%E5%BB%BA%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E6%92%AD%E6%94%BE%E5%99%A8/" rel="prev" title="用VPS+aria2+h5ai搭建离线下载播放器">
+      <i class="fa fa-chevron-left"></i> 用VPS+aria2+h5ai搭建离线下载播放器
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/02/CentOS7%E5%AE%89%E8%A3%85pip3%E3%80%81you-get%E5%92%8Cffmpeg/" rel="next" title="CentOS7安装pip3、you-get和FFmpeg">
+      CentOS7安装pip3、you-get和FFmpeg <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#h5ai%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">h5ai配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#h5ai%E5%8A%9F%E8%83%BD%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">h5ai功能设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%AF%AD%E8%A8%80"><span class="nav-number">1.2.</span> <span class="nav-text">设置默认语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.1.</span> <span class="nav-text">开启文件搜索功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8F%B4%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.2.</span> <span class="nav-text">多文件下载支援设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E7%B4%A2select%EF%BC%8C%E5%B0%86false%E6%94%B9%E4%B8%BAtrue%E3%80%82"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">在配置文件中搜索select，将false改为true。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E7%B4%A2download%EF%BC%8C%E5%B0%86false%E6%94%B9%E4%B8%BAtrue"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">在配置文件中搜索download，将false改为true</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">二维码下载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text">设置登录密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86"><span class="nav-number">1.4.</span> <span class="nav-text">部分文件加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85htpasswd%E5%B7%A5%E5%85%B7"><span class="nav-number">1.4.1.</span> <span class="nav-text">安装htpasswd工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%91%BD%E4%BB%A4%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">输入命令，进行安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">设置用户名和密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">修改nginx配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%90%AFlnmp%E5%8D%B3%E5%8F%AF"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">重启lnmp即可</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#aria2"><span class="nav-number">2.</span> <span class="nav-text">aria2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#aria2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.1.</span> <span class="nav-text">aria2命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0BTtracker"><span class="nav-number">2.2.</span> <span class="nav-text">添加BTtracker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AE%E8%AE%A4Aria2%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84"><span class="nav-number">2.2.1.</span> <span class="nav-text">确认Aria2安装路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E5%81%9Caria2%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.2.2.</span> <span class="nav-text">关停aria2服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAAria2-bt-tracker%E5%88%97%E8%A1%A8%E6%9B%B4%E6%96%B0%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.3.</span> <span class="nav-text">创建Aria2 bt-tracker列表更新脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%88%E6%9D%83%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.4.</span> <span class="nav-text">授权脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8aria2"><span class="nav-number">2.2.5.</span> <span class="nav-text">启动aria2</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

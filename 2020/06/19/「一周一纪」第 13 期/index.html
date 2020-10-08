@@ -1,23 +1,514 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是「一周一纪」第 13 期。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一周一纪」第 13 期">
+<meta property="og:url" content="https://zhigengniao.club/2020/06/19/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%2013%20%E6%9C%9F/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是「一周一纪」第 13 期。">
+<meta property="og:locale">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%85%AD%E6%9C%88%E5%A5%96%E5%8A%B1%20-%203.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%BC%97%E9%87%8C%E8%BE%BE.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%99%88%E5%AE%89%E7%84%B6.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%9A%B4%E9%9B%A8%E5%B0%86%E8%87%B3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%9E%9C%E7%89%A9%E3%81%AE%E7%93%B6%E8%A9%B0%E3%82%81.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E4%B8%BA%E4%BD%95%E8%AE%BA%E5%9D%9B%E6%96%87%E5%8C%96%E4%BC%9A%E6%B2%A1%E8%90%BD%EF%BC%9F.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%A4%A9%E5%A0%82%E7%94%B5%E5%BD%B1%E9%99%A2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%A3%9E%E8%B6%8A%E7%96%AF%E4%BA%BA%E9%99%A2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E7%8C%AB%E9%BC%A0%E6%B8%B8%E6%88%8F.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%8E%A7%E6%96%B9%E8%AF%81%E4%BA%BA.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E7%BA%A2%E8%BE%A3%E6%A4%92.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%A8%A1%E4%BB%BF%E6%B8%B8%E6%88%8F.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%97%AA%E7%81%B5.jpg">
+<meta property="article:published_time" content="2020-06-19T03:33:55.000Z">
+<meta property="article:modified_time" content="2020-06-26T15:11:04.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="一周一纪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%85%AD%E6%9C%88%E5%A5%96%E5%8A%B1%20-%203.png">
+
+<link rel="canonical" href="https://zhigengniao.club/2020/06/19/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%2013%20%E6%9C%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>「一周一纪」第 13 期 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2020/06/19/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%2013%20%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「一周一纪」第 13 期
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-19 11:33:55" itemprop="dateCreated datePublished" datetime="2020-06-19T11:33:55+08:00">2020-06-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-26 23:11:04" itemprop="dateModified" datetime="2020-06-26T23:11:04+08:00">2020-06-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" itemprop="url" rel="index"><span itemprop="name">一周一纪</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是「一周一纪」第 13 期。</p>
+<a id="more"></a>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="爷爷的自传连载"><a href="#爷爷的自传连载" class="headerlink" title="爷爷的自传连载"></a><a target="_blank" rel="noopener" href="https://matters.news/@yuzu">爷爷的自传连载</a></h2><p>作者的主页里面更新着「爷爷的自传」，共 14 期，已完结，读上一辈人的故事，就像是看历史。</p>
+<h2 id="Notion-的支撑者"><a href="#Notion-的支撑者" class="headerlink" title="Notion 的支撑者"></a><a target="_blank" rel="noopener" href="https://sspai.com/post/61000">Notion 的支撑者</a></h2><p>倒是第一次了解到 Notion 背后的故事。</p>
+<h2 id="人是如何变强的"><a href="#人是如何变强的" class="headerlink" title="人是如何变强的"></a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/gB3rvxtG9SivTf2B6H2Y4A">人是如何变强的</a></h2><blockquote>
+<p>人变强的过程，其实就是「心智世界」对「现实世界」的拟合。</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<p>1）当你接触到一个你抵触、排斥的信息时，不要急于摆脱它，先让它在脑子里转一转，思考它的合理性；<br>2）当你接收和关注到一个事物的某一面时，试一试去想象一下它的另一面；<br>3）不要依赖于旧的规则和框架，时刻做好心理准备，来「更新」自己的知识体系。</p>
+<h2 id="Stop-Preparing-For-The-Last-Disaster"><a href="#Stop-Preparing-For-The-Last-Disaster" class="headerlink" title="Stop Preparing For The Last Disaster"></a><a target="_blank" rel="noopener" href="https://fs.blog/2020/06/last-disaster/">Stop Preparing For The Last Disaster</a></h2><p>作者想强调的观点是「不应该照着上一次的经验去准备预防下一次的灾难」，而是应该增强自身对于灾难的适应和应变能力。</p>
+<h2 id="PTS-和-NTS"><a href="#PTS-和-NTS" class="headerlink" title="PTS 和 NTS"></a><a target="_blank" rel="noopener" href="https://clearbox.substack.com/p/2-?r=73hjh&utm_campaign=post&utm_medium=web&utm_source=copy">PTS 和 NTS</a></h2><blockquote>
+<p>PTS 是启发式的，它经常只是找到了局部最优解而不是全局最优解。</p>
+</blockquote>
+<blockquote>
+<p>NTS 是反直觉的，因此如果实在做不到，不妨试试在形成第一个猜想之后再逼迫自己想出第二个猜想。</p>
+</blockquote>
+<h2 id="Surgical-Reading-How-to-Read-12-Books-at-Once"><a href="#Surgical-Reading-How-to-Read-12-Books-at-Once" class="headerlink" title="Surgical Reading: How to Read 12 Books at Once"></a><a target="_blank" rel="noopener" href="https://superorganizers.substack.com/p/surgical-reading-how-to-read-12-books?token=eyJ1c2VyX2lkIjoxMTkyMDAxMywicG9zdF9pZCI6NTgwMDE0LCJfIjoibmV6YmsiLCJpYXQiOjE1OTMwMDk0MzYsImV4cCI6MTU5MzAxMzAzNiwiaXNzIjoicHViLTE0Nzk2Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.Wowaove9rSZN1833W_zXn2bEJt6PREhfIfeLkzQJ92E">Surgical Reading: How to Read 12 Books at Once</a></h2><p>对比着读书的思路还是很受用的！</p>
+<h2 id="国产漫画平台消亡史"><a href="#国产漫画平台消亡史" class="headerlink" title="国产漫画平台消亡史"></a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/3A67hid0l-n9ohhVccAfgA">国产漫画平台消亡史</a></h2><p>「贫瘠的国产动漫市场」</p>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><h2 id="六月奖励-3"><a href="#六月奖励-3" class="headerlink" title="六月奖励 - 3"></a><a target="_blank" rel="noopener" href="https://azz.net/14004/16406">六月奖励 - 3</a></h2><div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%85%AD%E6%9C%88%E5%A5%96%E5%8A%B1%20-%203.png"/>
+</div>
+⚠️ **图片为网页截屏**
+## [弗里达](https://drrd5.lofter.com/post/31600c0f_1c9af8368)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%BC%97%E9%87%8C%E8%BE%BE.png"/>
+</div>
+⚠️ **图片为网页截屏**
+推荐电影《[弗里达](https://movie.douban.com/subject/1291852/)》
+## [陈安然](https://denghuogongqingye.lofter.com/post/320a8464_1c9ae1a09)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%99%88%E5%AE%89%E7%84%B6.png"/>
+</div>
+⚠️ **图片为网页截屏**
+## [暴雨将至](https://ybbbb531.lofter.com/post/1f14cefe_1c9add956)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%9A%B4%E9%9B%A8%E5%B0%86%E8%87%B3.png"/>
+</div>
+⚠️ **图片为网页截屏**
+## [果物の瓶詰め](https://www.pixiv.net/artworks/82372444)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%9E%9C%E7%89%A9%E3%81%AE%E7%93%B6%E8%A9%B0%E3%82%81.png"/>
+</div>
+⚠️ **图片为网页截屏**
+# 话题
+## [为何论坛文化会没落？](https://meta.appinn.net/t/topic/15036)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E4%B8%BA%E4%BD%95%E8%AE%BA%E5%9D%9B%E6%96%87%E5%8C%96%E4%BC%9A%E6%B2%A1%E8%90%BD%EF%BC%9F.png"/>
+</div>
+# 碎语
+> 如果缺乏了宽容精神，如果我们还是以斗争思维来抹黑跟自己观点不同的人，如果总是用价值论的是非来替代认识论的真伪，我们的争论就会变成不具建设性的争吵甚至争斗，我们就会不断再生产当代特色的戾气。如果某些外部形势期待我们撒谎，而我们依然能够保持沉默，这也是一种忠诚于真理的勇气，依然值得赞美。（[来源](https://mp.weixin.qq.com/s/67-3DEzEFnpP9OoNY6qZZw)）
+
+<hr>
+<blockquote>
+<p>似乎许多人会把信息的获取成本作为信息价值的重要衡量要素之一，所以会挤进大会听分享但不会去看Youtube上能搜到的经典访谈，会去弄绝密的BP但不会去仔细研究上市公司的财报，会去读刚刚翻译出炉的畅销书候选但不会去读经过时间筛选的经典。的确许多信息会随着时间坍缩，但即时性强的信息在更长的时间维度往往也不是最重要的信息。（<a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/5ef21774ac72e500183874ea">来源</a>）</p>
+</blockquote>
+<h1 id="短片"><a href="#短片" class="headerlink" title="短片"></a>短片</h1><h2 id="剪辑师敲门砖《如何做好影视混剪》"><a href="#剪辑师敲门砖《如何做好影视混剪》" class="headerlink" title="剪辑师敲门砖《如何做好影视混剪》"></a><a target="_blank" rel="noopener" href="https://www.xinpianchang.com/a10817196">剪辑师敲门砖《如何做好影视混剪》</a></h2><p>混剪是非常需要技巧和创造力的。</p>
+<h2 id="《隐秘的角落》片头"><a href="#《隐秘的角落》片头" class="headerlink" title="《隐秘的角落》片头"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av668592972/">《隐秘的角落》片头</a></h2><iframe width="560" height="315" src="https://player.bilibili.com/player.html?aid=668592972&bvid=BV1ha4y1Y7FL&cid=204145989&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+《隐秘的角落》没有看，喜欢这个片头。
+## [《猫鼠游戏》片头](https://www.bilibili.com/s/video/BV15a4y1t7kS)
+<iframe width="560" height="315" src="https://player.bilibili.com/player.html?aid=667531041&bvid=BV15a4y1t7kS&cid=170846877&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+# 影视
+## [天堂电影院](https://movie.douban.com/subject/1291828/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%A4%A9%E5%A0%82%E7%94%B5%E5%BD%B1%E9%99%A2.jpg"/>
+</div>
+这部电影里面包含的内容是如此的复杂，就像是一个人的生命一样，你可以看到友情，看到爱情，看到家庭，看到理想，看到选择，看到机会，它的内涵如此的充盈以至于我都不知道该如何去叙说这部电影。
+
+<h2 id="飞越疯人院"><a href="#飞越疯人院" class="headerlink" title="飞越疯人院"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/1292224/">飞越疯人院</a></h2><div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%A3%9E%E8%B6%8A%E7%96%AF%E4%BA%BA%E9%99%A2.jpg"/>
+</div>
+「社会就是一个大的疯人院」
+## [猫鼠游戏](https://movie.douban.com/subject/1305487/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E7%8C%AB%E9%BC%A0%E6%B8%B8%E6%88%8F.jpg"/>
+</div>
+「Frankie is alone.」
+## [控方证人](https://movie.douban.com/subject/1296141/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%8E%A7%E6%96%B9%E8%AF%81%E4%BA%BA.jpg"/>
+</div>
+幽默十足，伏笔突出，反转精彩 👏
+## [红辣椒](https://movie.douban.com/subject/1865703/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E7%BA%A2%E8%BE%A3%E6%A4%92.jpg"/>
+</div>
+人物的台词设计的很好，剧情结尾有点 Down 下来了。
+## [模拟游戏](https://movie.douban.com/subject/10463953/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E6%A8%A1%E4%BB%BF%E6%B8%B8%E6%88%8F.jpg"/>
+</div>
+对图灵很感兴趣，但是片子拍的 「Just so so」
+## [闪灵](https://movie.douban.com/subject/1292225/)
+<div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E9%97%AA%E7%81%B5.jpg"/>
+</div>
+倒也不觉得恐惧。
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" rel="tag"># 一周一纪</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/18/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%2012%20%E6%9C%9F/" rel="prev" title="「一周一纪」第 12 期">
+      <i class="fa fa-chevron-left"></i> 「一周一纪」第 12 期
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/27/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%2014%20%E6%9C%9F/" rel="next" title="「一周一纪」第 14 期">
+      「一周一纪」第 14 期 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B7%E7%88%B7%E7%9A%84%E8%87%AA%E4%BC%A0%E8%BF%9E%E8%BD%BD"><span class="nav-number">1.1.</span> <span class="nav-text">爷爷的自传连载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notion-%E7%9A%84%E6%94%AF%E6%92%91%E8%80%85"><span class="nav-number">1.2.</span> <span class="nav-text">Notion 的支撑者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%8F%98%E5%BC%BA%E7%9A%84"><span class="nav-number">1.3.</span> <span class="nav-text">人是如何变强的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stop-Preparing-For-The-Last-Disaster"><span class="nav-number">1.4.</span> <span class="nav-text">Stop Preparing For The Last Disaster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PTS-%E5%92%8C-NTS"><span class="nav-number">1.5.</span> <span class="nav-text">PTS 和 NTS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Surgical-Reading-How-to-Read-12-Books-at-Once"><span class="nav-number">1.6.</span> <span class="nav-text">Surgical Reading: How to Read 12 Books at Once</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E4%BA%A7%E6%BC%AB%E7%94%BB%E5%B9%B3%E5%8F%B0%E6%B6%88%E4%BA%A1%E5%8F%B2"><span class="nav-number">1.7.</span> <span class="nav-text">国产漫画平台消亡史</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">2.</span> <span class="nav-text">图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E6%9C%88%E5%A5%96%E5%8A%B1-3"><span class="nav-number">2.1.</span> <span class="nav-text">六月奖励 - 3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%AD%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">短片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%AA%E8%BE%91%E5%B8%88%E6%95%B2%E9%97%A8%E7%A0%96%E3%80%8A%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E5%BD%B1%E8%A7%86%E6%B7%B7%E5%89%AA%E3%80%8B"><span class="nav-number">3.1.</span> <span class="nav-text">剪辑师敲门砖《如何做好影视混剪》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E9%9A%90%E7%A7%98%E7%9A%84%E8%A7%92%E8%90%BD%E3%80%8B%E7%89%87%E5%A4%B4"><span class="nav-number">3.2.</span> <span class="nav-text">《隐秘的角落》片头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9E%E8%B6%8A%E7%96%AF%E4%BA%BA%E9%99%A2"><span class="nav-number">3.3.</span> <span class="nav-text">飞越疯人院</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

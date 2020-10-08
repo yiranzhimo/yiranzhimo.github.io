@@ -1,23 +1,674 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是「一周一纪」第 2 期。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一周一纪」第 2 期">
+<meta property="og:url" content="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%202%20%E6%9C%9F/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是「一周一纪」第 2 期。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-04-22T02:20:20.000Z">
+<meta property="article:modified_time" content="2020-04-22T02:29:47.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="一周一纪">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%202%20%E6%9C%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>「一周一纪」第 2 期 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%202%20%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「一周一纪」第 2 期
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-22 10:20:20 / Modified: 10:29:47" itemprop="dateCreated datePublished" datetime="2020-04-22T10:20:20+08:00">2020-04-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" itemprop="url" rel="index"><span itemprop="name">一周一纪</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是「一周一纪」第 2 期。</p>
+<a id="more"></a>
+<p>Date: 2020.04.06–2020.04.12</p>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="15-Typical-Life-Problems-And-How-To-Solve-Them"><a href="#15-Typical-Life-Problems-And-How-To-Solve-Them" class="headerlink" title="15 Typical Life Problems And How To Solve Them"></a><a target="_blank" rel="noopener" href="https://medium.com/the-mission/15-typical-life-problems-and-how-to-solve-them-c56838f49738">15 Typical Life Problems And How To Solve Them</a></h2><h3 id="You-didn’t-reach-your-goal"><a href="#You-didn’t-reach-your-goal" class="headerlink" title="You didn’t reach your goal."></a>You didn’t reach your goal.</h3><blockquote>
+<p>Don’t give up and try a different approach.</p>
+</blockquote>
+<h3 id="Someone-criticized-you"><a href="#Someone-criticized-you" class="headerlink" title="Someone criticized you."></a>Someone criticized you.</h3><blockquote>
+<p>You can’t please everybody that you meet in life. Futhermore , Critics are not all bad. You can learn things about yourself from them too. The solution is to learn from criticism, not be afraid of it.</p>
+</blockquote>
+<h3 id="Your-career-got-messed-up"><a href="#Your-career-got-messed-up" class="headerlink" title="Your career got messed up."></a>Your career got messed up.</h3><blockquote>
+<p>Try to regard career messed up as a new chance.</p>
+</blockquote>
+<h3 id="You-have-financial-troubles"><a href="#You-have-financial-troubles" class="headerlink" title="You have financial troubles."></a>You have financial troubles.</h3><blockquote>
+<p>Lack of money helps you decide on what matters and what doesn’t.</p>
+</blockquote>
+<h3 id="You-are-unhealthy"><a href="#You-are-unhealthy" class="headerlink" title="You are unhealthy."></a>You are unhealthy.</h3><blockquote>
+<p>Take ownership.</p>
+</blockquote>
+<h3 id="A-relationship-ended"><a href="#A-relationship-ended" class="headerlink" title="A relationship ended."></a>A relationship ended.</h3><blockquote>
+<p>All breakups suck in the beginning until you grow and move on. Then, the solution to this problem is to find yourself.</p>
+</blockquote>
+<h3 id="You-made-a-dick-of-yourself"><a href="#You-made-a-dick-of-yourself" class="headerlink" title="You made a dick of yourself."></a>You made a dick of yourself.</h3><blockquote>
+<p>The opposite of making a dick of yourself is perfection.That’s a life where you think your shit doesn’t stink and you spend your entire day trying to impress everybody to eventually impress nobody</p>
+</blockquote>
+<h3 id="Someone-messed-your-shit-up"><a href="#Someone-messed-your-shit-up" class="headerlink" title="Someone messed your shit up."></a>Someone messed your <em>shit</em> up.</h3><blockquote>
+<p>What matters is that you take care of yourself so you can take care of others. </p>
+</blockquote>
+<h3 id="You-feel-like-your-life-has-no-meaning"><a href="#You-feel-like-your-life-has-no-meaning" class="headerlink" title="You feel like your life has no meaning."></a>You feel like your life has no meaning.</h3><blockquote>
+<p>If you feel like your life has no meaning, then it’s time to experiment. Standing still is not how you find the answer.</p>
+</blockquote>
+<h3 id="You-feel-like-you-can’t-go-on"><a href="#You-feel-like-you-can’t-go-on" class="headerlink" title="You feel like you can’t go on."></a>You feel like you can’t go on.</h3><blockquote>
+<p>Seek real help. These dark thoughts must be treated and sometimes the best medicine is to seek professional help through counseling, or for an extreme case, by calling Lifeline.</p>
+</blockquote>
+<h3 id="Every-day-feels-the-same"><a href="#Every-day-feels-the-same" class="headerlink" title="Every day feels the same."></a>Every day feels the same.</h3><blockquote>
+<p>You must find joy in the repetition. You do that by taking those reps and making them mean something. Add some variety in by breaking your comfort zone. </p>
+</blockquote>
+<h3 id="Your-friends-are-screwing-your-life-up"><a href="#Your-friends-are-screwing-your-life-up" class="headerlink" title="Your friends are screwing your life up."></a>Your friends are screwing your life up.</h3><blockquote>
+<p>‘Fitting in’ is what we’re taught to do. What I’d advise you to do is be you instead and that will attract the right people into your life.</p>
+</blockquote>
+<h3 id="You-feel-stressed"><a href="#You-feel-stressed" class="headerlink" title="You feel stressed."></a>You feel stressed.</h3><blockquote>
+<p>We don’t need more; we need less to destress.</p>
+</blockquote>
+<h3 id="A-fear-is-standing-in-your-way"><a href="#A-fear-is-standing-in-your-way" class="headerlink" title="A fear is standing in your way."></a>A fear is standing in your way.</h3><blockquote>
+<p>Real fear can be overcome through deliberate practice.</p>
+</blockquote>
+<h3 id="Real-fear-can-be-overcome-through-deliberate-practice"><a href="#Real-fear-can-be-overcome-through-deliberate-practice" class="headerlink" title="Real fear can be overcome through deliberate practice."></a>Real fear can be overcome through deliberate practice.</h3><blockquote>
+<p>The solution to dealing with death is not to overcome it but to accept it.</p>
+</blockquote>
+<h2 id="How-the-Pandemic-Will-End"><a href="#How-the-Pandemic-Will-End" class="headerlink" title="How the Pandemic Will End?"></a><a target="_blank" rel="noopener" href="https://www.theatlantic.com/health/archive/2020/03/how-will-coronavirus-end/608719/">How the Pandemic Will End?</a></h2><h2 id="Λ-Reading：谁来支撑中国经济"><a href="#Λ-Reading：谁来支撑中国经济" class="headerlink" title="Λ-Reading：谁来支撑中国经济"></a><a target="_blank" rel="noopener" href="https://rizime.substack.com/p/-reading-567?token=eyJ1c2VyX2lkIjo3ODE3NjY0LCJwb3N0X2lkIjozNTQ3NjEsIl8iOiJuZXpiayIsImlhdCI6MTU4NjI2NDAxMCwiZXhwIjoxNTg2MjY3NjEwLCJpc3MiOiJwdWItMzU5MjAiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.i2tNs6SODSBg9h343D_xBRBZK_3PrJ-GujRFTzw8SYU">Λ-Reading：谁来支撑中国经济</a></h2><h2 id="To-Fall-in-Love-With-Anyone-Do-This"><a href="#To-Fall-in-Love-With-Anyone-Do-This" class="headerlink" title="To Fall in Love With Anyone, Do This"></a><a target="_blank" rel="noopener" href="https://www.nytimes.com/2015/01/11/style/modern-love-to-fall-in-love-with-anyone-do-this.html">To Fall in Love With Anyone, Do This</a></h2><h1 id="播客"><a href="#播客" class="headerlink" title="播客"></a>播客</h1><h2 id="祝羽捷：我被读者钉在「做过时尚杂志」的耻辱柱上"><a href="#祝羽捷：我被读者钉在「做过时尚杂志」的耻辱柱上" class="headerlink" title="祝羽捷：我被读者钉在「做过时尚杂志」的耻辱柱上"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E5%BF%BD%E5%B7%A6%E5%BF%BD%E5%8F%B3/%E7%A5%9D%E7%BE%BD%E6%8D%B7%E6%88%91%E8%A2%AB%E8%AF%BB%E8%80%85%E9%92%89%E5%9C%A8%E5%81%9A%E8%BF%87%E6%97%B6%E5%B0%9A%E6%9D%82%E5%BF%97%E7%9A%84%E8%80%BB%E8%BE%B1%E6%9F%B1%E4%B8%8A-AId-N1tMOWR/">祝羽捷：我被读者钉在「做过时尚杂志」的耻辱柱上</a></h2><h2 id="「王牌」飞行员是如何炼成的"><a href="#「王牌」飞行员是如何炼成的" class="headerlink" title="「王牌」飞行员是如何炼成的"></a><a target="_blank" rel="noopener" href="https://dao.fm/2020/04/05/vol-211-%e3%80%8c%e7%8e%8b%e7%89%8c%e3%80%8d%e9%a3%9e%e8%a1%8c%e5%91%98%e6%98%af%e5%a6%82%e4%bd%95%e7%82%bc%e6%88%90%e7%9a%84/">「王牌」飞行员是如何炼成的</a></h2><h2 id="疫情笼罩下的硅谷"><a href="#疫情笼罩下的硅谷" class="headerlink" title="疫情笼罩下的硅谷"></a><a target="_blank" rel="noopener" href="https://guiguzaozhidao.fireside.fm/s4e12">疫情笼罩下的硅谷</a></h2><h2 id="疫情对你工作影响多大？①法国奢侈品牌②意大利管理咨询"><a href="#疫情对你工作影响多大？①法国奢侈品牌②意大利管理咨询" class="headerlink" title="疫情对你工作影响多大？①法国奢侈品牌②意大利管理咨询"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E5%9B%9B%E5%88%86%E4%B9%8B%E4%B8%80%E5%8D%B1%E6%9C%BA%E5%86%85%E5%9C%B0%E7%89%88-%E9%9B%A8%E8%8D%B7%E5%9C%A8%E9%A6%99%E6%B8%AF-knJ7qQ4GPrM/">疫情对你工作影响多大？①法国奢侈品牌②意大利管理咨询</a></h2><h2 id="瑞幸巨额造假，美国投资人怎么看？"><a href="#瑞幸巨额造假，美国投资人怎么看？" class="headerlink" title="瑞幸巨额造假，美国投资人怎么看？"></a><a target="_blank" rel="noopener" href="https://guiguzaozhidao.fireside.fm/lukincoffee">瑞幸巨额造假，美国投资人怎么看？</a></h2><h2 id="中美互联网公司的异同"><a href="#中美互联网公司的异同" class="headerlink" title="中美互联网公司的异同"></a><a target="_blank" rel="noopener" href="https://avocadotoast.typlog.io/episodes/ep-ecg15m">中美互联网公司的异同</a></h2><h2 id="【随机波动002】天生有罪，天生正确？从Trevor聊到鸡蛋与墙"><a href="#【随机波动002】天生有罪，天生正确？从Trevor聊到鸡蛋与墙" class="headerlink" title="【随机波动002】天生有罪，天生正确？从Trevor聊到鸡蛋与墙"></a><a target="_blank" rel="noopener" href="https://www.stovol.club/002">【随机波动002】天生有罪，天生正确？从Trevor聊到鸡蛋与墙</a></h2><h2 id="我的女儿在封城中长大-开小差"><a href="#我的女儿在封城中长大-开小差" class="headerlink" title="我的女儿在封城中长大 | 开小差"></a><a target="_blank" rel="noopener" href="https://theue.me/episode/velvet-wuhan/">我的女儿在封城中长大 | 开小差</a></h2><h2 id="专访Ms-MIN丨从淘宝到连卡佛，她的经历能否复制？"><a href="#专访Ms-MIN丨从淘宝到连卡佛，她的经历能否复制？" class="headerlink" title="专访Ms. MIN丨从淘宝到连卡佛，她的经历能否复制？"></a><a target="_blank" rel="noopener" href="https://fanchaoliuclub.fireside.fm/15">专访Ms. MIN丨从淘宝到连卡佛，她的经历能否复制？</a></h2><h2 id="Bonus丨90年前的大萧条与我们的今天（读书会后分享）"><a href="#Bonus丨90年前的大萧条与我们的今天（读书会后分享）" class="headerlink" title="Bonus丨90年前的大萧条与我们的今天（读书会后分享）"></a><a target="_blank" rel="noopener" href="https://www.etw.fm/greatdepression">Bonus丨90年前的大萧条与我们的今天（读书会后分享）</a></h2><h2 id="S2-Vol-03-哈啰出行李开逐：用技术跑赢共享经济下半场"><a href="#S2-Vol-03-哈啰出行李开逐：用技术跑赢共享经济下半场" class="headerlink" title="S2 Vol.03 哈啰出行李开逐：用技术跑赢共享经济下半场"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E5%88%9B%E4%B8%9A%E5%86%85%E5%B9%95-startup-insider/s2-vol03-%E5%93%88%E5%95%B0%E5%87%BA%E8%A1%8C%E6%9D%8E%E5%BC%80%E9%80%90%E7%94%A8%E6%8A%80%E6%9C%AF%E8%B7%91%E8%B5%A2%E5%85%B1%E4%BA%AB%E7%BB%8F%E6%B5%8E%E4%B8%8B%E5%8D%8A%E5%9C%BA-aUogSQCZv60/">S2 Vol.03 哈啰出行李开逐：用技术跑赢共享经济下半场</a></h2><h2 id="疫情打全场的③深圳科技产品出海④香港律师"><a href="#疫情打全场的③深圳科技产品出海④香港律师" class="headerlink" title="疫情打全场的③深圳科技产品出海④香港律师"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E5%9B%9B%E5%88%86%E4%B9%8B%E4%B8%80%E5%8D%B1%E6%9C%BA%E5%86%85%E5%9C%B0%E7%89%88/27-%E7%96%AB%E6%83%85%E6%89%93%E5%85%A8%E5%9C%BA%E7%9A%843%E6%B7%B1%E5%9C%B3%E7%A7%91%E6%8A%80%E4%BA%A7%E5%93%81%E5%87%BA%E6%B5%B74%E9%A6%99%E6%B8%AF%E5%BE%8B%E5%B8%88-Ryt2G53YA1Z/">疫情打全场的③深圳科技产品出海④香港律师</a></h2><h2 id="首相进了ICU，英国现在怎样了"><a href="#首相进了ICU，英国现在怎样了" class="headerlink" title="首相进了ICU，英国现在怎样了"></a><a target="_blank" rel="noopener" href="https://www.etw.fm/boris-johnson-icu">首相进了ICU，英国现在怎样了</a></h2><h2 id="晚风说-E44：Jade-amp-张琳"><a href="#晚风说-E44：Jade-amp-张琳" class="headerlink" title="晚风说 E44：Jade &amp; 张琳"></a><a target="_blank" rel="noopener" href="https://podcasts.cosmosrepair.com/44">晚风说 E44：Jade &amp; 张琳</a></h2><h2 id="人群之中的我们"><a href="#人群之中的我们" class="headerlink" title="人群之中的我们"></a><a target="_blank" rel="noopener" href="https://fakefestival.org/episodes/21">人群之中的我们</a></h2><h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="奈飞文化手册"><a href="#奈飞文化手册" class="headerlink" title="奈飞文化手册"></a>奈飞文化手册</h2><p>◆ 推荐序一 文化，奈飞成功的原动力</p>
+<blockquote>
+<blockquote>
+<p>麦考德在奈飞工作了整整14年，参与了奈飞创始高管团队的组建，曾任奈飞首席人才官。她的种种做法在外界看来不仅颠覆，甚至有些疯狂，却和奈飞水乳相融，创造出惊人的效果。例如：推动奈飞取消了休假制度、报销制度和差旅制度，甚至还在公司内部建立了一家猎头机构。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>对奈飞而言，企业文化的重要性再怎么强调也不为过。文化是企业的灵魂，是企业业务、流程、所在领域等之外的核心内容。如果说是创新帮助奈飞在业务上战胜百视达公司，是内容帮奈飞在最近的一届艾美奖提名中打败HBO公司，那么企业文化就是帮助奈飞打造出极具创新能力与内容生产能力的高绩效团队、推动公司指数级发展、在市值上超越迪士尼的最终力量。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>奈飞告诉员工，他们可以在自己认为适当的时候休假，只需要和他们的经理商量即可。后来公司发现，大家还是只会在夏天休一两周假、在节假日休息几天、在孩子参加比赛的日子休息一下，就跟取消这项制度之前一样。通过这次尝试，奈飞相信，公司可以放心地把权力交还给员工，因为他们会对自己的时间负责。</p>
+</blockquote>
+</blockquote>
+<p>◆ 推荐序二 今天我们为什么要学习奈飞</p>
+<blockquote>
+<blockquote>
+<p>作者麦考德将奈飞的文化总结为八大准则，单是第一条“我们只招成年人”，就一下子击中了我们这些企业家和企业管理人员的要害。是啊，我们为什么要花时间去和一个思想幼稚、任性冲动的员工打交道呢？我们为什么要花时间教育员工不撒谎、不迟到早退、不可以无故请假呢？如果是一个心智健全的成年人，这些都不是问题。心智成熟的成年人最需要的是空间，但他们经常因为那些不成熟者而受到不应该有的压抑。</p>
+</blockquote>
+</blockquote>
+<p>◆ 前言 自由与责任，奈飞文化的核心</p>
+<blockquote>
+<blockquote>
+<p>公司必须不断地自我革新：首先，保持邮递DVD业务的蓬勃发展，同时全力学习如何开展流媒体业务；其次，把我们的系统迁移到云端；最后，开始创作原创节目。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>向人们反复灌输一套核心行为，然后给予他们足够的空间来践行这些行为，或者确切地说，要求他们来践行这些行为，可以让团队变得异常富有活力和积极主动。这样的团队是让你获得成功的最好驱动因素。</p>
+</blockquote>
+</blockquote>
+<p>◆ 21世纪的企业VS.20世纪的管理方法</p>
+<blockquote>
+<blockquote>
+<p>人都是拥有权力的。企业的任务不是要对员工赋能，而是要从员工踏进公司大门的第一天起，就提醒他们拥有权力，而且为他们创造各种条件来行使权力。</p>
+</blockquote>
+</blockquote>
+<p>◆ 01 文化准则1 我们只招成年人</p>
+<blockquote>
+<blockquote>
+<p>其中的每一位成员都知道自己要前往何方，并愿意为此付出任何努力。建立伟大的团队不需要靠激励、程序和福利待遇，靠的是招聘成年人，渴望接受挑战的成年人，然后，清晰而持续地与他们沟通他们面对的挑战是什么。</p>
+</blockquote>
+</blockquote>
+<p>◆ 成年人最渴望的奖励，就是成功</p>
+<blockquote>
+<blockquote>
+<p>我热爱这种精神。我认为里德·哈斯廷斯在这番话里所表达的，正是人们最希望从工作中得到的东西：加入到让他们信任和钦佩的同事团队中，大家一起专注于完成一项伟大的任务。</p>
+</blockquote>
+</blockquote>
+<p>◆ 不要让规章与制度限制了高绩效者</p>
+<blockquote>
+<blockquote>
+<p>就拿取消休假制度来说，这件事被媒体广泛报道。我们告诉员工，他们可以在自己认为适当的时候休假，只需要和他们的经理商量即可。你猜后来发生了什么？大家会在夏天休一两周假，有时候会在节假日休假，偶尔还会休几天假去看孩子的球赛，就跟没取消这项制度之前一样。相信员工会对自己的时间负责，是我们把权力交回给员工所采取的早期措施之一。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>但是，我决定丢掉那种传统的招聘方法，在公司内部建立一家猎头机构。这样，我便不再去招在其他公司工作的人，而是去招那些在猎头公司工作过的人，以此来培养内部招聘能力。因为只要我们具备了这种能力，我就可以告诉管理者：“如果你的团队流失了几个人也没关系，我们可以很快为你招到新的优秀人才。”</p>
+</blockquote>
+</blockquote>
+<p>◆ 02 文化准则2 要让每个人都理解公司业务</p>
+<blockquote>
+<blockquote>
+<p>教他们阅读公司的损益表</p>
+</blockquote>
+</blockquote>
+<p>◆ 培养基层员工的高层视角</p>
+<blockquote>
+<blockquote>
+<p>员工需要以高层管理者的视角看事物，以便感受到自己与所有层级、所有部门都必须解决的问题有真正的联系，这样公司才能发现每个环节上的问题和机会，并采取有效行动。</p>
+</blockquote>
+</blockquote>
+<p>◆ 双向沟通，注入好奇文化</p>
+<blockquote>
+<blockquote>
+<p>双向沟通至关重要。员工必须能够提出问题、批评和其他意见。在理想情况下，员工应该可以对上至CEO在内的所有管理者提问。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>永远不要低估问题与想法的价值，无论它们是哪一个层级的员工提出的。</p>
+</blockquote>
+</blockquote>
+<p>◆ 员工的无知，是管理者的失职</p>
+<blockquote>
+<blockquote>
+<p>最好不要去臆想员工很笨，而是要考虑到另外一种情况：如果员工做了愚蠢的事情，要么是未被告知相关信息，要么是被告知了错误信息。</p>
+</blockquote>
+</blockquote>
+<p>◆ 让员工学习冲突管理，不如让他们学习业务运作</p>
+<blockquote>
+<blockquote>
+<p>思考一下你能做的每一件事，基于现有资源，为员工提供尽可能多的信息，这样才能帮助他们更好地为企业助力。</p>
+</blockquote>
+</blockquote>
+<p>◆ 情况在不断变化，沟通必须持续进行</p>
+<blockquote>
+<blockquote>
+<p>本章小结：如何做到让每位员工都理解公司业务1．建立新员工大学，保持沟通的强节奏。2．双向沟通，为员工提供向所有管理者提问的机会。3．让每一位员工了解，他为客户带来的体验是如何直接影响公司利润的。4．如果只选择一门课程面向公司全员开授，请选择公司业务运作和客户服务的基本知识。5．最好的福利，是让员工有机会去更好地了解业务和客户。</p>
+</blockquote>
+</blockquote>
+<p>◆ 人前人后言行一致</p>
+<blockquote>
+<blockquote>
+<p>奈飞文化的支柱之一是如果谁对某个员工有意见，对本部门的某个同事或公司里其他同事的工作方式有意见，他们就应该和当事人开诚布公地沟通，最好是当面沟通。</p>
+</blockquote>
+</blockquote>
+<p>◆ 公开批评的价值</p>
+<blockquote>
+<blockquote>
+<p>不给严格反馈，会给管理者带来不必要的压力，他们不得不掩盖事实并欺骗员工，进而导致员工丧失做出改进的机会。</p>
+</blockquote>
+</blockquote>
+<p>◆ 04 文化准则4 只有事实才能捍卫观点</p>
+<blockquote>
+<blockquote>
+<p>我们的要求很明确，提问的态度必须真诚。如果以一种真正感兴趣的态度来询问别人正在面临的问题，就可以在双方之间建立起一座牢固的“理解之桥”。</p>
+</blockquote>
+</blockquote>
+<p>◆ 坚持你的观点，用事实为它辩护</p>
+<blockquote>
+<blockquote>
+<p>我们在奈飞提出了一个要求，即人们必须通过探求事实来完善自己的观点，并且以开放的心态去倾听那些他们并不认同，但以事实为依据的辩论。</p>
+</blockquote>
+</blockquote>
+<p>◆ 基于事实≠真实，对观点进行不断审视</p>
+<blockquote>
+<blockquote>
+<p>在客户科学会议上，经常会有不少人在本能的驱动下，陷入为了争论而争论的局面之中。此时，总会有人插话说：“这样做对客户来说到底有什么好处？”一下子就避免了焦点的转移。</p>
+</blockquote>
+</blockquote>
+<p>◆ 要解决观点分歧，就将辩论公开化</p>
+<blockquote>
+<blockquote>
+<p>有一次，奈飞市场部和内容部的两位负责人就如何理解客户产生了巨大分歧。此事后来发展成了一场真正的拉锯战，因为两位高管态度都很强硬，两人也都有充分的理由支持自己的观点。哈斯廷斯做了一件很漂亮的事情。他安排两人走上讲台，坐在椅子上面对面辩论，其他部门的高管坐在下面聆听。而其中最巧妙的一个安排是，两个人都要为对方的立场辩护。因此，两个人必须真正做到换位思考。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>奈飞聘用和晋升人员时要求他们具备的核心素质之一，就是拥有良好的判断能力，从本质上讲就是能够在复杂环境下做出正确决策、深挖问题的根源，以及拥有战略性思维并可以清晰地表达出来的能力。</p>
+</blockquote>
+</blockquote>
+<p>◆ 站在6个月后的未来，审视你现在的团队</p>
+<blockquote>
+<blockquote>
+<p>现在，更重要的是，思考一下团队届时的做法和今天的做法有哪些不一样。他们的会议是更多了还是更少了？他们是在大声辩论吗？他们的决策速度更快了吗？谁在做决定？谁没有在做决定？是有更多的人埋头在自己的格子间里默默工作，还是有更多的人组成小组在白板前激烈地讨论？跨部门合作是不是更多了？员工有没有通过更多的合作去解决问题？</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>你应该从未来的规划出发，建立一支理想的团队：确认要解决的问题、确认解决问题的时间期限、确认能够成功解决这些问题的人选，并确认要解决这些问题他们该怎么做。然后问自己，需要做哪些准备，以及需要招入什么样的人？</p>
+</blockquote>
+</blockquote>
+<p>◆ 员工的成长，只能由自己负责</p>
+<blockquote>
+<blockquote>
+<p>我相信，对于今天职场人士的最佳建议就是：保持灵活，不断学习新技能，不断考虑新机会，经常接受新挑战，这样可以保持工作的新鲜感和延展性。</p>
+</blockquote>
+</blockquote>
+<p>◆ 你不必在一家公司待一辈子</p>
+<blockquote>
+<blockquote>
+<p>帮助公司获得早期成功的核心要素非常重要，它可以伴随着公司的成长而被保留下来，但激发人们对变革产生不满的怀旧情绪，将破坏公司的成长。</p>
+</blockquote>
+</blockquote>
+<p>◆ 人才保留不是团队建设的目标</p>
+<blockquote>
+<blockquote>
+<p>最有竞争力的公司能够保持灵活，不断创新和增长，很大原因在于它们总在积极地引进新的人才。最好的员工则总是在寻找有挑战的新机会，尽管他们大多极度忠诚，但是他们中的很多人最终还是会到别处寻找机会。你永远也不会知道他们何时决定离开，通常你也没有办法阻止他们。</p>
+</blockquote>
+</blockquote>
+<p>◆ 伟大的工作与福利无关</p>
+<blockquote>
+<blockquote>
+<p>你为客户提供服务，他们向你付钱，这笔钱扣掉运营成本，剩下的就是利润，这就是商业的本质。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>工作中真实和持久的幸福源于和你认识的优秀人才一起深入地解决一个问题，源于客户喜爱你付出辛勤努力所创造的产品或服务。</p>
+</blockquote>
+</blockquote>
+<p>◆ 简历之外，更能看出匹配度</p>
+<blockquote>
+<blockquote>
+<p>但是当我问他能不能用非常简单的语言向我解释他做的那些极其复杂的技术工作时，他做到了。他依然会结巴，但我认为他给了我一个引人入胜的解释。是的！他擅长把非常复杂的东西变得简单易懂。</p>
+</blockquote>
+</blockquote>
+<p>◆ 不要让员工在不得不离开时才获得应得的薪水</p>
+<blockquote>
+<blockquote>
+<p>我们意识到，在某些工作上，我们创造了自己的专业性和稀缺性。如果严格遵照内部薪酬标准执行，实际上会损害那些最优贡献者的利益，因为他们可以在别处挣到更多。我们决定，不要让员工在不得不离开时才获得应得的薪水。我们也经常鼓励员工出去面试，这是发现奈飞的薪水竞争力水平的最可靠和最有效的方式。</p>
+</blockquote>
+</blockquote>
+<p>◆ 告别密薪制，薪酬透明有助于市场定价</p>
+<blockquote>
+<blockquote>
+<p>人们喜欢声称硅谷之所以不能把女性的工资提高到男性的70%以上，是因为女性不擅长工资谈判。我认为，这更多是因为偏见以及女性主导着人力资源和财务部门，这些都是传统的低薪岗位。薪资最高的人力资源员工的薪酬通常是技术人员的一半。这部分归因于供需比例，比如技术人才的稀缺。</p>
+</blockquote>
+</blockquote>
+<p>◆ 取消绩效评估流程</p>
+<blockquote>
+<blockquote>
+<p>如果你无法找到可靠数据来证明评估流程有助于实现一些重要业务指标，那么我强烈建议你去争取废除它。</p>
+</blockquote>
+</blockquote>
+<p>◆ 高敬业度不代表高绩效</p>
+<blockquote>
+<blockquote>
+<p>你需要成为一个终身学习者。你需要不断获取新技能并积累新经验，但不是非得在同一家公司取得它们。事实上，有时候公司聘用你做某件事，你做完就完了。如果我雇用别人来整修我的车库，当他们干完活儿之后，我并不需要他们来整修我的后院。</p>
+</blockquote>
+</blockquote>
+<p>◆ 结语 文化即战略，创造你自己的管理新算法</p>
+<blockquote>
+<blockquote>
+<p>文化变革的过程是演进式的，正如大自然的进化一样，有些变革是没有适应性的，你必须重新尝试。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>在你建立自己的自由与责任的文化过程中，我会向你保证一件事，就是你会被员工的挺身而出而感动。当员工感到自己有更多权力、对自己的事业有更多掌控时，他们会更加自信，更加畅所欲言、敢于冒险、敢于纠错并勇于担责。</p>
+</blockquote>
+</blockquote>
+<h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><h2 id="瑞克和莫蒂第一季"><a href="#瑞克和莫蒂第一季" class="headerlink" title="瑞克和莫蒂第一季"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/11537954/">瑞克和莫蒂第一季</a></h2><p>Rick 就是一个智者，Morty 更像是寻常人。</p>
+<h2 id="瑞克和莫蒂第二季"><a href="#瑞克和莫蒂第二季" class="headerlink" title="瑞克和莫蒂第二季"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/25865470/">瑞克和莫蒂第二季</a></h2><p>直接看第四季吧，选择放弃。</p>
+<h2 id="使女的故事第三季"><a href="#使女的故事第三季" class="headerlink" title="使女的故事第三季"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/30212003/">使女的故事第三季</a></h2><p>决定弃剧，太久了看不下去。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" rel="tag"># 一周一纪</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%201%20%E6%9C%9F/" rel="prev" title="「一周一纪」第 1 期">
+      <i class="fa fa-chevron-left"></i> 「一周一纪」第 1 期
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%203%20%E6%9C%9F/" rel="next" title="「一周一纪」第 3 期">
+      「一周一纪」第 3 期 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#15-Typical-Life-Problems-And-How-To-Solve-Them"><span class="nav-number">1.1.</span> <span class="nav-text">15 Typical Life Problems And How To Solve Them</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#You-didn%E2%80%99t-reach-your-goal"><span class="nav-number">1.1.1.</span> <span class="nav-text">You didn’t reach your goal.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Someone-criticized-you"><span class="nav-number">1.1.2.</span> <span class="nav-text">Someone criticized you.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Your-career-got-messed-up"><span class="nav-number">1.1.3.</span> <span class="nav-text">Your career got messed up.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-have-financial-troubles"><span class="nav-number">1.1.4.</span> <span class="nav-text">You have financial troubles.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-are-unhealthy"><span class="nav-number">1.1.5.</span> <span class="nav-text">You are unhealthy.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-relationship-ended"><span class="nav-number">1.1.6.</span> <span class="nav-text">A relationship ended.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-made-a-dick-of-yourself"><span class="nav-number">1.1.7.</span> <span class="nav-text">You made a dick of yourself.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Someone-messed-your-shit-up"><span class="nav-number">1.1.8.</span> <span class="nav-text">Someone messed your shit up.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-feel-like-your-life-has-no-meaning"><span class="nav-number">1.1.9.</span> <span class="nav-text">You feel like your life has no meaning.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-feel-like-you-can%E2%80%99t-go-on"><span class="nav-number">1.1.10.</span> <span class="nav-text">You feel like you can’t go on.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Every-day-feels-the-same"><span class="nav-number">1.1.11.</span> <span class="nav-text">Every day feels the same.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Your-friends-are-screwing-your-life-up"><span class="nav-number">1.1.12.</span> <span class="nav-text">Your friends are screwing your life up.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-feel-stressed"><span class="nav-number">1.1.13.</span> <span class="nav-text">You feel stressed.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-fear-is-standing-in-your-way"><span class="nav-number">1.1.14.</span> <span class="nav-text">A fear is standing in your way.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Real-fear-can-be-overcome-through-deliberate-practice"><span class="nav-number">1.1.15.</span> <span class="nav-text">Real fear can be overcome through deliberate practice.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-the-Pandemic-Will-End"><span class="nav-number">1.2.</span> <span class="nav-text">How the Pandemic Will End?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%CE%9B-Reading%EF%BC%9A%E8%B0%81%E6%9D%A5%E6%94%AF%E6%92%91%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E"><span class="nav-number">1.3.</span> <span class="nav-text">Λ-Reading：谁来支撑中国经济</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-Fall-in-Love-With-Anyone-Do-This"><span class="nav-number">1.4.</span> <span class="nav-text">To Fall in Love With Anyone, Do This</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%92%AD%E5%AE%A2"><span class="nav-number">2.</span> <span class="nav-text">播客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9D%E7%BE%BD%E6%8D%B7%EF%BC%9A%E6%88%91%E8%A2%AB%E8%AF%BB%E8%80%85%E9%92%89%E5%9C%A8%E3%80%8C%E5%81%9A%E8%BF%87%E6%97%B6%E5%B0%9A%E6%9D%82%E5%BF%97%E3%80%8D%E7%9A%84%E8%80%BB%E8%BE%B1%E6%9F%B1%E4%B8%8A"><span class="nav-number">2.1.</span> <span class="nav-text">祝羽捷：我被读者钉在「做过时尚杂志」的耻辱柱上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8C%E7%8E%8B%E7%89%8C%E3%80%8D%E9%A3%9E%E8%A1%8C%E5%91%98%E6%98%AF%E5%A6%82%E4%BD%95%E7%82%BC%E6%88%90%E7%9A%84"><span class="nav-number">2.2.</span> <span class="nav-text">「王牌」飞行员是如何炼成的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%AB%E6%83%85%E7%AC%BC%E7%BD%A9%E4%B8%8B%E7%9A%84%E7%A1%85%E8%B0%B7"><span class="nav-number">2.3.</span> <span class="nav-text">疫情笼罩下的硅谷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%AB%E6%83%85%E5%AF%B9%E4%BD%A0%E5%B7%A5%E4%BD%9C%E5%BD%B1%E5%93%8D%E5%A4%9A%E5%A4%A7%EF%BC%9F%E2%91%A0%E6%B3%95%E5%9B%BD%E5%A5%A2%E4%BE%88%E5%93%81%E7%89%8C%E2%91%A1%E6%84%8F%E5%A4%A7%E5%88%A9%E7%AE%A1%E7%90%86%E5%92%A8%E8%AF%A2"><span class="nav-number">2.4.</span> <span class="nav-text">疫情对你工作影响多大？①法国奢侈品牌②意大利管理咨询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%91%9E%E5%B9%B8%E5%B7%A8%E9%A2%9D%E9%80%A0%E5%81%87%EF%BC%8C%E7%BE%8E%E5%9B%BD%E6%8A%95%E8%B5%84%E4%BA%BA%E6%80%8E%E4%B9%88%E7%9C%8B%EF%BC%9F"><span class="nav-number">2.5.</span> <span class="nav-text">瑞幸巨额造假，美国投资人怎么看？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E7%BE%8E%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E7%9A%84%E5%BC%82%E5%90%8C"><span class="nav-number">2.6.</span> <span class="nav-text">中美互联网公司的异同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E9%9A%8F%E6%9C%BA%E6%B3%A2%E5%8A%A8002%E3%80%91%E5%A4%A9%E7%94%9F%E6%9C%89%E7%BD%AA%EF%BC%8C%E5%A4%A9%E7%94%9F%E6%AD%A3%E7%A1%AE%EF%BC%9F%E4%BB%8ETrevor%E8%81%8A%E5%88%B0%E9%B8%A1%E8%9B%8B%E4%B8%8E%E5%A2%99"><span class="nav-number">2.7.</span> <span class="nav-text">【随机波动002】天生有罪，天生正确？从Trevor聊到鸡蛋与墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E5%A5%B3%E5%84%BF%E5%9C%A8%E5%B0%81%E5%9F%8E%E4%B8%AD%E9%95%BF%E5%A4%A7-%E5%BC%80%E5%B0%8F%E5%B7%AE"><span class="nav-number">2.8.</span> <span class="nav-text">我的女儿在封城中长大 | 开小差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%93%E8%AE%BFMs-MIN%E4%B8%A8%E4%BB%8E%E6%B7%98%E5%AE%9D%E5%88%B0%E8%BF%9E%E5%8D%A1%E4%BD%9B%EF%BC%8C%E5%A5%B9%E7%9A%84%E7%BB%8F%E5%8E%86%E8%83%BD%E5%90%A6%E5%A4%8D%E5%88%B6%EF%BC%9F"><span class="nav-number">2.9.</span> <span class="nav-text">专访Ms. MIN丨从淘宝到连卡佛，她的经历能否复制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bonus%E4%B8%A890%E5%B9%B4%E5%89%8D%E7%9A%84%E5%A4%A7%E8%90%A7%E6%9D%A1%E4%B8%8E%E6%88%91%E4%BB%AC%E7%9A%84%E4%BB%8A%E5%A4%A9%EF%BC%88%E8%AF%BB%E4%B9%A6%E4%BC%9A%E5%90%8E%E5%88%86%E4%BA%AB%EF%BC%89"><span class="nav-number">2.10.</span> <span class="nav-text">Bonus丨90年前的大萧条与我们的今天（读书会后分享）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S2-Vol-03-%E5%93%88%E5%95%B0%E5%87%BA%E8%A1%8C%E6%9D%8E%E5%BC%80%E9%80%90%EF%BC%9A%E7%94%A8%E6%8A%80%E6%9C%AF%E8%B7%91%E8%B5%A2%E5%85%B1%E4%BA%AB%E7%BB%8F%E6%B5%8E%E4%B8%8B%E5%8D%8A%E5%9C%BA"><span class="nav-number">2.11.</span> <span class="nav-text">S2 Vol.03 哈啰出行李开逐：用技术跑赢共享经济下半场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%AB%E6%83%85%E6%89%93%E5%85%A8%E5%9C%BA%E7%9A%84%E2%91%A2%E6%B7%B1%E5%9C%B3%E7%A7%91%E6%8A%80%E4%BA%A7%E5%93%81%E5%87%BA%E6%B5%B7%E2%91%A3%E9%A6%99%E6%B8%AF%E5%BE%8B%E5%B8%88"><span class="nav-number">2.12.</span> <span class="nav-text">疫情打全场的③深圳科技产品出海④香港律师</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E7%9B%B8%E8%BF%9B%E4%BA%86ICU%EF%BC%8C%E8%8B%B1%E5%9B%BD%E7%8E%B0%E5%9C%A8%E6%80%8E%E6%A0%B7%E4%BA%86"><span class="nav-number">2.13.</span> <span class="nav-text">首相进了ICU，英国现在怎样了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%9A%E9%A3%8E%E8%AF%B4-E44%EF%BC%9AJade-amp-%E5%BC%A0%E7%90%B3"><span class="nav-number">2.14.</span> <span class="nav-text">晚风说 E44：Jade &amp; 张琳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%BE%A4%E4%B9%8B%E4%B8%AD%E7%9A%84%E6%88%91%E4%BB%AC"><span class="nav-number">2.15.</span> <span class="nav-text">人群之中的我们</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%B1%8D"><span class="nav-number">3.</span> <span class="nav-text">书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%88%E9%A3%9E%E6%96%87%E5%8C%96%E6%89%8B%E5%86%8C"><span class="nav-number">3.1.</span> <span class="nav-text">奈飞文化手册</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%B1%E8%A7%86"><span class="nav-number">4.</span> <span class="nav-text">影视</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%91%9E%E5%85%8B%E5%92%8C%E8%8E%AB%E8%92%82%E7%AC%AC%E4%B8%80%E5%AD%A3"><span class="nav-number">4.1.</span> <span class="nav-text">瑞克和莫蒂第一季</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%91%9E%E5%85%8B%E5%92%8C%E8%8E%AB%E8%92%82%E7%AC%AC%E4%BA%8C%E5%AD%A3"><span class="nav-number">4.2.</span> <span class="nav-text">瑞克和莫蒂第二季</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E5%A5%B3%E7%9A%84%E6%95%85%E4%BA%8B%E7%AC%AC%E4%B8%89%E5%AD%A3"><span class="nav-number">4.3.</span> <span class="nav-text">使女的故事第三季</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

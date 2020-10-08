@@ -1,23 +1,585 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是「一周一纪」第 1 期。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一周一纪」第 1 期">
+<meta property="og:url" content="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%201%20%E6%9C%9F/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是「一周一纪」第 1 期。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-04-22T02:20:06.000Z">
+<meta property="article:modified_time" content="2020-04-22T02:29:31.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="一周一纪">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%201%20%E6%9C%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>「一周一纪」第 1 期 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%201%20%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「一周一纪」第 1 期
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-22 10:20:06 / Modified: 10:29:31" itemprop="dateCreated datePublished" datetime="2020-04-22T10:20:06+08:00">2020-04-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" itemprop="url" rel="index"><span itemprop="name">一周一纪</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是「一周一纪」第 1 期。</p>
+<a id="more"></a>
+<p>Date: 2020.03.30–2020.04.05</p>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="Therapy-that-sticks"><a href="#Therapy-that-sticks" class="headerlink" title="Therapy that sticks"></a><a target="_blank" rel="noopener" href="https://aeon.co/essays/why-depth-therapy-is-more-enduring-than-a-quick-fix-of-cbt">Therapy that sticks</a></h2><p>在心理健康治疗领域中，快速治疗心理疗法被誉为黄金标准，但是越来越多的证据表明这样的快速疗法并没有发挥到它所认为的极好的康复效果，而与此相关的深度疗法可能会更加持久和深刻。</p>
+<h2 id="Returning-Once-More-to-a-“Little-House-in-the-Big-Woods"><a href="#Returning-Once-More-to-a-“Little-House-in-the-Big-Woods" class="headerlink" title="Returning Once More to a “Little House in the Big Woods"></a><a target="_blank" rel="noopener" href="https://www.newyorker.com/culture/cultural-comment/returning-once-more-to-a-little-house-in-the-big-woods?source=EDT_NYR_EDIT_NEWSLETTER_0_imagenewsletter_Daily_ZZ&utm_campaign=aud-dev&utm_source=nl&utm_brand=tny&utm_mailing=TNY_Daily_032420&utm_medium=email&bxid=5d502f8cf543e65d213da05d&cndid=58099945&esrc=&mbid=&utm_term=TNY_Daily">Returning Once More to a “Little House in the Big Woods</a></h2><p>在疫情期间，从家庭的日常聊到了一本书《Little House in the Big Woods》，而这本书又是这个家庭很多年的温情的流传，从上一代讲这本书，到这一代，又到下一代，这一本书伴随了他们家的三代人，而在这样的特殊时刻，这本书就是一个对于家庭未来团圆的象征。</p>
+<h2 id="Rural-gay-Americans-have-more-children"><a href="#Rural-gay-Americans-have-more-children" class="headerlink" title="Rural, gay Americans have more children"></a><a target="_blank" rel="noopener" href="https://www.economist.com/united-states/2020/03/19/rural-gay-americans-have-more-children?utm_campaign=the-economist-today&utm_medium=newsletter&utm_source=salesforce-marketing-cloud&utm_term=2020-03-24&utm_content=article-link-6">Rural, gay Americans have more children</a></h2><p>产生这种现象的原因有两点：第一点是社会对于同性婚姻群体遗产的保守态度，第二点是内陆地区鼓励早结婚早生育的文化和养孩子的成本等因素。</p>
+<h2 id="China’s-Struggles-with-Hospice-Care"><a href="#China’s-Struggles-with-Hospice-Care" class="headerlink" title="China’s Struggles with Hospice Care"></a><a target="_blank" rel="noopener" href="https://www.newyorker.com/magazine/2020/04/06/chinas-struggles-with-hospice-care?source=EDT_NYR_EDIT_NEWSLETTER_0_imagenewsletter_Daily_ZZ&utm_campaign=aud-dev&utm_source=nl&utm_brand=tny&utm_mailing=TNY_Daily_033020&utm_medium=email&bxid=5d502f8cf543e65d213da05d&cndid=58099945&esrc=&mbid=&utm_term=TNY_Daily">China’s Struggles with Hospice Care</a></h2><p>在国内，临终关怀仍然是一个陌生的概念，对死亡的讨论有强烈的禁忌，而对生命的关怀长期以来一直是家庭事务。</p>
+<h2 id="How-art-galleries-are-adapting-to-the-lockdown"><a href="#How-art-galleries-are-adapting-to-the-lockdown" class="headerlink" title="How art galleries are adapting to the lockdown"></a><a target="_blank" rel="noopener" href="https://www.economist.com/books-and-arts/2020/03/26/how-art-galleries-are-adapting-to-the-lockdown?utm_campaign=the-economist-today&utm_medium=newsletter&utm_source=salesforce-marketing-cloud&utm_term=2020-03-30&utm_content=article-link-7">How art galleries are adapting to the lockdown</a></h2><p>当艺术馆开启线上浏览时，和线下相比，你在欣赏艺术品时无法更真切的感受它的质感，同时，线下观赏时的偶然性和社交性是无法被线上复制的。</p>
+<h2 id="My-9-Months-on-the-Road-With-Fan-Bingbing-China’s-Biggest-Movie-Star"><a href="#My-9-Months-on-the-Road-With-Fan-Bingbing-China’s-Biggest-Movie-Star" class="headerlink" title="My 9 Months on the Road With Fan Bingbing, China’s Biggest Movie Star"></a><a target="_blank" rel="noopener" href="https://gen.medium.com/my-9-months-on-the-road-with-fan-bingbing-chinas-biggest-movie-star-df6b7a8463b3">My 9 Months on the Road With Fan Bingbing, China’s Biggest Movie Star</a></h2><p>以一个十年前接触过她的人的口吻，写出了整篇文章，挺有意思的！</p>
+<h2 id="Is-marriage-over"><a href="#Is-marriage-over" class="headerlink" title="Is marriage over?"></a><a target="_blank" rel="noopener" href="https://aeon.co/essays/marriage-is-dead-long-live-marriage-how-will-we-couple-up">Is marriage over?</a></h2><p>婚姻在每个社会都有，但在全球范围内却急剧下降。是为了建立长期的亲密关系吗？</p>
+<h2 id="How-Alan-Jope-runs-Unilever-from-his-study"><a href="#How-Alan-Jope-runs-Unilever-from-his-study" class="headerlink" title="How Alan Jope runs Unilever from his study"></a><a target="_blank" rel="noopener" href="https://www.economist.com/business/2020/03/26/how-alan-jope-runs-unilever-from-his-study?utm_campaign=the-economist-today&utm_medium=newsletter&utm_source=salesforce-marketing-cloud&utm_term=2020-03-31&utm_content=article-link-3">How Alan Jope runs Unilever from his study</a></h2><p>关于联合利华。</p>
+<h2 id="How-high-will-unemployment-in-America-go"><a href="#How-high-will-unemployment-in-America-go" class="headerlink" title="How high will unemployment in America go?"></a><a target="_blank" rel="noopener" href="https://www.economist.com/united-states/2020/04/01/how-high-will-unemployment-in-america-go?utm_campaign=the-economist-today&utm_medium=newsletter&utm_source=salesforce-marketing-cloud&utm_term=2020-04-01&utm_content=article-link-1">How high will unemployment in America go?</a></h2><p>美国的失业率将上升到达顶峰。</p>
+<h2 id="How-dancing-helps-me-think-and-thinking-helps-me-dance"><a href="#How-dancing-helps-me-think-and-thinking-helps-me-dance" class="headerlink" title="How dancing helps me think, and thinking helps me dance"></a><a target="_blank" rel="noopener" href="https://aeon.co/ideas/how-dancing-helps-me-think-and-thinking-helps-me-dance">How dancing helps me think, and thinking helps me dance</a></h2><p>跳舞和思考。</p>
+<h2 id="97-Actions-You-Should-Take-To-Become-THE-Person-Companies-Want-To-Hire"><a href="#97-Actions-You-Should-Take-To-Become-THE-Person-Companies-Want-To-Hire" class="headerlink" title="97 Actions You Should Take To Become THE Person Companies Want To Hire"></a><a target="_blank" rel="noopener" href="https://collegeinfogeek.com/a-crap-ton-of-job-tips/?ck_subscriber_id=752466738">97 Actions You Should Take To Become THE Person Companies Want To Hire</a></h2><p>97 个 tips 让你变成一个更易被雇主欢迎的人。</p>
+<h2 id="You-Are-Destroying-Your-Life-with-These-Lies"><a href="#You-Are-Destroying-Your-Life-with-These-Lies" class="headerlink" title="You Are Destroying Your Life with These Lies"></a><a target="_blank" rel="noopener" href="https://psiloveyou.xyz/you-are-destroying-your-life-with-these-lies-df753a1da6d6">You Are Destroying Your Life with These Lies</a></h2><p>认清现实，很多理由只是逃避的壁垒。</p>
+<h2 id="How-will-humans-by-nature-social-animals-fare-when-isolated"><a href="#How-will-humans-by-nature-social-animals-fare-when-isolated" class="headerlink" title="How will humans, by nature social animals, fare when isolated?"></a><a target="_blank" rel="noopener" href="https://www.economist.com/international/2020/04/04/how-will-humans-by-nature-social-animals-fare-when-isolated?fsrc=newsletter&utm_campaign=the-economist-today&utm_medium=newsletter&utm_source=salesforce-marketing-cloud&utm_term=2020-04-03&utm_content=article-link-1">How will humans, by nature social animals, fare when isolated?</a></h2><p>特殊时期的人们。</p>
+<h1 id="播客"><a href="#播客" class="headerlink" title="播客"></a>播客</h1><h2 id="数字极简主义｜我是如何一步步戒掉信息焦虑的"><a href="#数字极简主义｜我是如何一步步戒掉信息焦虑的" class="headerlink" title="数字极简主义｜我是如何一步步戒掉信息焦虑的"></a><a target="_blank" rel="noopener" href="https://www.douban.com/note/752227068/">数字极简主义｜我是如何一步步戒掉信息焦虑的</a></h2><p>看似我们不断的从各种社交软件获取新的信息，从另外一个角度来看，我们也在不断的被这些社交软件绑架，它们剥夺了我们的时间，精力，甚至是自我。</p>
+<h2 id="生鲜之王——永辉超市"><a href="#生鲜之王——永辉超市" class="headerlink" title="生鲜之王——永辉超市"></a><a target="_blank" rel="noopener" href="https://crazy.capital/43">生鲜之王——永辉超市</a></h2><p>讲述的是在疫情影响下，人们无法自主出行导致生活出现影响，很大程度上依靠外来送菜这种情况下，生鲜进入了视野之中。</p>
+<h2 id="我做讣闻记者的日子"><a href="#我做讣闻记者的日子" class="headerlink" title="我做讣闻记者的日子"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E5%BF%BD%E5%B7%A6%E5%BF%BD%E5%8F%B3/%E6%88%91%E5%81%9A%E8%AE%A3%E9%97%BB%E8%AE%B0%E8%80%85%E7%9A%84%E6%97%A5%E5%AD%90-peKhUslodXk/">我做讣闻记者的日子</a></h2><p>讲述作为讣闻记者的事。</p>
+<h2 id="别看潮流合伙人了，日本潮流案内人带你走入真正的原宿街头"><a href="#别看潮流合伙人了，日本潮流案内人带你走入真正的原宿街头" class="headerlink" title="别看潮流合伙人了，日本潮流案内人带你走入真正的原宿街头"></a><a target="_blank" rel="noopener" href="https://fanchaoliuclub.fireside.fm/14">别看潮流合伙人了，日本潮流案内人带你走入真正的原宿街头</a></h2><p>亲历者讲述日本的潮流文化。</p>
+<h2 id="Cedrick：我们重逢在灿烂的季节"><a href="#Cedrick：我们重逢在灿烂的季节" class="headerlink" title="Cedrick：我们重逢在灿烂的季节"></a><a target="_blank" rel="noopener" href="https://www.listennotes.com/podcasts/%E9%9D%A2%E9%9D%A2%E7%9B%B8%E8%B6%A3/23-cedrick%E6%88%91%E4%BB%AC%E9%87%8D%E9%80%A2%E5%9C%A8%E7%81%BF%E7%83%82%E7%9A%84%E5%AD%A3%E8%8A%82-so4frvDQwBU/">Cedrick：我们重逢在灿烂的季节</a></h2><p>回顾了一直以来做播客的历程。</p>
+<h2 id="如何成为一名电商直播网红？"><a href="#如何成为一名电商直播网红？" class="headerlink" title="如何成为一名电商直播网红？"></a><a target="_blank" rel="noopener" href="https://dao.fm/2020/03/29/vol-210-%e5%a6%82%e4%bd%95%e6%88%90%e4%b8%ba%e4%b8%80%e5%90%8d%e7%94%b5%e5%95%86%e7%9b%b4%e6%92%ad%e7%bd%91%e7%ba%a2%ef%bc%9f/">如何成为一名电商直播网红？</a></h2><p>内容好多。</p>
+<h2 id="我们无处安放的记者身份"><a href="#我们无处安放的记者身份" class="headerlink" title="我们无处安放的记者身份"></a><a target="_blank" rel="noopener" href="https://www.etw.fm/deported-journalists">我们无处安放的记者身份</a></h2><p>围绕之前中美双方的“记者”时间，给你一些新的视角看待问题。</p>
+<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="俞军产品方法论"><a href="#俞军产品方法论" class="headerlink" title="俞军产品方法论"></a><a target="_blank" rel="noopener" href="https://book.douban.com/subject/34907971/">俞军产品方法论</a></h2><table>
+<thead>
+<tr>
+<th>俞军产品方法论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>◆ 2.2 如何理解用户</td>
+</tr>
+<tr>
+<td>&gt;&gt; 可塑性是指用户是可变的，其偏好和认知会随着外界不同的信息刺激发生变化和演化，具备可塑性。比如传销者的洗脑能力就很强，比如二战时日本军国主义者和德国纳粹把它们的大量国民洗脑成罪恶支持者，比如消费品营销领域和增长黑客领域都有很多技巧利用人性弱点去改变用户行为。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 首先，在行为发生前，用户通常会接受一个情境的刺激，这个情境的刺激会调用偏好和认知函数，产生一个主观期望效用，促使用户产生相应的行为，即追逐这个预期的效用。而行为会产生某个结果，这个结果又会成为经验，影响偏好和认知函数，从而可能对用户的下一次行为产生影响。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 欲望具有无限性和约束性。无限性是指人的所有行为，都是在约束条件下追求价值最大化，即欲望满足最大化，包括欲望种类的无限性和欲望满足程度的无限性。欲望的另一特点是约束性。物品和劳务供给有限，是约束条件；人的收入有限，是约束条件；时间、身体、心理、环境，各有各的约束。约束条件改变，人的行为改变；约束条件组合多变，欲望组合千人千面。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 为什么技术能创造价值，尤其是一个新的技术的出现，可能会让世界产生翻天覆地的变化？就是因为它影响了很多要素的相对价格，改变了人（群体）的最优选择可能性，从而产生连锁反应。</td>
+</tr>
+<tr>
+<td>◆ 2.3 如何理解产品</td>
+</tr>
+<tr>
+<td>&gt;&gt; 分析产品的重点是弄明白这个产品利从何来、利往何去，它创造了什么价值，价值是怎么分配的。从价值的维度分析，才能推演它的趋势，才能理解用户的需求，而不是只从表面上看它有没有某种功能，是不是又改版了。</td>
+</tr>
+<tr>
+<td>◆ 2.4 如何理解企业</td>
+</tr>
+<tr>
+<td>&gt;&gt; 信息的不对称、不完备、不确定充斥着这个世界，洞察、试错、偶然性也纠缠在一起，洞察不大可能孤立出现，在试错中积累的知识越多，就越会有获得洞察的可能性，因为一人一事的偶然性触发后续连锁反应的情况也总是存在。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 经济增长的根本动力是什么？诺斯在他的著名作品《西方世界的兴起》中，否定了通常把西方国家近代高速发展的原因归结为工业革命的观点，详细解释了是制度创新，是产权的不断明晰和保障不断加强，决定着知识、技术、商业和经济的增长和积累，最终工业革命水到渠成。诺斯后来凭制度变迁理论获得1993年诺贝尔经济学奖。</td>
+</tr>
+<tr>
+<td>◆ 3.1 交易与交易模型</td>
+</tr>
+<tr>
+<td>&gt;&gt; 在没有强迫或欺诈的前提下，拥有自由选择权的理性人，只有在预期收益大于直接代价，且预期收益大于机会成本的情况下，才会做出交易行为。交易不一定发生在买卖双方，人的每次行为都可以看作他跟世界做的一次交易。除了被本能、习惯和认知偏误所影响的行为，人们的主观行为过程中必然包含对预期得到什么、付出什么的思考，这是“交易”最核心的两点。</td>
+</tr>
+<tr>
+<td>◆ 3.2 效用</td>
+</tr>
+<tr>
+<td>&gt;&gt; 一个人要正确认知世界，结果发现自己正在做的事情其实是错误的和坏的。这个时候，只有少数人在少数时候能够进行自我否定和自我改变，多数人的习惯做法是在心理上寻找自我安慰甚至扭曲认知，以营造这件事其实“不算坏”甚至是“好的”的感觉，继续假装自己是正确的，自己是好人，归因于别人有偏见或无知，或者归因于这是别人和环境造成的问题。</td>
+</tr>
+<tr>
+<td>◆ 4.2 常见的决策方法和误区</td>
+</tr>
+<tr>
+<td>&gt;&gt; 行为科学研究得出结论，一个人一天的行为中大约有5%是非习惯性的，而其他95%的行为都源自习惯。这基本上意味着是习惯而不是逻辑，决定了我们的一生。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 产品经理需要认识到，在这个世界上，并不存在什么客观的事实，你所认为的事实，只是你所认为的事实。另一个人是否理解和接受这个事实，是受他的认知结构的刚性约束的。你只能在对方的认知约束内让他理解和接受他认为的事实，你只能按照对方的认知结构去设计沟通目标、沟通内容和沟通方式。</td>
+</tr>
+</tbody></table>
+<h2 id="西贝的服务员为什么总爱笑"><a href="#西贝的服务员为什么总爱笑" class="headerlink" title="西贝的服务员为什么总爱笑"></a><a target="_blank" rel="noopener" href="https://book.douban.com/subject/34781297/">西贝的服务员为什么总爱笑</a></h2><table>
+<thead>
+<tr>
+<th>西贝的服务员为什么总爱笑</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>◆ 上篇 西贝如何激励个体：西贝的产品是人</td>
+</tr>
+<tr>
+<td>&gt;&gt; 林男联想到，华为为什么不提倡“感恩”二字？任正非说，因为如果员工感恩公司，一定是公司给予他的，多过他所贡献的。贾国龙让西贝干部区辨一个问题：西贝内部人与人之间是什么关系？真是“哥们儿”吗？“我们本质上是相互信任的伙伴，首先是认同共同的价值观，之后就是能力信任。好比一支球队，你那个位置能不能盯住，不丢球，不掉链子，不漏气，一起赢得生意，赢得顾客对西贝的信任。每个人换得公司、老板对你的信任和尊重只有一个方式：你的贡献。一定要放下那些庸俗的关系。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 老板作为组织价值观的人格化身，当手下把你推上“神坛”，你一不小心就可能变成绝对正确的“教主”，于是如何管住自己，如何避免自我膨胀，是对一个领导者更大的考验。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 德鲁克的一句话值得每一位老板谨记心中，他认为，要求员工忠诚于企业本身就是错误的：“世上没有不辨是非的愚忠，相反，企业每天都必须争取获得员工的忠诚。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 老板整天在外面学习，可以学到新鲜的理念，但回到门店落地时，你干的全是笨活。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 我们常用的“能耐”一词，其实是两个词：“能”和“耐”。“能”是能力，有能力的人不一定有业绩；“耐”是耐烦，不怕麻烦，锲而不舍。人们通常高估了“能”，低估了“耐”——大作家沈从文夸一个人，常说“要算耐烦”。民间有句老理儿讲得好：有能无耐，终久必败；有耐无能，终久必成。</td>
+</tr>
+<tr>
+<td>◆ ·第二章·敢于信任、放权、容错</td>
+</tr>
+<tr>
+<td>&gt;&gt; “贾国龙带兵有一种能力，”在西贝工作十几年的首席体验官马燕说，“他总是很流畅地把部下的心理负担抹掉，让一个人甩掉包袱，轻装前进，发挥出最好的状态和能力。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 原来11个人的洗碗间老喊累，每天晚上12点还下不了班，经过她的调整，减掉4个，拿出两个人的工资激励剩下7位，碗洗得干干净净，利利索索，每天晚上11点准时下班。</td>
+</tr>
+<tr>
+<td>&gt;&gt; ‘弄人’是老板的最强项，‘弄人’他是高手，高手中的高手。有意见的，有个性的，能力大的，能力小的，他都把你用得团团转。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 领导力就是让对方感受到你对他的尊重和信任。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 一句是“组织为人所用”，另一句是“组织是人的工具”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 面子有时不是用来保护，而是用来撕破的。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 如何“回礼”，如何处理“中国式的人情往来”，是你我生活工作中都会遇到的问题。西贝有一条不成文的规矩：不能亏欠别人。比如贾国龙参观供应商，人家留下吃饭，不吃吧不近人情，西北人讲“太寡”；吃吧抢着买单也买不上，结果吃了人家的嘴短，拿了人家的手软。说下次你来北京我回请你，人家要是1年不来北京呢？对你的心理优势就保持1年。贾国龙怎么办？汽车后备箱里总是塞满了茅台酒，吃完饭撂下几瓶茅台，保证酒钱大过餐费，一把一过，谁也不欠谁的。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 人都是“练”出来的，你掏心掏肺跟一个人讲管理心得，希望他能够收到，结果往往无效。所谓“练”就是让他犯错，让他把该经历的都经历了，练“够”就好了。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 中餐要标准化，逻辑不也是通的：分离—组合。分离是为了精确，组合是为了味道。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 以我对西贝几年的观察，要说有哪些权力是贾国龙不会下放的，一是思想权、文化权；二是企业的战略大方向和节奏。除此之外，西贝人放手创造，百花齐放。做一位成果鉴定者和激励者，贾国龙乐此不疲。</td>
+</tr>
+<tr>
+<td>◆ ·第三章·管理就是激发善意</td>
+</tr>
+<tr>
+<td>&gt;&gt; 管理学家德鲁克说：“管理者天天都要面对不完美的人，面对人性中的善，人性中的恶，人的潜能、长处和弱点。而管理者要做的就是激发善意，激发和释放人本身固有的潜能。”更重要的是后面这句话：“但你不可能真正激发一个人，你只能给到他一个理由，让他来激发自己。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 毛泽东有一篇《关心群众生活，注意工作方法》，讲得很准：“就得和群众在一起，就得去发动群众的积极性，就得关心群众的痛痒，就得真心实意地为群众谋利益，解决群众的生产和生活的问题，盐的问题，米的问题，房子的问题，衣的问题，生小孩子的问题，解决群众的一切问题。”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 什么是领导力？德鲁克说，管理者有别于他人的最重要角色，就是他的教育职能——赋予他人愿景和执行能力。只有当员工拥有管理者的愿景，站在管理者的角度看待企业，认为自己的绩效将影响企业的兴衰存亡，他才会承担起达到最高绩效的责任。企业家和管理者都应该想一想，在你做经营管理的过程中，你是在提升自己和你追随者的境界呢，还是在让自己和他们堕落？</td>
+</tr>
+<tr>
+<td>◆ 中篇 西贝如何驱动组织：激励与约束</td>
+</tr>
+<tr>
+<td>&gt;&gt; 北京六里桥店的传菜岗托盘总是非常干净。有什么秘诀？首先，餐前，每个档口准备一条专用蓝毛巾，头一遍清洗干净后，用浓度30%的清洗剂再清洗一遍，半干备用；其次，要求传菜岗所有伙伴，用托盘传菜回来后，不管托盘是否有油渍，都用蓝毛巾擦拭一遍；第三，上述习惯，当区部长持续追踪检查15～20天，每餐做得不好的伙伴负责清洗所有下一餐用的蓝毛巾。还有六里桥店的岗会，不光有每个岗位的目标，更有完成目标的有效动作是什么，店长王大威都会一一和伙伴沟通清楚。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 销售羊三香。北京公益西桥店会在顾客一进门的地方摆一排羊三香，小火慢炖，顾客一进门，羊肉香气扑鼻而来。北京西单汉光店传菜岗伙伴怎么上羊三香？端着羊三香，绕远路，围着区域转一圈，高喊三遍：‘汤香、肉香、骨髓香，28号桌的羊三香上桌啦！’还有门店，先请客人免费品尝，也不强推，您觉得好就来一份，‘三香引来众人尝’。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 北京通州长楹店店长三德子，提高顾客满意度有技巧。寒冬腊月，5分钟给顾客加一次热水。5分钟巡台催凉菜，给顾客加一次热水，画一笔正字；10分钟巡台催热菜，再换一次热水，画第二笔正字……极致顾客体验都是设计出来的。</td>
+</tr>
+<tr>
+<td>◆ ·第七章·成就“成就人的人”</td>
+</tr>
+<tr>
+<td>&gt;&gt; 西贝的产品不是菜，是人！我是拿每一个员工当产品思考的，每个人来到西贝之前什么样，来到西贝之后变成什么样，西贝就是要把每个原本普通的产品塑造成精品。</td>
+</tr>
+<tr>
+<td>&gt;&gt; 领导力大师沃伦·本尼斯的话：“某种程度上，领导力就像美，你很难定义它，但当你看到它时，你就知道，那就是美。”</td>
+</tr>
+<tr>
+<td>◆ 下篇 贾国龙如何自我激励</td>
+</tr>
+<tr>
+<td>&gt;&gt; 在大机会时代，永远不要机会主义。也是一种自我激励：天下事就是这样，什么都想要的人，往往最后什么都要不到，所以，下决心不要，下决心就干一件事！</td>
+</tr>
+<tr>
+<td>&gt;&gt; 差异化是第一位的，卖就卖自己最熟悉、最擅长的东西——就卖羊肉、莜面，彻底放弃海鲜！</td>
+</tr>
+<tr>
+<td>&gt;&gt; 杰出的领导者都是激励大师，但首先必须是一位自我激励大师，通过真干、真学，不断拉高自己内心的使命感、危机感和成就欲。</td>
+</tr>
+</tbody></table>
+<h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><h2 id="燃烧女子的肖像"><a href="#燃烧女子的肖像" class="headerlink" title="燃烧女子的肖像"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/30257175/">燃烧女子的肖像</a></h2><p>电影拍的很细腻，很美，没有太多的配乐和灯光的营造，仅仅是眼神之中凝视的传递同言语一样有力量，有思想，最后三分钟的音乐响起，鸡皮疙瘩一阵接着一阵的。</p>
+<h2 id="请以你的名字呼唤我"><a href="#请以你的名字呼唤我" class="headerlink" title="请以你的名字呼唤我"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/26799731/">请以你的名字呼唤我</a></h2><p>夏日的躁动，少年朦胧的心，暗自悸动的欣喜，都构成了一种美感。</p>
+<h2 id="小妇人"><a href="#小妇人" class="headerlink" title="小妇人"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/26348103/">小妇人</a></h2><p>电影很一般，讲述了四个姑娘各自成长过程中，实现自我追求不断成长的过程，唯一惊喜的就是电影的时间线是切割的，以前和现在是糅合的，人物之间的关系和纠葛像一幅画卷一样慢慢展开的。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" rel="tag"># 一周一纪</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/22/BT%20Tracker%20List/" rel="prev" title="BT Tracker List">
+      <i class="fa fa-chevron-left"></i> BT Tracker List
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/22/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%202%20%E6%9C%9F/" rel="next" title="「一周一纪」第 2 期">
+      「一周一纪」第 2 期 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Therapy-that-sticks"><span class="nav-number">1.1.</span> <span class="nav-text">Therapy that sticks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Returning-Once-More-to-a-%E2%80%9CLittle-House-in-the-Big-Woods"><span class="nav-number">1.2.</span> <span class="nav-text">Returning Once More to a “Little House in the Big Woods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rural-gay-Americans-have-more-children"><span class="nav-number">1.3.</span> <span class="nav-text">Rural, gay Americans have more children</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#China%E2%80%99s-Struggles-with-Hospice-Care"><span class="nav-number">1.4.</span> <span class="nav-text">China’s Struggles with Hospice Care</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-art-galleries-are-adapting-to-the-lockdown"><span class="nav-number">1.5.</span> <span class="nav-text">How art galleries are adapting to the lockdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-9-Months-on-the-Road-With-Fan-Bingbing-China%E2%80%99s-Biggest-Movie-Star"><span class="nav-number">1.6.</span> <span class="nav-text">My 9 Months on the Road With Fan Bingbing, China’s Biggest Movie Star</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Is-marriage-over"><span class="nav-number">1.7.</span> <span class="nav-text">Is marriage over?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-Alan-Jope-runs-Unilever-from-his-study"><span class="nav-number">1.8.</span> <span class="nav-text">How Alan Jope runs Unilever from his study</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-high-will-unemployment-in-America-go"><span class="nav-number">1.9.</span> <span class="nav-text">How high will unemployment in America go?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-dancing-helps-me-think-and-thinking-helps-me-dance"><span class="nav-number">1.10.</span> <span class="nav-text">How dancing helps me think, and thinking helps me dance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#97-Actions-You-Should-Take-To-Become-THE-Person-Companies-Want-To-Hire"><span class="nav-number">1.11.</span> <span class="nav-text">97 Actions You Should Take To Become THE Person Companies Want To Hire</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-Are-Destroying-Your-Life-with-These-Lies"><span class="nav-number">1.12.</span> <span class="nav-text">You Are Destroying Your Life with These Lies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-will-humans-by-nature-social-animals-fare-when-isolated"><span class="nav-number">1.13.</span> <span class="nav-text">How will humans, by nature social animals, fare when isolated?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%92%AD%E5%AE%A2"><span class="nav-number">2.</span> <span class="nav-text">播客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89%EF%BD%9C%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E6%AD%A5%E6%88%92%E6%8E%89%E4%BF%A1%E6%81%AF%E7%84%A6%E8%99%91%E7%9A%84"><span class="nav-number">2.1.</span> <span class="nav-text">数字极简主义｜我是如何一步步戒掉信息焦虑的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E9%B2%9C%E4%B9%8B%E7%8E%8B%E2%80%94%E2%80%94%E6%B0%B8%E8%BE%89%E8%B6%85%E5%B8%82"><span class="nav-number">2.2.</span> <span class="nav-text">生鲜之王——永辉超市</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E5%81%9A%E8%AE%A3%E9%97%BB%E8%AE%B0%E8%80%85%E7%9A%84%E6%97%A5%E5%AD%90"><span class="nav-number">2.3.</span> <span class="nav-text">我做讣闻记者的日子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E7%9C%8B%E6%BD%AE%E6%B5%81%E5%90%88%E4%BC%99%E4%BA%BA%E4%BA%86%EF%BC%8C%E6%97%A5%E6%9C%AC%E6%BD%AE%E6%B5%81%E6%A1%88%E5%86%85%E4%BA%BA%E5%B8%A6%E4%BD%A0%E8%B5%B0%E5%85%A5%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8E%9F%E5%AE%BF%E8%A1%97%E5%A4%B4"><span class="nav-number">2.4.</span> <span class="nav-text">别看潮流合伙人了，日本潮流案内人带你走入真正的原宿街头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cedrick%EF%BC%9A%E6%88%91%E4%BB%AC%E9%87%8D%E9%80%A2%E5%9C%A8%E7%81%BF%E7%83%82%E7%9A%84%E5%AD%A3%E8%8A%82"><span class="nav-number">2.5.</span> <span class="nav-text">Cedrick：我们重逢在灿烂的季节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E7%94%B5%E5%95%86%E7%9B%B4%E6%92%AD%E7%BD%91%E7%BA%A2%EF%BC%9F"><span class="nav-number">2.6.</span> <span class="nav-text">如何成为一名电商直播网红？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E8%AE%B0%E8%80%85%E8%BA%AB%E4%BB%BD"><span class="nav-number">2.7.</span> <span class="nav-text">我们无处安放的记者身份</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%B1%8D"><span class="nav-number">3.</span> <span class="nav-text">书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9E%E5%86%9B%E4%BA%A7%E5%93%81%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="nav-number">3.1.</span> <span class="nav-text">俞军产品方法论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A5%BF%E8%B4%9D%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E6%80%BB%E7%88%B1%E7%AC%91"><span class="nav-number">3.2.</span> <span class="nav-text">西贝的服务员为什么总爱笑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%B1%E8%A7%86"><span class="nav-number">4.</span> <span class="nav-text">影视</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%87%83%E7%83%A7%E5%A5%B3%E5%AD%90%E7%9A%84%E8%82%96%E5%83%8F"><span class="nav-number">4.1.</span> <span class="nav-text">燃烧女子的肖像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B7%E4%BB%A5%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E5%91%BC%E5%94%A4%E6%88%91"><span class="nav-number">4.2.</span> <span class="nav-text">请以你的名字呼唤我</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E5%A6%87%E4%BA%BA"><span class="nav-number">4.3.</span> <span class="nav-text">小妇人</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

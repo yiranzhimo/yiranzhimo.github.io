@@ -1,23 +1,473 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是「一周一纪」第 7 期。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一周一纪」第 7 期">
+<meta property="og:url" content="https://zhigengniao.club/2020/05/17/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%207%20%E6%9C%9F/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是「一周一纪」第 7 期。">
+<meta property="og:locale">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%89%E5%AD%A3.jpg">
+<meta property="article:published_time" content="2020-05-17T01:55:37.000Z">
+<meta property="article:modified_time" content="2020-05-30T07:31:37.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="一周一纪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%89%E5%AD%A3.jpg">
+
+<link rel="canonical" href="https://zhigengniao.club/2020/05/17/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%207%20%E6%9C%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>「一周一纪」第 7 期 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2020/05/17/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%207%20%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「一周一纪」第 7 期
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-17 09:55:37" itemprop="dateCreated datePublished" datetime="2020-05-17T09:55:37+08:00">2020-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-30 15:31:37" itemprop="dateModified" datetime="2020-05-30T15:31:37+08:00">2020-05-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" itemprop="url" rel="index"><span itemprop="name">一周一纪</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是「一周一纪」第 7 期。</p>
+<a id="more"></a>
+<p>Date: 2020.05.11–2020.05.17</p>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="家用游戏机的历史：世嘉、任天堂和-PlayStation-的故事"><a href="#家用游戏机的历史：世嘉、任天堂和-PlayStation-的故事" class="headerlink" title="家用游戏机的历史：世嘉、任天堂和 PlayStation 的故事"></a><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2020/04/game-console-history.html">家用游戏机的历史：世嘉、任天堂和 PlayStation 的故事</a></h2><h2 id="RSS二十年"><a href="#RSS二十年" class="headerlink" title="RSS二十年"></a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI1OTAxMDY5Nw==&mid=2657350238&idx=1&sn=f3c698048e2dcdeb50233a44178b9de1&chksm=f1e82bb8c69fa2ae8c18d3908a772880e9e5b22b5eea978ee2459e38ea64e87502468a7cea3f&mpshare=1&scene=1&srcid=&sharer_sharetime=1584609908598&sharer_shareid=a56587fa0b31f9e20d84d6901253d4ae%23rd">RSS二十年</a></h2><h2 id="解决-90-8-的下载问题，剩下-2-看缘分"><a href="#解决-90-8-的下载问题，剩下-2-看缘分" class="headerlink" title="解决 90% + 8% 的下载问题，剩下 2% 看缘分"></a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dvTvWIwg5HeSo0noftX38w">解决 90% + 8% 的下载问题，剩下 2% 看缘分</a></h2><h2 id="爷爷的自传连载（1）南流江边六十年"><a href="#爷爷的自传连载（1）南流江边六十年" class="headerlink" title="爷爷的自传连载（1）南流江边六十年"></a><a target="_blank" rel="noopener" href="https://matters.news/@yuzu/%E7%88%B7%E7%88%B7%E7%9A%84%E8%87%AA%E4%BC%A0%E8%BF%9E%E8%BD%BD-1-%E5%8D%97%E6%B5%81%E6%B1%9F%E8%BE%B9%E5%85%AD%E5%8D%81%E5%B9%B4-bafyreiemuy42msuipjwgysstqlxkpdm6ark3wrxdjamq3lvgycel75ds3u?tg_rhash=6382d3f855b181">爷爷的自传连载（1）南流江边六十年</a></h2><h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><h2 id="乌合之众"><a href="#乌合之众" class="headerlink" title="乌合之众"></a><a target="_blank" rel="noopener" href="https://book.douban.com/subject/30457109/">乌合之众</a></h2><center>
+![](https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97.jpg)
+<font  size=4>《乌合之众：群体心理研究》</font>
+<font color='#6e6e6e' size=2>作者：[法]古斯塔夫&middot;勒庞</font>
+<font color='#6e6e6e' size=2>出版社：中国友谊出版公司</font>
+<font color='#6e6e6e' size=2>出版日期：2019-1-1</font>
+<font color='#6e6e6e' size=2>ISBN：9787505745681</font>
+</center>
+
+<hr>
+<p>🎯 共 10 条书摘</p>
+<p> <strong>第 1 条：</strong></p>
+<blockquote>
+<p>在各个民族的日常生活中,历年来,有组织的群体所起的作用是至关重要的,但是这种作用现在却表现得最为重要。目前这个时代,所有特征中重要的一点是,个人有意识的行为,会逐渐被群体无意识行为取代。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：1 | 2020-04-26 20:16:01</font> </p>
+<p> <strong>第 2 条：</strong></p>
+<blockquote>
+<p>研究发现,一个心理群体所表现出来的最令人吃惊的特征主要如下:构成这个群体的个人有很多,但不管是谁,不管他们的生活方式、职业选择、智力水平以及性格特点是相同还是完全不同,但有一个事实是他们变成了一个群体,相应地就会产生一种集体心理,这种集体心理使得他们的感情和思想行为变得同自己单独个人时有很大的不同。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：18 | 2020-04-26 20:47:46</font> </p>
+<p> <strong>第 3 条：</strong></p>
+<blockquote>
+<p>处于群体中的个人,和孤立的同一个人,不但在行动上有着本质的区别,就连他的独立性完全丧失之前,他的感情、他的思想,就已经发生了深刻的变化。这种变化可以让一个懦夫变成英雄豪杰,也可以让一个老实憨厚的人变成罪犯,还可以让一个怀疑论者变成忠实的信徒,甚至可以让一个吝啬的守财奴变成挥霍无度的公子。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：24 | 2020-04-26 20:53:09</font> </p>
+<p> <strong>第 4 条：</strong></p>
+<blockquote>
+<p>这种教育制度的出现可以说是非常危险的,有一个最基本的事实,那就是这种制度本身是以一种具有本质错误的心理学观点为基础。它认为,智力的提高主要是靠一心学好教科书来实现的正因为要采用这种观点,就不得不尽全力强化各种手册中的知识点。从小学接触教育直到大学毕业,一个个年轻人除了死记硬背教科书以外,对于个人的主动性和判断力用之甚少,很难派上用场。这就使得受教育对他们的唯一意义只有背书以及服从</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：93 | 2020-04-28 19:59:05</font> </p>
+<p> <strong>第 5 条：</strong></p>
+<blockquote>
+<p>教育有三个阶段,我们分为儿童期、少年期和青年期,如果从学历文凭的角度看这个问题,那么坐在教室里努力学习教科书、背理论的时间,简直就是大长了,而且他们还承受着巨大的负担。而且仅仅从学历文凭这个角度看,采取的教育方式也是非常错误失败的,这种教育方式是与社会对立的,是违反自然的制度,是不可行的。这种教育制度过多地延长了年轻人的受教育时间,同时学校还采用了很多错误的制度,比如寄宿制、填鸭式教育人为强制的训练,年轻学生的功课负担过重,而且这种教学不考虑之后的时代发展,不考虑年轻人毕业后的年龄,以及他们可选择的职业,也不考虑年轻人将要投身生活的世界,不考虑我们最终是要生活在这个世界的不考虑我们在融入这个社会之前必须先学会适应这个社会,也不考虑我们自身在社会中必须保护自己、必须斗争也不考虑我们在社会中为了站稳脚跟,我们必须有充足的装备和坚强的意志。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：101 | 2020-04-28 20:03:04</font> </p>
+<p> <strong>第 6 条：</strong></p>
+<blockquote>
+<p>如果群体中发生过政治动荡或者信仰的变化时,他们会对一些词语唤起的形象产生厌恶的情感。这个时候,对于一个真正的政治家就是一种考验,他们的当务之急一定是尽快变换说法,但前提是不能伤害事物本身,因为事物是和传统结构紧密联系在一起而无法改变的。托克维尔是一个很聪明的人,他在很久以前便说过,执政府和帝国所做的具体工作可以概括为,使用新的名称将过去存在的制度进行新的包装,简言之,就是使用新名称代替一些能够让群众想起厌恶或者不利形象的名称,新名称所具有的新鲜感可以防止群众产生这种不好的联想。我们来举一些简单的例子,比如将“地租”变成了“土地税”,将“盐赋”更改为“盐税”,将“徭役”改称为“间接摊派”,商号以及行会所缴纳的税款变成了所谓的执照费用等。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：109 | 2020-05-11 18:31:35</font> </p>
+<p> <strong>第 7 条：</strong></p>
+<blockquote>
+<p>我们很容易辨认一种信念开始衰亡的时刻,那个时刻便是信念的价值开始受到质疑。所有的普遍的信念,都是虚构的,它能够生存的唯一条件,就是不要去审查它。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：148 | 2020-05-12 12:21:30</font> </p>
+<p> <strong>第 8 条：</strong></p>
+<blockquote>
+<p>也幸亏存在着普谝的信念,每个时代的人都在一个似的环境中长大,在这个环境中,有着相似的传统、意见和惯,这些人是无法摆脱这些东西的束缚的。人的行为,首先支配它们的是信念,同时由这些信念形成的习惯也会支配它们。我们生活中最细微的行动就会由这些信念调整,即使最具独立精神的人,也无法摆脱这些信念的影响。唯一的、真正的暴政,正是那些支配着人们头脑的暴政,而且在不知不觉间就已经支配了,因为我们根本就没有办法同这些暴政对抗。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：150 | 2020-05-12 12:23:37</font> </p>
+<p> <strong>第 9 条：</strong></p>
+<blockquote>
+<p>第一,之前的信仰已经逐渐没有了影响力,所以它们也不像过去那样形成短暂的意见。因为普遍信仰逐渐走向衰落,从而让那些无历史也没有未来的暂时意见有了发挥的场所。第二,群众的势力越发强大,越来越没有力量制衡这种势力了。群众观念多变性这一特点,就会毫无保留地表现出来。第三,不断发展的报业持续不断地将对立的意见带给群众,每一种意见所产生的暗示作用,立刻就会被对立意见的暗示作用破坏。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：154 | 2020-05-12 12:25:54</font> </p>
+<p> <strong>第 10 条：</strong></p>
+<blockquote>
+<p>一个民族的生命循环,就是在追求理想中,从野蛮文明然后,理想没有了优势,便会走向衰落,然后死亡。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：223 | 2020-05-12 12:42:39</font> </p>
+<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><h2 id="【中国商业史01】欠债不是1-5亿而是20亿，王思聪濒临破产其实另有隐情…"><a href="#【中国商业史01】欠债不是1-5亿而是20亿，王思聪濒临破产其实另有隐情…" class="headerlink" title="【中国商业史01】欠债不是1.5亿而是20亿，王思聪濒临破产其实另有隐情…"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11J411i7EW?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589475919701">【中国商业史01】欠债不是1.5亿而是20亿，王思聪濒临破产其实另有隐情…</a></h2><h2 id="【中国商业史04】乐视帝国崩塌记"><a href="#【中国商业史04】乐视帝国崩塌记" class="headerlink" title="【中国商业史04】乐视帝国崩塌记"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15J411L7vd?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589474835541">【中国商业史04】乐视帝国崩塌记</a></h2><h2 id="奈飞只会烧钱拍片？"><a href="#奈飞只会烧钱拍片？" class="headerlink" title="奈飞只会烧钱拍片？"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SK41157SP?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589299142685">奈飞只会烧钱拍片？</a></h2><h2 id="神奇的饮水鸟：只需要一杯水的“永动机”"><a href="#神奇的饮水鸟：只需要一杯水的“永动机”" class="headerlink" title="神奇的饮水鸟：只需要一杯水的“永动机”"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hT4y1u75e?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589299727336">神奇的饮水鸟：只需要一杯水的“永动机”</a></h2><h2 id="【罗翔】最高院对“百香果女孩”案调卷审查"><a href="#【罗翔】最高院对“百香果女孩”案调卷审查" class="headerlink" title="【罗翔】最高院对“百香果女孩”案调卷审查"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13p4y1Q7YB?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589299783369">【罗翔】最高院对“百香果女孩”案调卷审查</a></h2><h2 id="【半佛】想选金融专业发财？建议洗洗睡吧？"><a href="#【半佛】想选金融专业发财？建议洗洗睡吧？" class="headerlink" title="【半佛】想选金融专业发财？建议洗洗睡吧？"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bC4y1H7FJ?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589385559979">【半佛】想选金融专业发财？建议洗洗睡吧？</a></h2><h2 id="【半佛】丰巢调价背后的快递价格战争"><a href="#【半佛】丰巢调价背后的快递价格战争" class="headerlink" title="【半佛】丰巢调价背后的快递价格战争"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1DZ4y1s7x1?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589607272188">【半佛】丰巢调价背后的快递价格战争</a></h2><h2 id="5G能代替老司机开车吗？【DannyWiki小丹尼01】"><a href="#5G能代替老司机开车吗？【DannyWiki小丹尼01】" class="headerlink" title="5G能代替老司机开车吗？【DannyWiki小丹尼01】"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kp4y1Q7Ff?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589386206826">5G能代替老司机开车吗？【DannyWiki小丹尼01】</a></h2><h2 id="新之说：肖战身后，中国造星“拿来主义”的垮掉"><a href="#新之说：肖战身后，中国造星“拿来主义”的垮掉" class="headerlink" title="新之说：肖战身后，中国造星“拿来主义”的垮掉"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mt4y1172S?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589608747520">新之说：肖战身后，中国造星“拿来主义”的垮掉</a></h2><h2 id="【回形针PaperClip】-二维码的秘密"><a href="#【回形针PaperClip】-二维码的秘密" class="headerlink" title="【回形针PaperClip】 二维码的秘密"></a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XW8sgT_D0To">【回形针PaperClip】 二维码的秘密</a></h2><h2 id="Why-Are-You-Alive-–-Life-Energy-amp-ATP"><a href="#Why-Are-You-Alive-–-Life-Energy-amp-ATP" class="headerlink" title="Why Are You Alive – Life, Energy &amp; ATP"></a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=QImCld9YubE&feature=youtu.be">Why Are You Alive – Life, Energy &amp; ATP</a></h2><h2 id="How-to-Figure-Out-What-to-Do-With-Your-Life-7-Helpful-Exercises"><a href="#How-to-Figure-Out-What-to-Do-With-Your-Life-7-Helpful-Exercises" class="headerlink" title="How to Figure Out What to Do With Your Life: 7 Helpful Exercises"></a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=bEq8UF-3yUw&feature=youtu.be">How to Figure Out What to Do With Your Life: 7 Helpful Exercises</a></h2><h2 id="小米为什么难冲高端？【DannyData小丹尼第6集】"><a href="#小米为什么难冲高端？【DannyData小丹尼第6集】" class="headerlink" title="小米为什么难冲高端？【DannyData小丹尼第6集】"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av88490767/">小米为什么难冲高端？【DannyData小丹尼第6集】</a></h2><h2 id="【牛顿】“土鳖”拼多多是如何实现“万亿逆袭”的？"><a href="#【牛顿】“土鳖”拼多多是如何实现“万亿逆袭”的？" class="headerlink" title="【牛顿】“土鳖”拼多多是如何实现“万亿逆袭”的？"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qi4y147WH?share_medium=android&share_source=more&bbid=XY612976F00A72E171F30FEA096209FCF1832&ts=1589679284466">【牛顿】“土鳖”拼多多是如何实现“万亿逆袭”的？</a></h2><h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><h2 id="西部世界第三季"><a href="#西部世界第三季" class="headerlink" title="西部世界第三季"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/30206389/">西部世界第三季</a></h2><div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%89%E5%AD%A3.jpg" width=350 height=500 />
+</div>
+西部世界第三季结束了，这一季的前几集看的特别刺激，但是难以避免的会发现还是会有俗套的情节。但是有一个点，让人颇为触动，Dolores 生存的西部世界和 Caleb 的现实人类世界是有异曲同工之妙的，Dolores 是人工智能机器人，他们是被人类教会如何去感受一切的，而人类也是可以被机器规训的，逐渐走上了机器给你安排的道路——你没有选择的机会。纵观来看，目前的信息人工智能推送也是这样的，它们根据我们的喜好设计好了一切，如果我们被这些信息包裹，那么就会被囚禁在这一串信息流里面，我们没得选择，所以一定能够要破圈——走出舒适圈，尝试新奇的东西，接触新的知识，只有这样人会沿着新的方向前进。
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" rel="tag"># 一周一纪</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/16/Markdown%20%E6%8F%92%E5%85%A5%E9%9F%B3%E9%A2%91/" rel="prev" title="Markdown 插入音频">
+      <i class="fa fa-chevron-left"></i> Markdown 插入音频
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/24/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%208%20%E6%9C%9F/" rel="next" title="「一周一纪」第 8 期">
+      「一周一纪」第 8 期 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B6%E7%94%A8%E6%B8%B8%E6%88%8F%E6%9C%BA%E7%9A%84%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%B8%96%E5%98%89%E3%80%81%E4%BB%BB%E5%A4%A9%E5%A0%82%E5%92%8C-PlayStation-%E7%9A%84%E6%95%85%E4%BA%8B"><span class="nav-number">1.1.</span> <span class="nav-text">家用游戏机的历史：世嘉、任天堂和 PlayStation 的故事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS%E4%BA%8C%E5%8D%81%E5%B9%B4"><span class="nav-number">1.2.</span> <span class="nav-text">RSS二十年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3-90-8-%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98%EF%BC%8C%E5%89%A9%E4%B8%8B-2-%E7%9C%8B%E7%BC%98%E5%88%86"><span class="nav-number">1.3.</span> <span class="nav-text">解决 90% + 8% 的下载问题，剩下 2% 看缘分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B7%E7%88%B7%E7%9A%84%E8%87%AA%E4%BC%A0%E8%BF%9E%E8%BD%BD%EF%BC%881%EF%BC%89%E5%8D%97%E6%B5%81%E6%B1%9F%E8%BE%B9%E5%85%AD%E5%8D%81%E5%B9%B4"><span class="nav-number">1.4.</span> <span class="nav-text">爷爷的自传连载（1）南流江边六十年</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%B1%8D"><span class="nav-number">2.</span> <span class="nav-text">书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97"><span class="nav-number">2.1.</span> <span class="nav-text">乌合之众</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%86%E9%A2%91"><span class="nav-number">3.</span> <span class="nav-text">视频</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E4%B8%AD%E5%9B%BD%E5%95%86%E4%B8%9A%E5%8F%B201%E3%80%91%E6%AC%A0%E5%80%BA%E4%B8%8D%E6%98%AF1-5%E4%BA%BF%E8%80%8C%E6%98%AF20%E4%BA%BF%EF%BC%8C%E7%8E%8B%E6%80%9D%E8%81%AA%E6%BF%92%E4%B8%B4%E7%A0%B4%E4%BA%A7%E5%85%B6%E5%AE%9E%E5%8F%A6%E6%9C%89%E9%9A%90%E6%83%85%E2%80%A6"><span class="nav-number">3.1.</span> <span class="nav-text">【中国商业史01】欠债不是1.5亿而是20亿，王思聪濒临破产其实另有隐情…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E4%B8%AD%E5%9B%BD%E5%95%86%E4%B8%9A%E5%8F%B204%E3%80%91%E4%B9%90%E8%A7%86%E5%B8%9D%E5%9B%BD%E5%B4%A9%E5%A1%8C%E8%AE%B0"><span class="nav-number">3.2.</span> <span class="nav-text">【中国商业史04】乐视帝国崩塌记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%88%E9%A3%9E%E5%8F%AA%E4%BC%9A%E7%83%A7%E9%92%B1%E6%8B%8D%E7%89%87%EF%BC%9F"><span class="nav-number">3.3.</span> <span class="nav-text">奈飞只会烧钱拍片？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E5%A5%87%E7%9A%84%E9%A5%AE%E6%B0%B4%E9%B8%9F%EF%BC%9A%E5%8F%AA%E9%9C%80%E8%A6%81%E4%B8%80%E6%9D%AF%E6%B0%B4%E7%9A%84%E2%80%9C%E6%B0%B8%E5%8A%A8%E6%9C%BA%E2%80%9D"><span class="nav-number">3.4.</span> <span class="nav-text">神奇的饮水鸟：只需要一杯水的“永动机”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E7%BD%97%E7%BF%94%E3%80%91%E6%9C%80%E9%AB%98%E9%99%A2%E5%AF%B9%E2%80%9C%E7%99%BE%E9%A6%99%E6%9E%9C%E5%A5%B3%E5%AD%A9%E2%80%9D%E6%A1%88%E8%B0%83%E5%8D%B7%E5%AE%A1%E6%9F%A5"><span class="nav-number">3.5.</span> <span class="nav-text">【罗翔】最高院对“百香果女孩”案调卷审查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E5%8D%8A%E4%BD%9B%E3%80%91%E6%83%B3%E9%80%89%E9%87%91%E8%9E%8D%E4%B8%93%E4%B8%9A%E5%8F%91%E8%B4%A2%EF%BC%9F%E5%BB%BA%E8%AE%AE%E6%B4%97%E6%B4%97%E7%9D%A1%E5%90%A7%EF%BC%9F"><span class="nav-number">3.6.</span> <span class="nav-text">【半佛】想选金融专业发财？建议洗洗睡吧？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E5%8D%8A%E4%BD%9B%E3%80%91%E4%B8%B0%E5%B7%A2%E8%B0%83%E4%BB%B7%E8%83%8C%E5%90%8E%E7%9A%84%E5%BF%AB%E9%80%92%E4%BB%B7%E6%A0%BC%E6%88%98%E4%BA%89"><span class="nav-number">3.7.</span> <span class="nav-text">【半佛】丰巢调价背后的快递价格战争</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G%E8%83%BD%E4%BB%A3%E6%9B%BF%E8%80%81%E5%8F%B8%E6%9C%BA%E5%BC%80%E8%BD%A6%E5%90%97%EF%BC%9F%E3%80%90DannyWiki%E5%B0%8F%E4%B8%B9%E5%B0%BC01%E3%80%91"><span class="nav-number">3.8.</span> <span class="nav-text">5G能代替老司机开车吗？【DannyWiki小丹尼01】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E4%B9%8B%E8%AF%B4%EF%BC%9A%E8%82%96%E6%88%98%E8%BA%AB%E5%90%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD%E9%80%A0%E6%98%9F%E2%80%9C%E6%8B%BF%E6%9D%A5%E4%B8%BB%E4%B9%89%E2%80%9D%E7%9A%84%E5%9E%AE%E6%8E%89"><span class="nav-number">3.9.</span> <span class="nav-text">新之说：肖战身后，中国造星“拿来主义”的垮掉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E5%9B%9E%E5%BD%A2%E9%92%88PaperClip%E3%80%91-%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E7%A7%98%E5%AF%86"><span class="nav-number">3.10.</span> <span class="nav-text">【回形针PaperClip】 二维码的秘密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Are-You-Alive-%E2%80%93-Life-Energy-amp-ATP"><span class="nav-number">3.11.</span> <span class="nav-text">Why Are You Alive – Life, Energy &amp; ATP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Figure-Out-What-to-Do-With-Your-Life-7-Helpful-Exercises"><span class="nav-number">3.12.</span> <span class="nav-text">How to Figure Out What to Do With Your Life: 7 Helpful Exercises</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%B1%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9A%BE%E5%86%B2%E9%AB%98%E7%AB%AF%EF%BC%9F%E3%80%90DannyData%E5%B0%8F%E4%B8%B9%E5%B0%BC%E7%AC%AC6%E9%9B%86%E3%80%91"><span class="nav-number">3.13.</span> <span class="nav-text">小米为什么难冲高端？【DannyData小丹尼第6集】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E7%89%9B%E9%A1%BF%E3%80%91%E2%80%9C%E5%9C%9F%E9%B3%96%E2%80%9D%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E2%80%9C%E4%B8%87%E4%BA%BF%E9%80%86%E8%A2%AD%E2%80%9D%E7%9A%84%EF%BC%9F"><span class="nav-number">3.14.</span> <span class="nav-text">【牛顿】“土鳖”拼多多是如何实现“万亿逆袭”的？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%B1%E8%A7%86"><span class="nav-number">4.</span> <span class="nav-text">影视</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%89%E5%AD%A3"><span class="nav-number">4.1.</span> <span class="nav-text">西部世界第三季</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

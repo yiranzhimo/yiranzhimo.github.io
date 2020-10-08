@@ -1,23 +1,448 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhigengniao.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文章主要介绍的是「一周一纪」第 4 期。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一周一纪」第 4 期">
+<meta property="og:url" content="https://zhigengniao.club/2020/04/26/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%204%20%E6%9C%9F/index.html">
+<meta property="og:site_name" content="我是一只知更鸟">
+<meta property="og:description" content="文章主要介绍的是「一周一纪」第 4 期。">
+<meta property="og:locale">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28118682.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/The%20Insible%20Man.jpg">
+<meta property="article:published_time" content="2020-04-26T11:49:25.000Z">
+<meta property="article:modified_time" content="2020-05-30T07:31:37.000Z">
+<meta property="article:author" content="知更鸟">
+<meta property="article:tag" content="一周一纪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img3.doubanio.com/view/subject/m/public/s28118682.jpg">
+
+<link rel="canonical" href="https://zhigengniao.club/2020/04/26/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%204%20%E6%9C%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>「一周一纪」第 4 期 | 我是一只知更鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="我是一只知更鸟" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我是一只知更鸟</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://zhigengniao.club/2020/04/26/%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC%204%20%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="知更鸟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一只知更鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「一周一纪」第 4 期
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-26 19:49:25" itemprop="dateCreated datePublished" datetime="2020-04-26T19:49:25+08:00">2020-04-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-30 15:31:37" itemprop="dateModified" datetime="2020-05-30T15:31:37+08:00">2020-05-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" itemprop="url" rel="index"><span itemprop="name">一周一纪</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>文章主要介绍的是「一周一纪」第 4 期。</p>
+<a id="more"></a>
+<p>Date: 2020.04.20–2020.04.26</p>
+<h1 id="播客"><a href="#播客" class="headerlink" title="播客"></a>播客</h1><h2 id="晓年鉴"><a href="#晓年鉴" class="headerlink" title="晓年鉴"></a><a target="_blank" rel="noopener" href="https://www.qingting.fm/channels/271526/">晓年鉴</a></h2><p>花了 5 天左右的时间，终于把 50 期的节目听完了。<br>从 1969 年到 2019 年的个人和年代的故事讲述中，一方面感叹世界如此辽阔，生命如此庞杂，但是每一年发生的大事都从简单的语言的流露出来，又仿佛不在一个世界，另一方面在于高晓松讲述了他个人的历程，可以看到很多年前他的年轻和肆意，直到现在的成熟和平和，时间真的是有魔力的。</p>
+<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><center>
+<img src="https://img3.doubanio.com/view/subject/m/public/s28118682.jpg" width="180" > 
+
+
+<p><font  size=4>《叫魂》</font></br><br></br><br><font color='#6e6e6e' size=2>作者：孔飞力 (Philip A.Kuhn)</font><br></br><br><font color='#6e6e6e' size=2>出版社：生活&middot;读书&middot;新知三联书店 上海三联书店</font><br></br><br><font color='#6e6e6e' size=2>出版日期：2014-6</font><br></br><br><font color='#6e6e6e' size=2>ISBN：9787542643216</font><br></br></p>
+</center>
+
+<hr>
+<p>🎯 共 5 条书摘</p>
+<p> <strong>第 1 条：</strong></p>
+<blockquote>
+<p>我们说,我们不能预见未来。然而,构成未来的种种条件就存在于我们周围。只是,它们似乎都被加上了密码,使我们在没有密码本的情况下难以解读(当这本子终于到了我们手中时,却又已经太迟了)。可是,我们确实可以看到难以为我们解读的种种支离片断,并必须赋予它们某种意义。我们自己当代文化的许多方面,大概也可以被称之为预示性的惊颤,正战战兢兢地为我们所要创造的那个社会提供目前还难以解读的信息。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：3 | 2020-04-17 18:42:09</font> </p>
+<p> <strong>第 2 条：</strong></p>
+<blockquote>
+<p>然而,从官方的观点来看,任何人不受其控制的行动都带有某种危险性。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：55 | 2020-04-17 20:20:00</font> </p>
+<p> <strong>第 3 条：</strong></p>
+<blockquote>
+<p>当画师为他画像时,人到中年的弘历笑得并不由衷一在我看来,甚至还显得有点勉强。也许,这略带凄凉的微笑中含有这样的认识:一宗伟大的事业,往往会因为那些为之服务的人们本身的卑下而变得不再伟大;一个伟大的人,往往难以抗衡多数人的卑下;乐到极点,往往会转而生悲。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：61 | 2020-04-18 12:10:16</font> </p>
+<p> <strong>第 4 条：</strong></p>
+<blockquote>
+<p>一个体面的社会在什么事情上最容易受到攻击?世界上所有的富人和有地位的人,最容易受到那些没有任何东西可以失去的人的攻击。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：155 | 2020-04-21 18:42:51</font> </p>
+<p> <strong>第 5 条：</strong></p>
+<blockquote>
+<p>就官僚本身而言,他们始终受到琐细的规章条例的制约，包括形式、时效、文牍、财政和司法上的限期,以及上司和下属之间的关系。他们若对这些规章条例有任何违反,便会受到弹劾、罚俸、调离或撤职的处分。但是,这些繁琐的规章条例至少也为他们的职责划定了某种边界,从而为他们提供了一定的保护,使他们得以对抗来自上司或君主本人的专制要求。</br></p>
+</blockquote>
+<p><font color='#6e6e6e' size=2> 位置：237 | 2020-04-25 20:08:56</font> </p>
+<h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><h2 id="隐形人"><a href="#隐形人" class="headerlink" title="隐形人"></a><a target="_blank" rel="noopener" href="https://movie.douban.com/subject/2364086/">隐形人</a></h2><div align=center>
+<img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/The%20Insible%20Man.jpg" width=350 height=500/>
+</div>
+影片讲述的就是一个科学家男友控制着他的女朋友，女朋友逃出去以后，他伪造死亡，通过自己设计的一套利用光学的装备实现了隐形，之后继续对他的女朋友实行控制，干扰她的生活，离间她的好友，姑娘也逐渐意识到这个男人没死，之后他杀了她的姐妹，导致她进了监狱，而姑娘最后也绝地反杀，不得不说，反杀看的好爽。
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/" rel="tag"># 一周一纪</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/26/Stoop%20%E6%8E%A5%E7%AE%A1%20Newsletter/" rel="prev" title="Stoop 接管 Newsletter">
+      <i class="fa fa-chevron-left"></i> Stoop 接管 Newsletter
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/27/Redmi%20Airdots%20%E5%8F%8C%E8%80%B3%E4%B8%B2%E8%81%94/" rel="next" title="Redmi Airdots 双耳串联">
+      Redmi Airdots 双耳串联 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%92%AD%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">播客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%93%E5%B9%B4%E9%89%B4"><span class="nav-number">1.1.</span> <span class="nav-text">晓年鉴</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%B1%8D"><span class="nav-number">2.</span> <span class="nav-text">书籍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%B1%E8%A7%86"><span class="nav-number">3.</span> <span class="nav-text">影视</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E5%BD%A2%E4%BA%BA"><span class="nav-number">3.1.</span> <span class="nav-text">隐形人</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">知更鸟</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">72</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">知更鸟</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
