@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-11T09:30:01.270Z</updated>
+  <updated>2020-10-11T09:39:14.090Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 如何卸载 Flash Player</title>
+    <link href="https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player/"/>
+    <id>https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player/</id>
+    <published>2020-10-11T09:39:14.000Z</published>
+    <updated>2020-10-11T09:39:14.090Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 如何卸载 Flash Player。</p><a id="more"></a><h1 id="确定-Mac-版本"><a href="#确定-Mac-版本" class="headerlink" title="确定 Mac 版本"></a>确定 Mac 版本</h1><p>点击桌面左上角的苹果图标 —— 关于本机，就可以看到 Mac 的系统版本</p><h1 id="下载-Mac-卸载程序"><a href="#下载-Mac-卸载程序" class="headerlink" title="下载 Mac 卸载程序"></a>下载 Mac 卸载程序</h1><p>在 MAC 10.4 和更高版本中运行卸载程序<br>Mac OS X 版本 10.6 及更高版本：<a href="https://fpdownload.macromedia.com/get/flashplayer/current/support/uninstall_flash_player_osx.dmg">下载链接</a><br>Mac OS X 版本 10.4 和 10.5：<a href="https://fpdownload.macromedia.com/get/flashplayer/current/support/uninstall_flash_player_osx_10.4.dmg">下载链接</a><br>之后运行程序卸载即可。</p><p>参考来源：<br><a href="https://macreports.com/how-to-uninstall-flash-player-on-mac/">How To Uninstall Flash Player On Mac</a><br><a href="https://helpx.adobe.com/cn/flash-player/kb/uninstall-flash-player-mac-os.html">卸载 Flash Player | Mac OS</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Mac 如何卸载 Flash Player。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+    
+    
+      <category term="Flash Player" scheme="https://yiranzhimo.github.io/tags/Flash-Player/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac 如何删除 Python3</title>

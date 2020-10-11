@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac 如何卸载 Flash Player]]></title>
+    <url>%2F2020%2F10%2F11%2FMac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Mac 如何卸载 Flash Player。 确定 Mac 版本点击桌面左上角的苹果图标 —— 关于本机，就可以看到 Mac 的系统版本 下载 Mac 卸载程序在 MAC 10.4 和更高版本中运行卸载程序Mac OS X 版本 10.6 及更高版本：下载链接Mac OS X 版本 10.4 和 10.5：下载链接之后运行程序卸载即可。 参考来源：How To Uninstall Flash Player On Mac卸载 Flash Player | Mac OS]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Flash Player</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 如何删除 Python3]]></title>
     <url>%2F2020%2F10%2F11%2FMac-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-Python3%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 如何系统降级。 官网安装如果是在官网安装的话，它会安装到应用程序一个 IDLE 和 Python Launcher，Python 会安装在：/Library/Frameworks/Python.framework 卸载步骤： 第一步，卸载框架：sudo rm -rf /Library/Frameworks/Python.framework/Versions/x.x 第二步，删除应用目录：sudo rm -rf &quot;/Applications/Python x.x&quot; 第三步，删除指向 Python 的连接：cd /usr/local/bin/ls -l /usr/local/bin | grep &#39;../Library/Frameworks/Python.framework/Versions/x.x&#39; | awk &#39;&#123;print $9&#125;&#39; | tr -d @ | xargs rm12Homebrew 安装通过 Homebrew 安装，可以直接输入命令：brew install python3卸载命令：brew uninstall python3 参考来源：Homebrew DocumentationMac 系统下安装及卸载 Python 3 的方法]]></content>
