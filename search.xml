@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac 安装配置 MySQL]]></title>
+    <url>%2F2020%2F10%2F11%2FMac-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-MySQL%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Mac 安装配置 MySQL。 安装 MySQL首先在网站下载好 dmg 格式的安装包：下载链接之后按照步骤安装就行，安装好完成以后，在 系统偏好设置 就可以看到 MySQL 了，可以选择 Start MySQL Sever，或者 Stop MySQL Sever。 终端配置 MySQL要在终端使用 MySQL，还需要再配置一下，需要把这个路径：/usr/local/mysql/bin/mysql 加入环境变量。 参考来源：Mac 系统下安装配置 MySQL 的方法MySQL and OS X]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 如何卸载 Flash Player]]></title>
     <url>%2F2020%2F10%2F11%2FMac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 如何卸载 Flash Player。 确定 Mac 版本点击桌面左上角的苹果图标 —— 关于本机，就可以看到 Mac 的系统版本 下载 Mac 卸载程序在 MAC 10.4 和更高版本中运行卸载程序Mac OS X 版本 10.6 及更高版本：下载链接Mac OS X 版本 10.4 和 10.5：下载链接之后运行程序卸载即可。 参考来源：How To Uninstall Flash Player On Mac卸载 Flash Player | Mac OS]]></content>
@@ -75,6 +86,18 @@
       </categories>
       <tags>
         <tag>一周一纪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[UDP 和 TCP]]></title>
+    <url>%2F2020%2F09%2F05%2FUDP%20%E5%92%8C%20TCP%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 UDP 和 TCP。 TCP(Transmission Control Protocol) 传输控制协议，UDP(User Datagram Protocol) 用户数据协议。 参考来源：TCP和UDP的区别Difference between TCP and UDP]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>UDP</tag>
+        <tag>TCP</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-11T09:39:14.090Z</updated>
+  <updated>2020-10-11T12:11:15.630Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac 安装配置 MySQL</title>
+    <link href="https://yiranzhimo.github.io/2020/10/11/Mac-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-MySQL/"/>
+    <id>https://yiranzhimo.github.io/2020/10/11/Mac-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-MySQL/</id>
+    <published>2020-10-11T12:11:15.000Z</published>
+    <updated>2020-10-11T12:11:15.630Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 安装配置 MySQL。</p><a id="more"></a><h1 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h1><p>首先在网站下载好 <strong>dmg</strong> 格式的安装包：<a href="https://dev.mysql.com/downloads/mysql/">下载链接</a><br>之后按照步骤安装就行，安装好完成以后，在 <strong>系统偏好设置</strong> 就可以看到 MySQL 了，可以选择 <strong>Start MySQL Sever</strong>，或者 <strong>Stop MySQL Sever</strong>。</p><h1 id="终端配置-MySQL"><a href="#终端配置-MySQL" class="headerlink" title="终端配置 MySQL"></a>终端配置 MySQL</h1><p>要在终端使用 MySQL，还需要再配置一下，<br>需要把这个路径：<code>/usr/local/mysql/bin/mysql</code> 加入环境变量。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/27960044">Mac 系统下安装配置 MySQL 的方法</a><br><a href="https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/">MySQL and OS X</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Mac 安装配置 MySQL。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+    
+    
+      <category term="MySQL" scheme="https://yiranzhimo.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac 如何卸载 Flash Player</title>
     <link href="https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player/"/>
     <id>https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD-Flash-Player/</id>
     <published>2020-10-11T09:39:14.000Z</published>
-    <updated>2020-10-11T09:39:14.090Z</updated>
+    <updated>2020-10-11T11:41:15.015Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 如何卸载 Flash Player。</p><a id="more"></a><h1 id="确定-Mac-版本"><a href="#确定-Mac-版本" class="headerlink" title="确定 Mac 版本"></a>确定 Mac 版本</h1><p>点击桌面左上角的苹果图标 —— 关于本机，就可以看到 Mac 的系统版本</p><h1 id="下载-Mac-卸载程序"><a href="#下载-Mac-卸载程序" class="headerlink" title="下载 Mac 卸载程序"></a>下载 Mac 卸载程序</h1><p>在 MAC 10.4 和更高版本中运行卸载程序<br>Mac OS X 版本 10.6 及更高版本：<a href="https://fpdownload.macromedia.com/get/flashplayer/current/support/uninstall_flash_player_osx.dmg">下载链接</a><br>Mac OS X 版本 10.4 和 10.5：<a href="https://fpdownload.macromedia.com/get/flashplayer/current/support/uninstall_flash_player_osx_10.4.dmg">下载链接</a><br>之后运行程序卸载即可。</p><p>参考来源：<br><a href="https://macreports.com/how-to-uninstall-flash-player-on-mac/">How To Uninstall Flash Player On Mac</a><br><a href="https://helpx.adobe.com/cn/flash-player/kb/uninstall-flash-player-mac-os.html">卸载 Flash Player | Mac OS</a></p>]]></content>
     
@@ -174,6 +197,31 @@
     
     
       <category term="一周一纪" scheme="https://yiranzhimo.github.io/tags/%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UDP 和 TCP</title>
+    <link href="https://yiranzhimo.github.io/2020/09/05/UDP%20%E5%92%8C%20TCP/"/>
+    <id>https://yiranzhimo.github.io/2020/09/05/UDP%20%E5%92%8C%20TCP/</id>
+    <published>2020-09-05T03:50:18.000Z</published>
+    <updated>2020-10-11T12:28:52.432Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 UDP 和 TCP。</p><a id="more"></a><p>TCP(Transmission Control Protocol) 传输控制协议，UDP(User Datagram Protocol) 用户数据协议。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/24860273">TCP和UDP的区别</a><br><a href="https://www.tutorialspoint.com/difference-between-tcp-and-udp">Difference between TCP and UDP</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 UDP 和 TCP。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="UDP" scheme="https://yiranzhimo.github.io/tags/UDP/"/>
+    
+      <category term="TCP" scheme="https://yiranzhimo.github.io/tags/TCP/"/>
     
   </entry>
   
