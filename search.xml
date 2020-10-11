@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac 如何删除 Python3]]></title>
+    <url>%2F2020%2F10%2F11%2FMac-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-Python3%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Mac 如何系统降级。 官网安装如果是在官网安装的话，它会安装到应用程序一个 IDLE 和 Python Launcher，Python 会安装在：/Library/Frameworks/Python.framework 卸载步骤： 第一步，卸载框架：sudo rm -rf /Library/Frameworks/Python.framework/Versions/x.x 第二步，删除应用目录：sudo rm -rf &quot;/Applications/Python x.x&quot; 第三步，删除指向 Python 的连接：cd /usr/local/bin/ls -l /usr/local/bin | grep &#39;../Library/Frameworks/Python.framework/Versions/x.x&#39; | awk &#39;&#123;print $9&#125;&#39; | tr -d @ | xargs rm12Homebrew 安装通过 Homebrew 安装，可以直接输入命令：brew install python3卸载命令：brew uninstall python3 参考来源：Homebrew DocumentationMac 系统下安装及卸载 Python 3 的方法]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Python3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[「一周一纪」第 26 期]]></title>
     <url>%2F2020%2F10%2F10%2F%E3%80%8C%E4%B8%80%E5%91%A8%E4%B8%80%E7%BA%AA%E3%80%8D%E7%AC%AC-26-%E6%9C%9F%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是「一周一纪」第 26 期。 文章Writing a book: is it worth it?The Pudding’s process to go from idea to data storyHow Notion Uses NotionWhy Figma WinsTracing. Testing. Tweaking. Approaches to data-driven Covid-19 management in China. How Remote Work Could Destroy Silicon ValleyHOW HTTPS WORKS这个系列很好，能够把知识说的清晰明了，脑袋还是更容易理解具象的内容。 The Almanack of Naval Ravikant This book collects and curates Naval’s wisdom from Twitter, Podcasts, and Essays over the past decade. The book mainly covers Building Wealth, Building Judgement, and Choosing Happiness. A look behind Dense Discovery: creating a fully customised weekly newsletter“Michelin Guide” Marketing Content is winner takes all. The top 1% gets 99% of the attention. The collective brain: where does innovation come from?书籍贫穷的本质 🎯 共 3 条书摘 第 1 条： 这并不像看上去那样令人难以置信。单纯的经济理性表明,费用一旦支付或“沉没”,将不会对使用产生任何影响。然而,很多人常常表示,经济理性把这一点搞错了。实际上,存在着一种“心理沉没成本”人们更有可能会利用他们为之支付很多钱的东西。此外,人们可能会根据价格来判断质量:恰恰是由于某物品是廉价的，人们便有可能认为它没有价值。 位置：52 | 2020-09-25 11:00:46 第 2 条： 穷人所陷入的困境与我们其他人的困扰似乎是一样的映乏信息,信念不坚定、拖延,的确,我们并不贫穷,受过良好的教育,见多识广,但我们穷人的差别其实很小,因为我们的认识比我们想象中的要少得多。 位置：62 | 2020-09-25 11:17:02 第 3 条： 一位年轻的教师甚至告诉我们,自己根本无法与“粗俗父母的孩子”进行为了证实这种偏见是否会影响教师对待学生的行为,教师们在一项研究中被要求为一组考试评分。他们并不认识那些学生,但随机选出的半数教师都被告知一个孩子的全名(包括种姓),其余都是匿名的。研究人员发现,平均而言,相对于教师们看不到学生所处阶层的情况,他们在得知学生所处阶层时给予底层学生的分数更低。然而,有意思的是,这样做的并非是来自上层的教师。来自底层的教师实际上更可能给予底层学生更低的分数,他们一定认为这些学生是拿不到好成绩的。 位置：83 | 2020-09-25 11:40:27 播客博物志|盐城寻瑞记随机波动|027 外卖骑手的工作是如何被“狗屎化”的？新气集ThinkAge|10. 高校学生的内卷竞争真的白热化了吗？短片Stag Stag from Dave Webster on Vimeo. 做的真的很棒！ Awkward Awkward from Nata Metlukh on Vimeo. 那些尴尬瞬间。。。 影视美国工厂 纪录片比较的是中美的模式，这里面并没有对错的比较！]]></content>

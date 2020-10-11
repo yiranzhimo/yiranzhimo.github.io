@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-10T13:58:35.822Z</updated>
+  <updated>2020-10-11T09:30:01.270Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 如何删除 Python3</title>
+    <link href="https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-Python3/"/>
+    <id>https://yiranzhimo.github.io/2020/10/11/Mac-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-Python3/</id>
+    <published>2020-10-11T09:27:24.000Z</published>
+    <updated>2020-10-11T09:30:01.270Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 如何系统降级。</p><a id="more"></a><h1 id="官网安装"><a href="#官网安装" class="headerlink" title="官网安装"></a>官网安装</h1><p>如果是在官网安装的话，它会安装到应用程序一个 <strong>IDLE</strong> 和 <strong>Python Launcher</strong>，Python 会安装在：<br><code>/Library/Frameworks/Python.framework </code><br>卸载步骤：</p><ul><li>第一步，卸载框架：<br><code>sudo rm -rf /Library/Frameworks/Python.framework/Versions/x.x</code></li><li>第二步，删除应用目录：<br><code>sudo rm -rf &quot;/Applications/Python x.x&quot;</code></li><li>第三步，删除指向 Python 的连接：<br><code>cd /usr/local/bin/</code><br><code>ls -l /usr/local/bin | grep &#39;../Library/Frameworks/Python.framework/Versions/x.x&#39; | awk &#39;&#123;print $9&#125;&#39; | tr -d @ | xargs rm12</code><h1 id="Homebrew-安装"><a href="#Homebrew-安装" class="headerlink" title="Homebrew 安装"></a>Homebrew 安装</h1>通过 Homebrew 安装，可以直接输入命令：<br><code>brew install python3</code><br>卸载命令：<br><code>brew uninstall python3</code></li></ul><p>参考来源：<br><a href="https://docs.brew.sh/">Homebrew Documentation</a><br><a href="http://16bing.com/2018/06/08/mac-install-uninstall-python3/">Mac 系统下安装及卸载 Python 3 的方法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Mac 如何系统降级。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+    
+    
+      <category term="Python3" scheme="https://yiranzhimo.github.io/tags/Python3/"/>
+    
+  </entry>
   
   <entry>
     <title>「一周一纪」第 26 期</title>
