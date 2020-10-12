@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac Mojave 如何安装 Xcode]]></title>
+    <url>%2F2020%2F10%2F12%2FMac-Mojave-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-Xcode%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Mac Mojave 如何安装 Xcode。 Mac Catalina 降级以后，发现应用商店无法安装对应版本的 Xcode，遂决定找办法解决。在 Xcode 的支持页面可以看到对应的 Mac 版本需要的 Xcode 版本 后续根据自己的 Mac 系统版本，在 下载网站 搜索对应版本下载即可。 参考来源：Xcode 支持]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Xcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Onedrive 如何取消登录账号]]></title>
+    <url>%2F2020%2F10%2F12%2FOnedrive-%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Onedrive 如何取消登录账号。 在 应用程序 找到 OneDrive， 按住 Control 键 单击该应用程序， 选择 显示包内容 &gt; Contents文件夹 &gt; Resources， 找到重置 OneDrive 脚本 ResetOneDriveApp.command，运行即可。 参考来源：Onedrive for Mac如何取消登录或者更换用户]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Onedrive</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 安装配置 MySQL]]></title>
     <url>%2F2020%2F10%2F11%2FMac-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-MySQL%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 安装配置 MySQL。 安装 MySQL首先在网站下载好 dmg 格式的安装包：下载链接之后按照步骤安装就行，安装好完成以后，在 系统偏好设置 就可以看到 MySQL 了，可以选择 Start MySQL Sever，或者 Stop MySQL Sever。 终端配置 MySQL要在终端使用 MySQL，还需要再配置一下，需要把这个路径：/usr/local/mysql/bin/mysql 加入环境变量。 参考来源：Mac 系统下安装配置 MySQL 的方法MySQL and OS X]]></content>
