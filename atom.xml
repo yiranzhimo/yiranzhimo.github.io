@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-12T12:22:27.332Z</updated>
+  <updated>2020-10-17T02:37:35.512Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yiranzhimo.github.io/2020/10/12/Mac-Mojave-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-Xcode/"/>
     <id>https://yiranzhimo.github.io/2020/10/12/Mac-Mojave-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-Xcode/</id>
     <published>2020-10-12T12:22:27.000Z</published>
-    <updated>2020-10-12T12:22:27.332Z</updated>
+    <updated>2020-10-17T02:37:35.512Z</updated>
     
-    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac Mojave 如何安装 Xcode。</p><a id="more"></a><p><em>Mac Catalina</em> 降级以后，发现应用商店无法安装对应版本的 <em>Xcode</em>，遂决定找办法解决。<br>在 <em>Xcode</em> 的支持页面可以看到对应的 <em>Mac</em> 版本需要的 <em>Xcode</em> 版本</p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Xcode%20%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81.png"/><p>后续根据自己的 Mac 系统版本，在 <strong><a href="https://developer.apple.com/download/more/">下载网站</a></strong> 搜索对应版本下载即可。</p><p>参考来源：<br><a href="https://developer.apple.com/cn/support/xcode/">Xcode 支持</a></p>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac Mojave 如何安装 Xcode。</p><a id="more"></a><p><em>Mac Catalina</em> 降级以后，发现应用商店无法安装对应版本的 <em>Xcode</em>，遂决定找办法解决。<br>在 <em>Xcode</em> 的支持页面可以看到对应的 <em>Mac</em> 版本需要的 <em>Xcode</em> 版本</p><div align = center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Xcode%20%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81.png"/></div><p>后续根据自己的 Mac 系统版本，在 <strong><a href="https://developer.apple.com/download/more/">下载网站</a></strong> 搜索对应版本下载即可。</p><p>参考来源：<br><a href="https://developer.apple.com/cn/support/xcode/">Xcode 支持</a></p>]]></content>
     
     <summary type="html">
     
