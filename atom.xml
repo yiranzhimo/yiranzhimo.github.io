@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-18T07:25:05.832Z</updated>
+  <updated>2020-10-18T14:31:13.882Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么放弃使用 Stoop</title>
+    <link href="https://yiranzhimo.github.io/2020/10/18/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BE%E5%BC%83%E4%BD%BF%E7%94%A8-Stoop/"/>
+    <id>https://yiranzhimo.github.io/2020/10/18/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BE%E5%BC%83%E4%BD%BF%E7%94%A8-Stoop/</id>
+    <published>2020-10-18T14:31:13.000Z</published>
+    <updated>2020-10-18T14:31:13.882Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是为什么放弃使用 Stoop。</p><a id="more"></a><p>订阅了大量的 Newsletter，这会出现一个问题，这么多信息，需要集中去处理和消化，因此选择了 Stoop。</p><h1 id="Stoop-是什么？"><a href="#Stoop-是什么？" class="headerlink" title="Stoop 是什么？"></a>Stoop 是什么？</h1><p>Stoop 是一款用于管理 Newsletter 的应用，初次登录的时候会分配一个邮箱，这个邮箱可以用来接收订阅 Newsletter，也可以将我们用来订阅 Newsletter 的邮件转发到这个邮箱。</p><p>我选择的就是通过 iCloud 邮箱订阅了 Newsletter，然后再转发到这个这个邮箱里面。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Stoop.png"/></div># 问题但是这个过程出现了一些问题：首先，在 Stoop 中阅读邮件以后，iCloud 邮件仍然是未阅读状态，导致 iCloud 邮箱大量邮件积累；更糟糕的是，Stoop 很迟钝，即使在有代理的情况下，设置这篇邮件已阅后，邮件仍然出现在未阅读邮件中，使用体验不太好。不如直接在手机上使用 Spark 登录 iCloud 邮箱阅读的体验更好一点，遂放弃了。<p>参考来源：<br><a href="https://stoopinbox.com/">StoopInbox</a><br><a href="https://sspai.com/post/59729">从邮件通讯的流行谈起</a><br><a href="https://sspai.com/post/58813">邮箱被订阅邮件塞满？这 7 种方法帮你解决</a><br><a href="https://sspai.com/post/51859">订阅的邮件太多导致邮箱凌乱不堪？用 Stoop inbox 接管你的 Newsletter | App+1</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是为什么放弃使用 Stoop。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="Stoop" scheme="https://yiranzhimo.github.io/tags/Stoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Office 系列简介</title>
+    <link href="https://yiranzhimo.github.io/2020/10/18/Office-%E7%B3%BB%E5%88%97%E7%AE%80%E4%BB%8B/"/>
+    <id>https://yiranzhimo.github.io/2020/10/18/Office-%E7%B3%BB%E5%88%97%E7%AE%80%E4%BB%8B/</id>
+    <published>2020-10-18T14:09:12.000Z</published>
+    <updated>2020-10-18T14:09:12.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Office 系列简介。</p><a id="more"></a><h1 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h1><p>Microsoft Office 2016（版本代号Office 16）是一个于 2015 年 9 月 22 日正式发行的 Microsoft Office 套装软件，下图列出Office 2016的几种版本，以及它们之间的区别。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Office%202016.png"/></div><h1 id="Office-2019"><a href="#Office-2019" class="headerlink" title="Office 2019"></a>Office 2019</h1><p>Microsoft Office 2019 是 Microsoft Office 的一个版本，为Office 2016的下一版，于 2018 年 9 月 24 日发布。</p><p>Office 2019 一次性购买终生使用，拥有大部分 Office 365 的功能，包括 Word，Excel 和 PowerPoint 经典 2019 版本。</p><h1 id="Microsoft-365"><a href="#Microsoft-365" class="headerlink" title="Microsoft 365"></a>Microsoft 365</h1><p>Microsoft Office 365 以收取订阅月费或年费，用户可获取完整及全套的Office应用程序：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和Access（ Publisher 和 Access 仅支持 PC）。</p><h2 id="Microsoft-365-家庭版"><a href="#Microsoft-365-家庭版" class="headerlink" title="Microsoft 365 家庭版"></a>Microsoft 365 家庭版</h2><ul><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>用户最多 6 人</li><li>Onedrive 空间最多 6 TB，1 TB/人<h2 id="Microsoft-365-个人版"><a href="#Microsoft-365-个人版" class="headerlink" title="Microsoft 365 个人版"></a>Microsoft 365 个人版</h2></li><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>Onedrive 1 TB</li></ul><p>参考来源：<br><a href="https://zh.wikipedia.org/wiki/Microsoft_Office_2016">Microsoft Office 2016</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/get-started-with-office-2019">Office 2019</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/business/compare-all-microsoft-365-business-products">Office 365</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Office 系列简介。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="Office" scheme="https://yiranzhimo.github.io/tags/Office/"/>
+    
+  </entry>
   
   <entry>
     <title>「一周文献」第 1 期</title>
