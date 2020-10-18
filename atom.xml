@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-18T15:05:04.792Z</updated>
+  <updated>2020-10-18T15:07:16.171Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yiranzhimo.github.io/2020/10/18/Hexo-%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%8F%8A%E5%A4%A7%E5%B0%8F/"/>
     <id>https://yiranzhimo.github.io/2020/10/18/Hexo-%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%8F%8A%E5%A4%A7%E5%B0%8F/</id>
     <published>2020-10-18T15:05:04.000Z</published>
-    <updated>2020-10-18T15:05:04.792Z</updated>
+    <updated>2020-10-18T15:07:16.171Z</updated>
     
-    <content type="html"><![CDATA[<p>文章介绍的是 Hexo 如何更改字体及大小。</p><a id="more"></a><h1 id="如何更改字体"><a href="#如何更改字体" class="headerlink" title="如何更改字体"></a>如何更改字体</h1><p>完整的路径：<br><code>/themes/next/_config.yml</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20family.png"/></div><p>在这里就可以设置全局的 <strong>font-family</strong>。</p><h1 id="如何更改字体大小"><a href="#如何更改字体大小" class="headerlink" title="如何更改字体大小"></a>如何更改字体大小</h1><p>完整的路径：<br><code>/themes/next/source/css_variables/base.styl</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Heading%20font%20size.png"/></div><p>图片中，<strong>font-size-headings-base</strong> 是 # 的值的大小，随后每增加一个 # 就会依次递减 <strong>0.125pm</strong></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20size.png"/></div><p>图片中，<strong>font-size-base</strong> 就是正文的大小了。</p><p>参考来源：</p><p><a href="https://www.jianshu.com/p/02fbd409988c">Hexo 你的博客之修改字体大小</a></p>]]></content>
+    <content type="html"><![CDATA[<p>文章介绍的是 Hexo 如何更改字体及大小。</p><a id="more"></a><h1 id="如何更改字体"><a href="#如何更改字体" class="headerlink" title="如何更改字体"></a>如何更改字体</h1><p>完整的路径：<br><code>/themes/next/_config.yml</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20family.png"/></div><p>在这里就可以设置全局的 <strong>font-family</strong>。</p><h1 id="如何更改字体大小"><a href="#如何更改字体大小" class="headerlink" title="如何更改字体大小"></a>如何更改字体大小</h1><p>完整的路径：<br><code>/themes/next/source/css_variables/base.styl</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Heading%20font%20size.png"/></div><p>图片中，<strong>font-size-headings-base</strong> 是 # 的值的大小，随后每增加一个 # 就会依次递减 <strong>0.125pm</strong></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20size.png"/></div><p>图片中，<strong>font-size-base</strong> 就是正文的大小了。</p><p>参考来源：</p><p><a href="https://www.jianshu.com/p/02fbd409988c">Hexo 你的博客之修改字体大小</a><br><a href="https://leay.net/2020/02/14/hexo-next-font/">Hexo Next 主题字体相关配置</a></p>]]></content>
     
     <summary type="html">
     

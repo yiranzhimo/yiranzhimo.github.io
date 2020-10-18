@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo 如何更改字体及大小]]></title>
     <url>%2F2020%2F10%2F18%2FHexo-%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%8F%8A%E5%A4%A7%E5%B0%8F%2F</url>
-    <content type="text"><![CDATA[文章介绍的是 Hexo 如何更改字体及大小。 如何更改字体完整的路径：/themes/next/_config.yml 在这里就可以设置全局的 font-family。 如何更改字体大小完整的路径：/themes/next/source/css_variables/base.styl 图片中，font-size-headings-base 是 # 的值的大小，随后每增加一个 # 就会依次递减 0.125pm 图片中，font-size-base 就是正文的大小了。 参考来源： Hexo 你的博客之修改字体大小]]></content>
+    <content type="text"><![CDATA[文章介绍的是 Hexo 如何更改字体及大小。 如何更改字体完整的路径：/themes/next/_config.yml 在这里就可以设置全局的 font-family。 如何更改字体大小完整的路径：/themes/next/source/css_variables/base.styl 图片中，font-size-headings-base 是 # 的值的大小，随后每增加一个 # 就会依次递减 0.125pm 图片中，font-size-base 就是正文的大小了。 参考来源： Hexo 你的博客之修改字体大小Hexo Next 主题字体相关配置]]></content>
       <categories>
         <category>Blog</category>
       </categories>
