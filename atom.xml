@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-18T14:31:13.882Z</updated>
+  <updated>2020-10-18T15:05:04.792Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo 如何更改字体及大小</title>
+    <link href="https://yiranzhimo.github.io/2020/10/18/Hexo-%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%8F%8A%E5%A4%A7%E5%B0%8F/"/>
+    <id>https://yiranzhimo.github.io/2020/10/18/Hexo-%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%8F%8A%E5%A4%A7%E5%B0%8F/</id>
+    <published>2020-10-18T15:05:04.000Z</published>
+    <updated>2020-10-18T15:05:04.792Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章介绍的是 Hexo 如何更改字体及大小。</p><a id="more"></a><h1 id="如何更改字体"><a href="#如何更改字体" class="headerlink" title="如何更改字体"></a>如何更改字体</h1><p>完整的路径：<br><code>/themes/next/_config.yml</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20family.png"/></div><p>在这里就可以设置全局的 <strong>font-family</strong>。</p><h1 id="如何更改字体大小"><a href="#如何更改字体大小" class="headerlink" title="如何更改字体大小"></a>如何更改字体大小</h1><p>完整的路径：<br><code>/themes/next/source/css_variables/base.styl</code></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Heading%20font%20size.png"/></div><p>图片中，<strong>font-size-headings-base</strong> 是 # 的值的大小，随后每增加一个 # 就会依次递减 <strong>0.125pm</strong></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/font%20size.png"/></div><p>图片中，<strong>font-size-base</strong> 就是正文的大小了。</p><p>参考来源：</p><p><a href="https://www.jianshu.com/p/02fbd409988c">Hexo 你的博客之修改字体大小</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章介绍的是 Hexo 如何更改字体及大小。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Blog" scheme="https://yiranzhimo.github.io/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://yiranzhimo.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为什么放弃使用 Stoop</title>
     <link href="https://yiranzhimo.github.io/2020/10/18/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BE%E5%BC%83%E4%BD%BF%E7%94%A8-Stoop/"/>
     <id>https://yiranzhimo.github.io/2020/10/18/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BE%E5%BC%83%E4%BD%BF%E7%94%A8-Stoop/</id>
     <published>2020-10-18T14:31:13.000Z</published>
-    <updated>2020-10-18T14:31:13.882Z</updated>
+    <updated>2020-10-18T14:36:20.794Z</updated>
     
-    <content type="html"><![CDATA[<p>文章主要介绍的是为什么放弃使用 Stoop。</p><a id="more"></a><p>订阅了大量的 Newsletter，这会出现一个问题，这么多信息，需要集中去处理和消化，因此选择了 Stoop。</p><h1 id="Stoop-是什么？"><a href="#Stoop-是什么？" class="headerlink" title="Stoop 是什么？"></a>Stoop 是什么？</h1><p>Stoop 是一款用于管理 Newsletter 的应用，初次登录的时候会分配一个邮箱，这个邮箱可以用来接收订阅 Newsletter，也可以将我们用来订阅 Newsletter 的邮件转发到这个邮箱。</p><p>我选择的就是通过 iCloud 邮箱订阅了 Newsletter，然后再转发到这个这个邮箱里面。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Stoop.png"/></div># 问题但是这个过程出现了一些问题：首先，在 Stoop 中阅读邮件以后，iCloud 邮件仍然是未阅读状态，导致 iCloud 邮箱大量邮件积累；更糟糕的是，Stoop 很迟钝，即使在有代理的情况下，设置这篇邮件已阅后，邮件仍然出现在未阅读邮件中，使用体验不太好。不如直接在手机上使用 Spark 登录 iCloud 邮箱阅读的体验更好一点，遂放弃了。<p>参考来源：<br><a href="https://stoopinbox.com/">StoopInbox</a><br><a href="https://sspai.com/post/59729">从邮件通讯的流行谈起</a><br><a href="https://sspai.com/post/58813">邮箱被订阅邮件塞满？这 7 种方法帮你解决</a><br><a href="https://sspai.com/post/51859">订阅的邮件太多导致邮箱凌乱不堪？用 Stoop inbox 接管你的 Newsletter | App+1</a></p>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是为什么放弃使用 Stoop。</p><a id="more"></a><p>订阅了大量的 Newsletter，这会出现一个问题，这么多信息，需要集中去处理和消化，因此选择了 Stoop。</p><h1 id="Stoop-是什么？"><a href="#Stoop-是什么？" class="headerlink" title="Stoop 是什么？"></a>Stoop 是什么？</h1><p>Stoop 是一款用于管理 Newsletter 的应用，初次登录的时候会分配一个邮箱，这个邮箱可以用来接收订阅 Newsletter，也可以将我们用来订阅 Newsletter 的邮件转发到这个邮箱。</p><p>我选择的就是通过 iCloud 邮箱订阅了 Newsletter，然后再转发到这个这个邮箱里面。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Stoop.png"/></div><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>但是这个过程出现了一些问题：<br>首先，在 Stoop 中阅读邮件以后，iCloud 邮件仍然是未阅读状态，导致 iCloud 邮箱大量邮件积累；<br>更糟糕的是，Stoop 很迟钝，即使在有代理的情况下，设置这篇邮件已阅后，邮件仍然出现在未阅读邮件中，使用体验不太好。<br>不如直接在手机上使用 Spark 登录 iCloud 邮箱阅读的体验更好一点，遂放弃了。</p><p>参考来源：<br><a href="https://stoopinbox.com/">StoopInbox</a><br><a href="https://sspai.com/post/59729">从邮件通讯的流行谈起</a><br><a href="https://sspai.com/post/58813">邮箱被订阅邮件塞满？这 7 种方法帮你解决</a><br><a href="https://sspai.com/post/51859">订阅的邮件太多导致邮箱凌乱不堪？用 Stoop inbox 接管你的 Newsletter | App+1</a></p>]]></content>
     
     <summary type="html">
     
@@ -44,9 +67,9 @@
     <link href="https://yiranzhimo.github.io/2020/10/18/Office-%E7%B3%BB%E5%88%97%E7%AE%80%E4%BB%8B/"/>
     <id>https://yiranzhimo.github.io/2020/10/18/Office-%E7%B3%BB%E5%88%97%E7%AE%80%E4%BB%8B/</id>
     <published>2020-10-18T14:09:12.000Z</published>
-    <updated>2020-10-18T14:09:12.263Z</updated>
+    <updated>2020-10-18T14:37:41.914Z</updated>
     
-    <content type="html"><![CDATA[<p>文章主要介绍的是 Office 系列简介。</p><a id="more"></a><h1 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h1><p>Microsoft Office 2016（版本代号Office 16）是一个于 2015 年 9 月 22 日正式发行的 Microsoft Office 套装软件，下图列出Office 2016的几种版本，以及它们之间的区别。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Office%202016.png"/></div><h1 id="Office-2019"><a href="#Office-2019" class="headerlink" title="Office 2019"></a>Office 2019</h1><p>Microsoft Office 2019 是 Microsoft Office 的一个版本，为Office 2016的下一版，于 2018 年 9 月 24 日发布。</p><p>Office 2019 一次性购买终生使用，拥有大部分 Office 365 的功能，包括 Word，Excel 和 PowerPoint 经典 2019 版本。</p><h1 id="Microsoft-365"><a href="#Microsoft-365" class="headerlink" title="Microsoft 365"></a>Microsoft 365</h1><p>Microsoft Office 365 以收取订阅月费或年费，用户可获取完整及全套的Office应用程序：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和Access（ Publisher 和 Access 仅支持 PC）。</p><h2 id="Microsoft-365-家庭版"><a href="#Microsoft-365-家庭版" class="headerlink" title="Microsoft 365 家庭版"></a>Microsoft 365 家庭版</h2><ul><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>用户最多 6 人</li><li>Onedrive 空间最多 6 TB，1 TB/人<h2 id="Microsoft-365-个人版"><a href="#Microsoft-365-个人版" class="headerlink" title="Microsoft 365 个人版"></a>Microsoft 365 个人版</h2></li><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>Onedrive 1 TB</li></ul><p>参考来源：<br><a href="https://zh.wikipedia.org/wiki/Microsoft_Office_2016">Microsoft Office 2016</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/get-started-with-office-2019">Office 2019</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/business/compare-all-microsoft-365-business-products">Office 365</a></p>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Office 系列简介。</p><a id="more"></a><h1 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h1><p>Microsoft Office 2016（版本代号Office 16）是一个于 2015 年 9 月 22 日正式发行的 Microsoft Office 套装软件，下图列出Office 2016的几种版本，以及它们之间的区别。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Office%202016.png"/></div><h1 id="Office-2019"><a href="#Office-2019" class="headerlink" title="Office 2019"></a>Office 2019</h1><p>Microsoft Office 2019 是 Microsoft Office 的一个版本，为Office 2016的下一版，于 2018 年 9 月 24 日发布。</p><p>Office 2019 一次性购买终生使用，拥有大部分 Office 365 的功能，包括 Word，Excel 和 PowerPoint 经典 2019 版本。</p><h1 id="Microsoft-365"><a href="#Microsoft-365" class="headerlink" title="Microsoft 365"></a>Microsoft 365</h1><p>Microsoft Office 365 以收取订阅月费或年费，用户可获取完整及全套的Office应用程序：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和Access（ Publisher 和 Access 仅支持 PC）。</p><h2 id="Microsoft-365-家庭版"><a href="#Microsoft-365-家庭版" class="headerlink" title="Microsoft 365 家庭版"></a>Microsoft 365 家庭版</h2><ul><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>用户最多 6 人</li><li>Onedrive 空间最多 6 TB，1 TB/人</li></ul><h2 id="Microsoft-365-个人版"><a href="#Microsoft-365-个人版" class="headerlink" title="Microsoft 365 个人版"></a>Microsoft 365 个人版</h2><ul><li>¥ 498.00/年</li><li>Word + Excel + PowerPoint + OneNote + Outlook + Access + Publisher + Onedrive</li><li>Onedrive 1 TB</li></ul><p>参考来源：<br><a href="https://zh.wikipedia.org/wiki/Microsoft_Office_2016">Microsoft Office 2016</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/get-started-with-office-2019">Office 2019</a><br><a href="https://www.microsoft.com/zh-cn/microsoft-365/business/compare-all-microsoft-365-business-products">Office 365</a></p>]]></content>
     
     <summary type="html">
     
@@ -59,29 +82,6 @@
     
     
       <category term="Office" scheme="https://yiranzhimo.github.io/tags/Office/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「一周文献」第 1 期</title>
-    <link href="https://yiranzhimo.github.io/2020/10/18/%E3%80%8C%E4%B8%80%E5%91%A8%E6%96%87%E7%8C%AE%E3%80%8D%E7%AC%AC-1-%E6%9C%9F-1/"/>
-    <id>https://yiranzhimo.github.io/2020/10/18/%E3%80%8C%E4%B8%80%E5%91%A8%E6%96%87%E7%8C%AE%E3%80%8D%E7%AC%AC-1-%E6%9C%9F-1/</id>
-    <published>2020-10-18T07:25:05.000Z</published>
-    <updated>2020-10-18T07:25:05.832Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章主要介绍的是「一周文献」第 1 期。</p><a id="more"></a><h1 id="Comparative-genomics-reveals-convergent-evolution-between-the-bamboo-eating-giant-and-red-pandas"><a href="#Comparative-genomics-reveals-convergent-evolution-between-the-bamboo-eating-giant-and-red-pandas" class="headerlink" title="Comparative genomics reveals convergent evolution between the bamboo-eating giant and red pandas"></a>Comparative genomics reveals convergent evolution between the bamboo-eating giant and red pandas</h1><p><a href="https://www.pnas.org/content/114/5/1081">原文链接</a> </p><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在亲缘关系较远相关类群的表型趋同进化发现对于相似环境选择压力的适应性，同时这种趋同进化也有可能是因为基因组的逐渐趋同导致的。大熊猫和喜马拉雅小熊猫属于食肉目中的不同科，但是都进化出了特定的食竹食性和适应性的假拇指，代表了趋同进化的古典模型。但是，这些形态学和生理学上的基因组变化仍然是未知的。通过将喜马拉雅小熊猫的基因组从头测序和添加数据以改善大熊猫的基因组装配，我们识别到了了趋同进化的基因信号。上肢生长基因 <em>DYNC2H1</em> 和 <em>PCNT</em> 都经历了适应性的趋同，而且可能是对于假拇指生长变化的重要候选基因。随着对食竹食性的进化反应，适应性的趋同出现在基因中，包括对竹子营养成分的消化和利用，比如重要的氨基酸，脂肪酸和维他命等。相似的，感受鲜味味觉的受体基因 <em>TAS1R1</em> 在两种熊猫中成为了假基因。这些发现对承担表型趋同和特异食竹食性的适应性的基因组的趋同机制提供了新的视角。</p><h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><h3 id="假拇指的发展变化"><a href="#假拇指的发展变化" class="headerlink" title="假拇指的发展变化"></a>假拇指的发展变化</h3><p>通过构建包括北极熊，雪貂，狗，老虎，人类和老鼠全基因组的系统进化树，比较两类熊猫的基因信号的差异。大熊猫和北极熊一同属于熊科，而喜马拉雅小熊猫和雪貂同属于鼬科。（见下图）</p><div align=center><img src="https://www.pnas.org/content/pnas/114/5/1081/F1.large.jpg?width=800&height=600&carousel=1" height="215" width="640"></div><div style="text-align:center;">图1. A.八物种的系统进化树；B.假拇指，喜马拉雅小熊猫（上），大熊猫（下）</div><p>根据在严格的分子时钟下进化的 133 个基因，通过三个校准点得出大熊猫和喜马拉雅小熊猫的分化时间在 47.5 百万年以前。（95％置信区间，39.5〜54.4 百万年前）</p><p><strong>通过一定的方法</strong>，70 个适应性趋同进化的基因被识别出来，其中，<em>DYNC2H1</em> 和 <em>PCNT</em> 都参与了老鼠和人类肢干的发展和它们的缺失或者无义和无效突变，导致了多指显性和异常的骨骼发生，<em>DYNC2H1</em> 蛋白是动力蛋白的核心成分，是在纤毛形成时的逆鞭毛内运输的动力。</p><p>R3128K 和 K3999R 的两个趋同进化的取代物被识别出来，它们都出现在了大熊猫和喜马拉雅小熊猫中，R3128k 取代物定位在 AAA的第 4 域和第 5 域之间，据报道，DYNC2H1 茎域中的氨基酸变化会影响逆行 IFT 并产生异常的初级纤毛，初级纤毛是 SHH 通路的细胞器转导信号，同时异常的纤毛将会阻止 GIL3 的作用，它是 SHH 通路的下游目标，在小鼠中，GLI3 的作用障碍会导致异常的手指和多指现象。</p><div align=center><img src="https://www.pnas.org/content/pnas/114/5/1081/F2.large.jpg?width=800&height=600&carousel=1" height="604" width="640"></div><div align=center>图2. A.DYNC2H1 蛋白的结构域和两个趋同氨基酸位点；B.59个真哺乳亚纲物种的DYNC2H1 基因的两个趋同氨基酸位点比较和三个其他真哺乳亚纲物种的基因片段比较；C.DYNC2H1 和 PCNT 蛋白在 IFT 和纤毛发生中的作用，DYNC2H1 是细胞质动力蛋白复合物2的核心成分</div><p><strong>因此，在纤毛中的结构和功能的变化通过 SHH 通路和 GLI3 阻滞很有可能会导致骨骼和四肢发育的问题。</strong></p><p><strong>我们认为尽管这两个基因对骨骼发育其他方面的影响仍然未知，但两个基因中的趋同氨基酸取代可能协同作用于两种熊猫的假拇指发育。该推论值得在将来进行进一步的实验验证。</strong></p><h3 id="竹子的营养利用"><a href="#竹子的营养利用" class="headerlink" title="竹子的营养利用"></a>竹子的营养利用</h3><p>对于大熊猫和喜马拉雅小熊猫来说，竹子是获取必需氨基酸，必需脂肪酸和维他命的唯一来源。为了应对这样的生存挑战，熊猫需要提高营养获取和利用的效率。因此，同重要的营养物质利用的基因的信号可能会被观察到。</p><p>三个参与膳食蛋白消化的基因：<em>PRSS1</em>, <em>PRSS36</em> 和 <em>CPB1</em> 展现了适应性趋同。<em>PRSS1</em> 和 <em>PRSS36</em> 都是内肽酶，用于蛋白水解从羧基末端裂解 Lys 或 Arg 残基，而 <em>CPB1</em> 是一种外肽酶，从 C 末端优先释放 Lys 残基或 Arg 残基发挥作用。</p><p>定量测量表明，竹子内的 Lys 和 Arg 含量比动物肉和植物叶低得多。这些基因的适应性趋同似乎可以协同作用，从而提高从膳食蛋白中释放 Lys , Arg 以及氨基酸再循环的效率，从而抵消了竹子中有限的养分供应。</p><p>维他命 A，维他命 B12和花生四烯酸都是非常重要的营养物质，然而，在竹子中，这些营养物质要么没有，要么含量远低于肉类，坚果或者绿色植物。这四种基因 <em>ADH1C</em>, <em>CYP3A5</em>, <em>CYP4F2</em> 和 <em>GIF</em> 都参与了上述的营养物质的利用，被确定处于适应性趋同的状态。</p><p><em>ADH1C</em> 和 <em>CYP3A5</em> 参与了维他命 A 的代谢调控，这对于暗视觉很重要，<em>ADH1C</em> 催化视黄醛和视黄醇之间的转化，而 <em>CYP3A5</em> 参与维甲酸的降解，以防止过量维生素 A 的有害积累。因此，这两个基因的适应性趋同可能改善维他命 A 的利用，而这是为了满足暗夜视觉的需要。</p><p>研究表明，长期素食会导致维他命 B12 缺乏，因为维他命 B12 不能够被植物提供导致只能由肠道微生物合成，维生素 B12 缺乏是心血管疾病的重要风险因素，如血管硬化，所有的食竹熊猫需要克服这样的问题。</p><p>GIF 是胃粘膜壁细胞分泌的一种糖蛋白，对于维生素 B12的充分吸收必不可少，其适应性趋同进化可能会提高维生素 B12 的吸收效率。</p><p>蛋白质编码基因上的功能限制的选择性放宽可能会在两种熊猫的食性转化的专一化上出现。因此，基于这八个物种的全基因比对，我们识别了假基因化的信号。我们在大熊猫和喜马拉雅小熊猫中分别鉴定了 129 个和 140 个假基因，其中，分别有 10 个假基因是共有的。其中，鲜味基因 <em>TAS1R1</em> 在两种熊猫中都已经假化了。根据非同义替换与同义替换的比率（ω）的变化，我们推断小熊猫对TAS1R1 的功能约束大约在 1.58 百万年前放开（95％置信区间，0.1〜4.36 百万年前）。来自喜马拉雅小熊猫的同谱系的化石记录表明，小熊猫科自中新世晚期（7〜4.5 百万年以前）部分已草食。因此，在喜马拉雅小熊猫中 TAS1R1 的趋同进化当它的饮食至少部分草食以后可能会出现，就像在大熊猫中一样。</p><div align=center><img src="https://www.pnas.org/content/pnas/114/5/1081/F3.large.jpg?width=800&height=600&carousel=1" height="180" width="640"></div><div align=center>图3. 大熊猫和喜马拉雅小熊猫之间的鲜味受体基因 TAS1R1 趋同假基因化，同北极熊，雪貂，狗和老虎相反</div><p>在大熊猫和喜马拉雅小熊猫的鲜味受体基因 <em>TAS1R1</em> 趋同的基因假化，同熊，雪貂，狗和老虎对比发现，大熊猫在第三个外显子有 2bp 插入和在第六个外显子分别有 6bp 和 4bp 的两个删除，同时，喜马拉雅小熊猫仅仅在第六外显子上有一个删除。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;文章主要介绍的是「一周文献」第 1 期。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="一周文献" scheme="https://yiranzhimo.github.io/categories/%E4%B8%80%E5%91%A8%E6%96%87%E7%8C%AE/"/>
-    
-    
-      <category term="一周文献" scheme="https://yiranzhimo.github.io/tags/%E4%B8%80%E5%91%A8%E6%96%87%E7%8C%AE/"/>
     
   </entry>
   
