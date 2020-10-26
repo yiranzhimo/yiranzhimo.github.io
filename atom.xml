@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-26T03:59:09.089Z</updated>
+  <updated>2020-10-26T06:49:08.801Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 如何系统降级</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/Mac-%E5%A6%82%E4%BD%95%E7%B3%BB%E7%BB%9F%E9%99%8D%E7%BA%A7/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/Mac-%E5%A6%82%E4%BD%95%E7%B3%BB%E7%BB%9F%E9%99%8D%E7%BA%A7/</id>
+    <published>2020-10-26T06:49:08.000Z</published>
+    <updated>2020-10-26T06:49:08.801Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 如何系统降级。</p><a id="more"></a><p><strong>Catalina</strong> 的系统用着很不舒服，几个常用的软件都出现了问题，所以，决定降级到 <strong>Mojave</strong>，升级很简单，但是降级会麻烦一点，主要是涉及到数据的问题。</p><h1 id="制作启动磁盘"><a href="#制作启动磁盘" class="headerlink" title="制作启动磁盘"></a>制作启动磁盘</h1><p>在 <strong>App Store</strong> 搜索下载 <strong>Mac Mojave</strong> 的系统，但是一般是搜索不到的，需要从特定的入口进去</p><ul><li><a href="https://support.apple.com/zh-cn/HT201475">Mac Catalina</a></li><li><a href="https://support.apple.com/zh-cn/HT210190">Mac Mojave</a></li><li><a href="https://support.apple.com/zh-cn/HT208969">Mac High Sierra</a></li><li><a href="https://support.apple.com/zh-cn/HT208202">Mac Sierra</a></li></ul><p>下载好对应的包以后，会在应用商店看到 <em>Install xxxxxx</em>，下一步就到了真正的制作启动 U 盘的过程了<br>打开磁盘工具，找到外置栏的 U 盘，抹掉 U 盘，把名称设置为 <em>xx</em>，选择格式为 <strong>Mac OS 扩展( 日志式 )</strong><br>打开终端，在终端输入命令，比如，我的是 <strong>Mojave</strong><br><code>sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/xx</code></p><p>这里的 <code>～/Volumes/xx</code> 中 <strong>xx</strong>，就是之前设置的磁盘名。<br>⚠️ 这里要记得把<strong>查找我的 Mac</strong>退出，之前做准备功课的时候有的这里因为没有退出遇到问题。<br>后续就开始降级系统安装了。</p><h1 id="降级系统安装"><a href="#降级系统安装" class="headerlink" title="降级系统安装"></a>降级系统安装</h1><p>电脑关机，按住 <strong>option 键</strong>，再按一下电源键要一直按住 <strong>option 键</strong>，稍后屏幕上就会出现磁盘了，之后就看到了 <strong>Install Mojave</strong>，选择它，进入实用工具界面，点击磁盘工具，抹掉磁盘，随后退出，选择 <strong>安装 macOS</strong>，随后等待后续安装即可。</p><h1 id="数据迁移"><a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h1><p>之前一直有用 <strong>Time Machine</strong> 备份数据，本来打算是直接把数据通过<strong>迁移助理</strong>迁移，但是尝试迁移 2～3 次，都中途退出了，好在所有的数据都在磁盘里面了。</p><p>这里就要强调一下备份中的重要性，电脑里面的文件，密码最好及时备份，这样电脑出了问题也不用担心，比如这次数据迁移不过去以后，应用程序都从 <strong>Time Machine</strong> 移动过来了，重要文件 iCloud 备份了，常看的书和音乐都在坚果云里面，密码加密后都在 Dropbox 里面，狡兔三窟。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/39103887">macOS 重装系统 Mojave Catalina 升级 降级mac OS</a><br><a href="https://discussionschinese.apple.com/thread/250751381">Catalina怎么降级回Mojave</a><br><a href="https://www.bilibili.com/video/av82809995/">【教程】一分钟教会你从Mac OS Catalina降级到Mojave</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Mac 如何系统降级。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+    
+    
+      <category term="Mac 降级" scheme="https://yiranzhimo.github.io/tags/Mac-%E9%99%8D%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hypothesis 网页批注工具的使用</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/Hypothesis-%E7%BD%91%E9%A1%B5%E6%89%B9%E6%B3%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/Hypothesis-%E7%BD%91%E9%A1%B5%E6%89%B9%E6%B3%A8%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-10-26T06:21:32.000Z</published>
+    <updated>2020-10-26T06:21:32.787Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Hypothesis 网页批注工具的使用。</p><a id="more"></a><p>为什么需要网页标注呢？<br>对于自己来说，需要自己看到的内容和标记可以被记录，同时是可以回溯，之后还需要具有分享功能。<br>印象笔记可以满足这个需要，但是有一点小瑕疵：</p><ul><li>分享的链接在电脑上无法打开</li><li>印象笔记过于累赘<div align = center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E7%91%95%E7%96%B5.png"/></div>因此，Hypothesis 这个工具还是很值得探索的。# 基本使用首先在 [Hypothesis 官网](https://hypothes.is/)注册账号</li></ul><div align = center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20%E7%BD%91%E9%A1%B5.png"/></div><p>在自己的账户下可以看到 <em>Group</em> ，可以新建一个 <em>pirate group</em> ， 然后把自己做的标注放在这里</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20new%20group.png"/></div><p>如果没有新建的话，默认会放在一个整个公共的 <em>Group</em> 里面</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20group.png"/></div><h1 id="使用流程"><a href="#使用流程" class="headerlink" title="使用流程"></a>使用流程</h1><p>这个小工具提供了 <strong>Chrome 扩展程序</strong> 和<a href="https://web.hypothes.is/start/">书签</a>，两者功能差不多。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20%E6%8C%87%E5%BC%95.png"/></div><p>这个是使用的界面，支持 <em>Highlight</em> 和后续的 <em>Annotation</em>。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20%E4%BD%BF%E7%94%A8.png"/></div>Hypothesis 指引把文章标注以后，可以分享链接给别人，在这个链接里面，可以看到标注的内容，只要原文的链接没有消失，这个的标注就会一直在。<div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20test.png"/></div><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>那要是原文链接没有了呢？<br>可以通过插件 **<a href="https://github.com/rahiel/archiveror">Archiveror</a>**，先将网页保存到 **<a href="https://archive.org/">Internet Archive</a>**，在这个保存页面进行标注，就不用担心链接失效的问题。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Hypothesis%20web%20archive.png"/></div><p>参与这个工具的设计思路可以参见这篇文章：<br><a href="https://type.cyhsu.xyz/2020/10/hypothesis-tutorial/">开源、可定制的网页批注工具——Hypothesis</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Hypothesis 网页批注工具的使用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Hypothesis" scheme="https://yiranzhimo.github.io/tags/Hypothesis/"/>
+    
+  </entry>
   
   <entry>
     <title>通过 Hexo 和 Github 搭建博客</title>
