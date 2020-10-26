@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Kiwix 简述]]></title>
+    <url>%2F2020%2F10%2F26%2FKiwix-%E7%AE%80%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Kiwix 简述。 KiwixKiwix 是一个离线的维基百科阅读器，支持 LinuX，Windows，MacOS，Android 和 IOS，可以将维基百科的内容下载好，导入其中离线阅读。 # 下载内容 在对应的[资源页面](https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn)可以下载对应语言的包。 其中，有一些含义需要解释一下， * mini：只摘录词条的一部分内容，很有可能是词条的第一段。 * nopic：词条中的所有图片都已剔除。 * maxi：除了大的媒体文件外，整个词条的内容都打包。 可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。 参考来源：离线维基阅读工具—— Kiwix（阅读器）介绍维基百科离线数据库PC/iOS/Android全平台使用教程WikiPedia 的正确打开方式]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>Kiwix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VS Code 设置]]></title>
     <url>%2F2020%2F10%2F26%2FVS-Code-%E8%AE%BE%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 VS Code 设置。 中文设置在扩展商店搜索 simplified chinese 安装 配置 GithubVS Code 自带了 git 的功能，只需要按照过程配置即可。 参考来源：在VScode上配置Git]]></content>
@@ -247,7 +258,7 @@
     <url>%2F2020%2F09%2F05%2FUDP%20%E5%92%8C%20TCP%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 UDP 和 TCP。 TCP(Transmission Control Protocol) 传输控制协议，UDP(User Datagram Protocol) 用户数据协议。 参考来源：TCP和UDP的区别Difference between TCP and UDP]]></content>
       <categories>
-        <category>Skill</category>
+        <category>Sever</category>
       </categories>
       <tags>
         <tag>UDP</tag>

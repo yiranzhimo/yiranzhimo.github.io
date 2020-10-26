@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-26T08:45:16.698Z</updated>
+  <updated>2020-10-26T09:13:29.618Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kiwix 简述</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/Kiwix-%E7%AE%80%E8%BF%B0/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/Kiwix-%E7%AE%80%E8%BF%B0/</id>
+    <published>2020-10-26T09:13:29.000Z</published>
+    <updated>2020-10-26T09:13:29.618Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Kiwix 简述。</p><a id="more"></a><h1 id="Kiwix"><a href="#Kiwix" class="headerlink" title="Kiwix"></a>Kiwix</h1><p><a href="https://www.kiwix.org/en/download/">Kiwix</a> 是一个离线的维基百科阅读器，支持 <strong>LinuX</strong>，<strong>Windows</strong>，<strong>MacOS</strong>，<strong>Android</strong> 和 <strong>IOS</strong>，可以将维基百科的内容下载好，导入其中离线阅读。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E7%BD%91%E9%A1%B5.png"/></div># 下载内容在对应的[资源页面](https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn)可以下载对应语言的包。<div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E4%B8%AD%E6%96%87.png"/></div>其中，有一些含义需要解释一下，* mini：只摘录词条的一部分内容，很有可能是词条的第一段。* nopic：词条中的所有图片都已剔除。* maxi：除了大的媒体文件外，整个词条的内容都打包。<p>可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/93055159">离线维基阅读工具—— Kiwix（阅读器）介绍</a><br><a href="https://www.ruanjianzhai.com/kiwix-wikipedia-lixianshujuku.html">维基百科离线数据库PC/iOS/Android全平台使用教程</a><br><a href="https://zhuanlan.kanxue.com/article-10519.htm">WikiPedia 的正确打开方式</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Kiwix 简述。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="Kiwix" scheme="https://yiranzhimo.github.io/tags/Kiwix/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code 设置</title>
@@ -527,7 +550,7 @@
     <link href="https://yiranzhimo.github.io/2020/09/05/UDP%20%E5%92%8C%20TCP/"/>
     <id>https://yiranzhimo.github.io/2020/09/05/UDP%20%E5%92%8C%20TCP/</id>
     <published>2020-09-05T03:50:18.000Z</published>
-    <updated>2020-10-11T12:28:52.432Z</updated>
+    <updated>2020-10-26T08:54:38.906Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 UDP 和 TCP。</p><a id="more"></a><p>TCP(Transmission Control Protocol) 传输控制协议，UDP(User Datagram Protocol) 用户数据协议。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/24860273">TCP和UDP的区别</a><br><a href="https://www.tutorialspoint.com/difference-between-tcp-and-udp">Difference between TCP and UDP</a></p>]]></content>
     
@@ -538,7 +561,7 @@
     </summary>
     
     
-      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+      <category term="Sever" scheme="https://yiranzhimo.github.io/categories/Sever/"/>
     
     
       <category term="UDP" scheme="https://yiranzhimo.github.io/tags/UDP/"/>
