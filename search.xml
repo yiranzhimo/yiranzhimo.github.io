@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Wordpress 建站]]></title>
+    <url>%2F2020%2F10%2F26%2FWordpress-%E5%BB%BA%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Wordpress 建站。 建站流程购买服务器比如说，在阿里云购买服务器，可以设置初始安装 Wordpress 或者 BT Panel 如果安装的是宝塔面板，可以根据阿里云的里的指导设置获得密码，登录到宝塔面板。 购买域名购买域名后要设置域名解析。 安装 LNMP登录到宝塔面板后，可以安装 lnmp，如果开始的服务器没有安装 Wordpress，可以在宝塔面板内安装。 Wordpress 安装Wordpress 安装以后可以在后台配置主题，进行一些其他的设置。 Wordpress 优化申请 SSL 证书在 Wordpress 后台安装 WP Encrypt 插件，之后下载生成证书，上传到 /wp-content/plugins/ 即可。]]></content>
+      <categories>
+        <category>Sever</category>
+      </categories>
+      <tags>
+        <tag>Wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Kiwix 简述]]></title>
     <url>%2F2020%2F10%2F26%2FKiwix-%E7%AE%80%E8%BF%B0%2F</url>
-    <content type="text"><![CDATA[文章主要介绍的是 Kiwix 简述。 KiwixKiwix 是一个离线的维基百科阅读器，支持 LinuX，Windows，MacOS，Android 和 IOS，可以将维基百科的内容下载好，导入其中离线阅读。 # 下载内容 在对应的[资源页面](https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn)可以下载对应语言的包。 其中，有一些含义需要解释一下， * mini：只摘录词条的一部分内容，很有可能是词条的第一段。 * nopic：词条中的所有图片都已剔除。 * maxi：除了大的媒体文件外，整个词条的内容都打包。 可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。 参考来源：离线维基阅读工具—— Kiwix（阅读器）介绍维基百科离线数据库PC/iOS/Android全平台使用教程WikiPedia 的正确打开方式]]></content>
+    <content type="text"><![CDATA[文章主要介绍的是 Kiwix 简述。 KiwixKiwix 是一个离线的维基百科阅读器，支持 LinuX，Windows，MacOS，Android 和 IOS，可以将维基百科的内容下载好，导入其中离线阅读。 下载内容在对应的资源页面可以下载对应语言的包。 其中，有一些含义需要解释一下， * mini：只摘录词条的一部分内容，很有可能是词条的第一段。 * nopic：词条中的所有图片都已剔除。 * maxi：除了大的媒体文件外，整个词条的内容都打包。 可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。 参考来源：离线维基阅读工具—— Kiwix（阅读器）介绍维基百科离线数据库PC/iOS/Android全平台使用教程WikiPedia 的正确打开方式]]></content>
       <categories>
         <category>Skill</category>
       </categories>

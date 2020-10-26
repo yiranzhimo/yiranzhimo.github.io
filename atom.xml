@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-26T09:13:29.618Z</updated>
+  <updated>2020-10-26T10:28:14.209Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Wordpress 建站</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/Wordpress-%E5%BB%BA%E7%AB%99/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/Wordpress-%E5%BB%BA%E7%AB%99/</id>
+    <published>2020-10-26T10:28:14.000Z</published>
+    <updated>2020-10-26T10:28:14.209Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Wordpress 建站。</p><a id="more"></a><h1 id="建站流程"><a href="#建站流程" class="headerlink" title="建站流程"></a>建站流程</h1><h2 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h2><p>比如说，在阿里云购买服务器，可以设置初始安装 <strong>Wordpress</strong> 或者 <strong>BT Panel</strong></p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Wordpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png"/></div><p>如果安装的是宝塔面板，可以根据阿里云的里的指导设置获得密码，登录到宝塔面板。</p><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>购买域名后要设置域名解析。</p><h2 id="安装-LNMP"><a href="#安装-LNMP" class="headerlink" title="安装 LNMP"></a>安装 LNMP</h2><p>登录到宝塔面板后，可以安装 <strong>lnmp</strong>，如果开始的服务器没有安装 <strong>Wordpress</strong>，可以在宝塔面板内安装。</p><h2 id="Wordpress-安装"><a href="#Wordpress-安装" class="headerlink" title="Wordpress 安装"></a>Wordpress 安装</h2><p><strong>Wordpress</strong> 安装以后可以在后台配置主题，进行一些其他的设置。</p><h1 id="Wordpress-优化"><a href="#Wordpress-优化" class="headerlink" title="Wordpress 优化"></a>Wordpress 优化</h1><h2 id="申请-SSL-证书"><a href="#申请-SSL-证书" class="headerlink" title="申请 SSL 证书"></a>申请 SSL 证书</h2><p>在 <strong>Wordpress</strong> 后台安装 <strong>WP Encrypt</strong> 插件，之后下载生成证书，上传到 <em>/wp-content/plugins/</em> 即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Wordpress 建站。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Sever" scheme="https://yiranzhimo.github.io/categories/Sever/"/>
+    
+    
+      <category term="Wordpress" scheme="https://yiranzhimo.github.io/tags/Wordpress/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kiwix 简述</title>
     <link href="https://yiranzhimo.github.io/2020/10/26/Kiwix-%E7%AE%80%E8%BF%B0/"/>
     <id>https://yiranzhimo.github.io/2020/10/26/Kiwix-%E7%AE%80%E8%BF%B0/</id>
     <published>2020-10-26T09:13:29.000Z</published>
-    <updated>2020-10-26T09:13:29.618Z</updated>
+    <updated>2020-10-26T09:56:13.462Z</updated>
     
-    <content type="html"><![CDATA[<p>文章主要介绍的是 Kiwix 简述。</p><a id="more"></a><h1 id="Kiwix"><a href="#Kiwix" class="headerlink" title="Kiwix"></a>Kiwix</h1><p><a href="https://www.kiwix.org/en/download/">Kiwix</a> 是一个离线的维基百科阅读器，支持 <strong>LinuX</strong>，<strong>Windows</strong>，<strong>MacOS</strong>，<strong>Android</strong> 和 <strong>IOS</strong>，可以将维基百科的内容下载好，导入其中离线阅读。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E7%BD%91%E9%A1%B5.png"/></div># 下载内容在对应的[资源页面](https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn)可以下载对应语言的包。<div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E4%B8%AD%E6%96%87.png"/></div>其中，有一些含义需要解释一下，* mini：只摘录词条的一部分内容，很有可能是词条的第一段。* nopic：词条中的所有图片都已剔除。* maxi：除了大的媒体文件外，整个词条的内容都打包。<p>可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/93055159">离线维基阅读工具—— Kiwix（阅读器）介绍</a><br><a href="https://www.ruanjianzhai.com/kiwix-wikipedia-lixianshujuku.html">维基百科离线数据库PC/iOS/Android全平台使用教程</a><br><a href="https://zhuanlan.kanxue.com/article-10519.htm">WikiPedia 的正确打开方式</a></p>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Kiwix 简述。</p><a id="more"></a><h1 id="Kiwix"><a href="#Kiwix" class="headerlink" title="Kiwix"></a>Kiwix</h1><p><a href="https://www.kiwix.org/en/download/">Kiwix</a> 是一个离线的维基百科阅读器，支持 <strong>LinuX</strong>，<strong>Windows</strong>，<strong>MacOS</strong>，<strong>Android</strong> 和 <strong>IOS</strong>，可以将维基百科的内容下载好，导入其中离线阅读。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E7%BD%91%E9%A1%B5.png"/></div><h1 id="下载内容"><a href="#下载内容" class="headerlink" title="下载内容"></a>下载内容</h1><p>在对应的<a href="https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn">资源页面</a>可以下载对应语言的包。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/kiwix%20%E4%B8%AD%E6%96%87.png"/></div>其中，有一些含义需要解释一下，* mini：只摘录词条的一部分内容，很有可能是词条的第一段。* nopic：词条中的所有图片都已剔除。* maxi：除了大的媒体文件外，整个词条的内容都打包。<p>可以看到中文的全包也只有 18G，通过 BT 软件下载对应的包导入软件内就行了。</p><p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/93055159">离线维基阅读工具—— Kiwix（阅读器）介绍</a><br><a href="https://www.ruanjianzhai.com/kiwix-wikipedia-lixianshujuku.html">维基百科离线数据库PC/iOS/Android全平台使用教程</a><br><a href="https://zhuanlan.kanxue.com/article-10519.htm">WikiPedia 的正确打开方式</a></p>]]></content>
     
     <summary type="html">
     
