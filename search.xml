@@ -1183,7 +1183,7 @@
     <url>%2F2019%2F06%2F26%2FKindleEar%E6%90%AD%E5%BB%BA%E5%AE%9E%E7%8E%B0%E6%8E%A8%E9%80%81RSS%E8%AE%A2%E9%98%85%E5%88%B0Kindle%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是通过Google APP Engine安装KindleEar实现推送 前提条件：科学上网Google账号 创建 Google Cloud 项目[https://console.cloud.google.com/](Google Cloud页面)点击页面左上角的“选择项目”，点击弹出对话框右上角的“新建项目”，然后在“新建项目”页面中输入你喜欢的“项目名称”。请记住项目ID。 创建 Google App Engine 应用点击页面右上角的 [ &gt;_ ] 图标按钮，调出云端 Shell，输入以下命令按回车：gcloud beta app create命令执行后会出现 Which region would you like to choose? 字样，询问选择应用的位置，在 Please enter your numeric choice: 之后输入数字 1，稍等片刻即可完成 GAE 应用的创建。 上传程序复制下面的代码，粘贴到 Google 云端 Shell，回车执行。 1234rm -f uploader.sh* &amp;&amp;\wget https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;kindlefere&#x2F;KindleEar-Uploader&#x2F;master&#x2F;uploader.sh &amp;&amp; \chmod +x uploader.sh &amp;&amp; \.&#x2F;uploader.sh 按照脚本的提示，输入你的 Gmail 地址和准备好的 APPID，回车，等待上传成功即可。面的代码只需要执行一次即可，如果想要重新上传或要更新代码，只需要直接运行 uploader.sh 这个 Shell 文件即可，即在云终端中输入下面这行代码即可：./uploader.sh 检查安装打开浏览器输入 http://你的APPID.appspot.com 可访问你搭建的 KindleEar。KindleEar 初始登录名和密码都是“admin”。 参考来源：KindleEar 搭建教程：推送 RSS 订阅到 Kindle]]></content>
       <categories>
-        <category>KindleEar</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>RSS</tag>
@@ -1219,7 +1219,7 @@
     <url>%2F2019%2F06%2F22%2FLinux%E5%91%BD%E4%BB%A4cat%2F</url>
     <content type="text"><![CDATA[文章介绍的是Linux下cat命令的用法。 cat命令的基本用法命令参数命令参数：-A, –show-all 等价于 -vET-b, –number-nonblank 对非空输出行编号-e 等价于 -vE-E, –show-ends 在每行结束处显示 $-n, –number 对输出的所有行编号,由1开始对所有输出的行数编号-s, –squeeze-blank 有连续两行以上的空白行，就代换为一行的空白行-t 与 -vT 等价-T, –show-tabs 将跳格字符显示为 ^I-u (被忽略)-v, –show-nonprinting 使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外 显示文件内容cat filename 创建文件cat &gt; filename 合并文件cat file1 file2 &gt; file 参考来源：cat 命令]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Sever</category>
       </categories>
       <tags>
         <tag>cat</tag>
