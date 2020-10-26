@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[VS Code 设置]]></title>
+    <url>%2F2020%2F10%2F26%2FVS-Code-%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 VS Code 设置。 中文设置在扩展商店搜索 simplified chinese 安装 # 配置 Github **VS Code** 自带了 **git** 的功能，只需要按照过程配置即可。 参考来源：在VScode上配置Git]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Atom 设置]]></title>
+    <url>%2F2020%2F10%2F26%2FAtom-%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 Atom 设置指南。 切换中文ATOM – setting – 安装，在这里可以搜索简体中文的插件安装。 不显示欢迎页面将首页的 Show Welcome Guide when opening Atom 不勾选即可，需要重启应用生效。 参考来源：How do I make the Welcome screen stop showing up?Atom怎么换成中文版(Atom汉化教程)]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>Atom</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 如何系统降级]]></title>
     <url>%2F2020%2F10%2F26%2FMac-%E5%A6%82%E4%BD%95%E7%B3%BB%E7%BB%9F%E9%99%8D%E7%BA%A7%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 如何系统降级。 Catalina 的系统用着很不舒服，几个常用的软件都出现了问题，所以，决定降级到 Mojave，升级很简单，但是降级会麻烦一点，主要是涉及到数据的问题。 制作启动磁盘在 App Store 搜索下载 Mac Mojave 的系统，但是一般是搜索不到的，需要从特定的入口进去 Mac Catalina Mac Mojave Mac High Sierra Mac Sierra 下载好对应的包以后，会在应用商店看到 Install xxxxxx，下一步就到了真正的制作启动 U 盘的过程了打开磁盘工具，找到外置栏的 U 盘，抹掉 U 盘，把名称设置为 xx，选择格式为 Mac OS 扩展( 日志式 )打开终端，在终端输入命令，比如，我的是 Mojavesudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/xx 这里的 ～/Volumes/xx 中 xx，就是之前设置的磁盘名。⚠️ 这里要记得把查找我的 Mac退出，之前做准备功课的时候有的这里因为没有退出遇到问题。后续就开始降级系统安装了。 降级系统安装电脑关机，按住 option 键，再按一下电源键要一直按住 option 键，稍后屏幕上就会出现磁盘了，之后就看到了 Install Mojave，选择它，进入实用工具界面，点击磁盘工具，抹掉磁盘，随后退出，选择 安装 macOS，随后等待后续安装即可。 数据迁移之前一直有用 Time Machine 备份数据，本来打算是直接把数据通过迁移助理迁移，但是尝试迁移 2～3 次，都中途退出了，好在所有的数据都在磁盘里面了。 这里就要强调一下备份中的重要性，电脑里面的文件，密码最好及时备份，这样电脑出了问题也不用担心，比如这次数据迁移不过去以后，应用程序都从 Time Machine 移动过来了，重要文件 iCloud 备份了，常看的书和音乐都在坚果云里面，密码加密后都在 Dropbox 里面，狡兔三窟。 参考来源：macOS 重装系统 Mojave Catalina 升级 降级mac OSCatalina怎么降级回Mojave【教程】一分钟教会你从Mac OS Catalina降级到Mojave]]></content>
@@ -123,7 +145,7 @@
     <url>%2F2020%2F10%2F12%2FOnedrive-%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Onedrive 如何取消登录账号。 在 应用程序 找到 OneDrive， 按住 Control 键 单击该应用程序， 选择 显示包内容 &gt; Contents文件夹 &gt; Resources， 找到重置 OneDrive 脚本 ResetOneDriveApp.command，运行即可。 参考来源：Onedrive for Mac如何取消登录或者更换用户]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Onedrive</tag>
@@ -267,7 +289,7 @@
     <url>%2F2020%2F08%2F27%2FMac%20%E6%90%AD%E5%BB%BA%20Gitbook%20%E5%86%99%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 搭建 Gitbook 写作。 需要整理碎片化笔记，所以利用 Typora 写作 Markdown，Gitbook 支持图书构建及发布管理。 安装 Typora安装 Typora 安装 Gitbook安装 Node.js输入命令：brew install node 安装 Gitbooksudo npm install -g gitbook-cli 使用1234cd Downloadsmkdir TestBookcd TestBookgitbook init 这样就可以初始化目录生成 SUMMARY.md 和 README.md 随后，在 SUMMARY.md 中编辑大纲 再次对文件初始化 `gitbook init`，就会生成目录了，即可。 参考来源：Mac上搭建得心应手的写作环境(Typora+Gitbook)]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Gitbook</tag>
@@ -278,7 +300,7 @@
     <url>%2F2020%2F08%2F27%2FMac%20%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%20ebook-convert%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Mac 安装 ebook-convert 和简单使用。 ebook-convert 下载安装ebook-convert 是 Calibre 的一个命令行。 下载 Calibre 以后，创建一个指向ebook-convert工具的软件链接： sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin但是出现问题：ln: /usr/bin/ebook-convert: Operation not permitted如果出现 Operation not permitted ，说明系统权限限制，需要配置环境变量的方式解决。输入命令：vim ~/.bash_profile 进入命令模式输入：i这样进入了编辑模式，输入： 12export EBOOK_PATH&#x3D;&#x2F;Applications&#x2F;calibre.app&#x2F;Contents&#x2F;MacOSexport PATH&#x3D;$PATH:$EBOOK_PATH 需要保存文件，按住 ESC，之后再命令模式，输入 :wq 保存文件即可。刷新一下刚刚的配置:source ~/.bash_profile最后测试一下 ebook-convert 指令是否能正常被调用：ebook-convert --version弹出版本就可以，说明可以调用了。不过当关闭了终端以后，再打开会发现提示：zsh: command not found: ebook-convert这时候，还是需要刷新配置：source ~/.bash_profile ebook-convert 使用常用命令：ebook-convert xxx.html xxx.mobi会自动输出在 xxx.html 的目录 参考来源：安装ebook-convert]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>ebook-convert</tag>
@@ -461,22 +483,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Markdown 插入音频]]></title>
-    <url>%2F2020%2F05%2F16%2FMarkdown%20%E6%8F%92%E5%85%A5%E9%9F%B3%E9%A2%91%2F</url>
-    <content type="text"><![CDATA[文章主要介绍的是Markdown 插入音频。 代码123&lt;div align&#x3D;life&gt; &lt;iframe frameborder&#x3D;&quot;no&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;400 height&#x3D;140 src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;&lt;&#x2F;div&gt; 值得注意的是： 1src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot; 音乐文件的 id，可以在网页播放链接中找到。 参考来源：markdown插入音乐Markdown中插入音频文件]]></content>
-      <categories>
-        <category>Skill</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Saladict 与 Alfred 协作指南]]></title>
     <url>%2F2020%2F05%2F15%2FSaladict%20%E4%B8%8E%20Alfred%20%E5%8D%8F%E4%BD%9C%E6%8C%87%E5%8D%97%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Saladict 与 Alfred 协作指南。 SaladictSaladict 即沙拉查词，非常好用的查单词插件，它本身是浏览器插件，但是可以通过配置也可以在电脑上读文献时使用。 配置插件安装沙拉查词-聚合词典划词翻译插件安装安装后需要在浏览器上设置全局快捷键，打开网站：chrome://extensions/shortcuts，找到沙拉查词中的在独立窗口中搜索剪贴板内容，设置快捷键（建议设置为 CMD+Shift+L ），并选择全局。 Alfred 配置下载 Alfred workflow 脚本，安装后，选择 Hotkey 录入快捷键，快捷键随意选择即可，之后，双击 Run NSAppleScript默认代码： 123456on alfred_script(q) tell application &quot;System Events&quot; # 快捷键打开沙拉词典 key code 37 using &#123;control down, command down&#125; end tellend alfred_script 修改使用 shift 替换 control 即可。修改代码： 123456on alfred_script(q) tell application &quot;System Events&quot; # 快捷键打开沙拉词典 key code 37 using &#123;shift down, command down&#125; end tellend alfred_scrip 配置完成以后，选中文字–&gt;按下快捷键–&gt;自动弹出查询结果，但是需要注意：Alfred 和 浏览器必须同时开启。 问题后来电脑重新配置后发现了一些问题，补充一下：调用快捷键发现无法弹出沙拉查词的页面 原因是因为重新安装的 Alfred其他版本，需要打开Mac电脑的设置–&gt;安全性与隐私–&gt;辅助功能，重新勾选 Alfred4。 参考来源：沙拉查词 + Alfred，打造最佳文献翻译体验！技巧分享：Alfred Workflows 调用 Saladict 实现全局【文本翻译】 #509]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Saladict</tag>
@@ -498,7 +509,7 @@
     <url>%2F2020%2F05%2F15%2F%E9%BC%A0%E9%A1%BB%E7%AE%A1%E8%BE%93%E5%85%A5%E6%B3%95%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是鼠须管输入法使用指南。 鼠须管输入法鼠须管是一个 Mac 平台的输入法，它基于 RIME／中州韵输入法引擎。RIME 是一个跨平台的输入法框架，在 Linux 下，名为 中州韵，Windows 则为小狼毫。这套算法支持朙月拼音、仓颉五代、五笔 86、粤拼、吴语、中古全拼／三拼、国际音标输入法及 emoji 表情等几乎所有音码和形码输入法。 安装鼠须管输入法，官网下载安装即可。 小鹤音形在小鹤音形输入法，选择 Mac 版本下载，下载后进入 Finder，进入 ～/Library/Rime/，将解压缩的文件覆盖安装即可。如果不熟悉的双拼或者字码表的话，可以在网站进入双拼练习练习。 卸载卸载指南：打开系统输入法设定面板，移除鼠须管；打开 Finder /Library/Input Methods，移除「鼠须管.app」。前往 ~/Library 并移除个人鼠须管设定资料夹 Rime。重新登入系统，确保清理完毕。 参考来源：鼠须管，“神级” 输入法接近原生的鼠须管 Rime 配置鼠须管输入法 傻瓜版配置 - 基于 rime_pro 增强包这是一个Mac系统上鼠须管版的小鹤音形用 RIME 定制输入法「鼠须管」的调教笔记安装及配置 Mac 上的 Rime 输入法——鼠鬚管 (Squirrel)如何卸载？]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>鼠须管输入法</tag>
@@ -509,7 +520,7 @@
     <url>%2F2020%2F05%2F15%2FAlfred%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Alfred 使用指南。 AlfredAlfred 是 Mac 上的效率神器。免费用户只能使用其Features中的功能，而使用 Workflows (自定义插件的工作流)，则需要购买 Powerpack 才能激活此功能。如果想要破解激活，可参考: Alfred-Powerpack WorkflowWorkflow 是 Alfred 中支持的插件工作流，可以极大的提升工作效率。如果你想要寻找到想要的 Workflow ，可参考：PackalA collection of all known Alfred3 workflowsCollection of Alfred workflows🤘 A collection of Alfred 3 and 4 workflows that will rock your worldWorkflows ListAlfredWorkflow.comShare your WorkflowsWorkflows ListAlfred douban workflowGitHub Workflow for Alfred 3 参考来源:Alfred - Workflow工作流5分钟上手Mac效率神器Alfred以及Alfred常用操作]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Alfred</tag>
@@ -517,8 +528,8 @@
   </entry>
   <entry>
     <title><![CDATA[Markdown 插入视频]]></title>
-    <url>%2F2020%2F05%2F13%2FMarkdown%20%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91%2F</url>
-    <content type="text"><![CDATA[文章主要介绍的是Markdown 插入视频。 Bilibili视频网页 - 分享 - 嵌入代码 即可。 Youtube视频网页 - 分享 - 嵌入- 复制代码 即可。]]></content>
+    <url>%2F2020%2F05%2F13%2FMarkdown%20%E6%8F%92%E5%85%A5%E5%AA%92%E4%BD%93%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是Markdown 插入媒体。 视频Bilibili视频网页 - 分享 - 嵌入代码 就可以找到链接了，但是 Bilibili 中的链接中是没有设置视频页面的长宽度，同时 src 属性后面也没有 https:，需要手动添加。 1&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https:&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;841146667&amp;bvid&#x3D;BV1A54y1z72v&amp;cid&#x3D;207779271&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt; Youtube视频网页 - 分享 - 嵌入- 复制代码 即可。 1&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;vePc5V4h_kg&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt; 音频网易云代码示例 123&lt;div align&#x3D;life&gt; &lt;iframe frameborder&#x3D;&quot;no&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;400 height&#x3D;140 src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;&lt;&#x2F;div&gt; 值得注意的是： 1src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot; 音乐文件的 id，可以在网页播放链接中找到。 参考来源：markdown插入音乐Markdown中插入音频文件]]></content>
       <categories>
         <category>Skill</category>
       </categories>
@@ -619,7 +630,7 @@
     <url>%2F2020%2F04%2F26%2F%E9%85%8D%E7%BD%AE%20Tor%20%E6%B5%8F%E8%A7%88%E5%99%A8%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是配置 Tor 浏览器。 TorTor - configure - socks5/sock4/http 配置具体配置可在代理软件中的控制台找到。 参考来源：配置Telegram走SS/SSR/V2ray/trojan代理]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Tor</tag>
@@ -630,7 +641,7 @@
     <url>%2F2020%2F04%2F26%2F%E9%85%8D%E7%BD%AE%20Telegram%20%E4%BB%A3%E7%90%86%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Telegram 代理。 Telegram进入 Setting - Advanced - Network and proxy - Proxy setting - Use custom proxy选择 Socks5, HTTP, MTPROTO。 设置根据自身使用的代理软件进行设置 Hostname 和 Port 即可。相关信息可以在代理软件的控制台看到。 参考来源：配置Telegram走SS/SSR/V2ray/trojan代理]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Telegram</tag>
@@ -674,7 +685,7 @@
     <url>%2F2020%2F04%2F23%2FKeePassXC%20%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 KeePassXC 密码管理。 平时在网上，会注册很多的网站，如果密码全部采取一致的，一旦被撞库就相当于把所有鸡蛋放在一个篮子里，结果篮子砸了。如果都采取不同的密码，那么脑子不够用记不住，使用过程比较麻烦，为了解决这些痛点，需要有合适的密码管理方案。需要满足两个条件：条件一：当我们在新的网站输入注册时，可以实现自动保存。条件二：可以实现手机和电脑密码的同步，方便查看。 自动保存密码在电脑上安装 KeePassXC，同时 Google 浏览器上安装 KeePassXC-Browser，即可实现。 密码同步在安卓手机上安装 keepass2android，手机和电脑之间通过 Dropbox 同步。 参考来源：KeePass实现Chrome浏览器自动填充密码方法二KeePass实现Chrome浏览器自动填充密码方法一在 Windows 和 Android 上利用 KeePass 进行密码管理与同步keeweb]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>KeePassXC</tag>
@@ -685,7 +696,7 @@
     <url>%2F2020%2F04%2F23%2FKodi%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Kodi 使用指南。 下载进入 Kodi 官网，分别支持 Mac、Linux、Windows、Android、IOS平台的安装包。 使用设置中文界面启动 Kodi，通过左上角的“齿轮”图标进入 System -&gt; Interface Settings -&gt; Skin，将其中的 Fonts 修改成 Arial Based；然后将 Regional 中的 Language 修改成 Chinese (Simple)；进入 播放设置 -&gt; 语言，将“首选音频语言”、“首选字幕语言” 以及“下载字幕语言”均选择 Chinese (Simple)。 安装插件电视用5大Kodi附加组件（含安装指南） – 2020年更新 参考来源：Kodi中文网一个私人影视库的解决方案——KODI（上）]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Kodi</tag>
@@ -784,7 +795,7 @@
     <url>%2F2020%2F04%2F23%2FIRC%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 IRC 的使用教程。 IRCIRC（Internet Relay Chat 的缩写，“因特网中继聊天”）是一个位于应用层的协议。其主要用于群体聊天，但同样也可以用于个人对个人的聊天。IRC 使用的服务器端口有 6667（明文传输，如irc://irc.freenode.net）、6697（SSL加密传输，如ircs://irc.freenode.net:6697）等。IRC采用客户机/服务器模式，它能使 Internet 用户实时地与其他用户交谈，每个用户通过客户端程序与远程主机建立连接，远程主机接受多个来自客户端程序的连接，并实现多个用户之间的实时通话。 客户端WeeChat它是一个轻便，快速，高可扩展的命令行基础，尤其是在 Unix，Linux，BSD，GNU Hurd，Windows 和 Mac OS 上运行的跨平台聊天客户端。 Pidgin用于 Linux 的 Pidgin IM 客户端。 XChat适用于 Linux 和 Windows 的 IRC 客户端，v用户能够同时连接几个聊天网络。 Textual适用于 Mac 的 IRC 客户端。 使用过程以 irc://irc.freenode.net 为例子打开 Textual 后，点击 sever - add sever输入 irc.freenode.net可以添加服务器，服务器添加完毕后点击 sever - add channel输入 #freenode，即可实现添加频道。 参考来源：IRC如何使用IRC?7个用于Linux的IRC客户端freenode如何使用 IRCirc]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>IRC</tag>
@@ -795,7 +806,7 @@
     <url>%2F2020%2F04%2F23%2FIPTV%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 IPTV 的使用教程。 IPTV 简介12345Internet Protocol television (IPTV) is the delivery of television content over Internet Protocol (IP) networks.This is in contrast to delivery through traditional terrestrial, satellite, and cable television formats. Unlike downloaded media, IPTV offers the ability to stream the source media continuously. As a result, a client media player can begin playing the content (such as a TV channel) almost immediately. This is known as streaming media. 互联网协议电视（IPTV）是通过互联网协议（IP）网络传送电视内容的方法，这与通过传统的地面，卫星和有线电视格式进行传送形成对比，与下载的媒体不同，IPTV提供了连续播放源媒体的功能，结果，客户端媒体播放器几乎可以立即开始播放内容（例如电视频道），这称为流媒体，比如说我们经常通过手机看的电视直播，他们就属于IPTV。 IPTV ChannelsGIthub 上有一个项目，是收藏的 IPTV 的频道。Collection of 8000+ publicly available IPTV channels from all over the world IPTV 客户端全平台通用的 VLC 或者 Windows 下的 Potplayer 都是支持 m3u8 文件格式的导入。]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>IPTV</tag>
@@ -872,7 +883,7 @@
     <url>%2F2020%2F04%2F23%2F%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是Mac 如何下载视频网站视频。 最开始只是想下载我想要的视频收藏，后来，就想，要不试试各大视频怎么下载（此处的下载不是指解析VIP视频，而是指如何下载各大视频网站的免费的视频） Bilibili哔哩哔哩的视频用 Mac 版的 bilibili 客户端下载即可，下载速度很OK，还是多线程的aria2下载，只是有一个问题，就是下载完以后的视频为 flv 格式，且为分段的，这并不影响观看，用IINA或者bilibli就可以看了，但是如果是收藏视频就得自己转换合并了，推荐工具 ffmpeg。##优酷Mac 的 Downie 即可。##腾讯下面是挖坑历程，不过 2020 年了，Downie 可以搞定一切。 第一步尝试客户端下载，然后找到文件，转化合并格式就好了，但是，等我找到文件之后，我惊讶的发现文件竟然都是 ts 格式的了，而且每段都是 10s 左右的，于是，我想着用软件转化并且合并，结果转化的东西都是音频没有视频，而且 ts 格式的源文件也是只有音频没有视频。无奈，放弃了这个方法。 第二步我尝试了 Github 上的项目，you-get, youtube-dl, Annie，结果，这三个没有一个能下载，无奈，这条路又放弃了。 第三步我尝试用 Apowersoft, 但是这个软件的下载速度不太行，而且，基本上都是失败的。 第四步事到如今，只能退而求其次了，想到了两个办法，第一个办法，我用网页嗅探视频，然后下载合并，尝试下载电视剧还好，视频基本会被截成20Mb左右的一段，而且，最让我愕然的是，如果我打开斗罗大陆的视频，会被截成不到2Mb的文件，这是有多少段啊，好的，这条路也没了。 爱奇艺爱奇艺的视频网页嗅探没用，网页解析没用，you-get, youtube-dl，Downie, Apowersoft，统统没用，还好有 Annie。]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>视频</tag>
@@ -960,7 +971,7 @@
     <url>%2F2020%2F04%2F22%2FMoon%20FM%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%8C%E6%AD%A5%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Moon FM 不同客户端同步的使用教程。 Moon FMMoon FM 官网Moon FM 是一款 UI 设计精美的播客软件，支持 Mac、Windows、Linux、Android 和 IOS，真正的做到的全平台支持，但是不同的客户端之间存在同步的问题，开发者也给出了同步的解决方案，但是还是比较麻烦的，网上有一份利用 Cloudant 实现同步的方案，自己照着步骤设置完毕。 操作步骤进入 IBM Cloud 注册；登陆后搜索输入：Cloudant；选择 Lite 套餐，服务名称随便取，资源组、标记都默认即可，Available authentication methods选择 Use both legacy credentials and IAM；创建完毕后，进入到创建好的服务，点击Launch Cloudant Dashboard，进入 Cloudant 的 Dashboard 页面，创建一个数据库，记好名字：xxx；返回创建好的服务，回到上一级页面，新建凭证，名称随意选取，角色选择 Reader，选择服务标识自动生成；选择查看凭证，其中有：“url”：“https://..................cloud”而需要的地址即是：url 地址/数据库名https://..................cloud/xxx填入对应的客户端即可实现同步。 参考来源：使用 IBM Cloudant 多端同步 MoonFM 数据同步功能如何使用？Moon-FM-Support]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Moon FM</tag>
@@ -1015,7 +1026,7 @@
     <url>%2F2020%2F04%2F22%2FNestopia%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Nestopia 的使用教程。 NestopiaNestopia 官网第一步：双击打开下载的 Nestopia 模拟器 (pd)CMC 80’s Demo，会出现蓝色的模拟器界面,这是正常的启动后的界面。第二步：选择下载好的游戏文件，把文件拖入到 Nestopia 模拟器界面就可以进行游戏了。 Enhancer装上Enhancer还能让Nestopia支持手柄操作，下载Enhancer的dmg文件，加载后将里面的folder拷贝到 Library/Application Support/ 目录下即可完成安装。 参考来源：Nestopia：最好的FC红白机模拟器nestopia mac版使用教程]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Nestopia</tag>
@@ -1026,7 +1037,7 @@
     <url>%2F2020%2F04%2F22%2FPicGo%20%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 PicGo 如何配置图床。 PicGoPicGo 是一款图床软件，支持的图床有微博、腾讯云、阿里云、七牛云、又拍云、SM.MS、Github 等。 Github 图床首先在 Github 新建仓库，即 reposity，Public / Private 选择 Private，勾选 Add a README file。 在个人账户的 Setting，找到 Developer settings，选择 Personal access tokens，生成这个 token 后续备用。 在 PicGo 的配置页面，可以看到需要设置的内容 仓库名，比如，上面新建的仓库是 https://github.com/xx/yy，那么仓库名就是 xx/yy 分支名，默认是master Token 就是之前在 Developer setting 生成的 Gitee 图床同 Github 图床的设置过程，但是 PicGo 默认里面没有 Gitee，需要安装一个 Gitee 插件。 参考来源：PicGo 配置手册]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Github</tag>
@@ -1037,7 +1048,7 @@
     <url>%2F2020%2F04%2F21%2FProxifier%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 Proxifier 的使用教程。 ProxifierProxifier 是一款可以针对电脑上的特定的软件设置代理的软件，会使用这个软件是因为在用一款日记软件：Journey，它需要 Google Drive 进行同步，但是这个软件奇怪在即使我在电脑上开了代理，仍然无法连接，只能通过 Proxifier 进行设置进行连接。 使用教程下载Proxifier 官网Proxifier 授权： 12Name: AnySerial number: P427L-9Y552-5433E-8DSR3-58Z68 使用ShadowsocksX-NG 设置打开 Proxifier 后，在主界面，打开 Proxies，添加代理服务器，我用的是 ShadowsocksX-NG，所以代理的端口是：1086，如果用的是 Shadowsocks，代理的端口就是：1080，如果用的是 Clash X，也可以设置 HTTP 代理，选择的端口可以在 ClashX 的控制板看到。接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击 YES，然后还会有一个弹窗，提示你 ss-local 貌似进入死循环了，要不要使用建议设置自动修改，选择 OK 即可。 自定义规则Proxifier 同时可以设置自定义规则，比如说我想要设置 Journey 走代理，可以把 Default 设置为 Direct，之后点击 Add，添加新的规则，点击 “+” 添加 Application 内的应用即可。 参考来源：使用 Proxifier，为某一软件进行代理Proxifier 使用教程 —— Mac/Windows 下最好的代理软件Proxifier使用教程Proxifier汉化版使用教程]]></content>
       <categories>
-        <category>Mac</category>
+        <category>SKill</category>
       </categories>
       <tags>
         <tag>Proxifier</tag>
@@ -1070,7 +1081,7 @@
     <url>%2F2019%2F08%2F23%2FMac%E4%B8%8AWine%E8%BF%90%E8%A1%8CLibgen-Desktop%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是在MacOS系统通过Wine运行Libgen Desktop for windows。 关于Wine（Wine Is Not an Emulator）是一个能够在多种 POSIX-compliant 操作系统（诸如 Linux，macOS 及 BSD 等）上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是將 Windows API 调用翻译成为动态的 POSIX 调用，免除了性能和其他一些行为的内存占用，让你能够干净地集合 Windows 应用到你的桌面。我们所熟知的Crossover虚拟机安装应用就是基于Wine所实现的。 Libgen DesktopLibgen Desktop是一个用于浏览LibGen目录本地副本的Windows应用程序。支持主要（非小说），小说和科学文章（scimag）LibGen集合。 XQuartzXQuartz项目是一个开源工作，用于开发在OSX上运行的 X.Org X Window System 系统版本。 安装输入命令：brew install rubybrew cask install xquartzbrew install wine在Mac的如下目录，生成了wine的相关目录（ ~/.wine/drive_c ），里面最值得大家注意的是drive_c目录，这个就是我们win下面的c盘了。 运行输入命令：wine &lt;your&gt;.exe 卸载正常卸载即可。例如：brew uninstall rm -r参考来源：Wine官网Libgen DesktopLibgen Desktop项目Xquarz官网mac 如何使用 wine 运行 exe 程序？]]></content>
       <categories>
-        <category>Mac</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Wine</tag>
@@ -1146,8 +1157,11 @@
     <title><![CDATA[Mac安装Python3设为默认版本]]></title>
     <url>%2F2019%2F06%2F26%2FMac%E5%AE%89%E8%A3%85Python3%E8%AE%BE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是在MacOS系统上安装Python3设为默认版本。 安装python3输入命令：brew install python3查看python3的实际安装目录例如：/usr/local/Cellar/python3/3.6.2 改变外部环境变量打开配置输入命令：open ~/.bash_profile写入python的外部环境变量输入命令：export PATH=$&#123;PATH&#125;:/usr/local/Cellar/python3/3.6.2/bin 重命名python输入命令：alias python=&quot;/usr/local/Cellar/python3/3.6.2/bin/python3.6&quot; 配置文件生效输入命令：source ~/.bash_profile 使用python命令查看输入命令：python可以看到出来的就是python3. 查看位置输入命令：which python3查看此时Python3的位置是否正确。 参考来源：Mac使用HomeBrew安装Python3.*并设为默认版本安装 Python 模块]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
       <tags>
-        <tag>Python3 v</tag>
+        <tag>Python3</tag>
       </tags>
   </entry>
   <entry>
@@ -1155,7 +1169,7 @@
     <url>%2F2019%2F06%2F26%2F%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85KindleEar%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是Mac本地安装KindleEar的过程。 KindleEar 的调试环境由于 KindleEar 的运行依赖于 Google App Engine 环境，无法像用 Calibre 测试 Recipe 脚本那样直接在本地运行，所以为了方便测试编写 安装 App Engine SDK[https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.85.dmg](macOS 系统) 获取 KindleEar 源代码将代码Git clone回本地git clone https://github.com/cdhigh/KindleEar.git 本地运行 KindleEarMac需要定位到 KindleEar 项目目录（注意替换 YOURNAME）cd /Users/YOURNAME/Desktop/KindleEar输入以下命令让 KindleEar 运行起来（注意有两个空格）dev_appserver.py ./app.yaml ./module-worker.yaml看到以下提示，就说明 KindleEar 已经在本机正常运行了 1234567INFO 2019-05-11 13:51:41,358 sdk_update_checker.py:231] Checking for updates to the SDK.INFO 2019-05-11 13:51:44,383 sdk_update_checker.py:247] Update check failed: INFO 2019-05-11 13:51:44,613 api_server.py:275] Starting API server at: http:&#x2F;&#x2F;localhost:49342INFO 2019-05-11 13:51:44,625 dispatcher.py:256] Starting module &quot;default&quot; running at: http:&#x2F;&#x2F;localhost:8080INFO 2019-05-11 13:51:44,667 dispatcher.py:256] Starting module &quot;worker&quot; running at: http:&#x2F;&#x2F;localhost:8081INFO 2019-05-11 13:51:44,672 admin_server.py:150] Starting admin server at: http:&#x2F;&#x2F;localhost:8000INFO 2019-05-11 13:51:46,928 instance.py:294] Instance PID: 37115 打开浏览器（推荐用 Chrome），输入 http://localhost:8080 即可访问运行在本机上的 KindleEar 程序，输入默认的用户名和密码 admin 即可登入控制界面。至此，KindleEar 的调试环境便准备好了。 常见问题在这一过程中，Mac系统会有一些问题，KindleEar会默认采用python2.7.x版本，但是Mac自带的python2.7.10版本低于项目需要的python2.7.12版本，因此需要安装其他的python版本。通过homebrew安装输入命令：brew install python2会安装最高的python2.7.x版本,解决问题。 参考来源：如何用 KindleEar 推送无 RSS 的网站内容（上篇)]]></content>
       <categories>
-        <category>KindleEar</category>
+        <category>SKill</category>
       </categories>
       <tags>
         <tag>KindleEar</tag>

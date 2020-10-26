@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2020-10-26T06:49:08.801Z</updated>
+  <updated>2020-10-26T08:23:41.312Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code 设置</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/VS-Code-%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/VS-Code-%E8%AE%BE%E7%BD%AE/</id>
+    <published>2020-10-26T08:23:41.000Z</published>
+    <updated>2020-10-26T08:23:41.312Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 VS Code 设置。</p><a id="more"></a><h1 id="中文设置"><a href="#中文设置" class="headerlink" title="中文设置"></a>中文设置</h1><p>在扩展商店搜索 <strong>simplified chinese</strong> 安装</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/VS%20Code%20%E6%B1%89%E5%8C%96.png"/></div># 配置 Github**VS Code** 自带了 **git** 的功能，只需要按照过程配置即可。<p>参考来源：<br><a href="https://zhuanlan.zhihu.com/p/31417255">在VScode上配置Git</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 VS Code 设置。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="VS Code" scheme="https://yiranzhimo.github.io/tags/VS-Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Atom 设置</title>
+    <link href="https://yiranzhimo.github.io/2020/10/26/Atom-%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://yiranzhimo.github.io/2020/10/26/Atom-%E8%AE%BE%E7%BD%AE/</id>
+    <published>2020-10-26T08:09:50.000Z</published>
+    <updated>2020-10-26T08:16:36.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 Atom 设置指南。</p><a id="more"></a><h1 id="切换中文"><a href="#切换中文" class="headerlink" title="切换中文"></a>切换中文</h1><p><strong>ATOM</strong> – <strong>setting</strong> – <strong>安装</strong>，在这里可以搜索简体中文的插件安装。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Atom%20%E4%B8%AD%E6%96%87.png"/></div><h1 id="不显示欢迎页面"><a href="#不显示欢迎页面" class="headerlink" title="不显示欢迎页面"></a>不显示欢迎页面</h1><p>将首页的 <strong>Show Welcome Guide when opening Atom</strong> 不勾选即可，需要重启应用生效。</p><p>参考来源：<br><a href="https://discuss.atom.io/t/how-do-i-make-the-welcome-screen-stop-showing-up/40403">How do I make the Welcome screen stop showing up?</a><br><a href="https://blog.csdn.net/ywb201314/article/details/82899508">Atom怎么换成中文版(Atom汉化教程)</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 Atom 设置指南。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
+    
+    
+      <category term="Atom" scheme="https://yiranzhimo.github.io/tags/Atom/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac 如何系统降级</title>
@@ -272,7 +318,7 @@
     <link href="https://yiranzhimo.github.io/2020/10/12/Onedrive-%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7/"/>
     <id>https://yiranzhimo.github.io/2020/10/12/Onedrive-%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7/</id>
     <published>2020-10-12T11:39:58.000Z</published>
-    <updated>2020-10-12T11:39:58.866Z</updated>
+    <updated>2020-10-26T07:44:54.120Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Onedrive 如何取消登录账号。</p><a id="more"></a><ul><li><p>在 <strong>应用程序</strong> 找到 <strong>OneDrive</strong>，</p></li><li><p>按住 <strong>Control 键</strong> 单击该应用程序，</p></li><li><p>选择 <strong>显示包内容</strong> &gt; <strong>Contents文件夹</strong> &gt; <strong>Resources</strong>，</p></li><li><p>找到重置 OneDrive 脚本 <strong>ResetOneDriveApp.command</strong>，运行即可。</p></li></ul><p>参考来源：<br><a href="https://answers.microsoft.com/zh-hans/msoffice/forum/all/onedrive-for/1cc9061d-4a3c-4d58-a452-bdd3d9473414">Onedrive for Mac如何取消登录或者更换用户</a></p>]]></content>
     
@@ -283,7 +329,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Onedrive" scheme="https://yiranzhimo.github.io/tags/Onedrive/"/>
@@ -573,7 +619,7 @@
     <link href="https://yiranzhimo.github.io/2020/08/27/Mac%20%E6%90%AD%E5%BB%BA%20Gitbook%20%E5%86%99%E4%BD%9C/"/>
     <id>https://yiranzhimo.github.io/2020/08/27/Mac%20%E6%90%AD%E5%BB%BA%20Gitbook%20%E5%86%99%E4%BD%9C/</id>
     <published>2020-08-27T04:40:21.000Z</published>
-    <updated>2020-08-30T09:27:17.000Z</updated>
+    <updated>2020-10-26T07:46:08.300Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 搭建 Gitbook 写作。</p><a id="more"></a><p>需要整理碎片化笔记，所以利用 Typora 写作 Markdown，Gitbook 支持图书构建及发布管理。</p><h1 id="安装-Typora"><a href="#安装-Typora" class="headerlink" title="安装 Typora"></a>安装 Typora</h1><p>安装 <a href="https://typora.io/">Typora</a> </p><h1 id="安装-Gitbook"><a href="#安装-Gitbook" class="headerlink" title="安装 Gitbook"></a>安装 Gitbook</h1><h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>输入命令：<br><code>brew install node</code></p><h2 id="安装-Gitbook-1"><a href="#安装-Gitbook-1" class="headerlink" title="安装 Gitbook"></a>安装 Gitbook</h2><p><code>sudo npm install -g gitbook-cli</code></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd Downloads</span><br><span class="line">mkdir TestBook</span><br><span class="line">cd TestBook</span><br><span class="line">gitbook init</span><br></pre></td></tr></table></figure><p>这样就可以初始化目录生成 <strong>SUMMARY.md</strong> 和  <strong>README.md</strong> </p><p>随后，在 <strong>SUMMARY.md</strong> 中编辑大纲</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Gitbook%20%E7%BC%96%E8%BE%91%E5%A4%A7%E7%BA%B2.png"/></div>再次对文件初始化 `gitbook init`，就会生成目录了，即可。<p>参考来源：<br><a href="https://www.jianshu.com/p/bb4bb2360bd8">Mac上搭建得心应手的写作环境(Typora+Gitbook)</a></p>]]></content>
     
@@ -584,7 +630,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Gitbook" scheme="https://yiranzhimo.github.io/tags/Gitbook/"/>
@@ -596,7 +642,7 @@
     <link href="https://yiranzhimo.github.io/2020/08/27/Mac%20%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%20ebook-convert/"/>
     <id>https://yiranzhimo.github.io/2020/08/27/Mac%20%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%20ebook-convert/</id>
     <published>2020-08-27T03:25:14.000Z</published>
-    <updated>2020-09-06T13:01:34.000Z</updated>
+    <updated>2020-10-26T07:46:06.978Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Mac 安装 ebook-convert 和简单使用。</p><a id="more"></a><h1 id="ebook-convert-下载安装"><a href="#ebook-convert-下载安装" class="headerlink" title="ebook-convert 下载安装"></a>ebook-convert 下载安装</h1><p><strong>ebook-convert</strong> 是 Calibre 的一个命令行。<br> 下载 <a href="https://calibre-ebook.com/download">Calibre</a> 以后，创建一个指向ebook-convert工具的软件链接：<br><code> sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin</code><br>但是出现问题：<br><code>ln: /usr/bin/ebook-convert: Operation not permitted</code><br>如果出现 <code>Operation not permitted</code> ，说明系统权限限制，需要配置环境变量的方式解决。<br>输入命令：<br><code>vim ~/.bash_profile </code><br>进入命令模式输入：<code>i</code><br>这样进入了编辑模式，输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export EBOOK_PATH&#x3D;&#x2F;Applications&#x2F;calibre.app&#x2F;Contents&#x2F;MacOS</span><br><span class="line">export PATH&#x3D;$PATH:$EBOOK_PATH</span><br></pre></td></tr></table></figure><p>需要保存文件，按住 <em>ESC</em>，之后再命令模式，输入 <code>:wq</code> 保存文件即可。<br>刷新一下刚刚的配置:<br><code>source ~/.bash_profile</code><br>最后测试一下 ebook-convert 指令是否能正常被调用：<br><code>ebook-convert --version</code><br>弹出版本就可以，说明可以调用了。<br>不过当关闭了终端以后，再打开会发现提示：<br><code>zsh: command not found: ebook-convert</code><br>这时候，还是需要刷新配置：<br><code>source ~/.bash_profile</code></p><h1 id="ebook-convert-使用"><a href="#ebook-convert-使用" class="headerlink" title="ebook-convert 使用"></a>ebook-convert 使用</h1><p>常用命令：<br><code>ebook-convert xxx.html xxx.mobi</code><br>会自动输出在 <code>xxx.html</code> 的目录</p><p>参考来源：<br><a href="http://gitbook.wiliam.me/ebookandpdf.html?q=">安装ebook-convert</a></p>]]></content>
     
@@ -607,7 +653,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="ebook-convert" scheme="https://yiranzhimo.github.io/tags/ebook-convert/"/>
@@ -983,34 +1029,11 @@
   </entry>
   
   <entry>
-    <title>Markdown 插入音频</title>
-    <link href="https://yiranzhimo.github.io/2020/05/16/Markdown%20%E6%8F%92%E5%85%A5%E9%9F%B3%E9%A2%91/"/>
-    <id>https://yiranzhimo.github.io/2020/05/16/Markdown%20%E6%8F%92%E5%85%A5%E9%9F%B3%E9%A2%91/</id>
-    <published>2020-05-16T04:23:58.000Z</published>
-    <updated>2020-05-16T04:32:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章主要介绍的是Markdown 插入音频。</p><a id="more"></a><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div align&#x3D;life&gt; </span><br><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;400 height&#x3D;140 src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>值得注意的是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;</span><br></pre></td></tr></table></figure><p>音乐文件的 <strong>id</strong>，可以在网页播放链接中找到。</p><p>参考来源：<br><a href="https://yuanlichenai.cn/2019/03/03/music/">markdown插入音乐</a><br><a href="https://www.sunyazhou.com/2017/12/27/20171227markdown-audio/">Markdown中插入音频文件</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;文章主要介绍的是Markdown 插入音频。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
-    
-    
-      <category term="Markdown" scheme="https://yiranzhimo.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Saladict 与 Alfred 协作指南</title>
     <link href="https://yiranzhimo.github.io/2020/05/15/Saladict%20%E4%B8%8E%20Alfred%20%E5%8D%8F%E4%BD%9C%E6%8C%87%E5%8D%97/"/>
     <id>https://yiranzhimo.github.io/2020/05/15/Saladict%20%E4%B8%8E%20Alfred%20%E5%8D%8F%E4%BD%9C%E6%8C%87%E5%8D%97/</id>
     <published>2020-05-15T13:37:54.000Z</published>
-    <updated>2020-10-24T06:06:57.982Z</updated>
+    <updated>2020-10-26T07:46:09.413Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Saladict 与 Alfred 协作指南。</p><a id="more"></a><h1 id="Saladict"><a href="#Saladict" class="headerlink" title="Saladict"></a>Saladict</h1><p><a href="https://saladict.crimx.com/">Saladict</a> 即沙拉查词，非常好用的查单词插件，它本身是浏览器插件，但是可以通过配置也可以在电脑上读文献时使用。</p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p><a href="https://chrome.google.com/webstore/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D-%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/cdonnmffkdaoajfknoeeecmchibpmkmg/reviews?hl=en">沙拉查词-聚合词典划词翻译插件安装</a><br>安装后需要在浏览器上设置全局快捷键，打开网站：<strong>chrome://extensions/shortcuts</strong>，找到沙拉查词中的<strong>在独立窗口中搜索剪贴板内容</strong>，设置快捷键（建议设置为 <strong>CMD+Shift+L</strong> ），并选择<strong>全局</strong>。</p><h2 id="Alfred-配置"><a href="#Alfred-配置" class="headerlink" title="Alfred 配置"></a>Alfred 配置</h2><p>下载 <a href="https://github.com/crimx/ext-saladict/files/3711425/saladict.alfredworkflow.zip">Alfred workflow 脚本</a>，安装后，选择 <strong>Hotkey</strong> 录入快捷键，快捷键随意选择即可，之后，双击 <strong>Run NSAppleScript</strong><br>默认代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">on alfred_script(q)</span><br><span class="line">  tell application &quot;System Events&quot;</span><br><span class="line"># 快捷键打开沙拉词典</span><br><span class="line">key code 37 using &#123;control down, command down&#125;</span><br><span class="line">  end tell</span><br><span class="line">end alfred_script</span><br></pre></td></tr></table></figure><p>修改使用 <strong>shift</strong>  替换 <strong>control</strong> 即可。<br>修改代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">on alfred_script(q)</span><br><span class="line">  tell application &quot;System Events&quot;</span><br><span class="line"># 快捷键打开沙拉词典</span><br><span class="line">key code 37 using &#123;shift down, command down&#125;</span><br><span class="line">  end tell</span><br><span class="line">end alfred_scrip</span><br></pre></td></tr></table></figure><p>配置完成以后，<strong>选中文字</strong>–&gt;<strong>按下快捷键</strong>–&gt;<strong>自动弹出查询结果</strong>，但是需要注意：Alfred 和 浏览器必须同时开启。</p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>后来电脑重新配置后发现了一些问题，补充一下：<strong>调用快捷键发现无法弹出沙拉查词的页面</strong></p><p>原因是因为重新安装的 Alfred其他版本，需要打开Mac电脑的设置–&gt;安全性与隐私–&gt;辅助功能，重新勾选 Alfred4。</p><p>参考来源：<br><a href="https://iseex.github.io/2020-03/saladict-alfred/">沙拉查词 + Alfred，打造最佳文献翻译体验！</a><br><a href="https://github.com/crimx/ext-saladict/issues/509">技巧分享：Alfred Workflows 调用 Saladict 实现全局【文本翻译】 #509</a></p>]]></content>
     
@@ -1021,7 +1044,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Saladict" scheme="https://yiranzhimo.github.io/tags/Saladict/"/>
@@ -1056,7 +1079,7 @@
     <link href="https://yiranzhimo.github.io/2020/05/15/%E9%BC%A0%E9%A1%BB%E7%AE%A1%E8%BE%93%E5%85%A5%E6%B3%95%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://yiranzhimo.github.io/2020/05/15/%E9%BC%A0%E9%A1%BB%E7%AE%A1%E8%BE%93%E5%85%A5%E6%B3%95%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-05-15T12:59:46.000Z</published>
-    <updated>2020-05-29T06:30:48.000Z</updated>
+    <updated>2020-10-26T07:46:08.673Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是鼠须管输入法使用指南。</p><a id="more"></a><h1 id="鼠须管输入法"><a href="#鼠须管输入法" class="headerlink" title="鼠须管输入法"></a>鼠须管输入法</h1><p>鼠须管是一个 Mac 平台的输入法，它基于 RIME／中州韵输入法引擎。RIME 是一个跨平台的输入法框架，在 Linux 下，名为 中州韵，Windows 则为小狼毫。这套算法支持朙月拼音、仓颉五代、五笔 86、粤拼、吴语、中古全拼／三拼、国际音标输入法及 emoji 表情等几乎所有音码和形码输入法。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><a href="https://rime.im/">鼠须管输入法</a>，官网下载安装即可。</p><h1 id="小鹤音形"><a href="#小鹤音形" class="headerlink" title="小鹤音形"></a>小鹤音形</h1><p>在<a href="http://flypy.ys168.com/">小鹤音形输入法</a>，选择 Mac 版本下载，下载后进入 Finder，进入 <code>～/Library/Rime/</code>，将解压缩的文件覆盖安装即可。<br>如果不熟悉的双拼或者字码表的话，可以在网站进入<a href="https://api.ihint.me/shuang/">双拼练习</a>练习。</p><h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><p>卸载指南：<br>打开系统输入法设定面板，移除鼠须管；<br>打开 Finder  /Library/Input Methods，移除「鼠须管.app」。<br>前往 ~/Library 并移除个人鼠须管设定资料夹 Rime。<br>重新登入系统，确保清理完毕。</p><p>参考来源：<br><a href="https://www.ifanr.com/156409">鼠须管，“神级” 输入法</a><br><a href="https://github.com/wongdean/rime-settings">接近原生的鼠须管 Rime 配置</a><br><a href="https://segmentfault.com/a/1190000005754706">鼠须管输入法 傻瓜版配置 - 基于 rime_pro 增强包</a><br><a href="https://flypy.com/bbs/forum.php?mod=viewthread&tid=162">这是一个Mac系统上鼠须管版的小鹤音形</a><br><a href="https://www.ahonn.me/blog/custom-input-methods-with-rime">用 RIME 定制输入法</a><br><a href="https://scomper.me/gtd/-shu-xu-guan-de-diao-jiao-bi-ji">「鼠须管」的调教笔记</a><br><a href="https://www.dreamxu.com/install-config-squirrel/">安装及配置 Mac 上的 Rime 输入法——鼠鬚管 (Squirrel)</a><br><a href="https://github.com/rime/home/issues/59">如何卸载？</a></p>]]></content>
     
@@ -1067,7 +1090,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="鼠须管输入法" scheme="https://yiranzhimo.github.io/tags/%E9%BC%A0%E9%A1%BB%E7%AE%A1%E8%BE%93%E5%85%A5%E6%B3%95/"/>
@@ -1079,7 +1102,7 @@
     <link href="https://yiranzhimo.github.io/2020/05/15/Alfred%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://yiranzhimo.github.io/2020/05/15/Alfred%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-05-15T12:35:49.000Z</published>
-    <updated>2020-05-15T12:52:48.000Z</updated>
+    <updated>2020-10-26T07:47:27.180Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Alfred 使用指南。</p><a id="more"></a><h1 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a><a href="https://www.alfredapp.com/">Alfred</a></h1><p>Alfred 是 Mac 上的效率神器。<br>免费用户只能使用其Features中的功能，而使用 Workflows (自定义插件的工作流)，则需要购买 Powerpack 才能激活此功能。<br>如果想要破解激活，可参考: <a href="https://github.com/lhajh/Alfred-Powerpack">Alfred-Powerpack</a></p><h1 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h1><p>Workflow 是 Alfred 中支持的插件工作流，可以极大的提升工作效率。<br>如果你想要寻找到想要的 Workflow ，可参考：<br><a href="http://www.packal.org/">Packal</a><br><a href="https://github.com/msoedov/Alfred-collection">A collection of all known Alfred3 workflows</a><br><a href="https://github.com/vitorgalvao/alfred-workflows">Collection of Alfred workflows</a><br><a href="https://github.com/zenorocha/alfred-workflows#ip-address-v120--download">🤘 A collection of Alfred 3 and 4 workflows that will rock your world</a><br><a href="http://www.alfredworkflow.com/">Workflows List</a><br><a href="https://github.com/hzlzh/AlfredWorkflow.com/tree/master/Sources/Workflows">AlfredWorkflow.com</a><br><a href="https://www.alfredforum.com/forum/3-share-your-workflows/">Share your Workflows</a><br><a href="http://www.alfredworkflow.com/">Workflows List</a><br><a href="https://github.com/h3l/douban-workflow">Alfred douban workflow</a><br><a href="https://github.com/gharlan/alfred-github-workflow">GitHub Workflow for Alfred 3</a></p><p>参考来源:<br><a href="http://leedoo.cn/post/alfred-workflowgong-zuo-liu">Alfred - Workflow工作流</a><br><a href="https://www.jianshu.com/p/e9f3352c785f">5分钟上手Mac效率神器Alfred以及Alfred常用操作</a></p>]]></content>
     
@@ -1090,7 +1113,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Alfred" scheme="https://yiranzhimo.github.io/tags/Alfred/"/>
@@ -1099,16 +1122,16 @@
   
   <entry>
     <title>Markdown 插入视频</title>
-    <link href="https://yiranzhimo.github.io/2020/05/13/Markdown%20%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91/"/>
-    <id>https://yiranzhimo.github.io/2020/05/13/Markdown%20%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91/</id>
+    <link href="https://yiranzhimo.github.io/2020/05/13/Markdown%20%E6%8F%92%E5%85%A5%E5%AA%92%E4%BD%93/"/>
+    <id>https://yiranzhimo.github.io/2020/05/13/Markdown%20%E6%8F%92%E5%85%A5%E5%AA%92%E4%BD%93/</id>
     <published>2020-05-13T02:52:47.000Z</published>
-    <updated>2020-05-13T04:36:04.000Z</updated>
+    <updated>2020-10-26T07:52:18.669Z</updated>
     
-    <content type="html"><![CDATA[<p>文章主要介绍的是Markdown 插入视频。</p><a id="more"></a><h1 id="Bilibili"><a href="#Bilibili" class="headerlink" title="Bilibili"></a>Bilibili</h1><p><strong>视频网页</strong> - <strong>分享</strong> - <strong>嵌入代码</strong> 即可。</p><h1 id="Youtube"><a href="#Youtube" class="headerlink" title="Youtube"></a>Youtube</h1><p><strong>视频网页</strong> - <strong>分享</strong> - <strong>嵌入</strong>- <strong>复制代码</strong> 即可。</p>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是Markdown 插入媒体。</p><a id="more"></a><h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><h2 id="Bilibili"><a href="#Bilibili" class="headerlink" title="Bilibili"></a>Bilibili</h2><p><strong>视频网页</strong> - <strong>分享</strong> - <strong>嵌入代码</strong> 就可以找到链接了，但是 Bilibili 中的链接中是没有设置视频页面的长宽度，同时 <strong>src</strong> 属性后面也没有 <code>https:</code>，需要手动添加。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https:&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;841146667&amp;bvid&#x3D;BV1A54y1z72v&amp;cid&#x3D;207779271&amp;page&#x3D;1&quot; scrolling&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; frameborder&#x3D;&quot;no&quot; framespacing&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;true&quot;&gt; &lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure><h2 id="Youtube"><a href="#Youtube" class="headerlink" title="Youtube"></a>Youtube</h2><p><strong>视频网页</strong> - <strong>分享</strong> - <strong>嵌入</strong>- <strong>复制代码</strong> 即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;vePc5V4h_kg&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure><h1 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h1><p>网易云代码示例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div align&#x3D;life&gt; </span><br><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;400 height&#x3D;140 src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>值得注意的是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src&#x3D;&quot;https:&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;4238134&amp;auto&#x3D;0&amp;height&#x3D;66&quot;</span><br></pre></td></tr></table></figure><p>音乐文件的 <strong>id</strong>，可以在网页播放链接中找到。</p><p>参考来源：<br><a href="https://yuanlichenai.cn/2019/03/03/music/">markdown插入音乐</a><br><a href="https://www.sunyazhou.com/2017/12/27/20171227markdown-audio/">Markdown中插入音频文件</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;文章主要介绍的是Markdown 插入视频。&lt;/p&gt;
+      &lt;p&gt;文章主要介绍的是Markdown 插入媒体。&lt;/p&gt;
     
     </summary>
     
@@ -1309,7 +1332,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/26/%E9%85%8D%E7%BD%AE%20Tor%20%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     <id>https://yiranzhimo.github.io/2020/04/26/%E9%85%8D%E7%BD%AE%20Tor%20%E6%B5%8F%E8%A7%88%E5%99%A8/</id>
     <published>2020-04-26T10:22:33.000Z</published>
-    <updated>2020-04-26T11:53:21.000Z</updated>
+    <updated>2020-10-26T07:54:08.241Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是配置 Tor 浏览器。</p><a id="more"></a><h1 id="Tor"><a href="#Tor" class="headerlink" title="Tor"></a>Tor</h1><p><strong>Tor</strong> - <strong>configure</strong> - <strong>socks5</strong>/<strong>sock4</strong>/<strong>http</strong> </p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>具体配置可在代理软件中的控制台找到。</p><p>参考来源：<br><a href="https://www.hijk.pw/pc-config-telegram-use-proxy/">配置Telegram走SS/SSR/V2ray/trojan代理</a></p>]]></content>
     
@@ -1320,7 +1343,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Tor" scheme="https://yiranzhimo.github.io/tags/Tor/"/>
@@ -1332,7 +1355,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/26/%E9%85%8D%E7%BD%AE%20Telegram%20%E4%BB%A3%E7%90%86/"/>
     <id>https://yiranzhimo.github.io/2020/04/26/%E9%85%8D%E7%BD%AE%20Telegram%20%E4%BB%A3%E7%90%86/</id>
     <published>2020-04-26T10:22:06.000Z</published>
-    <updated>2020-04-26T10:47:45.000Z</updated>
+    <updated>2020-10-26T07:54:09.131Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Telegram 代理。</p><a id="more"></a><h1 id="Telegram"><a href="#Telegram" class="headerlink" title="Telegram"></a>Telegram</h1><p>进入 <strong>Setting</strong> - <strong>Advanced</strong> - <strong>Network and proxy</strong> - <strong>Proxy setting</strong> - <strong>Use custom proxy</strong><br>选择 <strong>Socks5</strong>, <strong>HTTP</strong>, <strong>MTPROTO</strong>。</p><h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>根据自身使用的代理软件进行设置 <strong>Hostname</strong> 和 <strong>Port</strong> 即可。<br>相关信息可以在代理软件的控制台看到。</p><p>参考来源：<br><a href="https://www.hijk.pw/pc-config-telegram-use-proxy/">配置Telegram走SS/SSR/V2ray/trojan代理</a></p>]]></content>
     
@@ -1343,7 +1366,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Telegram" scheme="https://yiranzhimo.github.io/tags/Telegram/"/>
@@ -1424,7 +1447,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/23/KeePassXC%20%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
     <id>https://yiranzhimo.github.io/2020/04/23/KeePassXC%20%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/</id>
     <published>2020-04-23T14:52:49.000Z</published>
-    <updated>2020-04-23T15:02:36.000Z</updated>
+    <updated>2020-10-26T07:55:29.058Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 KeePassXC 密码管理。</p><a id="more"></a><p>平时在网上，会注册很多的网站，如果密码全部采取一致的，一旦被撞库就相当于把所有鸡蛋放在一个篮子里，结果篮子砸了。<br>如果都采取不同的密码，那么脑子不够用记不住，使用过程比较麻烦，为了解决这些痛点，需要有合适的密码管理方案。<br>需要满足两个条件：<br>条件一：<strong>当我们在新的网站输入注册时，可以实现自动保存。</strong><br>条件二：<strong>可以实现手机和电脑密码的同步，方便查看。</strong></p><h1 id="自动保存密码"><a href="#自动保存密码" class="headerlink" title="自动保存密码"></a>自动保存密码</h1><p>在电脑上安装 <a href="https://keepassxc.org/">KeePassXC</a>，同时 Google 浏览器上安装 <a href="https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk">KeePassXC-Browser</a>，即可实现。</p><h1 id="密码同步"><a href="#密码同步" class="headerlink" title="密码同步"></a>密码同步</h1><p>在安卓手机上安装 <a href="https://play.google.com/store/apps/details?id=keepass2android.keepass2android&hl=en_US">keepass2android</a>，手机和电脑之间通过 Dropbox 同步。</p><p>参考来源：<br><a href="https://blog.naibabiji.com/archives/396">KeePass实现Chrome浏览器自动填充密码方法二</a><br><a href="https://blog.naibabiji.com/archives/374">KeePass实现Chrome浏览器自动填充密码方法一</a><br><a href="https://blog.techcat.me/20180324/how-to-use-keepass/">在 Windows 和 Android 上利用 KeePass 进行密码管理与同步</a><br><a href="https://github.com/keeweb/keeweb/releases/tag/v1.11.5">keeweb</a></p>]]></content>
     
@@ -1435,7 +1458,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="KeePassXC" scheme="https://yiranzhimo.github.io/tags/KeePassXC/"/>
@@ -1447,7 +1470,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/23/Kodi%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://yiranzhimo.github.io/2020/04/23/Kodi%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-04-23T14:43:24.000Z</published>
-    <updated>2020-04-23T14:52:14.000Z</updated>
+    <updated>2020-10-26T07:55:30.065Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Kodi 使用指南。</p><a id="more"></a><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>进入 <a href="https://kodi.tv/">Kodi 官网</a>，分别支持 Mac、Linux、Windows、Android、IOS平台的安装包。</p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="设置中文界面"><a href="#设置中文界面" class="headerlink" title="设置中文界面"></a>设置中文界面</h2><p>启动 Kodi，通过左上角的“齿轮”图标进入 <code>System -&gt; Interface Settings -&gt; Skin</code>，将其中的 Fonts 修改成 Arial Based；<br>然后将 Regional 中的 Language 修改成 Chinese (Simple)；<br>进入 播放设置 -&gt; 语言，将“首选音频语言”、“首选字幕语言” 以及“下载字幕语言”均选择 Chinese (Simple)。</p><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p><a href="https://zh.wizcase.com/blog/%E7%94%B5%E8%A7%86%E7%94%A8%E5%A4%A7kodi%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6%EF%BC%88%E5%90%AB%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%EF%BC%89-%E5%B9%B4%E6%9B%B4%E6%96%B0/">电视用5大Kodi附加组件（含安装指南） – 2020年更新</a></p><p>参考来源：<br><a href="http://www.kodiplayer.cn/">Kodi中文网</a><br><a href="https://www.douban.com/note/709691715/">一个私人影视库的解决方案——KODI（上）</a></p>]]></content>
     
@@ -1458,7 +1481,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Kodi" scheme="https://yiranzhimo.github.io/tags/Kodi/"/>
@@ -1654,7 +1677,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/23/IRC%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>https://yiranzhimo.github.io/2020/04/23/IRC%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
     <published>2020-04-23T08:55:05.000Z</published>
-    <updated>2020-04-23T09:28:22.000Z</updated>
+    <updated>2020-10-26T07:55:30.502Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 IRC 的使用教程。</p><a id="more"></a><h1 id="IRC"><a href="#IRC" class="headerlink" title="IRC"></a>IRC</h1><p>IRC（Internet Relay Chat 的缩写，“因特网中继聊天”）是一个位于应用层的协议。其主要用于群体聊天，但同样也可以用于个人对个人的聊天。IRC 使用的服务器端口有 6667（明文传输，如irc://irc.freenode.net）、6697（SSL加密传输，如ircs://irc.freenode.net:6697）等。<br>IRC采用客户机/服务器模式，它能使 Internet 用户实时地与其他用户交谈，每个用户通过客户端程序与远程主机建立连接，远程主机接受多个来自客户端程序的连接，并实现多个用户之间的实时通话。</p><h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><h2 id="WeeChat"><a href="#WeeChat" class="headerlink" title="WeeChat"></a>WeeChat</h2><p>它是一个轻便，快速，高可扩展的命令行基础，尤其是在 Unix，Linux，BSD，GNU Hurd，Windows 和 Mac OS 上运行的跨平台聊天客户端。</p><h2 id="Pidgin"><a href="#Pidgin" class="headerlink" title="Pidgin"></a>Pidgin</h2><p>用于 Linux 的 Pidgin IM 客户端。</p><h2 id="XChat"><a href="#XChat" class="headerlink" title="XChat"></a>XChat</h2><p>适用于 Linux 和 Windows 的 IRC 客户端，v用户能够同时连接几个聊天网络。</p><h2 id="Textual"><a href="#Textual" class="headerlink" title="Textual"></a>Textual</h2><p>适用于 Mac 的 IRC 客户端。</p><h1 id="使用过程"><a href="#使用过程" class="headerlink" title="使用过程"></a>使用过程</h1><p>以 <em>irc://irc.freenode.net</em> 为例子<br>打开 Textual 后，点击 <em>sever</em> - <em>add sever</em><br>输入 <em>irc.freenode.net</em><br>可以添加服务器，服务器添加完毕后<br>点击 <em>sever</em> - <em>add channel</em><br>输入 <em>#freenode</em>，即可实现添加频道。</p><p>参考来源：<br><a href="https://zh.wikipedia.org/wiki/IRC">IRC</a><br><a href="https://free-e.net/144">如何使用IRC?</a><br><a href="https://www.howtoing.com/best-irc-clients-for-linux">7个用于Linux的IRC客户端</a><br><a href="https://freenode.net/groupreg">freenode</a><br><a href="https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IRC">如何使用 IRC</a><br><a href="https://www.cnblogs.com/openix/p/3525479.html">irc</a></p>]]></content>
     
@@ -1665,7 +1688,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="IRC" scheme="https://yiranzhimo.github.io/tags/IRC/"/>
@@ -1677,7 +1700,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/23/IPTV/"/>
     <id>https://yiranzhimo.github.io/2020/04/23/IPTV/</id>
     <published>2020-04-23T08:19:22.000Z</published>
-    <updated>2020-04-23T08:23:08.000Z</updated>
+    <updated>2020-10-26T07:55:30.956Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 IPTV 的使用教程。</p><a id="more"></a><h1 id="IPTV-简介"><a href="#IPTV-简介" class="headerlink" title="IPTV 简介"></a>IPTV 简介</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Internet Protocol television (IPTV) is the delivery of television content over Internet Protocol (IP) networks.</span><br><span class="line">This is in contrast to delivery through traditional terrestrial, satellite, and cable television formats. </span><br><span class="line">Unlike downloaded media, IPTV offers the ability to stream the source media continuously. </span><br><span class="line">As a result, a client media player can begin playing the content (such as a TV channel) almost immediately. </span><br><span class="line">This is known as streaming media.</span><br></pre></td></tr></table></figure><p>互联网协议电视（IPTV）是通过互联网协议（IP）网络传送电视内容的方法，这与通过传统的地面，卫星和有线电视格式进行传送形成对比，与下载的媒体不同，IPTV提供了连续播放源媒体的功能，结果，客户端媒体播放器几乎可以立即开始播放内容（例如电视频道），这称为流媒体，比如说我们经常通过手机看的电视直播，他们就属于IPTV。</p><h1 id="IPTV-Channels"><a href="#IPTV-Channels" class="headerlink" title="IPTV Channels"></a>IPTV Channels</h1><p>GIthub 上有一个项目，是收藏的 IPTV 的频道。<br><a href="https://github.com/iptv-org/iptv">Collection of 8000+ publicly available IPTV channels from all over the world</a></p><h1 id="IPTV-客户端"><a href="#IPTV-客户端" class="headerlink" title="IPTV 客户端"></a>IPTV 客户端</h1><p>全平台通用的 <a href="https://www.videolan.org/">VLC</a> 或者 Windows 下的 <a href="https://daumpotplayer.com/">Potplayer</a> 都是支持 m3u8 文件格式的导入。</p>]]></content>
     
@@ -1688,7 +1711,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="IPTV" scheme="https://yiranzhimo.github.io/tags/IPTV/"/>
@@ -1838,7 +1861,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/23/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91/"/>
     <id>https://yiranzhimo.github.io/2020/04/23/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%A7%86%E9%A2%91/</id>
     <published>2020-04-23T07:08:22.000Z</published>
-    <updated>2020-04-23T07:19:39.000Z</updated>
+    <updated>2020-10-26T07:55:52.458Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是Mac 如何下载视频网站视频。</p><a id="more"></a><p>最开始只是想下载我想要的视频收藏，后来，就想，要不试试各大视频怎么下载（此处的下载不是指解析VIP视频，而是指如何下载各大视频网站的免费的视频）</p><h1 id="Bilibili"><a href="#Bilibili" class="headerlink" title="Bilibili"></a>Bilibili</h1><p>哔哩哔哩的视频用 Mac 版的 bilibili 客户端下载即可，下载速度很OK，还是多线程的aria2下载，只是有一个问题，就是下载完以后的视频为 flv 格式，且为分段的，这并不影响观看，用IINA或者bilibli就可以看了，但是如果是收藏视频就得自己转换合并了，推荐工具 ffmpeg。<br>##优酷<br>Mac 的 Downie 即可。<br>##腾讯<br>下面是挖坑历程，不过 2020 年了，Downie 可以搞定一切。</p><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>尝试客户端下载，然后找到文件，转化合并格式就好了，但是，等我找到文件之后，我惊讶的发现文件竟然都是 ts 格式的了，而且每段都是 10s 左右的，于是，我想着用软件转化并且合并，结果转化的东西都是音频没有视频，而且 ts 格式的源文件也是只有音频没有视频。无奈，放弃了这个方法。</p><h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>我尝试了 Github 上的项目，<a href="https://you-get.org/">you-get</a>, <a href="http://ytdl-org.github.io/youtube-dl/">youtube-dl</a>, <a href="https://github.com/iawia002/annie">Annie</a>，结果，这三个没有一个能下载，无奈，这条路又放弃了。</p><h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>我尝试用 Apowersoft, 但是这个软件的下载速度不太行，而且，基本上都是失败的。</p><h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>事到如今，只能退而求其次了，想到了两个办法，第一个办法，我用网页嗅探视频，然后下载合并，尝试下载电视剧还好，视频基本会被截成20Mb左右的一段，而且，最让我愕然的是，如果我打开斗罗大陆的视频，会被截成不到2Mb的文件，这是有多少段啊，好的，这条路也没了。</p><h1 id="爱奇艺"><a href="#爱奇艺" class="headerlink" title="爱奇艺"></a>爱奇艺</h1><p>爱奇艺的视频网页嗅探没用，网页解析没用，<a href="https://you-get.org/">you-get</a>, <a href="http://ytdl-org.github.io/youtube-dl/">youtube-dl</a>，Downie, Apowersoft，统统没用，还好有 <a href="https://github.com/iawia002/annie">Annie</a>。</p>]]></content>
     
@@ -1849,7 +1872,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="视频" scheme="https://yiranzhimo.github.io/tags/%E8%A7%86%E9%A2%91/"/>
@@ -2022,7 +2045,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/22/Moon%20FM%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%8C%E6%AD%A5/"/>
     <id>https://yiranzhimo.github.io/2020/04/22/Moon%20FM%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%8C%E6%AD%A5/</id>
     <published>2020-04-22T04:35:32.000Z</published>
-    <updated>2020-04-26T11:20:05.000Z</updated>
+    <updated>2020-10-26T07:54:07.375Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Moon FM 不同客户端同步的使用教程。<br> <a id="more"></a></p><h1 id="Moon-FM"><a href="#Moon-FM" class="headerlink" title="Moon FM"></a>Moon FM</h1><p><a href="http://beta.moon.fm/">Moon FM 官网</a><br>Moon FM 是一款 UI 设计精美的播客软件，支持 Mac、Windows、Linux、Android 和 IOS，真正的做到的全平台支持，但是不同的客户端之间存在同步的问题，开发者也给出了同步的解决方案，但是还是比较麻烦的，网上有一份利用 Cloudant 实现同步的方案，自己照着步骤设置完毕。</p><h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><p>进入 <a href="https://cloud.ibm.com/registration">IBM Cloud </a>注册；<br>登陆后搜索输入：<strong>Cloudant</strong>；<br>选择 Lite 套餐，服务名称随便取，资源组、标记都默认即可，<strong>Available authentication methods</strong>选择 <strong>Use both legacy credentials and IAM</strong>；<br>创建完毕后，进入到创建好的服务，点击<strong>Launch Cloudant Dashboard</strong>，进入 <strong>Cloudant</strong> 的 <strong>Dashboard</strong> 页面，创建一个数据库，记好名字：xxx；<br>返回创建好的服务，回到上一级页面，新建凭证，名称随意选取，角色选择  Reader，选择服务标识自动生成；<br>选择查看凭证，其中有：<br><code>“url”：“https://..................cloud”</code><br>而需要的地址即是：<br><strong>url 地址/数据库名</strong><br><code>https://..................cloud/xxx</code><br>填入对应的客户端即可实现同步。</p><p>参考来源：<br><a href="https://lifesign.me/2019/12/24/use-ibm-cloudant-for-moonfm/">使用 IBM Cloudant 多端同步 MoonFM 数据</a><br><a href="https://github.com/gaodeng/Moon-FM-Support/issues/52">同步功能如何使用？</a><br><a href="https://github.com/gaodeng/Moon-FM-Support/blob/master/couchdb_setup/couchdb.md">Moon-FM-Support</a></p>]]></content>
     
@@ -2033,7 +2056,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Moon FM" scheme="https://yiranzhimo.github.io/tags/Moon-FM/"/>
@@ -2137,7 +2160,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/22/Nestopia%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://yiranzhimo.github.io/2020/04/22/Nestopia%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2020-04-22T01:55:46.000Z</published>
-    <updated>2020-04-22T02:03:18.000Z</updated>
+    <updated>2020-10-26T07:56:37.721Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Nestopia 的使用教程。</p><a id="more"></a><h1 id="Nestopia"><a href="#Nestopia" class="headerlink" title="Nestopia"></a>Nestopia</h1><p><a href="http://nestopia.sourceforge.net/">Nestopia 官网</a><br>第一步：双击打开下载的 Nestopia 模拟器 (pd)CMC 80’s Demo，会出现蓝色的模拟器界面,这是正常的启动后的界面。<br>第二步：选择下载好的游戏文件，把文件拖入到 Nestopia 模拟器界面就可以进行游戏了。</p><h1 id="Enhancer"><a href="#Enhancer" class="headerlink" title="Enhancer"></a>Enhancer</h1><p>装上Enhancer还能让Nestopia支持手柄操作，下载Enhancer的dmg文件，加载后将里面的folder拷贝到 Library/Application Support/ 目录下即可完成安装。</p><p>参考来源：<br><a href="https://www.waerfa.com/nestopia-for-mac">Nestopia：最好的FC红白机模拟器</a><br><a href="https://www.yxbao.com/xw/127478.html">nestopia mac版使用教程</a></p>]]></content>
     
@@ -2148,7 +2171,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Nestopia" scheme="https://yiranzhimo.github.io/tags/Nestopia/"/>
@@ -2160,7 +2183,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/22/PicGo%20%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/"/>
     <id>https://yiranzhimo.github.io/2020/04/22/PicGo%20%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/</id>
     <published>2020-04-22T00:09:52.000Z</published>
-    <updated>2020-10-26T07:32:33.557Z</updated>
+    <updated>2020-10-26T07:56:38.094Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 PicGo 如何配置图床。</p><a id="more"></a><h1 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h1><p><strong><a href="https://github.com/Molunerfinn/PicGo">PicGo</a></strong> 是一款图床软件，支持的图床有<strong>微博</strong>、<strong>腾讯云</strong>、<strong>阿里云</strong>、<strong>七牛云</strong>、<strong>又拍云</strong>、<strong>SM.MS</strong>、<strong>Github</strong> 等。</p><h2 id="Github-图床"><a href="#Github-图床" class="headerlink" title="Github 图床"></a>Github 图床</h2><p>首先在 Github 新建仓库，即 <strong>reposity</strong>，<strong>Public</strong> / <strong>Private</strong> 选择 <strong>Private</strong>，勾选 <strong>Add a README file</strong>。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%20Github%20new%20reposity.png"/></div><p>在个人账户的 <strong>Setting</strong>，找到 <strong>Developer settings</strong>，选择 <strong>Personal access tokens</strong>，生成这个 <strong>token</strong> 后续备用。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Github%20Token.png"/></div><p>在 <strong>PicGo</strong> 的配置页面，可以看到需要设置的内容</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PicGo%20Github%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE.jpg"/></div><ul><li>仓库名，比如，上面新建的仓库是 <em><a href="https://github.com/xx/yy">https://github.com/xx/yy</a></em>，那么仓库名就是 <em>xx/yy</em></li><li>分支名，默认是master</li><li>Token 就是之前在 <strong>Developer setting</strong> 生成的</li></ul><h2 id="Gitee-图床"><a href="#Gitee-图床" class="headerlink" title="Gitee 图床"></a>Gitee 图床</h2><p>同 Github 图床的设置过程，但是 PicGo 默认里面没有 Gitee，需要安装一个 Gitee 插件。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PicGo%20%E6%8F%92%E4%BB%B6.png"/></div><p>参考来源：<br><a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E4%B8%83%E7%89%9B%E5%9B%BE%E5%BA%8A">PicGo 配置手册</a></p>]]></content>
     
@@ -2171,7 +2194,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Github" scheme="https://yiranzhimo.github.io/tags/Github/"/>
@@ -2183,7 +2206,7 @@
     <link href="https://yiranzhimo.github.io/2020/04/21/Proxifier%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>https://yiranzhimo.github.io/2020/04/21/Proxifier%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
     <published>2020-04-21T15:04:56.000Z</published>
-    <updated>2020-04-22T01:51:59.000Z</updated>
+    <updated>2020-10-26T07:56:36.726Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是 Proxifier 的使用教程。</p><a id="more"></a><h1 id="Proxifier"><a href="#Proxifier" class="headerlink" title="Proxifier"></a>Proxifier</h1><p>Proxifier 是一款可以针对电脑上的特定的软件设置代理的软件，会使用这个软件是因为在用一款日记软件：Journey，它需要 Google Drive 进行同步，但是这个软件奇怪在即使我在电脑上开了代理，仍然无法连接，只能通过 Proxifier 进行设置进行连接。</p><h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.proxifier.com/">Proxifier 官网</a><br>Proxifier 授权：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Name: Any</span><br><span class="line">Serial number: P427L-9Y552-5433E-8DSR3-58Z68</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="ShadowsocksX-NG-设置"><a href="#ShadowsocksX-NG-设置" class="headerlink" title="ShadowsocksX-NG 设置"></a>ShadowsocksX-NG 设置</h3><p>打开 Proxifier 后，在主界面，打开 Proxies，添加代理服务器，我用的是 ShadowsocksX-NG，所以代理的端口是：<strong>1086</strong>，如果用的是 Shadowsocks，代理的端口就是：<strong>1080</strong>，如果用的是 Clash X，也可以设置 HTTP 代理，选择的端口可以在 ClashX 的控制板看到。接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击 YES，然后还会有一个弹窗，提示你 ss-local 貌似进入死循环了，要不要使用建议设置自动修改，选择 OK 即可。</p><h3 id="自定义规则"><a href="#自定义规则" class="headerlink" title="自定义规则"></a>自定义规则</h3><p>Proxifier 同时可以设置自定义规则，比如说我想要设置 Journey 走代理，可以把 Default 设置为 <strong>Direct</strong>，之后点击 Add，添加新的规则，点击 “+” 添加 Application 内的应用即可。 </p><p>参考来源：<br><a href="https://blog.shuziyimin.org/44">使用 Proxifier，为某一软件进行代理</a><br><a href="https://www.hizxc.com/1546.html">Proxifier 使用教程 —— Mac/Windows 下最好的代理软件</a><br><a href="https://www.williamlong.info/archives/4842.html">Proxifier使用教程</a><br><a href="https://blog.augustdoit.men/proxifier/">Proxifier汉化版使用教程</a></p>]]></content>
     
@@ -2194,7 +2217,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="SKill" scheme="https://yiranzhimo.github.io/categories/SKill/"/>
     
     
       <category term="Proxifier" scheme="https://yiranzhimo.github.io/tags/Proxifier/"/>
@@ -2252,7 +2275,7 @@
     <link href="https://yiranzhimo.github.io/2019/08/23/Mac%E4%B8%8AWine%E8%BF%90%E8%A1%8CLibgen-Desktop/"/>
     <id>https://yiranzhimo.github.io/2019/08/23/Mac%E4%B8%8AWine%E8%BF%90%E8%A1%8CLibgen-Desktop/</id>
     <published>2019-08-23T07:41:34.000Z</published>
-    <updated>2020-04-22T00:08:43.000Z</updated>
+    <updated>2020-10-26T07:56:38.607Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是在MacOS系统通过Wine运行Libgen Desktop for windows。</p><a id="more"></a><h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><h2 id="Wine"><a href="#Wine" class="headerlink" title="Wine"></a>Wine</h2><p>（Wine Is Not an Emulator）是一个能够在多种 POSIX-compliant 操作系统（诸如 Linux，macOS 及 BSD 等）上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是將 Windows API 调用翻译成为动态的 POSIX 调用，免除了性能和其他一些行为的内存占用，让你能够干净地集合 Windows 应用到你的桌面。<br>我们所熟知的Crossover虚拟机安装应用就是基于Wine所实现的。</p><h2 id="Libgen-Desktop"><a href="#Libgen-Desktop" class="headerlink" title="Libgen Desktop"></a>Libgen Desktop</h2><p>Libgen Desktop是一个用于浏览LibGen目录本地副本的Windows应用程序。支持主要（非小说），小说和科学文章（scimag）LibGen集合。</p><h2 id="XQuartz"><a href="#XQuartz" class="headerlink" title="XQuartz"></a>XQuartz</h2><p>XQuartz项目是一个开源工作，用于开发在OSX上运行的 X.Org X Window System 系统版本。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>输入命令：<br><code>brew install ruby</code><br><code>brew cask install xquartz</code><br><code>brew install wine</code><br>在Mac的如下目录，生成了wine的相关目录（ ~/.wine/drive_c ），里面最值得大家注意的是drive_c目录，这个就是我们win下面的c盘了。</p><h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>输入命令：<br><code>wine &lt;your&gt;.exe</code></p><h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><p>正常卸载即可。<br>例如：<br><code>brew uninstall rm -r</code><br>参考来源：<br><a href="https://www.winehq.org/">Wine官网</a><br><a href="https://wiki.mhut.org/software:libgen_desktop">Libgen Desktop</a><br><a href="https://github.com/libgenapps/LibgenDesktop">Libgen Desktop项目</a><br><a href="https://www.xquartz.org/index.html">Xquarz官网</a><br><a href="https://newsn.net/say/mac-wine.html">mac 如何使用 wine 运行 exe 程序？</a></p>]]></content>
     
@@ -2263,7 +2286,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+      <category term="Skill" scheme="https://yiranzhimo.github.io/categories/Skill/"/>
     
     
       <category term="Wine" scheme="https://yiranzhimo.github.io/tags/Wine/"/>
@@ -2413,7 +2436,7 @@
     <link href="https://yiranzhimo.github.io/2019/06/26/Mac%E5%AE%89%E8%A3%85Python3%E8%AE%BE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%89%88%E6%9C%AC/"/>
     <id>https://yiranzhimo.github.io/2019/06/26/Mac%E5%AE%89%E8%A3%85Python3%E8%AE%BE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%89%88%E6%9C%AC/</id>
     <published>2019-06-26T03:45:51.000Z</published>
-    <updated>2020-04-30T03:08:54.000Z</updated>
+    <updated>2020-10-26T07:54:06.984Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是在MacOS系统上安装Python3设为默认版本。</p><a id="more"></a><h1 id="安装python3"><a href="#安装python3" class="headerlink" title="安装python3"></a>安装python3</h1><p>输入命令：<br><code>brew install python3</code><br>查看python3的实际安装目录<br>例如：/usr/local/Cellar/python3/3.6.2</p><h1 id="改变外部环境变量"><a href="#改变外部环境变量" class="headerlink" title="改变外部环境变量"></a>改变外部环境变量</h1><p>打开配置<br>输入命令：<br><code>open ~/.bash_profile</code><br>写入python的外部环境变量<br>输入命令：<br><code>export PATH=$&#123;PATH&#125;:/usr/local/Cellar/python3/3.6.2/bin</code></p><h1 id="重命名python"><a href="#重命名python" class="headerlink" title="重命名python"></a>重命名python</h1><p>输入命令：<br><code>alias python=&quot;/usr/local/Cellar/python3/3.6.2/bin/python3.6&quot;</code></p><h1 id="配置文件生效"><a href="#配置文件生效" class="headerlink" title="配置文件生效"></a>配置文件生效</h1><p>输入命令：<br><code>source ~/.bash_profile</code></p><h1 id="使用python命令查看"><a href="#使用python命令查看" class="headerlink" title="使用python命令查看"></a>使用python命令查看</h1><p>输入命令：<br><code>python</code><br>可以看到出来的就是python3.</p><h1 id="查看位置"><a href="#查看位置" class="headerlink" title="查看位置"></a>查看位置</h1><p>输入命令：<br><code>which python3</code><br>查看此时Python3的位置是否正确。</p><p>参考来源：<br><a href="https://blog.csdn.net/NancyLiu0/article/details/81781809">Mac使用HomeBrew安装Python3.*并设为默认版本</a><br><a href="https://docs.python.org/zh-cn/2.7/installing/index.html">安装 Python 模块</a></p>]]></content>
     
@@ -2424,8 +2447,10 @@
     </summary>
     
     
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
     
-      <category term="Python3 v" scheme="https://yiranzhimo.github.io/tags/Python3-v/"/>
+    
+      <category term="Python3" scheme="https://yiranzhimo.github.io/tags/Python3/"/>
     
   </entry>
   
@@ -2434,7 +2459,7 @@
     <link href="https://yiranzhimo.github.io/2019/06/26/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85KindleEar/"/>
     <id>https://yiranzhimo.github.io/2019/06/26/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85KindleEar/</id>
     <published>2019-06-26T03:27:01.000Z</published>
-    <updated>2020-04-21T16:22:44.000Z</updated>
+    <updated>2020-10-26T07:58:16.634Z</updated>
     
     <content type="html"><![CDATA[<p>文章主要介绍的是Mac本地安装KindleEar的过程。</p><a id="more"></a><h1 id="KindleEar-的调试环境"><a href="#KindleEar-的调试环境" class="headerlink" title="KindleEar 的调试环境"></a>KindleEar 的调试环境</h1><p>由于 KindleEar 的运行依赖于 Google App Engine 环境，无法像用 Calibre 测试 Recipe 脚本那样直接在本地运行，所以为了方便测试编写</p><h2 id="安装-App-Engine-SDK"><a href="#安装-App-Engine-SDK" class="headerlink" title="安装 App Engine SDK"></a>安装 App Engine SDK</h2><p>[<a href="https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.85.dmg]">https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.85.dmg]</a>(macOS 系统)</p><h2 id="获取-KindleEar-源代码"><a href="#获取-KindleEar-源代码" class="headerlink" title="获取 KindleEar 源代码"></a>获取 KindleEar 源代码</h2><p>将代码Git clone回本地<br><code>git clone https://github.com/cdhigh/KindleEar.git</code></p><h2 id="本地运行-KindleEar"><a href="#本地运行-KindleEar" class="headerlink" title="本地运行 KindleEar"></a>本地运行 KindleEar</h2><p>Mac需要定位到 KindleEar 项目目录（注意替换 YOURNAME）<br><code>cd /Users/YOURNAME/Desktop/KindleEar</code><br>输入以下命令让 KindleEar 运行起来（注意有两个空格）<br><code>dev_appserver.py ./app.yaml ./module-worker.yaml</code><br>看到以下提示，就说明 KindleEar 已经在本机正常运行了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INFO     2019-05-11 13:51:41,358 sdk_update_checker.py:231] Checking for updates to the SDK.</span><br><span class="line">INFO     2019-05-11 13:51:44,383 sdk_update_checker.py:247] Update check failed: </span><br><span class="line">INFO     2019-05-11 13:51:44,613 api_server.py:275] Starting API server at: http:&#x2F;&#x2F;localhost:49342</span><br><span class="line">INFO     2019-05-11 13:51:44,625 dispatcher.py:256] Starting module &quot;default&quot; running at: http:&#x2F;&#x2F;localhost:8080</span><br><span class="line">INFO     2019-05-11 13:51:44,667 dispatcher.py:256] Starting module &quot;worker&quot; running at: http:&#x2F;&#x2F;localhost:8081</span><br><span class="line">INFO     2019-05-11 13:51:44,672 admin_server.py:150] Starting admin server at: http:&#x2F;&#x2F;localhost:8000</span><br><span class="line">INFO     2019-05-11 13:51:46,928 instance.py:294] Instance PID: 37115</span><br></pre></td></tr></table></figure><p>打开浏览器（推荐用 Chrome），输入 <a href="http://localhost:8080/">http://localhost:8080</a> 即可访问运行在本机上的 KindleEar 程序，输入默认的用户名和密码 admin 即可登入控制界面。至此，KindleEar 的调试环境便准备好了。</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>在这一过程中，Mac系统会有一些问题，KindleEar会默认采用python2.7.x版本，但是Mac自带的python2.7.10版本低于项目需要的python2.7.12版本，因此需要安装其他的python版本。<br>通过homebrew安装<br>输入命令：<br><code>brew install python2</code><br>会安装最高的python2.7.x版本,解决问题。</p><p>参考来源：<br><a href="%5Bhttps://bookfere.com/post/750.html/comment-page-1?unapproved=21654&moderation-hash=e69a317b89700cd9712dc31abdee9d60#comment-21654">如何用 KindleEar 推送无 RSS 的网站内容（上篇)</a></p>]]></content>
     
@@ -2445,7 +2470,7 @@
     </summary>
     
     
-      <category term="KindleEar" scheme="https://yiranzhimo.github.io/categories/KindleEar/"/>
+      <category term="SKill" scheme="https://yiranzhimo.github.io/categories/SKill/"/>
     
     
       <category term="KindleEar" scheme="https://yiranzhimo.github.io/tags/KindleEar/"/>
