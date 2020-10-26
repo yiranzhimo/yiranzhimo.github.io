@@ -2156,6 +2156,29 @@
   </entry>
   
   <entry>
+    <title>PicGo 如何配置图床</title>
+    <link href="https://yiranzhimo.github.io/2020/04/22/PicGo%20%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/"/>
+    <id>https://yiranzhimo.github.io/2020/04/22/PicGo%20%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/</id>
+    <published>2020-04-22T00:09:52.000Z</published>
+    <updated>2020-10-26T07:32:33.557Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 PicGo 如何配置图床。</p><a id="more"></a><h1 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h1><p><strong><a href="https://github.com/Molunerfinn/PicGo">PicGo</a></strong> 是一款图床软件，支持的图床有<strong>微博</strong>、<strong>腾讯云</strong>、<strong>阿里云</strong>、<strong>七牛云</strong>、<strong>又拍云</strong>、<strong>SM.MS</strong>、<strong>Github</strong> 等。</p><h2 id="Github-图床"><a href="#Github-图床" class="headerlink" title="Github 图床"></a>Github 图床</h2><p>首先在 Github 新建仓库，即 <strong>reposity</strong>，<strong>Public</strong> / <strong>Private</strong> 选择 <strong>Private</strong>，勾选 <strong>Add a README file</strong>。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/%20Github%20new%20reposity.png"/></div><p>在个人账户的 <strong>Setting</strong>，找到 <strong>Developer settings</strong>，选择 <strong>Personal access tokens</strong>，生成这个 <strong>token</strong> 后续备用。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Github%20Token.png"/></div><p>在 <strong>PicGo</strong> 的配置页面，可以看到需要设置的内容</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PicGo%20Github%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE.jpg"/></div><ul><li>仓库名，比如，上面新建的仓库是 <em><a href="https://github.com/xx/yy">https://github.com/xx/yy</a></em>，那么仓库名就是 <em>xx/yy</em></li><li>分支名，默认是master</li><li>Token 就是之前在 <strong>Developer setting</strong> 生成的</li></ul><h2 id="Gitee-图床"><a href="#Gitee-图床" class="headerlink" title="Gitee 图床"></a>Gitee 图床</h2><p>同 Github 图床的设置过程，但是 PicGo 默认里面没有 Gitee，需要安装一个 Gitee 插件。</p><div align=center><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PicGo%20%E6%8F%92%E4%BB%B6.png"/></div><p>参考来源：<br><a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E4%B8%83%E7%89%9B%E5%9B%BE%E5%BA%8A">PicGo 配置手册</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 PicGo 如何配置图床。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
+    
+    
+      <category term="Github" scheme="https://yiranzhimo.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Proxifier 使用教程</title>
     <link href="https://yiranzhimo.github.io/2020/04/21/Proxifier%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>https://yiranzhimo.github.io/2020/04/21/Proxifier%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
@@ -2198,29 +2221,6 @@
     
     
       <category term="Mac" scheme="https://yiranzhimo.github.io/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过uPic或PicGo配置Github图床</title>
-    <link href="https://yiranzhimo.github.io/2019/08/24/%E9%80%9A%E8%BF%87uPic%E6%88%96PicGo%E9%85%8D%E7%BD%AEGithub%E5%9B%BE%E5%BA%8A/"/>
-    <id>https://yiranzhimo.github.io/2019/08/24/%E9%80%9A%E8%BF%87uPic%E6%88%96PicGo%E9%85%8D%E7%BD%AEGithub%E5%9B%BE%E5%BA%8A/</id>
-    <published>2019-08-24T06:48:14.000Z</published>
-    <updated>2020-04-22T00:09:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章主要介绍的是搭建GitHub图床。</p><a id="more"></a><h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p><strong>uPic</strong>和<strong>PicGo</strong>都是非常好的图床软件，支持的图床有<strong>微博</strong>、<strong>腾讯云</strong>、<strong>阿里云</strong>、<strong>七牛云</strong>、<strong>又拍云</strong>、<strong>SM.M</strong>S等等。</p><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>图床称为网络相册或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，当前大部分照片为储存于在线相册中。</p><h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><h2 id="配置项说明"><a href="#配置项说明" class="headerlink" title="配置项说明"></a>配置项说明</h2><p>以uPic为例</p><ul><li>用户名: Github 用户名。例如：我的 Github 主页<a href="https://github.com/gee1k%EF%BC%8C%E6%88%91%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%B0%B1%E6%98%AFgee1k">https://github.com/gee1k，我的用户名就是gee1k</a></li><li>仓库名: 需要储存上传文件的仓库名称。例如：我的仓库地址为 <a href="https://github.com/gee1k/oss%EF%BC%8C%E4%BB%93%E5%BA%93%E5%90%8D%E7%A7%B0%E5%B0%B1%E6%98%AFoss">https://github.com/gee1k/oss，仓库名称就是oss</a></li><li>分支: 分支名称，默认是master，如果是其他分支，就必须先创建好分支，才能上传</li><li>Token: Github 的个人访问令牌（Personal access tokens）</li><li>域名: 默认可不设置域名，会使用 Github 默认的访问地址。当你的仓库开启了pages功能，并配置好了自定义域名时，这里就可以使用你的自定义域名</li><li>更多设置: 域名后面设置按钮可以弹出详细的文件访问 URL 配置，可额外配置储存文件夹路径和文件名规则。</li></ul><h2 id="配置Token"><a href="#配置Token" class="headerlink" title="配置Token"></a>配置Token</h2><p>1、进入<a href="https://github.com/settings/tokens/new">Github Token 创建页面</a>；<br>2、勾选 <strong>repo</strong>访问权限。然后滚动页面到底部，点击<strong>Generate token</strong>按钮来生成 token；<br>3、复制生成好的 Token 值到 uPic token 输入框。<br><strong>注意：此 Token 只会显示一次！</strong></p><p>参考来源：<br><a href="https://blog.svend.cc/upic/tutorials/github/">uPic 图床配置教程 - Github</a><br><a href="https://github.com/Molunerfinn/PicGo">PicGo</a><br><a href="https://github.com/gee1k/uPic">uPic</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;文章主要介绍的是搭建GitHub图床。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Mac" scheme="https://yiranzhimo.github.io/categories/Mac/"/>
-    
-    
-      <category term="Github" scheme="https://yiranzhimo.github.io/tags/Github/"/>
     
   </entry>
   
