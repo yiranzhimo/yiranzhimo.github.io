@@ -28,7 +28,7 @@
 <meta property="og:description" content="文章主要介绍的是  2021-13周小记。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-02T09:09:32.000Z">
-<meta property="article:modified_time" content="2021-04-02T09:09:32.597Z">
+<meta property="article:modified_time" content="2021-04-02T10:36:20.998Z">
 <meta property="article:author" content="知更鸟">
 <meta property="article:tag" content="一周小记">
 <meta name="twitter:card" content="summary">
@@ -217,8 +217,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-04-02 17:09:32" itemprop="dateCreated datePublished" datetime="2021-04-02T17:09:32+08:00">2021-04-02</time>
+              <time title="Created: 2021-04-02 17:09:32 / Modified: 18:36:20" itemprop="dateCreated datePublished" datetime="2021-04-02T17:09:32+08:00">2021-04-02</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,7 +261,7 @@
 <p>又一周过去了，记录一下吧。</p>
 <p>遇到了一个问题，如何导入其他用户目录下的 python 模块，可以通过 sys 模块来做：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path.append(<span class="string">&#x27;/xxx/xxx&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>通过 Anaconda 安装 R，试了好几次终于某一次成功了，直接命令：<br><code>conda install r</code> 就可以了，但是在集群上很考验网络速度，就是之后想升级，发现升级不太行。<br>想安装两个 R 包，loomR 在 Github 上，得通过 devtools 安装，scater 得通过 biomanager 安装。<br>安装 biomanager ，可以指定源安装：<br><code>install.packages(&#39;biomanager&#39;, repos = &#39;https://mirrors.tuna.tsinghua.edu.cn/CRAN&#39;)</code><br>由于网络原因，也可以更换 R 包的安装源：<br><code>options(repos=structure(c(CRAN=&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;)))</code><br>安装了 biomanager 以后，可以先更换 biomanager 的安装源：<br><code>options(BioC_mirror=&quot;https://mirrors.tuna.tsinghua.edu.cn/bioconductor&quot;)</code><br>之后安装 scater：<br>BiocManager::install(“scater”)<br>但是 loomR 和 devtools 都还没有装上，等之后弄完了再记录。<br>这周做了两个 PPT，一个是关于触角的，一个是关于肾脏演化的，开始意识到我所能想到的方式都已经是我可以意识到的，而更多的我意识到别的做法更好的时候，那是因为我没有建立对其他方法的认识。</p>
+<p>通过 Anaconda 安装 R，试了好几次终于某一次成功了，直接命令：<br><code>conda install r</code> 就可以了，但是在集群上很考验网络速度，就是之后想升级，发现升级不太行。<br>想安装两个 R 包，loomR 在 Github 上，得通过 devtools 安装，scater 得通过 biomanager 安装。<br>安装 biomanager ，可以指定源安装：<br><code>install.packages(&#39;biomanager&#39;, repos = &#39;https://mirrors.tuna.tsinghua.edu.cn/CRAN&#39;)</code><br>由于网络原因，也可以更换 R 包的安装源：<br><code>options(repos=structure(c(CRAN=&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;)))</code><br>安装了 biomanager 以后，可以先更换 biomanager 的安装源：<br><code>options(BioC_mirror=&quot;https://mirrors.tuna.tsinghua.edu.cn/bioconductor&quot;)</code><br>之后安装 scater：<br>BiocManager::install(“scater”)<br>loomR 的安装，先安装 devtools，在安装依赖 hdf5r ，最后安装 loomR<br><code>install.packages(&quot;devtools&quot;)</code><br><code>devtools::install_github(repo = &quot;hhoeflin/hdf5r&quot;)</code><br><code>devtools::install_github(repo = &quot;mojaveazure/loomR&quot;, ref = &quot;develop&quot;)</code><br>上一行代码显示连接超时，把 <code>ref = &quot;develop</code> 删除就顺利安装了。<br>这周做了两个 PPT，一个是关于触角的，一个是关于肾脏演化的，开始意识到我所能想到的方式都已经是我可以意识到的，而更多的我意识到别的做法更好的时候，那是因为我没有建立对其他方法的认识。</p>
 
     </div>
 
