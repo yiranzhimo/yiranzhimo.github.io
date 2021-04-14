@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2021-14周小记]]></title>
+    <url>%2F2021%2F04%2F14%2F2021-14%E5%91%A8%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是 2021-14周小记。 又一周过去了，一直没有时间，就到周三才来记录一下。 Linux 把某个目录的内容复制到另一个目录中：cp -r dir1 dir2也可以同时复制多个文件：cp /home/usr/dir/file&#123;1..4&#125; ./ xxx Linux 查看磁盘大小：df -h - 查看根路径的大小du -sh xx - 查看目录大小 在 home 目录配置了一下快捷方式：alias cd1=&quot;cd xx&quot; 通过 Shell 命令把一个文件复制多份：for i in &#123;1..100&#125;;do echo -ne &quot;hello-$i.txt &quot;;done | xargs -n 1 cp hello.txt 统计文件行数：less xx | wc -l 找到类似文件：find -name xx Shell 读取文件内容每行输出： 1234for line in &#96;cat file&#96;do echo $linedone 这周配置了一下 vim 编辑器，在服务器上写 python 程序真的一点都不好玩，还是设置一下比较好： 123456syntax enable #语法高亮set number #显示行号set tabstop&#x3D;4#设定 tab 长度为 4 在这个过程中还有一个问题，source .vimrc 出现syntax命令不存在，发现原因是因为直接在终端运行了 syntax on 命令，而 shell 中不存在 syntax 这个命令，所以就会出错了，但是 vim 在运行的时候会直接读取这个文件的。 另外，vim 退出编辑模式，shift+g 会跳到文件最后一行，shift+4会跳到文件最后一行的最后一个字符。 同时，如果想删除行的话，正常模式下：:1,10d 安装了 python 的一个库 pytest-shutil，看博主们的用法一直以为是 shutil ，结果不是，安装的时候名字不太一样，长个记性，下次可以先查一下。]]></content>
+      <categories>
+        <category>一周小记</category>
+      </categories>
+      <tags>
+        <tag>一周小记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2021-13周小记]]></title>
     <url>%2F2021%2F04%2F02%2F2021-13%E5%91%A8%E5%B0%8F%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 2021-13周小记。 又一周过去了，记录一下吧。 遇到了一个问题，如何导入其他用户目录下的 python 模块，可以通过 sys 模块来做： 12import syssys.path.append(&#x27;/xxx/xxx&#x27;) 通过 Anaconda 安装 R，试了好几次终于某一次成功了，直接命令：conda install r 就可以了，但是在集群上很考验网络速度，就是之后想升级，发现升级不太行。想安装两个 R 包，loomR 在 Github 上，得通过 devtools 安装，scater 得通过 biomanager 安装。安装 biomanager ，可以指定源安装：install.packages(&#39;biomanager&#39;, repos = &#39;https://mirrors.tuna.tsinghua.edu.cn/CRAN&#39;)由于网络原因，也可以更换 R 包的安装源：options(repos=structure(c(CRAN=&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;)))安装了 biomanager 以后，可以先更换 biomanager 的安装源：options(BioC_mirror=&quot;https://mirrors.tuna.tsinghua.edu.cn/bioconductor&quot;)之后安装 scater：BiocManager::install(“scater”)loomR 的安装，先安装 devtools，在安装依赖 hdf5r ，最后安装 loomRinstall.packages(&quot;devtools&quot;)devtools::install_github(repo = &quot;hhoeflin/hdf5r&quot;)devtools::install_github(repo = &quot;mojaveazure/loomR&quot;, ref = &quot;develop&quot;)上一行代码显示连接超时，把 ref = &quot;develop 删除就顺利安装了。这周做了两个 PPT，一个是关于触角的，一个是关于肾脏演化的，开始意识到我所能想到的方式都已经是我可以意识到的，而更多的我意识到别的做法更好的时候，那是因为我没有建立对其他方法的认识。]]></content>
@@ -31,6 +42,17 @@
       </categories>
       <tags>
         <tag>一周小记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[集群目录配置 Python3 环境]]></title>
+    <url>%2F2021%2F03%2F21%2F%E9%9B%86%E7%BE%A4%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE-Python3-%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是集群目录配置 Python3 环境。 在集群上的工作目录配置 Python3 环境，有很多限制，比如说无法通过 Python 官方网站下载安装，也无法通过 Anaconda 安装，最后只能通过 Miniconda 安装。简单记录一下安装流程： 下载 Miniconda 1wget https:&#x2F;&#x2F;mirrors.bfsu.edu.cn&#x2F;anaconda&#x2F;miniconda&#x2F;Miniconda3-py37_4.8.2-Linux-x86_64.sh 由于限制，需要通过国内的源安装，首选的是清华大学开源软件镜像站，但是下载过于缓慢，最后找到的是北京外国语大学开源软件镜像站，这个源也很好用。 安装 Miniconda下载完成的是一个后缀为 .sh 的 Shell 脚本，执行命令通过这个脚本安装 Miniconda。bash xxx.sh在这个安装过程中可以自行设置安装的目录，比如个人工作目录：**/xxx/xxx/xxx **。 配置环境变量安装好 Miniconda 以后在命令行输入 conda 如果没有反应，就需要配置环境变量。在 /home/user/ 目录，会看到配置文件，比如 .bash_profile，**.bashrc，其中根据这篇文章的介绍：profile、bash_profile、bashrc文件的作用与区别，.bash_profile** 这个文件只对单一用户有效，需要在这个文件里面设置环境变量。export PATH=xxx/xxx/bin:$PATH最开始的时候是在 .bashrc 文件里面进行设置，发现会导致 Linux 很多基本命令失效，这个问题应该是跟这个文件的属性有关系，它跟系统的 Shell 有关系。]]></content>
+      <categories>
+        <category>一周杂项</category>
+      </categories>
+      <tags>
+        <tag>Python3</tag>
       </tags>
   </entry>
   <entry>

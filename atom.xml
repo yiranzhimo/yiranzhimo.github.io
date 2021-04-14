@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2021-04-02T10:36:20.998Z</updated>
+  <updated>2021-04-14T03:57:13.032Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-14周小记</title>
+    <link href="https://yiranzhimo.github.io/2021/04/14/2021-14%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://yiranzhimo.github.io/2021/04/14/2021-14%E5%91%A8%E5%B0%8F%E8%AE%B0/</id>
+    <published>2021-04-14T03:57:12.000Z</published>
+    <updated>2021-04-14T03:57:13.032Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是 2021-14周小记。</p><a id="more"></a><p>又一周过去了，一直没有时间，就到周三才来记录一下。</p><p>Linux 把某个目录的内容复制到另一个目录中：<br><code>cp -r  dir1 dir2</code><br>也可以同时复制多个文件：<br><code>cp /home/usr/dir/file&#123;1..4&#125; ./ xxx </code></p><p>Linux 查看磁盘大小：<br><code>df -h</code> - 查看根路径的大小<br><code>du -sh xx</code> - 查看目录大小</p><p>在 home 目录配置了一下快捷方式：<br><code>alias cd1=&quot;cd xx&quot;</code></p><p>通过 Shell 命令把一个文件复制多份：<br><code>for i in &#123;1..100&#125;;do echo -ne &quot;hello-$i.txt &quot;;done | xargs -n 1 cp hello.txt</code></p><p>统计文件行数：<br><code>less xx | wc -l</code></p><p>找到类似文件：<br><code>find -name xx</code></p><p>Shell 读取文件内容每行输出：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for line in &#96;cat file&#96;</span><br><span class="line">do</span><br><span class="line">    echo $line</span><br><span class="line">done</span><br></pre></td></tr></table></figure><p>这周配置了一下 vim 编辑器，在服务器上写 python 程序真的一点都不好玩，还是设置一下比较好：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">syntax enable </span><br><span class="line">#语法高亮</span><br><span class="line">set number </span><br><span class="line">#显示行号</span><br><span class="line">set tabstop&#x3D;4</span><br><span class="line">#设定 tab 长度为 4</span><br></pre></td></tr></table></figure><p>在这个过程中还有一个问题，<strong>source .vimrc</strong> 出现<strong>syntax命令不存在</strong>，发现原因是因为直接在终端运行了 syntax on 命令，而 shell 中不存在 syntax 这个命令，所以就会出错了，但是 vim 在运行的时候会直接读取这个文件的。</p><p>另外，vim 退出编辑模式，<strong>shift+g</strong> 会跳到文件最后一行，<strong>shift+4</strong>会跳到文件最后一行的最后一个字符。</p><p>同时，如果想删除行的话，正常模式下：<br><code>:1,10d</code></p><p>安装了 python 的一个库 pytest-shutil，看博主们的用法一直以为是 shutil ，结果不是，安装的时候名字不太一样，长个记性，下次可以先查一下。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是 2021-14周小记。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="一周小记" scheme="https://yiranzhimo.github.io/categories/%E4%B8%80%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="一周小记" scheme="https://yiranzhimo.github.io/tags/%E4%B8%80%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-13周小记</title>
@@ -82,6 +105,29 @@
     
     
       <category term="一周小记" scheme="https://yiranzhimo.github.io/tags/%E4%B8%80%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集群目录配置 Python3 环境</title>
+    <link href="https://yiranzhimo.github.io/2021/03/21/%E9%9B%86%E7%BE%A4%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE-Python3-%E7%8E%AF%E5%A2%83/"/>
+    <id>https://yiranzhimo.github.io/2021/03/21/%E9%9B%86%E7%BE%A4%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE-Python3-%E7%8E%AF%E5%A2%83/</id>
+    <published>2021-03-21T08:51:40.000Z</published>
+    <updated>2021-04-14T03:34:50.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是集群目录配置 Python3 环境。</p><a id="more"></a><p>在集群上的工作目录配置 Python3 环境，有很多限制，比如说无法通过 Python 官方网站下载安装，也无法通过 Anaconda 安装，最后只能通过 Miniconda 安装。<br>简单记录一下安装流程：</p><ul><li>下载 Miniconda</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;mirrors.bfsu.edu.cn&#x2F;anaconda&#x2F;miniconda&#x2F;Miniconda3-py37_4.8.2-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><p>由于限制，需要通过国内的源安装，首选的是<a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a>，但是下载过于缓慢，最后找到的是<a href="https://mirrors.bfsu.edu.cn/anaconda/miniconda/">北京外国语大学开源软件镜像站</a>，这个源也很好用。</p><ul><li>安装 Miniconda<br>下载完成的是一个后缀为 <strong>.sh</strong> 的 Shell 脚本，执行命令通过这个脚本安装 Miniconda。<br><code>bash xxx.sh</code><br>在这个安装过程中可以自行设置安装的目录，比如个人工作目录：**/xxx/xxx/xxx **。</li><li>配置环境变量<br>安装好 Miniconda 以后在命令行输入 <strong>conda</strong> 如果没有反应，就需要配置环境变量。在 <strong>/home/user/</strong> 目录，会看到配置文件，比如 <strong>.bash_profile</strong>，**.bashrc<strong>，其中根据这篇文章的介绍：<a href="https://itbilu.com/linux/management/NyI9cjipl.html">profile、bash_profile、bashrc文件的作用与区别</a>，</strong>.bash_profile** 这个文件只对单一用户有效，需要在这个文件里面设置环境变量。<br><code>export PATH=xxx/xxx/bin:$PATH</code><br>最开始的时候是在 <strong>.bashrc</strong> 文件里面进行设置，发现会导致 Linux 很多基本命令失效，这个问题应该是跟这个文件的属性有关系，它跟系统的 Shell 有关系。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是集群目录配置 Python3 环境。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="一周杂项" scheme="https://yiranzhimo.github.io/categories/%E4%B8%80%E5%91%A8%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Python3" scheme="https://yiranzhimo.github.io/tags/Python3/"/>
     
   </entry>
   
