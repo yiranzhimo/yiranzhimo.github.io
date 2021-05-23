@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2021-04-19T14:11:32.810Z</updated>
+  <updated>2021-05-23T12:50:59.109Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://yiranzhimo.github.io/2021/04/19/2021-15%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
     <id>https://yiranzhimo.github.io/2021/04/19/2021-15%E5%91%A8%E5%B0%8F%E8%AE%B0/</id>
     <published>2021-04-19T14:11:32.000Z</published>
-    <updated>2021-04-19T14:11:32.810Z</updated>
+    <updated>2021-05-23T12:50:59.109Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>文章主要介绍的是 2021-15周小记。</code></pre><a id="more"></a><p>又一周过去了，度过了愉快的周末，这周开始就很忙要做很多其他的事情，趁周一晚上有空，简单记录一下。<br>用 STAR 建索引的时候，需要用到 GTF 文件，但是偶尔只有 GFF 文件，所以需要一个工具 <a href="https://github.com/gpertea/gffread">gffread</a> 来转换一下，转换命令：<br><code>gffread merged.gtf -o- &gt; merged.gff3</code><br>另外安装 gffread 前需要先安装 <a href="https://github.com/gpertea/gclib">gclib</a>。<br>STAR 具体建索引的命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">STAR --runMode genomeGenerate </span><br><span class="line">     --runThreadN 10 </span><br><span class="line">     --genomeDir .&#x2F;index </span><br><span class="line">     --genomeFastaFiles .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Sequence&#x2F;WholeGenomeFasta&#x2F;genome.fa</span><br><span class="line">     --sjdbGTFfile .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Annotation&#x2F;Genes&#x2F;genes.gtf </span><br><span class="line">     --sjdbOverhang 75</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>文章主要介绍的是 2021-15周小记。</p><a id="more"></a><p>又一周过去了，度过了愉快的周末，这周开始就很忙要做很多其他的事情，趁周一晚上有空，简单记录一下。<br>用 STAR 建索引的时候，需要用到 GTF 文件，但是偶尔只有 GFF 文件，所以需要一个工具 <a href="https://github.com/gpertea/gffread">gffread</a> 来转换一下，转换命令：<br><code>gffread merged.gtf -o- &gt; merged.gff3</code><br>另外安装 gffread 前需要先安装 <a href="https://github.com/gpertea/gclib">gclib</a>。<br>STAR 具体建索引的命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">STAR --runMode genomeGenerate </span><br><span class="line">     --runThreadN 10 </span><br><span class="line">     --genomeDir .&#x2F;index </span><br><span class="line">     --genomeFastaFiles .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Sequence&#x2F;WholeGenomeFasta&#x2F;genome.fa</span><br><span class="line">     --sjdbGTFfile .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Annotation&#x2F;Genes&#x2F;genes.gtf </span><br><span class="line">     --sjdbOverhang 75</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;pre&gt;&lt;code&gt;文章主要介绍的是 2021-15周小记。&lt;/code&gt;&lt;/pre&gt;
+      &lt;p&gt;文章主要介绍的是 2021-15周小记。&lt;/p&gt;
     
     </summary>
     
