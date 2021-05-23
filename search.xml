@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2021-20周小记]]></title>
+    <url>%2F2021%2F05%2F23%2F2021-20%E5%91%A8%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[文章主要介绍的是2021-20周小记。 Linux 不同节点间复制文件：scp -r admin@hostname:文件路径 目标路径Linux 取 txt 文件的前 n 行到另一个文件:head -n xx.txt &gt; xx.txtLinux 去除文件重复行：cat data1.txt | sort | uniq只有 uniq 命令，只是把相邻的重复的数据行去掉，如果先 sort 的话，就会把所有重复的数据行变成相邻的数据行，再 uniq 的话，就去掉所有重复的数据行了。Linux 保留原压缩文件的方法：gzip -cd xx.fq.gz &gt; xx.fqLinux 合并压缩文件：cat xx.fastq.gz xx.fastq.gz &gt; xx.fastq.gz]]></content>
+      <categories>
+        <category>一周小记</category>
+      </categories>
+      <tags>
+        <tag>一周小记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2021-15周小记.md]]></title>
     <url>%2F2021%2F04%2F19%2F2021-15%E5%91%A8%E5%B0%8F%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[文章主要介绍的是 2021-15周小记。 又一周过去了，度过了愉快的周末，这周开始就很忙要做很多其他的事情，趁周一晚上有空，简单记录一下。用 STAR 建索引的时候，需要用到 GTF 文件，但是偶尔只有 GFF 文件，所以需要一个工具 gffread 来转换一下，转换命令：gffread merged.gtf -o- &gt; merged.gff3另外安装 gffread 前需要先安装 gclib。STAR 具体建索引的命令： 123456STAR --runMode genomeGenerate --runThreadN 10 --genomeDir .&#x2F;index --genomeFastaFiles .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Sequence&#x2F;WholeGenomeFasta&#x2F;genome.fa --sjdbGTFfile .&#x2F;Homo_sapiens&#x2F;UCSC&#x2F;hg19&#x2F;Annotation&#x2F;Genes&#x2F;genes.gtf --sjdbOverhang 75]]></content>

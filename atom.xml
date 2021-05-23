@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yiranzhimo.github.io/"/>
-  <updated>2021-05-23T12:50:59.109Z</updated>
+  <updated>2021-05-23T13:16:10.859Z</updated>
   <id>https://yiranzhimo.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-20周小记</title>
+    <link href="https://yiranzhimo.github.io/2021/05/23/2021-20%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://yiranzhimo.github.io/2021/05/23/2021-20%E5%91%A8%E5%B0%8F%E8%AE%B0/</id>
+    <published>2021-05-23T13:16:10.000Z</published>
+    <updated>2021-05-23T13:16:10.859Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章主要介绍的是2021-20周小记。</p><a id="more"></a><p>Linux 不同节点间复制文件：<br><code>scp -r admin@hostname:文件路径 目标路径</code><br>Linux 取 txt 文件的前 n 行到另一个文件:<br><code>head -n xx.txt &gt; xx.txt</code><br>Linux 去除文件重复行：<br><code>cat data1.txt | sort | uniq</code><br>只有 uniq 命令，只是把相邻的重复的数据行去掉，如果先 sort 的话，就会把所有重复的数据行变成相邻的数据行，再 uniq 的话，就去掉所有重复的数据行了。<br>Linux 保留原压缩文件的方法：<br><code>gzip -cd  xx.fq.gz &gt; xx.fq</code><br>Linux 合并压缩文件：<br><code>cat xx.fastq.gz xx.fastq.gz &gt; xx.fastq.gz</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章主要介绍的是2021-20周小记。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="一周小记" scheme="https://yiranzhimo.github.io/categories/%E4%B8%80%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="一周小记" scheme="https://yiranzhimo.github.io/tags/%E4%B8%80%E5%91%A8%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-15周小记.md</title>
