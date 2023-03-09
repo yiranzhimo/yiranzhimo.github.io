@@ -5,8 +5,12 @@ html,
 body,
 .container {
   height: 100%;
-  font-family: Monaco, monospace, Hiragino Sans GB, Microsoft YaHei, WenQuanYi, Airal, sans-serif;
+  font-family: Times New Roman, Monaco, monospace, Hiragino Sans GB, Microsoft YaHei, WenQuanYi, Airal, sans-serif;
   letter-spacing: 0.01rem;
+}
+body {
+  background-color: #ececec;
+  font-size: 18px;
 }
 .container {
   max-width: 840px;
@@ -20,6 +24,7 @@ a {
   display: table;
   width: 100%;
   height: 100%;
+  background: #55aaad;
 }
 .home .info {
   display: table-cell;
@@ -55,7 +60,7 @@ a {
   margin-bottom: 2em;
 }
 .page p {
-  line-height: 1.5em;
+  line-height: 2em;
 }
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Tomorrow Comment */

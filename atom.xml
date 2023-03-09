@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Qian&#39;s blog</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-08T09:26:30.129Z</updated>
+  <updated>2023-03-09T05:23:14.952Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Qian Li</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2023/03/08/hello-world/"/>
-    <id>http://example.com/2023/03/08/hello-world/</id>
-    <published>2023-03-08T09:26:30.128Z</published>
-    <updated>2023-03-08T09:26:30.129Z</updated>
+    <title>iSpatial</title>
+    <link href="http://example.com/2023/03/08/iSpatial/"/>
+    <id>http://example.com/2023/03/08/iSpatial/</id>
+    <published>2023-03-08T13:44:35.000Z</published>
+    <updated>2023-03-09T05:23:14.952Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Recently, I read a paper named <em>Accurate inference of genome-widespatial expression with iSpatial</em>, from which I learned a lot.</p><p>iSpatial is used to infer expression patterns of all genes at highspatial resolution by integrating scRNA-seq and ST data. In the processof single-cell RNA sequencing, it can capture more genes as possible itcan. In this paper, the authors try to recover all genes' spatialinformation of the spatial transcriptomics data based on scRNA.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Accurate%20inference%20of%20genome-wide%20spatial%20expression%20with%20iSpatial%20Figure1.png" /></p><p>How do they infer spatial information?</p><p>In the first step, it needs to integrate scRNA and spatialtranscriptomics datasets. The core function is a weighted KNN graph. Foreach cell t in spatial transcriptome data, iSpatial searches the KNNs(<em>KNNt,k</em>).</p><p>Each gene's expression of cell t was calculated by the followingformula:</p><p><span class="math inline">\(K N N_{t, k}:\left\{K N N_{t, 1}, K NN_{t, 2}, \ldots, K N N_{t, k}\right\}\)</span></p><p>β is an argument to balance the expression from the spatialtranscriptome and scRNA-seq. ω is the weight factor that shows thedistance between cell t and other KNN neighbor cells. Through the belowformula, we can see the most similar neighbor cell, its weight factor issmaller.</p><p><span class="math inline">\(\widehat{E_t}=(1-\beta)E_t+\beta\left(\sum_k \omega_{t, k} E_{\mathrm{KNN}_{t,k}^{\prime}}\right)\)</span></p><p><span class="math inline">\(\operatorname{dist}\left(E_t,E_{\mathrm{KNN}_{t, k}^t}\right)=1-\operatorname{cor}\left(E_t,E_{\mathrm{KNN}_{t, k}^{\prime}}\right)\)</span></p><p><span class="math inline">\(d_{t, k}=\operatorname{dist}\left(E_t,E_{\mathrm{KNN}_{t, k}}\right)\)</span></p><p><span class="math inline">\(\omega_{t, k}=\frac{d_{t, k}^2}{\sum_kd_{t, k}^2}\)</span></p><p>But I think this method requires high quality of fitness betweenscRNA and spatial transcriptomics datasets.</p><p>And, the paper has developed a way to identify spatial variablegenes(SVGs). First, it divides the two-dimensional space into n x ngrids and calculates the gene mean expression level. Second, it randomlysamples the spatial location and calculates the mean gene expressionlevel once more. Finally, to compare whether there have significantdifferences between the two values.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;p&gt;Recently, I read a paper named &lt;em&gt;Accurate inference of genome-wide
+spatial expression with iSpatial&lt;/em&gt;, from which I learned a lot.&lt;/</summary>
       
     
     
     
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
     
   </entry>
   
