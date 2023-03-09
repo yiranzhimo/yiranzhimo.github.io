@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-09T12:23:31.112Z</updated>
+  <updated>2023-03-09T12:25:46.073Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://example.com/2023/03/04/Spatial%20profiling%20technologies%20illuminate%20the%20tumor%20microenvironment/"/>
     <id>http://example.com/2023/03/04/Spatial%20profiling%20technologies%20illuminate%20the%20tumor%20microenvironment/</id>
     <published>2023-03-04T00:44:35.000Z</published>
-    <updated>2023-03-09T12:23:31.112Z</updated>
+    <updated>2023-03-09T12:25:46.073Z</updated>
     
-    <content type="html"><![CDATA[<h1id="spatial-profiling-technologies-illuminate-the-tumor-microenvironment">Spatialprofiling technologies illuminate the tumor microenvironment</h1><p>In this review, most interesting is the figure which depicts theadvantages of in Spatial transcriptome in cancer research.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Spatial%20profiling%20technologies%20illuminate%20the%20tumor%20microenvironment_fig4.png" /></p>]]></content>
+    <content type="html"><![CDATA[<p>In this review, most interesting is the figure which depicts theadvantages of in Spatial transcriptome in cancer research.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Spatial%20profiling%20technologies%20illuminate%20the%20tumor%20microenvironment_fig4.png" /></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1
-id=&quot;spatial-profiling-technologies-illuminate-the-tumor-microenvironment&quot;&gt;Spatial
-profiling technologies illuminate the tumor microenvir</summary>
+    <summary type="html">&lt;p&gt;In this review, most interesting is the figure which depicts the
+advantages of in Spatial transcriptome in cancer research.&lt;/p&gt;
+&lt;p&gt;&lt;img
+s</summary>
       
     
     
