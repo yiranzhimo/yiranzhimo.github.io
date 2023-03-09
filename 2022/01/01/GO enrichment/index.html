@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>GO enrichment - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=tools,principle>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">GO enrichment</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <p>GO enrichment analysis is a prevalent method to characterize
+genesets' profiles.</p>
+<p>What does it mean?</p>
+<p>GO is the gene ontology, a structured, controlled vocabulary for
+classifying gene function at the molecular and cellular levels. It is
+divided into three separate sub-ontologies: biological process (e.g.,
+signal transduction), molecular function (e.g., ATPase activity), and
+cellular component (e.g., ribosome)[^1].</p>
+<p>How to calculate GO term scores?</p>
+<p>To Calculate p-values through a hypergeometric distribution test.</p>
+<p>We have a geneset containing <em>n</em> and <em>k</em> genes in one
+specific GO term. All GO terms have <em>N</em> genes. For one particular
+GO term, there have K genes.</p>
+<p>The hypergeometric distribution measures precisely the probability of
+<strong>k</strong> successes in <strong>n</strong> draws, without
+replacement, from a finite population of size <strong>N</strong> that
+contains exactly <strong>K</strong> successful objects:</p>
+<p><span
+class="math inline">\(\mathrm{P}(\mathrm{X}=k)=\frac{\left(\begin{array}{l}K
+\\ k\end{array}\right)\left(\begin{array}{l}N-n \\
+K-k\end{array}\right)}{\left(\begin{array}{l}N \\
+n\end{array}\right)}\)</span></p>
+<p><span
+class="math inline">\(\mathrm{p-value}=1-\mathrm{P}(\mathrm{X}=k)\)</span></p>
+<h1 id="reference">Reference</h1>
+<p>[1]
+https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/goenrichment/tutorial.html</p>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2022-01-01</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/principle/" rel="tag">principle</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>Gitto - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=tools,principle,spatial transcriptomics>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">Gitto</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#coherent-gene-expression"><span class="toc-text">1、coherent gene expression</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spatial-domain-detection"><span class="toc-text">2、spatial domain detection</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spatial-variable-genes"><span class="toc-text">3、spatial variable genes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cell-cell-communication"><span class="toc-text">4、cell-cell communication</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <p>Recently, I read a toolbox <em>Giotto</em> to characterize spatial
+transcriptomics data. It focus on three parts: 1) characterizing tissue
+composition; 2) spatial expression patterns; 3) cellular
+interactions.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Giotto_Fig.%201.webp" /></p>
+<p>In this literature, what interests me lost is these three
+aspects.</p>
+<h1 id="coherent-gene-expression">1、coherent gene expression</h1>
+<p>In Giotto, it depends on two functions <em>detectSpatialCorGenes and
+clusterSpatialCorGenes.</em> The first function spatially smooths gene
+expression through a grid averaging or k-nearest neighbor approach and
+then calculates the gene-to-gene correlation (default = Pearson) scores.
+The second function performs hierarchical clustering to cluster the
+gene-to-gene co-expression network into modules and creates metagene
+scores by averaging all the genes for each identified co-expression
+module</p>
+<p>For my perspective, I don't approve the genes found by this method
+are belong to gene co-expression relationship. I think they just have
+gene expression correlation.</p>
+<h1 id="spatial-domain-detection">2、spatial domain detection</h1>
+<p>Firstly, HMRF infers the state of each cell as the joint probability
+of the cell’s intrinsic state (inferred from the cell’s own gene
+expression vector), and the cell’s extrinsic state, which is based on
+the distribution of the states of the cell’s neighbors.</p>
+<p>The neighborhood graph defines the extent of the neighbor cell
+influence, together with the parameter beta that defines the strength of
+the interaction of cells.</p>
+<p>At the end, HMRF assigns each cell to one of k spatial domains (k to
+be defined by the user).</p>
+<h1 id="spatial-variable-genes">3、spatial variable genes</h1>
+<p>For SVGs, the toolbox integrate methods such like SpatialDE, SPARK,
+Trendsceek and BinSpect.</p>
+<h1 id="cell-cell-communication">4、cell-cell communication</h1>
+<p>This is implemented in the function <em>spatCellCellcom.</em></p>
+<p><span class="math inline">\(\overline{S(L, R, A, B)}=\frac{1}{n}
+\sum_{i=1}^n L_i+\frac{1}{m} \sum_{j=1}^m R_j\)</span></p>
+<p>where <span class="math inline">\(n\)</span> represents the number of
+A-type cells that interact with B-type cells, <span
+class="math inline">\(m\)</span> represents the number of B-type cells
+that interact with A-type cells, <span
+class="math inline">\(L_{i}\)</span> represents the expression level of
+the ligand in the ith A-type cell, and <span
+class="math inline">\(R_{j}\)</span> represents the expression level of
+the receptor in the jth B-type cell.</p>
+<p>And how to do the statistic test?</p>
+<p>This background distribution is created by shuffling cell locations
+within the same cell type for A and B for 1000 (= default) times. In
+each round, a permutation score Sp is calculated using the same formula.
+Associated p values were calculated as the probability of Sp to be
+greater or smaller than the actual observed score S.Thep values for all
+ligand-receptor pairs in all cell-type pairs were subsequently adjusted
+for multiple hypothesis testing.</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02286-2">Giotto</a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2022-07-21</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/principle/" rel="tag">principle</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/spatial-transcriptomics/" rel="tag">spatial transcriptomics</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

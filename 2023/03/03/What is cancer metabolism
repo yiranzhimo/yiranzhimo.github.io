@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>What is cancer metabolism? - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=cancer,review,metabolism>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">What is cancer metabolism?</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  
+
+  <div class="post-content">
+    <p>What is cancer metabolism? This is something to think about.</p>
+<p>And I have read the paper <em>What is cancer metabolism?</em></p>
+<p>What I learned is mainly two parts.</p>
+<p>First, For tumor cells, it chooses to produce lactate even if oxygen
+is abundant.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure1.%20Warburg%20and%20Pasteur%20eff" /></p>
+<p>Second, Nutrient uptake is largely initiated by receptor tyrosine
+kinases (RTKs) which activate signaling cascades that promote the
+membrane localization of nutrient transporters and activity of enzymes
+that metabolize—and therefore help capture—nutrients. Signaling pathways
+downstream of PI3K, most notably RAS, can also direct bulk uptake of
+macromolecules via macropinocytosis. Nutrient uptake is also facilitated
+by transcriptional induction of membrane transporters via oncogenic
+transcription factors hypoxia-inducible factor (HIF), which activates
+genes encoding plasma membrane glucose transporters (Glut), and MYC,
+which activates genes encoding amino acid transporters such as Asct2.
+Genes frequently mutated or activated in cancer are colored orange.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure2.%20Mechanisms%20of%20nutrient" /></p>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-03-03</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/cancer/" rel="tag">cancer</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/metabolism/" rel="tag">metabolism</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/review/" rel="tag">review</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>
