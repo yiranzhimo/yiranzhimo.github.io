@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>SpatialDE - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">SpatialDE</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <p>To some degree, SpatialDE is the first literature focused on spatial
+variable genes(SVGS).</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spatialde_figure1.webp" /></p>
+<p>Now, I would like to intriduce the algorithm principle.</p>
+<p>Its method depend on Gaussian process regression. For each gene,
+SpatialDE decomposes expression variability into spatial and nonspatial
+components, using two random effect terms: a spatial variance term that
+parametrizes gene expression covariance by pairwise distances of
+samples, and a noise term that models nonspatial variability.</p>
+<p><span class="math inline">\(P\left(y \mid \mu, \sigma_s^2, \delta,
+\Sigma\right)=N\left(y \mid \mu \cdot 1, \sigma_s^2 \cdot(\Sigma+\delta
+\cdot I)\right)\)</span></p>
+<p><span class="math inline">\(y\)</span> represents the observed gene
+expression levels, <span class="math inline">\(μ\)</span> represents the
+mean expression level, <span class="math inline">\(\sigma_s^2\)</span>
+represents the variance of the expression levels, <span
+class="math inline">\(δ\)</span> represents the spatial variance, and
+<span class="math inline">\(Σ\)</span> represents the covariance matrix
+of the spatial coordinates.</p>
+<p><span class="math inline">\(\Sigma_{i, j}=k\left(x_i, x_j\right)=\exp
+\left(-\frac{\left|x_i-x_j\right|^2}{2 \cdot l^2}\right)\)</span></p>
+<p><span class="math inline">\(x_i\)</span> and <span
+class="math inline">\(x_j\)</span> represent the spatial coordinates of
+two locations, and <span class="math inline">\(l\)</span> is a parameter
+that determines the scale of the distance over which the similarity
+between the locations is calculated. The function calculates the
+similarity between the two locations as a value between 0 and 1, with
+higher values indicating greater similarity.</p>
+<p>The second covariance term <span class="math inline">\(δ ·I\)</span>
+accounts for independent nonspatial variation in gene expression, where
+the ratio <span class="math inline">\(1/(1 + δ)\)</span> can be
+interpreted as the fraction of expression variance attributable to
+spatial effects. Model parameters are fit by maximizing the marginal log
+likelihood (LL)</p>
+<p><span class="math inline">\(\begin{aligned} L L= &amp; -\frac{1}{2}
+\cdot N \cdot \log (2 \pi)-\frac{1}{2} \cdot \log \left(\left|\sigma_s^2
+\cdot(\Sigma+\delta \cdot I)\right|\right) \\ &amp; -\frac{1}{2}
+\cdot(y-\mu \cdot 1)^T\left(\sigma_s^2 \cdot(\Sigma+\delta \cdot
+I)\right)^{-1}(y-\mu \cdot 1)\end{aligned}\)</span></p>
+<p>To estimate statistical significance, it compared the model
+likelihood of the fitted SpatialDE model with the likelihood of a model
+that corresponds to the null hypothesis of no spatial covariance,</p>
+<p><span class="math inline">\(P\left(y \mid \mu,
+\sigma^2\right)=N\left(\mu \cdot 1, \sigma^2 \cdot I\right)\)</span></p>
+<p>Then estimating <em>P</em> values analytically on the basis of the χ2
+distribution transformation with one degree of freedom.</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/nmeth.4636">SpatialDE:
+identification of spatially variable genes</a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2022-01-20</span>
+  </div>
+
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

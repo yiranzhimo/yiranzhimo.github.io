@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-15T01:53:12.491Z</updated>
+  <updated>2023-03-14T15:02:21.689Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,48 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://example.com/2023/03/15/test-1/"/>
-    <id>http://example.com/2023/03/15/test-1/</id>
-    <published>2023-03-15T01:53:12.000Z</published>
-    <updated>2023-03-15T01:53:12.491Z</updated>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-      
-      
-    <summary type="html">
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://example.com/2023/03/15/test/"/>
-    <id>http://example.com/2023/03/15/test/</id>
-    <published>2023-03-15T01:18:34.000Z</published>
-    <updated>2023-03-15T01:18:34.217Z</updated>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-      
-      
-    <summary type="html">
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>SPARK</title>
@@ -214,28 +172,6 @@ Therapy</summary>
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="tumor" scheme="http://example.com/tags/tumor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpatialDE</title>
-    <link href="http://example.com/2023/01/20/SpatialDE/"/>
-    <id>http://example.com/2023/01/20/SpatialDE/</id>
-    <published>2023-01-20T14:17:09.000Z</published>
-    <updated>2023-03-14T14:25:49.546Z</updated>
-    
-    <content type="html"><![CDATA[<p>To some degree, SpatialDE is the first literature focused on spatialvariable genes(SVGS).</p><p>Now, I would like to intriduce the algorithm principle.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;To some degree, SpatialDE is the first literature focused on spatial
-variable genes(SVGS).&lt;/p&gt;
-&lt;p&gt;Now, I would like to intriduce the algo</summary>
-      
-    
-    
-    
     
   </entry>
   
@@ -461,6 +397,29 @@ src=&quot;https://r</summary>
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpatialDE</title>
+    <link href="http://example.com/2022/01/20/SpatialDE/"/>
+    <id>http://example.com/2022/01/20/SpatialDE/</id>
+    <published>2022-01-20T14:17:09.000Z</published>
+    <updated>2023-03-17T07:51:43.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>To some degree, SpatialDE is the first literature focused on spatialvariable genes(SVGS).</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spatialde_figure1.webp" /></p><p>Now, I would like to intriduce the algorithm principle.</p><p>Its method depend on Gaussian process regression. For each gene,SpatialDE decomposes expression variability into spatial and nonspatialcomponents, using two random effect terms: a spatial variance term thatparametrizes gene expression covariance by pairwise distances ofsamples, and a noise term that models nonspatial variability.</p><p><span class="math inline">\(P\left(y \mid \mu, \sigma_s^2, \delta,\Sigma\right)=N\left(y \mid \mu \cdot 1, \sigma_s^2 \cdot(\Sigma+\delta\cdot I)\right)\)</span></p><p><span class="math inline">\(y\)</span> represents the observed geneexpression levels, <span class="math inline">\(μ\)</span> represents themean expression level, <span class="math inline">\(\sigma_s^2\)</span>represents the variance of the expression levels, <spanclass="math inline">\(δ\)</span> represents the spatial variance, and<span class="math inline">\(Σ\)</span> represents the covariance matrixof the spatial coordinates.</p><p><span class="math inline">\(\Sigma_{i, j}=k\left(x_i, x_j\right)=\exp\left(-\frac{\left|x_i-x_j\right|^2}{2 \cdot l^2}\right)\)</span></p><p><span class="math inline">\(x_i\)</span> and <spanclass="math inline">\(x_j\)</span> represent the spatial coordinates oftwo locations, and <span class="math inline">\(l\)</span> is a parameterthat determines the scale of the distance over which the similaritybetween the locations is calculated. The function calculates thesimilarity between the two locations as a value between 0 and 1, withhigher values indicating greater similarity.</p><p>The second covariance term <span class="math inline">\(δ ·I\)</span>accounts for independent nonspatial variation in gene expression, wherethe ratio <span class="math inline">\(1/(1 + δ)\)</span> can beinterpreted as the fraction of expression variance attributable tospatial effects. Model parameters are fit by maximizing the marginal loglikelihood (LL)</p><p><span class="math inline">\(\begin{aligned} L L= &amp; -\frac{1}{2}\cdot N \cdot \log (2 \pi)-\frac{1}{2} \cdot \log \left(\left|\sigma_s^2\cdot(\Sigma+\delta \cdot I)\right|\right) \\ &amp; -\frac{1}{2}\cdot(y-\mu \cdot 1)^T\left(\sigma_s^2 \cdot(\Sigma+\delta \cdotI)\right)^{-1}(y-\mu \cdot 1)\end{aligned}\)</span></p><p>To estimate statistical significance, it compared the modellikelihood of the fitted SpatialDE model with the likelihood of a modelthat corresponds to the null hypothesis of no spatial covariance,</p><p><span class="math inline">\(P\left(y \mid \mu,\sigma^2\right)=N\left(\mu \cdot 1, \sigma^2 \cdot I\right)\)</span></p><p>Then estimating <em>P</em> values analytically on the basis of the χ2distribution transformation with one degree of freedom.</p><h1 id="reference">Reference</h1><ul><li>[1] <a href="https://www.nature.com/articles/nmeth.4636">SpatialDE:identification of spatially variable genes</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;To some degree, SpatialDE is the first literature focused on spatial
+variable genes(SVGS).&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&quot;https://raw.githubusercontent</summary>
+      
+    
+    
+    
     
   </entry>
   
