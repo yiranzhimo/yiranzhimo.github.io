@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-09T12:25:46.073Z</updated>
+  <updated>2023-03-30T04:45:12.072Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SRTsim</title>
+    <link href="http://example.com/2023/03/10/SRTsim/"/>
+    <id>http://example.com/2023/03/10/SRTsim/</id>
+    <published>2023-03-10T03:09:24.000Z</published>
+    <updated>2023-03-30T04:45:12.072Z</updated>
+    
+    <content type="html"><![CDATA[<p>Today, I read a paper, "SRTsim: spatial pattern preservingsimulations for spatially resolved transcriptomics" used to producesimulated data in spatial transcriptomics.</p><p>This is the main work process</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SRTsim_1.png" /></p><p>What impresses me most is the way to test the advantages of SRTsim.It calculated the rand index between real data and simulated datathrough various of clustering methods.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02879-z">SRTsim:spatial pattern preserving simulations for spatially resolvedtranscriptomics</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Today, I read a paper, &quot;SRTsim: spatial pattern preserving
+simulations for spatially resolved transcriptomics&quot; used to produce
+simulated </summary>
+      
+    
+    
+    
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+  </entry>
   
   <entry>
     <title>Spatial profiling technologies illuminate the tumor microenvironment</title>
