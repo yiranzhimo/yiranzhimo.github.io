@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-30T04:45:12.072Z</updated>
+  <updated>2023-03-30T04:59:00.947Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>SRTsim</title>
-    <link href="http://example.com/2023/03/10/SRTsim/"/>
-    <id>http://example.com/2023/03/10/SRTsim/</id>
-    <published>2023-03-10T03:09:24.000Z</published>
-    <updated>2023-03-30T04:45:12.072Z</updated>
+    <link href="http://example.com/2023/03/06/SRTsim/"/>
+    <id>http://example.com/2023/03/06/SRTsim/</id>
+    <published>2023-03-06T03:09:24.000Z</published>
+    <updated>2023-03-30T04:59:00.947Z</updated>
     
     <content type="html"><![CDATA[<p>Today, I read a paper, "SRTsim: spatial pattern preservingsimulations for spatially resolved transcriptomics" used to producesimulated data in spatial transcriptomics.</p><p>This is the main work process</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SRTsim_1.png" /></p><p>What impresses me most is the way to test the advantages of SRTsim.It calculated the rand index between real data and simulated datathrough various of clustering methods.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02879-z">SRTsim:spatial pattern preserving simulations for spatially resolvedtranscriptomics</a></li></ul>]]></content>
     
@@ -203,9 +203,41 @@ spatial expression with iSpatial&lt;/em&gt;, from which I learned a lot.&lt;/</s
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
+  </entry>
+  
+  <entry>
+    <title>hdWGCNA</title>
+    <link href="http://example.com/2022/09/22/hdWGCNA/"/>
+    <id>http://example.com/2022/09/22/hdWGCNA/</id>
+    <published>2022-09-22T09:40:25.000Z</published>
+    <updated>2023-03-30T15:28:12.545Z</updated>
+    
+    <content type="html"><![CDATA[<p>How to deduce gene coexpression network is worth thinking.</p><p>I read the paper named "High dimensional co-expression networksenable discovery of transcriptomic drivers in complex biologicalsystems" which focus on gene co-expression networks.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hdWGCNA_1.png" /></p><p>the signed correlation：</p><p><span class="math inline">\(a_{i,j}=\frac{1+\operatorname{cor}\left(x_i, x_j\right)}{2}\)</span></p><p>In order to emphasize strong correlations, we raise the elements of Ato a power β, and we refer to this as soft power thresholding.</p><p><span class="math inline">\(\begin{array}{r}\alpha_{i, j}=\left(a_{i,j}\right)^\beta \\ \tilde{\alpha}_{i, j}=\alpha_{i, j} \times\operatorname{sign}\left(\operatorname{cor}\left(x_i,x_j\right)\right)\end{array}\)</span></p><p>Now we have the gene-gene correlation raised to a power β, and analternative metric ̃ αi,j which also retains the sign of the correlationbetween these genes. The final co-expression network is then computed asa signed topological overlap matrix (TOM). The TOM describes sharedneighbors between the a pair of genes (i, j). We define the signed TOMas</p><p><span class="math inline">\(\operatorname{TOM}_{i, j}^{\text {signed}}=\frac{\left|\alpha_{i, j}+\sum_{u \neq i, j} \tilde{\alpha}_{i, u}\tilde{\alpha}_{u, j}\right|}{\min \left(k_i,k_j\right)+1-\left|\alpha_{i, j}\right|}\)</span></p><h1 id="reference">Reference</h1><ul><li><p>[1] <ahref="https://www.biorxiv.org/content/10.1101/2022.09.22.509094v1">hdWGCNA</a></p></li><li><p>[2] <ahref="http://rstudio-pubs-static.s3.amazonaws.com/554864_6e0f44cdc1474b8ba2c5f8326559bbe4.html">基因共表达网络WGCNA</a></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;How to deduce gene coexpression network is worth thinking.&lt;/p&gt;
+&lt;p&gt;I read the paper named &quot;High dimensional co-expression networks
+enable </summary>
+      
+    
+    
+    
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="co-expression" scheme="http://example.com/tags/co-expression/"/>
     
   </entry>
   
@@ -367,11 +399,11 @@ in tumor spatial transcriptome.&lt;/p&gt;
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
   </entry>
   
@@ -399,11 +431,11 @@ src=&quot;https://r</summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
   </entry>
   
