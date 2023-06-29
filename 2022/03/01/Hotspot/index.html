@@ -10,7 +10,7 @@
   <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   
-  <meta name="keywords" content=tools,principle,spatial transcriptomics,scRNA>
+  <meta name="keywords" content=tools,scRNA,principle,spatial transcriptomics>
   
   
   
@@ -54,88 +54,39 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference:</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference:</span></a></li></ol>
 
   <div class="post-content">
-    <p>Hotspot is a useful tools to find gene expression module, especially
-in tumor spatial transcriptome.</p>
+    <p>Hotspot is a useful tools to find gene expression module, especially in tumor spatial transcriptome. </p>
 <p>Now, I want to introduce its work principle.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hotspot_1.jpg" /></p>
-<p>To compute gene modules, Hotspot uses a three-step procedure:</p>
-<p>1、Find informative genes with high local autocorrelation</p>
-<p>Firstly, to compute cells similarity map through KNN graph or spatial
-position or development lineage.</p>
-<p>For an interested gene <span class="math inline">\(x\)</span>, to
-calculate its <span class="math inline">\(H_x\)</span>. <span
-class="math display">\[
-H_x=\sum_j \sum_{j \neq i} w_{i j} x_i x_j
-\]</span> If cell <span class="math inline">\(i\)</span> and cell <span
-class="math inline">\(j\)</span> are nearest neighbors, then weight
-<span class="math inline">\(w_{ij}\)</span> is higher then dissimilar
-cells. If cell <span class="math inline">\(i\)</span> and cell <span
-class="math inline">\(j\)</span> are denifitely different, then weight
-<span class="math inline">\(w_{ij}\)</span> is equal to 0.</p>
-<p><span class="math inline">\(x_i\)</span> and <span
-class="math inline">\(x_j\)</span> are gene <span
-class="math inline">\(x\)</span> expression value in cell <span
-class="math inline">\(i\)</span> and cell <span
-class="math inline">\(j\)</span> . Notably, whether <span
-class="math inline">\(x_i\)</span> or <span
-class="math inline">\(x_j\)</span> is standardized expression value
-(such that <span class="math display">\[
-E\left[x_i\right]=0\]</span>，<span class="math display">\[
-E\left[x_i^2\right]=1
-\]</span>).</p>
-<p>But, how to evaluate <span class="math inline">\(H_x\)</span> and
-detect informative genes?</p>
-<p>For each gene, to define a null model in which the expression values
-are drawn independently from some assumed distribution and transfer
-<span class="math inline">\(H_x\)</span> to <em>Z-score</em> to eveluate
-statistically significant. <span class="math display">\[
-\hat{Z}=\frac{\widehat{H}-\mathrm{E}[\hat{H}]}{\operatorname{var}(\widehat{H})^{\frac{1}{2}}}=\frac{\sum_i
-\sum_j w_{i j} \widehat{X_i} \widehat{X}_j}{\left(\sum_i \sum_j w_{i
-j}^2\right)^{\frac{1}{2}}}
-\]</span> Through this formula, the method measures cell’s expression by
-its local neighborhood in the graph. Finally, <span
-class="math inline">\(\hat{Z}\)</span> represents gene expression
-value.</p>
-<p>2、Evaluate pair-wise local correlations between genes</p>
-<p>In the first step, we can identify informative genes. <span
-class="math display">\[
-H_{x y}=\sum_i \sum_{j \neq i} w_{i j}\left(x_i y_j+y_i x_j\right)
-\]</span> Here, the <span class="math inline">\(i\)</span>, <span
-class="math inline">\(j\)</span> indices represent individual cells and
-<span class="math inline">\(x_i\)</span> and <span
-class="math inline">\(y_i\)</span> are the standardized expression
-values in cell <span class="math inline">\(i\)</span> for genes <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span>, respectively. Weights <span
-class="math inline">\(w_{ij}\)</span> are defined as before based on the
-cell similarity map. As with <span class="math inline">\(H_{x}\)</span>,
-the null model is again used to convert <span
-class="math inline">\(H_{xy}\)</span> values into <span
-class="math inline">\(Z\)</span> scores. <span class="math display">\[
-\mathrm{E}\left[H_{x y}^2\right]=\sum_i^N\left(\sum_{j \in N(i)} w_{i j}
-\hat{x}_j\right)^2
-\]</span></p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hotspot_1.jpg" alt=""></p>
+<p>To compute gene modules, Hotspot uses a three-step procedure: </p>
+<p>1、Find informative genes with high local autocorrelation </p>
+<p>Firstly, to compute cells similarity map through KNN graph or spatial position or development lineage. </p>
+<p>For an interested gene $x$, to calculate its $H_x$. </p>
+<script type="math/tex; mode=display">
+H_x=\sum_j \sum_{j \neq i} w_{i j} x_i x_j</script><p>If cell $i$ and cell $j$ are nearest neighbors, then weight $w<em>{ij}$ is higher then dissimilar cells. If cell $i$ and cell $j$ are denifitely different, then weight $w</em>{ij}$ is equal to 0.</p>
+<p>$x_i$ and $x_j$ are gene $x$ expression value in cell $i$ and cell $j$ . Notably, whether $x_i$ or $x_j$ is standardized expression value (such that <script type="math/tex">E\left[x_i\right]=0</script>，$$<br>E\left[x_i^2\right]=1</p>
+<script type="math/tex; mode=display">).
+
+But, how to evaluate $H_x$ and detect informative genes?
+
+For each gene, to define a null model in which the expression values are drawn independently from some assumed distribution and transfer $H_x$ to *Z-score*  to eveluate statistically significant.</script><p>\hat{Z}=\frac{\widehat{H}-\mathrm{E}[\hat{H}]}{\operatorname{var}(\widehat{H})^{\frac{1}{2}}}=\frac{\sum<em>i \sum_j w</em>{i j} \widehat{X<em>i} \widehat{X}_j}{\left(\sum_i \sum_j w</em>{i j}^2\right)^{\frac{1}{2}}}</p>
+<script type="math/tex; mode=display">
+Through this formula, the method measures cell’s expression by its local neighborhood in the graph. Finally, $\hat{Z}$ represents gene expression value. 
+
+2、Evaluate pair-wise local correlations between genes 
+
+In the first step, we can identify informative genes.</script><p>H<em>{x y}=\sum_i \sum</em>{j \neq i} w_{i j}\left(x_i y_j+y_i x_j\right)</p>
+<script type="math/tex; mode=display">
+Here, the $i$, $j$ indices represent individual cells and $x_i$ and $y_i$ are the standardized expression values in cell $i$ for genes $x$ and $y$, respectively. Weights $w_{ij}$ are defined as before based on the cell similarity map. As with $H_{x}$, the null model is again used to convert $H_{xy}$ values into $Z$ scores.</script><p>\mathrm{E}\left[H<em>{x y}^2\right]=\sum_i^N\left(\sum</em>{j \in N(i)} w_{i j} \hat{x}_j\right)^2</p>
+<p>$$</p>
 <p>3、Cluster the resulting gene-gene affinity matrix</p>
-<p>Through applying a bottom-up clustering procedure with two parameters
-<em>min_cluster_genes</em>, and <em>fdr_threshold</em> to cluster these
-genes into module.</p>
-<p>If a module accumulates more than <em>min_cluster_genes</em>, then it
-is assigned a label.</p>
-<p>The <em>fdr_threshold</em> parameter is used to set a minimum
-significant <em>Z-score</em>. If at any point in the above merging
-module procedure the maximal Z-score falls below this threshold, the
-procedure halts as further gene assignments fall below the significance
-threshold and are therefore ambiguous.</p>
-<h1 id="reference">Reference:</h1>
-<ul>
-<li>[1] <a
-target="_blank" rel="noopener" href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00114-9">Hotspot
-identifies informative gene modules across modalities of single-cell
-genomics</a></li>
+<p>Through applying a bottom-up clustering procedure with two parameters <em>min_cluster_genes</em>, and <em>fdr_threshold</em> to cluster these genes into module.  </p>
+<p>If a module accumulates more than <em>min_cluster_genes</em>, then it is assigned a label.</p>
+<p>The <em>fdr_threshold</em> parameter is used to set a minimum significant <em>Z-score</em>. If at any point in the above merging module procedure the maximal Z-score falls below this threshold, the procedure halts as further gene assignments fall below the significance threshold and are therefore ambiguous.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21">Hotspot identifies informative gene modules across modalities of single-cell genomics</a>00114-9)</li>
 </ul>
 
   </div>

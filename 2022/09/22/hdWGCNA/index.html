@@ -10,7 +10,7 @@
   <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   
-  <meta name="keywords" content=tools,principle,spatial transcriptomics,scRNA,co-expression>
+  <meta name="keywords" content=tools,scRNA,principle,spatial transcriptomics,co-expression>
   
   
   
@@ -54,41 +54,23 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
     <p>How to deduce gene coexpression network is worth thinking.</p>
-<p>I read the paper named "High dimensional co-expression networks
-enable discovery of transcriptomic drivers in complex biological
-systems" which focus on gene co-expression networks.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hdWGCNA_1.png" /></p>
+<p>I read the paper named “High dimensional co-expression networks enable discovery of transcriptomic drivers in complex biological systems” which focus on gene co-expression networks.</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hdWGCNA_1.png" alt=""></p>
 <p>the signed correlation：</p>
-<p><span class="math inline">\(a_{i,
-j}=\frac{1+\operatorname{cor}\left(x_i, x_j\right)}{2}\)</span></p>
-<p>In order to emphasize strong correlations, we raise the elements of A
-to a power β, and we refer to this as soft power thresholding.</p>
-<p><span class="math inline">\(\begin{array}{r}\alpha_{i, j}=\left(a_{i,
-j}\right)^\beta \\ \tilde{\alpha}_{i, j}=\alpha_{i, j} \times
-\operatorname{sign}\left(\operatorname{cor}\left(x_i,
-x_j\right)\right)\end{array}\)</span></p>
-<p>Now we have the gene-gene correlation raised to a power β, and an
-alternative metric ̃ αi,j which also retains the sign of the correlation
-between these genes. The final co-expression network is then computed as
-a signed topological overlap matrix (TOM). The TOM describes shared
-neighbors between the a pair of genes (i, j). We define the signed TOM
-as</p>
-<p><span class="math inline">\(\operatorname{TOM}_{i, j}^{\text {signed
-}}=\frac{\left|\alpha_{i, j}+\sum_{u \neq i, j} \tilde{\alpha}_{i, u}
-\tilde{\alpha}_{u, j}\right|}{\min \left(k_i,
-k_j\right)+1-\left|\alpha_{i, j}\right|}\)</span></p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li><p>[1] <a
-target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2022.09.22.509094v1">hdWGCNA</a></p></li>
-<li><p>[2] <a
-target="_blank" rel="noopener" href="http://rstudio-pubs-static.s3.amazonaws.com/554864_6e0f44cdc1474b8ba2c5f8326559bbe4.html">基因共表达网络
-WGCNA</a></p></li>
+<p>$a_{i, j}=\frac{1+\operatorname{cor}\left(x_i, x_j\right)}{2}$</p>
+<p>In order to emphasize strong correlations, we raise the elements of A to a power β, and we refer to this as soft power thresholding.</p>
+<p>$\begin{array}{r}\alpha<em>{i, j}=\left(a</em>{i, j}\right)^\beta \ \tilde{\alpha}<em>{i, j}=\alpha</em>{i, j} \times \operatorname{sign}\left(\operatorname{cor}\left(x_i, x_j\right)\right)\end{array}$</p>
+<p>Now we have the gene-gene correlation raised to a power β, and an alternative metric  ̃ αi,j which also retains the sign of the correlation between these genes. The final co-expression network is then computed as a signed topological overlap matrix (TOM). The TOM describes shared neighbors between the a pair of genes (i, j). We define the signed TOM as</p>
+<p>$\operatorname{TOM}<em>{i, j}^{\text {signed }}=\frac{\left|\alpha</em>{i, j}+\sum<em>{u \neq i, j} \tilde{\alpha}</em>{i, u} \tilde{\alpha}<em>{u, j}\right|}{\min \left(k_i, k_j\right)+1-\left|\alpha</em>{i, j}\right|}$</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><p>[1] <a target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2022.09.22.509094v1">hdWGCNA</a></p>
+</li>
+<li><p>[2] <a target="_blank" rel="noopener" href="http://rstudio-pubs-static.s3.amazonaws.com/554864_6e0f44cdc1474b8ba2c5f8326559bbe4.html">基因共表达网络 WGCNA</a></p>
+</li>
 </ul>
 
   </div>

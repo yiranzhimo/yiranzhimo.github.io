@@ -54,43 +54,20 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>SpaCET is a toolbox mainly focused on cancer areas in spatial
-transcriptomics.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spacet_figure1.webp" /></p>
-<p>First, SpaCET estimates malignant cell fractions based on a gene
-pattern dictionary of copy number alterations (CNA) and malignant
-transcriptome signatures across common tumor types.</p>
-<p>Second, SpaCET deconvolves nonmalignant cell fractions and adjusts
-cell densities under a unified linear model. Using scRNA-seq datasets
-from diverse cancer types, we defined reference expression profiles of
-immune and stromal cells in a hierarchical lineage</p>
-<p>Third, SpaCET infers intercellular interactions based on cell
-colocalization and ligand–receptor co-expression analysis.</p>
+    <p>SpaCET is a toolbox mainly focused on cancer areas in spatial transcriptomics. </p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spacet_figure1.webp" alt=""></p>
+<p>First, SpaCET estimates malignant cell fractions based on a gene pattern dictionary of copy number alterations (CNA) and malignant transcriptome signatures across common tumor types.</p>
+<p>Second, SpaCET deconvolves nonmalignant cell fractions and adjusts cell densities under a unified linear model. Using scRNA-seq datasets from diverse cancer types, we defined reference expression profiles of immune and stromal cells in a hierarchical lineage</p>
+<p>Third, SpaCET infers intercellular interactions based on cell colocalization and ligand–receptor co-expression analysis.</p>
 <p>What interest me most is cell interaction analysis.</p>
-<p>For a spot, an L–R network score is defined as the sum of expression
-products between all L–R pairs, divided by the average random value from
-1000 randomized networks. P values were calculated with the empirical
-null distribution generated from network scores of randomized
-L–Rinteractions.</p>
-<p>Network Score <span class="math inline">\((\mathrm{NS})=\frac{\sum_i
-E_{L i} \times E_{R i}}{\left\langle\sum_i E_{L i} \times E_{R
-i}\right\rangle}, P\)</span> value <span
-class="math inline">\(=P_r\left(\mathrm{NS}_{\text {random }} \geq
-\mathrm{NS}\right)\)</span></p>
-<p><span class="math inline">\(E_{Li}\)</span> and <span
-class="math inline">\(E_{Ri}\)</span> donate the expression of ligand
-and receptor from the ith L–R pair, respectively. The <span
-class="math inline">\(&lt;&gt;\)</span> represents averaging the product
-sums from 1000 random networks.</p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li>[1] <a
-target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36062-6#Sec11">Estimation
-of cell lineages in tumors from spatial transcriptomics data</a></li>
+<p>For a spot, an L–R network score is defined as the sum of expression products between all L–R pairs, divided by the average random value from 1000 randomized networks. P values were calculated with the empirical null distribution generated from network scores of randomized L–Rinteractions.</p>
+<p>Network Score $(\mathrm{NS})=\frac{\sum<em>i E</em>{L i} \times E<em>{R i}}{\left\langle\sum_i E</em>{L i} \times E<em>{R i}\right\rangle}, P$ value $=P_r\left(\mathrm{NS}</em>{\text {random }} \geq \mathrm{NS}\right)$</p>
+<p>$E<em>{Li}$ and $E</em>{Ri}$ donate the expression of ligand and receptor from the ith L–R pair, respectively. The $&lt;&gt;$ represents averaging the product sums from 1000 random networks.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36062-6#Sec11">Estimation of cell lineages in tumors from spatial transcriptomics data</a></li>
 </ul>
 
   </div>

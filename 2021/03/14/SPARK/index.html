@@ -54,125 +54,34 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#what-is-spark"><span class="toc-text">What is SPARK?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sparks-principle"><span class="toc-text">SPARK&#39;s principle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#how-to-calculate-the-p-value"><span class="toc-text">How to calculate the p-value</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-SPARK"><span class="toc-text">What is SPARK?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SPARK%E2%80%99s-principle"><span class="toc-text">SPARK’s principle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-calculate-the-p-value"><span class="toc-text">How to calculate the p-value</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <h1 id="what-is-spark">What is SPARK?</h1>
-<p>SPARK directly models spatial count data through generalized linear
-spatial models. It relies on recently developed statistical formulas for
-hypothesis testing, effectively controlling type I errors and yielding
-high statistical power.</p>
-<p>This literature thinks there are three disadvantages in the two
-existing approaches to identifying spatial variable genes(SVGs).</p>
-<p>Firstly, SpatialDE and Trendsceek transform count data into
-normalized data, which may fail to account for the mean-variance
-relationship in raw counts.</p>
-<p>Secondly, SpatialDE relies on asymptotic normality and minimal
-<em>P</em>-value-combination rules for constructing hypothesis tests
-which may cause many true SVGs ignored.</p>
-<p>Thirdly, like Trendsceek, its module is not efficient which causes
-amounts of calculation time.</p>
-<h1 id="sparks-principle">SPARK's principle</h1>
-<p>Now, I would like to choose the SPARK principle.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SPARK_1.png" /></p>
-<p>It builds upon a generalized linear spatial model (GLSM) with a
-variety of spatial kernels to accommodate count data generated from
-smFISH or sequencing-based spatial transcriptomics studies. With a newly
-developed penalized quasi-likelihood (PQL) algorithm, SPARK is scalable
-to analyzing tens of thousands of genes across tens of thousands spatial
-locations. Importantly, SPARK relies on a mixture of χ2 distributions to
-serve as the exact test statistics distribution and takes advantage of a
-recently developed Cauchy combination rule to combine information across
-multiple spatial kernels for calibrated <em>P</em> value calculation. As
-a result, SPARK properly controls for type I error at the
-transcriptome-wide level and is more powerful for identifying SE genes
-than existing approaches.</p>
-<p><span class="math inline">\(y_i\left(s_i\right) \sim
-\operatorname{Poi}\left(N_i\left(s_i\right)
-\lambda_i\left(s_i\right)\right), i=1,2, \cdots, n\)</span></p>
-<p><span class="math inline">\(y_i\left(s_i\right)\)</span> as the gene
-expression measurement in terms of counts for the <em>i</em>’th
-sample.</p>
-<p><span class="math inline">\(N_i(s_i)\)</span> as the normalization
-factor for i'th sample. Here, it set <span
-class="math inline">\(N_i(s_i)\)</span> as the summation of the total
-number of counts across all genes for the sample as the main interest is
-in analyzing the relative gene expression level.</p>
-<p><span class="math inline">\(\log
-\left(\lambda_i\left(s_i\right)\right)=\boldsymbol{x}_i\left(s_i\right)^{\boldsymbol{T}}
-\boldsymbol{\beta}+b_i\left(s_i\right)+\epsilon_i\)</span></p>
-<p>where <span class="math inline">\(\lambda_i\left(s_i\right)\)</span>
-is an unknown Poisson rate parameter that represents the underlying gene
-expression level for the <em>i'</em>th sample. In the spatial setting,
-<span class="math inline">\(\lambda_i\left(s_i\right)\)</span> can also
-be viewed as the unobserved spatial random process occurring at location
-<span class="math inline">\(𝒔_𝑖\)</span>. We model the log scale of the
-latent variable <span
-class="math inline">\(\lambda_i\left(s_i\right)\)</span> as a linear
-combination of three terms.</p>
-<p><span class="math inline">\(\log
-\left(\lambda_i\left(s_i\right)\right)=\boldsymbol{x}_i\left(s_i\right)^T
-\boldsymbol{\beta}+b_i\left(s_i\right)+\epsilon_i\)</span></p>
-<p><span class="math inline">\(x_i\left(s_i\right)\)</span> is
-<em>k</em>-vector of covariates that include a scalar of one for the
-intercept and <em>k</em>-1 observed explanatory variables for the i'th
-sample.</p>
-<p><strong>𝜷</strong> is a <em>k</em>-vector of coefficients that
-include an intercept representing the mean log-expression of the gene
-across spatial locations together with <em>k</em>-1 coefficients for the
-corresponding covariates; ∈𝑖 is the residual error that is independently
-and identically distributed from 𝑁(0,<span
-class="math inline">\(𝜏^2\)</span>) with variance <span
-class="math inline">\(𝜏^2\)</span>; and <span
-class="math inline">\(𝑏_𝑖(𝒔_𝑖)\)</span> is a zero-mean, stationary
-Gaussian process modeling the spatial correlation pattern among spatial
-locations</p>
-<p><span
-class="math inline">\(\boldsymbol{b}(s)=\left(b_1\left(s_1\right),
-b_2\left(s_2\right), \cdots, b_n\left(s_n\right)\right)^T \sim
-\operatorname{MVN}\left(0, \tau_1 \boldsymbol{K}(s)\right)\)</span></p>
-<p>The covariance <span class="math inline">\(K(s)\)</span> is a kernel
-function of the spatial locations
-<strong>𝒔</strong>=(<strong>𝒔</strong>1,…,<strong>𝒔</strong>𝑛)𝑇, with
-<em>ij</em>’th element being 𝑲(<span
-class="math inline">\(𝒔_𝑖\)</span>,<span
-class="math inline">\(𝒔_𝑗\)</span>); 𝜏1 is a scaling factor of the
-covariance kernel; and MVN denotes a multivariate normal
-distribution.</p>
+    <h1 id="What-is-SPARK"><a href="#What-is-SPARK" class="headerlink" title="What is SPARK?"></a>What is SPARK?</h1><p>SPARK directly models spatial count data through generalized linear spatial models. It relies on recently developed statistical formulas for hypothesis testing, effectively controlling type I errors and yielding high statistical power.</p>
+<p>This literature thinks there are three disadvantages in the two existing approaches to identifying spatial variable genes(SVGs).</p>
+<p>Firstly, SpatialDE and Trendsceek transform count data into normalized data, which may fail to account for the mean-variance relationship in raw counts. </p>
+<p>Secondly, SpatialDE relies on asymptotic normality and minimal <em>P</em>-value-combination rules for constructing hypothesis tests which may cause many true SVGs ignored. </p>
+<p>Thirdly, like  Trendsceek, its module is not efficient which causes amounts of calculation time.</p>
+<h1 id="SPARK’s-principle"><a href="#SPARK’s-principle" class="headerlink" title="SPARK’s principle"></a>SPARK’s principle</h1><p>Now, I would like to choose the SPARK principle.</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SPARK_1.png" alt=""></p>
+<p>It builds upon a generalized linear spatial model (GLSM) with a variety of spatial kernels to accommodate count data generated from smFISH or sequencing-based spatial transcriptomics studies. With a newly developed penalized quasi-likelihood (PQL) algorithm, SPARK is scalable to analyzing tens of thousands of genes across tens of thousands spatial locations. Importantly, SPARK relies on a mixture of χ2 distributions to serve as the exact test statistics distribution and takes advantage of a recently developed Cauchy combination rule to combine information across multiple spatial kernels for calibrated <em>P</em> value calculation. As a result, SPARK properly controls for type I error at the transcriptome-wide level and is more powerful for identifying SE genes than existing approaches.</p>
+<p>$y_i\left(s_i\right) \sim \operatorname{Poi}\left(N_i\left(s_i\right) \lambda_i\left(s_i\right)\right), i=1,2, \cdots, n$</p>
+<p>$y_i\left(s_i\right)$ as the gene expression measurement in terms of counts for the <em>i</em>’th sample. </p>
+<p>$N_i(s_i)$ as the normalization factor for i’th sample. Here, it set $N_i(s_i)$ as the summation of the total number of counts across all genes for the sample as the main interest is in analyzing the relative gene expression level.</p>
+<p>$\log \left(\lambda_i\left(s_i\right)\right)=\boldsymbol{x}_i\left(s_i\right)^{\boldsymbol{T}} \boldsymbol{\beta}+b_i\left(s_i\right)+\epsilon_i$</p>
+<p>where $\lambda<em>i\left(s_i\right)$ is an unknown Poisson rate parameter that represents the underlying gene expression level for the <em>i’</em>th sample. In the spatial setting, $\lambda_i\left(s_i\right)$  can also be viewed as the unobserved spatial random process occurring at location $𝒔</em>𝑖$. We model the log scale of the latent variable $\lambda_i\left(s_i\right)$ as a linear combination of three terms.</p>
+<p>$\log \left(\lambda_i\left(s_i\right)\right)=\boldsymbol{x}_i\left(s_i\right)^T \boldsymbol{\beta}+b_i\left(s_i\right)+\epsilon_i$</p>
+<p>$x_i\left(s_i\right)$ is <em>k</em>-vector of covariates that include a scalar of one for the intercept and <em>k</em>-1 observed explanatory variables for the i’th sample. </p>
+<p><strong>𝜷</strong> is a <em>k</em>-vector of coefficients that include an intercept representing the mean log-expression of the gene across spatial locations together with <em>k</em>-1 coefficients for the corresponding covariates; ∈𝑖 is the residual error that is independently and identically distributed from 𝑁(0,$𝜏^2$) with variance $𝜏^2$; and $𝑏<em>𝑖(𝒔</em>𝑖)$ is a zero-mean, stationary Gaussian process modeling the spatial correlation pattern among spatial locations</p>
+<p>$\boldsymbol{b}(s)=\left(b_1\left(s_1\right), b_2\left(s_2\right), \cdots, b_n\left(s_n\right)\right)^T \sim \operatorname{MVN}\left(0, \tau_1 \boldsymbol{K}(s)\right)$</p>
+<p>The covariance $K(s)$ is a kernel function of the spatial locations <strong>𝒔</strong>=(<strong>𝒔</strong>1,…,<strong>𝒔</strong>𝑛)𝑇, with <em>ij</em>’th element being 𝑲($𝒔<em>𝑖$,$𝒔</em>𝑗$); 𝜏1 is a scaling factor of the covariance kernel; and MVN denotes a multivariate normal distribution. </p>
 <p>This is the defined GLSM model.</p>
-<p>testing whether a gene shows spatial expression pattern can be
-translated into testing the null hypothesis <span
-class="math inline">\(𝑯_0\)</span>:𝜏1=0. The statistical power of such a
-hypothesis test will inevitably depend on how the spatial kernel
-function <span class="math inline">\(K(s)\)</span> matches the true
-underlying spatial pattern displayed by the gene of interest.</p>
-<p>The true underlying spatial pattern for any gene is unfortunately
-unknown and may vary across genes. To ensure robust identification of SE
-genes across various spatial patterns, SPARK considers using a total of
-ten different spatial kernels, including five periodic kernels with
-different periodicity parameters and five Gaussian kernels with
-different smoothness parameters.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SPARK_2.png" /></p>
-<h1 id="how-to-calculate-the-p-value">How to calculate the p-value</h1>
-<p>First, SPARK tests the null hypothesis using the ten kernels one at a
-time. By one designed algorithm, to get the p-value. Afterward, it
-combines these ten <em>p</em>-values through the recently developed
-Cauchy <em>p</em>-value combination rule. To apply the Cauchy
-combination rule, we convert each of the ten <em>p</em>-values into a
-Cauchy statistic, aggregate the ten Cauchy statistics through summation,
-and convert the summation back to a single <em>p</em>-value based on the
-standard Cauchy distribution, because the Cauchy rule takes advantage of
-the fact that combination of Cauchy random variables also follows a
-Cauchy distribution regardless whether these random variables are
-correlated or not</p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li>[1] <a
-target="_blank" rel="noopener" href="https://www.nature.com/articles/s41592-019-0701-7">Statistical
-analysis of spatial expression patterns for spatially resolved
-transcriptomic studies</a></li>
+<p>testing whether a gene shows spatial expression pattern can be translated into testing the null hypothesis $𝑯_0$:𝜏1=0. The statistical power of such a hypothesis test will inevitably depend on how the spatial kernel function $K(s)$ matches the true underlying spatial pattern displayed by the gene of interest.</p>
+<p>The true underlying spatial pattern for any gene is unfortunately unknown and may vary across genes. To ensure robust identification of SE genes across various spatial patterns, SPARK considers using a total of ten different spatial kernels, including five periodic kernels with different periodicity parameters and five Gaussian kernels with different smoothness parameters. </p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/SPARK_2.png" alt=""></p>
+<h1 id="How-to-calculate-the-p-value"><a href="#How-to-calculate-the-p-value" class="headerlink" title="How to calculate the p-value"></a>How to calculate the p-value</h1><p>First, SPARK tests the null hypothesis using the ten kernels one at a time. By one designed algorithm, to get the p-value. Afterward, it combines these ten <em>p</em>-values through the recently developed Cauchy <em>p</em>-value combination rule. To apply the Cauchy combination rule, we convert each of the ten <em>p</em>-values into a Cauchy statistic, aggregate the ten Cauchy statistics through summation, and convert the summation back to a single <em>p</em>-value based on the standard Cauchy distribution, because the Cauchy rule takes advantage of the fact that combination of Cauchy random variables also follows a Cauchy distribution regardless whether these random variables are correlated or not</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41592-019-0701-7">Statistical analysis of spatial expression patterns for spatially resolved transcriptomic studies</a></li>
 </ul>
 
   </div>

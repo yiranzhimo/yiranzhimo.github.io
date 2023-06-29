@@ -54,60 +54,24 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>To some degree, SpatialDE is the first literature focused on spatial
-variable genes(SVGS).</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spatialde_figure1.webp" /></p>
+    <p>To some degree, SpatialDE is the first literature focused on spatial variable genes(SVGS).</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spatialde_figure1.webp" alt=""></p>
 <p>Now, I would like to intriduce the algorithm principle.</p>
-<p>Its method depend on Gaussian process regression. For each gene,
-SpatialDE decomposes expression variability into spatial and nonspatial
-components, using two random effect terms: a spatial variance term that
-parametrizes gene expression covariance by pairwise distances of
-samples, and a noise term that models nonspatial variability.</p>
-<p><span class="math inline">\(P\left(y \mid \mu, \sigma_s^2, \delta,
-\Sigma\right)=N\left(y \mid \mu \cdot 1, \sigma_s^2 \cdot(\Sigma+\delta
-\cdot I)\right)\)</span></p>
-<p><span class="math inline">\(y\)</span> represents the observed gene
-expression levels, <span class="math inline">\(μ\)</span> represents the
-mean expression level, <span class="math inline">\(\sigma_s^2\)</span>
-represents the variance of the expression levels, <span
-class="math inline">\(δ\)</span> represents the spatial variance, and
-<span class="math inline">\(Σ\)</span> represents the covariance matrix
-of the spatial coordinates.</p>
-<p><span class="math inline">\(\Sigma_{i, j}=k\left(x_i, x_j\right)=\exp
-\left(-\frac{\left|x_i-x_j\right|^2}{2 \cdot l^2}\right)\)</span></p>
-<p><span class="math inline">\(x_i\)</span> and <span
-class="math inline">\(x_j\)</span> represent the spatial coordinates of
-two locations, and <span class="math inline">\(l\)</span> is a parameter
-that determines the scale of the distance over which the similarity
-between the locations is calculated. The function calculates the
-similarity between the two locations as a value between 0 and 1, with
-higher values indicating greater similarity.</p>
-<p>The second covariance term <span class="math inline">\(δ ·I\)</span>
-accounts for independent nonspatial variation in gene expression, where
-the ratio <span class="math inline">\(1/(1 + δ)\)</span> can be
-interpreted as the fraction of expression variance attributable to
-spatial effects. Model parameters are fit by maximizing the marginal log
-likelihood (LL)</p>
-<p><span class="math inline">\(\begin{aligned} L L= &amp; -\frac{1}{2}
-\cdot N \cdot \log (2 \pi)-\frac{1}{2} \cdot \log \left(\left|\sigma_s^2
-\cdot(\Sigma+\delta \cdot I)\right|\right) \\ &amp; -\frac{1}{2}
-\cdot(y-\mu \cdot 1)^T\left(\sigma_s^2 \cdot(\Sigma+\delta \cdot
-I)\right)^{-1}(y-\mu \cdot 1)\end{aligned}\)</span></p>
-<p>To estimate statistical significance, it compared the model
-likelihood of the fitted SpatialDE model with the likelihood of a model
-that corresponds to the null hypothesis of no spatial covariance,</p>
-<p><span class="math inline">\(P\left(y \mid \mu,
-\sigma^2\right)=N\left(\mu \cdot 1, \sigma^2 \cdot I\right)\)</span></p>
-<p>Then estimating <em>P</em> values analytically on the basis of the χ2
-distribution transformation with one degree of freedom.</p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/nmeth.4636">SpatialDE:
-identification of spatially variable genes</a></li>
+<p>Its method depend on Gaussian process regression. For each gene, SpatialDE decomposes expression variability into spatial and nonspatial components, using two random effect terms: a spatial variance term that parametrizes gene expression covariance by pairwise distances of samples, and a noise term that models nonspatial variability. </p>
+<p>$P\left(y \mid \mu, \sigma_s^2, \delta, \Sigma\right)=N\left(y \mid \mu \cdot 1, \sigma_s^2 \cdot(\Sigma+\delta \cdot I)\right)$</p>
+<p>$y$ represents the observed gene expression levels, $μ$ represents the mean expression level, $\sigma_s^2$ represents the variance of the expression levels, $δ$ represents the spatial variance, and $Σ$ represents the covariance matrix of the spatial coordinates.</p>
+<p>$\Sigma_{i, j}=k\left(x_i, x_j\right)=\exp \left(-\frac{\left|x_i-x_j\right|^2}{2 \cdot l^2}\right)$</p>
+<p>$x_i$ and $x_j$ represent the spatial coordinates of two locations, and $l$ is a parameter that determines the scale of the distance over which the similarity between the locations is calculated. The function calculates the similarity between the two locations as a value between 0 and 1, with higher values indicating greater similarity.</p>
+<p>The second covariance term  $δ ·I$ accounts for independent nonspatial variation in gene expression, where the ratio $1/(1 + δ)$ can be interpreted as the fraction of expression variance attributable to spatial effects. Model parameters are fit by maximizing the marginal log likelihood (LL)</p>
+<p>$\begin{aligned} L L= &amp; -\frac{1}{2} \cdot N \cdot \log (2 \pi)-\frac{1}{2} \cdot \log \left(\left|\sigma_s^2 \cdot(\Sigma+\delta \cdot I)\right|\right) \ &amp; -\frac{1}{2} \cdot(y-\mu \cdot 1)^T\left(\sigma_s^2 \cdot(\Sigma+\delta \cdot I)\right)^{-1}(y-\mu \cdot 1)\end{aligned}$</p>
+<p>To estimate statistical significance, it compared the model likelihood of the fitted SpatialDE model with the likelihood of a model that corresponds to the null hypothesis of no spatial covariance,</p>
+<p>$P\left(y \mid \mu, \sigma^2\right)=N\left(\mu \cdot 1, \sigma^2 \cdot I\right)$</p>
+<p>Then estimating <em>P</em> values analytically on the basis of the χ2 distribution transformation with one degree of freedom.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/nmeth.4636">SpatialDE: identification of spatially variable genes</a></li>
 </ul>
 
   </div>

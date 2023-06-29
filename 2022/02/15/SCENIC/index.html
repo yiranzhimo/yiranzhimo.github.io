@@ -10,7 +10,7 @@
   <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   
-  <meta name="keywords" content=tools,principle,spatial transcriptomics,scRNA>
+  <meta name="keywords" content=tools,scRNA,principle,spatial transcriptomics>
   
   
   
@@ -54,72 +54,43 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>SCENIC is a computational method to deduce gene regulatory
-networks.</p>
+    <p>SCENIC is a computational method to deduce gene regulatory networks. </p>
 <p>The main progress has three parts.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/scenic_1.webp" /></p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/scenic_1.webp" alt=""></p>
 <p>Part1. GENIE3</p>
-<p>Through GENIE3 to identify genesets coexpressed with TF genes.</p>
-<p>The method assumes that a specific gene expression depends on the
-other genes' expression in the network.</p>
-<p>Denoting by <span class="math inline">\(x_k^{j-1}\)</span> the vector
-containing the expression values in the <span
-class="math inline">\(k_{th}\)</span> the experiment of all genes except
-gene <em>j</em>:</p>
-<p><span class="math inline">\(\mathbf{x}_k^{-j}=\left(x_k^1, \ldots,
-x_k^{j-1}, x_k^{j+1}, \ldots, x_k^p\right)^{\mathrm{T}}\)</span></p>
+<p>Through GENIE3 to identify genesets coexpressed with TF genes. </p>
+<p>The method assumes that a specific gene expression depends on the other genes’ expression in the network. </p>
+<p>Denoting by $x<em>k^{j-1}$ the vector containing the expression values in the $k</em>{th}$ the experiment of all genes except gene <em>j</em>:</p>
+<p>$\mathbf{x}_k^{-j}=\left(x_k^1, \ldots, x_k^{j-1}, x_k^{j+1}, \ldots, x_k^p\right)^{\mathrm{T}}$</p>
 <p>Then,</p>
-<p><span
-class="math inline">\(x_k^j=f_j\left(\mathbf{x}_k^{-j}\right)+\varepsilon_k,
-\forall k\)</span> , where <span
-class="math inline">\(\varepsilon_k\)</span> is a random noise with zero
-means (conditionally to <span
-class="math inline">\(\mathbf{x}_k^{-j}\)</span>)</p>
-<p>For <em>j</em> = 1 to <em>p</em>:</p>
+<p>$x_k^j=f_j\left(\mathbf{x}_k^{-j}\right)+\varepsilon_k, \forall k$ , where $\varepsilon_k$ is a random noise with zero means (conditionally to $\mathbf{x}_k^{-j}$)</p>
+<p>For <em>j</em> = 1 to <em>p</em>: </p>
 <ul>
-<li>Generate the learning sample of input-output pairs for gene
-<em>j</em>:</li>
+<li>Generate the learning sample of input-output pairs for gene <em>j</em>:</li>
 </ul>
-<p><span class="math inline">\(L S^j=\left\{\left(\mathbf{x}_k^{-j},
-x_k^j\right), k=1, \ldots, N\right\}\)</span></p>
+<p>$L S^j=\left{\left(\mathbf{x}_k^{-j}, x_k^j\right), k=1, \ldots, N\right}$</p>
 <ul>
-<li><p>Use a feature selection technique on <span
-class="math inline">\(L S^j\)</span> to compute confidence levels <span
-class="math inline">\(w_{i, j}, \forall i \neq j\)</span>, for all genes
-except gene <em>j</em> itself.</p></li>
-<li><p>Aggregate the <em>p</em> individual gene rankings to get a global
-scale of all regulatory links.</p></li>
+<li><p>Use a feature selection technique on $L S^j$ to compute confidence levels $w_{i, j}, \forall i \neq j$, for all genes except gene <em>j</em> itself.</p>
+</li>
+<li><p>Aggregate the <em>p</em> individual gene rankings to get a global scale of all regulatory links.</p>
+</li>
 </ul>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GENIE3.png" /></p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GENIE3.png" alt=""></p>
 <p>Part2. RcisTarget</p>
-<p>RcisTarget identifies enriched TF-binding motifs and candidate
-transcription factors for a gene list.</p>
-<p>In these two steps:</p>
-<p>Step 1 selects DNA motifs significantly over-represented in the
-surroundings of the transcription start site (TSS) of the genes in the
-gene set.</p>
-<p>Step 2, RcisTarget predicts candidate target genes (i.e., genes in
-the gene set that are ranked above the leading edge), like enrichment
-analysis.</p>
+<p>RcisTarget identifies enriched TF-binding motifs and candidate transcription factors for a gene list.</p>
+<p>In these two steps: </p>
+<p>Step 1 selects DNA motifs significantly over-represented in the surroundings of the transcription start site (TSS) of the genes in the gene set. </p>
+<p>Step 2, RcisTarget predicts candidate target genes (i.e., genes in the gene set that are ranked above the leading edge), like enrichment analysis.</p>
 <p>Part3. AUCell</p>
-<p>The input of AUCell is a regulon that contains TF and regulated
-genes.</p>
-<p>AUCell calculates the enrichment of the regulon as an area under the
-recovery curve (AUC) across the ranking of all genes in a particular
-cell, whereby genes are ranked by their expression value.</p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li>[1] <a
-target="_blank" rel="noopener" href="https://www.nature.com/articles/nmeth.4463">SCENIC</a></li>
-<li>[2] <a
-target="_blank" rel="noopener" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">GENIE3</a></li>
-<li>[3] <a
-target="_blank" rel="noopener" href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000435">RcisTarget</a></li>
+<p>The input of AUCell is a regulon that contains TF and regulated genes. </p>
+<p>AUCell calculates the enrichment of the regulon as an area under the recovery curve (AUC) across the ranking of all genes in a particular cell, whereby genes are ranked by their expression value.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/nmeth.4463">SCENIC</a></li>
+<li>[2] <a target="_blank" rel="noopener" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">GENIE3</a></li>
+<li>[3] <a target="_blank" rel="noopener" href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000435">RcisTarget</a></li>
 </ul>
 
   </div>
