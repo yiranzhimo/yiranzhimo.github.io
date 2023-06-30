@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-30T03:12:39.122Z</updated>
+  <updated>2023-06-30T04:53:48.964Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2023/06/30/Single-cell-spatial-immune-landscapes-of-primary-and-metastatic-brain-tumours/"/>
     <id>http://example.com/2023/06/30/Single-cell-spatial-immune-landscapes-of-primary-and-metastatic-brain-tumours/</id>
     <published>2023-06-30T03:04:27.000Z</published>
-    <updated>2023-06-30T03:12:39.122Z</updated>
+    <updated>2023-06-30T04:53:48.964Z</updated>
     
-    <content type="html"><![CDATA[<h1id="single-cell-spatial-immune-landscapes-of-primary-and-metastatic-brain-tumours">Single-cellspatial immune landscapes of primary and metastatic brain tumours</h1><h2 id="abstract">Abstract</h2><p>Single-cell technologies have enabled the characterization of thetumour microenvironment at unprecedented depth and have revealed vastcellular diversity among tumour cells and their niche. Anti-tumourimmunity relies on cell–cell relationships within the tumourmicroenvironment1,2, yet many single-cell studies lack spatial contextand rely on dissociated tissues3. Here we applied imaging mass cytometryto characterize the immunological landscape of 139 high-grade glioma and46 brain metastasis tumours from patients. Single-cell analysis of morethan 1.1 million cells across 389 high-dimensional histopathology imagesenabled the spatial resolution of immune lineages and activation states,revealing differences in immune landscapes between primary tumours andbrain metastases from diverse solid cancers. These analyses revealedcellular neighbourhoods associated with survival in patients withglioblastoma, which we leveraged to identify a unique population ofmyeloperoxidase (MPO)-positive macrophages associated with long-termsurvival. Our findings provide insight into the biology of primary andmetastatic brain tumours, reinforcing the value of integrating spatialresolution to single-cell datasets to dissect the microenvironmentalcontexture of cancer.</p><h2 id="results">Results</h2><h3 id="figure1">FIgure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure1.webp" /></p><p>The d plot indicates cell types as a percentage of all cells withinthe TME according to clinical subgroups。</p><p>The e plot shows the cell-type distribution of cell populations as apercentage of all cells in the TME.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure2.webp" /></p><p>The b plot shows T cell frequencies as a percentage of total cellsacross clinical subgroups.</p><p>The c plot shows heatmap of pairwise interaction-avoiddancescores.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure3.png" /></p><p>To define their differences from neighborhood, which claims its microenvironment.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure4.png" /></p><p>MPO+ macrophages are enriched in LTS tumours and are associated withenhanced cytotoxic functions.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41586-022-05680-3">Single-cellspatial immune landscapes of primary and metastatic braintumours</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1id="single-cell-spatial-immune-landscapes-of-primary-and-metastatic-brain-tumours">Single-cellspatial immune landscapes of primary and metastatic brain tumours</h1><h2 id="abstract">Abstract</h2><p>Single-cell technologies have enabled the characterization of thetumour microenvironment at unprecedented depth and have revealed vastcellular diversity among tumour cells and their niche. Anti-tumourimmunity relies on cell–cell relationships within the tumourmicroenvironment1,2, yet many single-cell studies lack spatial contextand rely on dissociated tissues3. Here we applied imaging mass cytometryto characterize the immunological landscape of 139 high-grade glioma and46 brain metastasis tumours from patients. Single-cell analysis of morethan 1.1 million cells across 389 high-dimensional histopathology imagesenabled the spatial resolution of immune lineages and activation states,revealing differences in immune landscapes between primary tumours andbrain metastases from diverse solid cancers. These analyses revealedcellular neighbourhoods associated with survival in patients withglioblastoma, which we leveraged to identify a unique population ofmyeloperoxidase (MPO)-positive macrophages associated with long-termsurvival. Our findings provide insight into the biology of primary andmetastatic brain tumours, reinforcing the value of integrating spatialresolution to single-cell datasets to dissect the microenvironmentalcontexture of cancer.</p><h2 id="results">Results</h2><h3 id="figure1">FIgure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure1.webp" /></p><p>The d plot indicates cell types as a percentage of all cells withinthe TME according to clinical subgroups。</p><p>The e plot shows the cell-type distribution of cell populations as apercentage of all cells in the TME.</p><h3 id="figure2">FIgure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure2.webp" /></p><p>The b plot shows T cell frequencies as a percentage of total cellsacross clinical subgroups.</p><p>The c plot shows heatmap of pairwise interaction-avoiddancescores.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure3.png" /></p><p>To define their differences from neighborhood, which claims its microenvironment.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230630_figure4.png" /></p><p>MPO+ macrophages are enriched in LTS tumours and are associated withenhanced cytotoxic functions.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41586-022-05680-3">Single-cellspatial immune landscapes of primary and metastatic braintumours</a></li></ul>]]></content>
     
     
       
@@ -317,9 +317,9 @@ enable </summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -485,9 +485,9 @@ in tumor spatial transcriptome.&lt;/p&gt;
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -517,9 +517,9 @@ src=&quot;https://r</summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
