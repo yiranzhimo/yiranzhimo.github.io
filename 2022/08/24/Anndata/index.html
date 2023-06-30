@@ -54,27 +54,58 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Anndata-object"><span class="toc-text">Anndata object</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-transfer-a-dataframe-to-anndata-object"><span class="toc-text">How to transfer a dataframe to anndata object</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#anndata-object"><span class="toc-text">Anndata object</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#how-to-transfer-a-dataframe-to-anndata-object"><span class="toc-text">How to transfer a
+dataframe to anndata object</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>Anndata is a Python package for handling annotated data matrices in memory and on disk (<a target="_blank" rel="noopener" href="http://github.com/theislab/anndata">github.com/theislab/anndata</a>), positioned between pandas and xarray.</p>
-<h1 id="Anndata-object"><a href="#Anndata-object" class="headerlink" title="Anndata object"></a>Anndata object</h1><p>What’s its structure?</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/anndata_structure.svg" alt=""></p>
-<p>The AnnData object is a collection of arrays aligned to the common dimensions of observations (obs) and variables (var). </p>
-<p>As we can see, color is used to denote elements of the object, with “orange” colors selected for elements aligned to the observations and “blue” colors for elements aligned to variables. The object is centered around the main data matrix X, whose two dimensions correspond to observations and variables respectively. Primary labels for each of these dimensions are stored as obs_names and var_names. If needed, layers stores matrices of the exact same shape as X. One-dimensional annotations for each dimension are stored in pandas DataFrames obs and var. Multi-dimensional annotations are stored in obsm and varm. Pairwise relationships are stored in obsp and varp. Unstructured data which doesn’t fit this model, but should stay associated to the dataset are stored in</p>
-<h1 id="How-to-transfer-a-dataframe-to-anndata-object"><a href="#How-to-transfer-a-dataframe-to-anndata-object" class="headerlink" title="How to transfer a dataframe to anndata object"></a>How to transfer a dataframe to anndata object</h1><p>Let’s see an example.</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/dataframe_example.png" alt=""></p>
-<p>This is a gene expression matrix, and I want to transfer it to an anndata object for analysis.</p>
+    <p>Anndata is a Python package for handling annotated data matrices in
+memory and on disk (<a
+target="_blank" rel="noopener" href="http://github.com/theislab/anndata">github.com/theislab/anndata</a>),
+positioned between pandas and xarray.</p>
+<h1 id="anndata-object">Anndata object</h1>
+<p>What's its structure?</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/anndata_structure.svg" /></p>
+<p>The AnnData object is a collection of arrays aligned to the common
+dimensions of observations (obs) and variables (var).</p>
+<p>As we can see, color is used to denote elements of the object, with
+"orange" colors selected for elements aligned to the observations and
+"blue" colors for elements aligned to variables. The object is centered
+around the main data matrix X, whose two dimensions correspond to
+observations and variables respectively. Primary labels for each of
+these dimensions are stored as obs_names and var_names. If needed,
+layers stores matrices of the exact same shape as X. One-dimensional
+annotations for each dimension are stored in pandas DataFrames obs and
+var. Multi-dimensional annotations are stored in obsm and varm. Pairwise
+relationships are stored in obsp and varp. Unstructured data which
+doesn’t fit this model, but should stay associated to the dataset are
+stored in</p>
+<h1 id="how-to-transfer-a-dataframe-to-anndata-object">How to transfer a
+dataframe to anndata object</h1>
+<p>Let's see an example.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/dataframe_example.png" /></p>
+<p>This is a gene expression matrix, and I want to transfer it to an
+anndata object for analysis.</p>
 <p>The first step is to read the dataframe file.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&quot;./Rep11_MOB_count_matrix-1.tsv&quot;</span>,sep=<span class="string">&quot;\t&quot;</span>,index_col=<span class="number">0</span>)</span><br><span class="line">df = df.T</span><br></pre></td></tr></table></figure>
-<p>In an anndata object, obs and var are data frames. So, in the second step, we try to construct this elements.</p>
+<p>In an anndata object, obs and var are data frames. So, in the second
+step, we try to construct this elements.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">obs = pd.DataFrame()</span><br><span class="line">obs[<span class="string">&#x27;sample&#x27;</span>] = df.columns</span><br><span class="line">obs.index = <span class="string">&quot;mob_&quot;</span>+df.columns</span><br><span class="line">var_names = df.index</span><br><span class="line">var = pd.DataFrame(index=var_names)</span><br><span class="line">var[<span class="string">&quot;gene_ids&quot;</span>] = var.index</span><br><span class="line">X = df.T.values</span><br><span class="line">adata = anndata.AnnData(X, obs=obs, var=var,dtype=<span class="string">&#x27;int32&#x27;</span>)</span><br><span class="line">adata.var_names_make_unique() </span><br><span class="line">adata</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spa = pd.DataFrame(index=df.columns)</span><br><span class="line">spa[[<span class="string">&quot;x&quot;</span>,<span class="string">&quot;y&quot;</span>]] = spa.index.to_series().<span class="built_in">str</span>.split(<span class="string">&#x27;x&#x27;</span>, expand=<span class="literal">True</span>)</span><br><span class="line">adata.obsm[<span class="string">&quot;spatial&quot;</span>] = spa.to_numpy()</span><br><span class="line">adata</span><br></pre></td></tr></table></figure>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2021.12.16.473007v1.full">anndata: Annotated data</a></li>
-<li>[2] <a target="_blank" rel="noopener" href="https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html">Getting started with anndata</a></li>
-<li>[3] <a target="_blank" rel="noopener" href="https://chanzuckerberg.github.io/scRNA-python-workshop/preprocessing/00-tabula-muris.html?utm_source=pocket_saves#Building-an-AnnData-object">Building an AnnData object</a></li>
-<li>[4] <a target="_blank" rel="noopener" href="https://www.biostars.org/p/9482750/">Pandas dataframe to H5ad file</a></li>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2021.12.16.473007v1.full">anndata:
+Annotated data</a></li>
+<li>[2] <a
+target="_blank" rel="noopener" href="https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html">Getting
+started with anndata</a></li>
+<li>[3] <a
+target="_blank" rel="noopener" href="https://chanzuckerberg.github.io/scRNA-python-workshop/preprocessing/00-tabula-muris.html?utm_source=pocket_saves#Building-an-AnnData-object">Building
+an AnnData object</a></li>
+<li>[4] <a target="_blank" rel="noopener" href="https://www.biostars.org/p/9482750/">Pandas dataframe
+to H5ad file</a></li>
 </ul>
 
   </div>

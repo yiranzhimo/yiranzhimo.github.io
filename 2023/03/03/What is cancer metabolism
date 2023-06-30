@@ -10,7 +10,7 @@
   <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   
-  <meta name="keywords" content=cancer,review,metabolism>
+  <meta name="keywords" content=review,cancer,metabolism>
   
   
   
@@ -57,13 +57,26 @@
   
 
   <div class="post-content">
-    <p>What is cancer metabolism? This is something to think about. </p>
-<p>And I have read the paper <em>What is cancer metabolism?</em> </p>
+    <p>What is cancer metabolism? This is something to think about.</p>
+<p>And I have read the paper <em>What is cancer metabolism?</em></p>
 <p>What I learned is mainly two parts.</p>
-<p>First, For tumor cells, it chooses to produce lactate even if oxygen is abundant.</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure1.%20Warburg%20and%20Pasteur%20eff" alt=""></p>
-<p>Second, Nutrient uptake is largely initiated by receptor tyrosine kinases (RTKs) which activate signaling cascades that promote the membrane localization of nutrient transporters and activity of enzymes that metabolize—and therefore help capture—nutrients. Signaling pathways downstream of PI3K, most notably RAS, can also direct bulk uptake of macromolecules via macropinocytosis. Nutrient uptake is also facilitated by transcriptional induction of membrane transporters via oncogenic transcription factors hypoxia-inducible factor (HIF), which activates genes encoding plasma membrane glucose transporters (Glut), and MYC, which activates genes encoding amino acid transporters such as Asct2. Genes frequently mutated or activated in cancer are colored orange.</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure2.%20Mechanisms%20of%20nutrient" alt=""></p>
+<p>First, For tumor cells, it chooses to produce lactate even if oxygen
+is abundant.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure1.%20Warburg%20and%20Pasteur%20eff" /></p>
+<p>Second, Nutrient uptake is largely initiated by receptor tyrosine
+kinases (RTKs) which activate signaling cascades that promote the
+membrane localization of nutrient transporters and activity of enzymes
+that metabolize—and therefore help capture—nutrients. Signaling pathways
+downstream of PI3K, most notably RAS, can also direct bulk uptake of
+macromolecules via macropinocytosis. Nutrient uptake is also facilitated
+by transcriptional induction of membrane transporters via oncogenic
+transcription factors hypoxia-inducible factor (HIF), which activates
+genes encoding plasma membrane glucose transporters (Glut), and MYC,
+which activates genes encoding amino acid transporters such as Asct2.
+Genes frequently mutated or activated in cancer are colored orange.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure2.%20Mechanisms%20of%20nutrient" /></p>
 
   </div>
   <div class="post-meta">

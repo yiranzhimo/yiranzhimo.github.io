@@ -57,22 +57,52 @@
   
 
   <div class="post-content">
-    <p>Recently, I read a new paper about <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36296-4?utm_source=pocket_saves">pancreatic ductal adenocarcinoma</a> (PDAC), published in <em>nature communication</em>.</p>
-<p>It mainly studies human PDAC and applies scRNA sequencing on freshly collected human PDAC samples before or after chemotherapy. The abstract has three main results: 1) They find a heterogeneous mixture of basal and classical cancer cell subtypes, along with distinct cancer-associated fibroblast and macrophage subpopulations. 2) Classical and basal-like cancer cells exhibit similar transcriptional responses to chemotherapy and do not demonstrate a shift towards a basal-like transcriptional program among treated samples. 3) Ligand-receptors decrease interactions in treated samples, particularly between TIGIT on CD8 + T cells and its receptor on cancer cells, and identify TIGIT as the significant inhibitory checkpoint molecule of CD8 + T cells. </p>
+    <p>Recently, I read a new paper about <a
+target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36296-4?utm_source=pocket_saves">pancreatic
+ductal adenocarcinoma</a> (PDAC), published in <em>nature
+communication</em>.</p>
+<p>It mainly studies human PDAC and applies scRNA sequencing on freshly
+collected human PDAC samples before or after chemotherapy. The abstract
+has three main results: 1) They find a heterogeneous mixture of basal
+and classical cancer cell subtypes, along with distinct
+cancer-associated fibroblast and macrophage subpopulations. 2) Classical
+and basal-like cancer cells exhibit similar transcriptional responses to
+chemotherapy and do not demonstrate a shift towards a basal-like
+transcriptional program among treated samples. 3) Ligand-receptors
+decrease interactions in treated samples, particularly between TIGIT on
+CD8 + T cells and its receptor on cancer cells, and identify TIGIT as
+the significant inhibitory checkpoint molecule of CD8 + T cells.</p>
 <p>Let us see how they analyze the three results.</p>
-<p>One、How to judge the cut-off between basal and classical cancer cell subtypes?</p>
-<p>Here, the researchers found there is no difference between upon conditions. </p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_1.png" alt=""></p>
-<p>All samples but one were comprised of a mixture of basal and classical cancer cells in varying proportions. </p>
+<p>One、How to judge the cut-off between basal and classical cancer cell
+subtypes?</p>
+<p>Here, the researchers found there is no difference between upon
+conditions.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_1.png" /></p>
+<p>All samples but one were comprised of a mixture of basal and
+classical cancer cells in varying proportions.</p>
 <blockquote>
-<p>Although we did not observe this specific intermediate state gene signature (the number of samples in each dataset may limit the generalizability of such a signature), we did discover cancer cells in numerous patient samples that expressed both basal and classical histological markers to varying degrees.</p>
+<p>Although we did not observe this specific intermediate state gene
+signature (the number of samples in each dataset may limit the
+generalizability of such a signature), we did discover cancer cells in
+numerous patient samples that expressed both basal and classical
+histological markers to varying degrees.</p>
 </blockquote>
-<p>Two 、How to detect Classical and basal-like cancer cells exhibiting similar transcriptional responses?</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_3.png" alt=""></p>
-<p>Through gene sets score, they found two groups’ cells are mostly overlapped. </p>
-<p>Three、How to ensure ligand-receptors decreased interactions in treated samples?</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_2.png" alt=""></p>
-<p>They employed CellPhoneDB to infer potential ligand-receptor interactions (LRIs) between malignant epithelial cells, TAM and CAF subpopulations, CD8 +and CD4 + T cells, MDSCs, and DCs in naïve and treated samples and found a general decrease of cell-cell interactions in the chemotherapy-treated group by fold change value.</p>
+<p>Two 、How to detect Classical and basal-like cancer cells exhibiting
+similar transcriptional responses?</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_3.png" /></p>
+<p>Through gene sets score, they found two groups' cells are mostly
+overlapped.</p>
+<p>Three、How to ensure ligand-receptors decreased interactions in
+treated samples?</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_2.png" /></p>
+<p>They employed CellPhoneDB to infer potential ligand-receptor
+interactions (LRIs) between malignant epithelial cells, TAM and CAF
+subpopulations, CD8 +and CD4 + T cells, MDSCs, and DCs in naïve and
+treated samples and found a general decrease of cell-cell interactions
+in the chemotherapy-treated group by fold change value.</p>
 
   </div>
   <div class="post-meta">
