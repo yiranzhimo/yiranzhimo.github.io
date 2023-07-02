@@ -372,9 +372,9 @@ enable </summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -540,9 +540,9 @@ in tumor spatial transcriptome.&lt;/p&gt;
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -572,9 +572,9 @@ src=&quot;https://r</summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
