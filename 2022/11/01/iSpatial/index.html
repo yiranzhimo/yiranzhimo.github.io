@@ -57,47 +57,20 @@
   
 
   <div class="post-content">
-    <p>Recently, I read a paper named <em>Accurate inference of genome-wide
-spatial expression with iSpatial</em>, from which I learned a lot.</p>
-<p>iSpatial is used to infer expression patterns of all genes at high
-spatial resolution by integrating scRNA-seq and ST data. In the process
-of single-cell RNA sequencing, it can capture more genes as possible it
-can. In this paper, the authors try to recover all genes' spatial
-information of the spatial transcriptomics data based on scRNA.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Accurate%20inference%20of%20genome-wide%20spatial%20expression%20with%20iSpatial%20Figure1.png" /></p>
+    <p>Recently, I read a paper named <em>Accurate inference of genome-wide spatial expression with iSpatial</em>, from which I learned a lot.</p>
+<p>iSpatial is used to infer expression patterns of all genes at high spatial resolution by integrating scRNA-seq and ST data. In the process of single-cell RNA sequencing, it can capture more genes as possible it can. In this paper, the authors try to recover all genes’ spatial information of the spatial transcriptomics data based on scRNA. </p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Accurate%20inference%20of%20genome-wide%20spatial%20expression%20with%20iSpatial%20Figure1.png" alt=""></p>
 <p>How do they infer spatial information?</p>
-<p>In the first step, it needs to integrate scRNA and spatial
-transcriptomics datasets. The core function is a weighted KNN graph. For
-each cell t in spatial transcriptome data, iSpatial searches the KNNs
-(<em>KNNt,k</em>).</p>
-<p>Each gene's expression of cell t was calculated by the following
-formula:</p>
-<p><span class="math inline">\(K N N_{t, k}:\left\{K N N_{t, 1}, K N
-N_{t, 2}, \ldots, K N N_{t, k}\right\}\)</span></p>
-<p>β is an argument to balance the expression from the spatial
-transcriptome and scRNA-seq. ω is the weight factor that shows the
-distance between cell t and other KNN neighbor cells. Through the below
-formula, we can see the most similar neighbor cell, its weight factor is
-smaller.</p>
-<p><span class="math inline">\(\widehat{E_t}=(1-\beta)
-E_t+\beta\left(\sum_k \omega_{t, k} E_{\mathrm{KNN}_{t,
-k}^{\prime}}\right)\)</span></p>
-<p><span class="math inline">\(\operatorname{dist}\left(E_t,
-E_{\mathrm{KNN}_{t, k}^t}\right)=1-\operatorname{cor}\left(E_t,
-E_{\mathrm{KNN}_{t, k}^{\prime}}\right)\)</span></p>
-<p><span class="math inline">\(d_{t, k}=\operatorname{dist}\left(E_t,
-E_{\mathrm{KNN}_{t, k}}\right)\)</span></p>
-<p><span class="math inline">\(\omega_{t, k}=\frac{d_{t, k}^2}{\sum_k
-d_{t, k}^2}\)</span></p>
-<p>But I think this method requires high quality of fitness between
-scRNA and spatial transcriptomics datasets.</p>
-<p>And, the paper has developed a way to identify spatial variable
-genes(SVGs). First, it divides the two-dimensional space into n x n
-grids and calculates the gene mean expression level. Second, it randomly
-samples the spatial location and calculates the mean gene expression
-level once more. Finally, to compare whether there have significant
-differences between the two values.</p>
+<p>In the first step, it needs to integrate scRNA and spatial transcriptomics datasets. The core function is a weighted KNN graph. For each cell t in spatial transcriptome data, iSpatial searches the KNNs (<em>KNNt,k</em>).</p>
+<p>Each gene’s expression of cell t was calculated by the following formula:</p>
+<p>$K N N<em>{t, k}:\left{K N N</em>{t, 1}, K N N<em>{t, 2}, \ldots, K N N</em>{t, k}\right}$</p>
+<p>β is an argument to balance the expression from the spatial transcriptome and scRNA-seq. ω is the weight factor that shows the distance between cell t and other KNN neighbor cells. Through the below formula, we can see the most similar neighbor cell, its weight factor is smaller.</p>
+<p>$\widehat{E<em>t}=(1-\beta) E_t+\beta\left(\sum_k \omega</em>{t, k} E<em>{\mathrm{KNN}</em>{t, k}^{\prime}}\right)$</p>
+<p>$\operatorname{dist}\left(E<em>t, E</em>{\mathrm{KNN}<em>{t, k}^t}\right)=1-\operatorname{cor}\left(E_t, E</em>{\mathrm{KNN}_{t, k}^{\prime}}\right)$</p>
+<p>$d<em>{t, k}=\operatorname{dist}\left(E_t, E</em>{\mathrm{KNN}_{t, k}}\right)$</p>
+<p>$\omega<em>{t, k}=\frac{d</em>{t, k}^2}{\sum<em>k d</em>{t, k}^2}$</p>
+<p>But I think this method requires high quality of fitness between scRNA and spatial transcriptomics datasets. </p>
+<p>And, the paper has developed a way to identify spatial variable genes(SVGs). First, it divides the two-dimensional space into n x n grids and calculates the gene mean expression level. Second, it randomly samples the spatial location and calculates the mean gene expression level once more. Finally, to compare whether there have significant differences between the two values.</p>
 
   </div>
   <div class="post-meta">
@@ -124,21 +97,5 @@ differences between the two values.</p>
 
 
     </div>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-</body>
+  </body>
 </html>

@@ -54,67 +54,25 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#spatial-mapping-reveals-human-adipocyte-subpopulations-with-distinct-sensitivities-to-insulin"><span class="toc-text">Spatial
-mapping reveals human adipocyte subpopulations with distinct
-sensitivities to insulin</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spatial-mapping-reveals-human-adipocyte-subpopulations-with-distinct-sensitivities-to-insulin"><span class="toc-text">Spatial mapping reveals human adipocyte subpopulations with distinct sensitivities to insulin</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results"><span class="toc-text">Results</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
 
   <div class="post-content">
-    <h1
-id="spatial-mapping-reveals-human-adipocyte-subpopulations-with-distinct-sensitivities-to-insulin">Spatial
-mapping reveals human adipocyte subpopulations with distinct
-sensitivities to insulin</h1>
-<h2 id="abstract">Abstract</h2>
-<p>“The contribution of cellular heterogeneity and architecture to white
-adipose tissue (WAT) function is poorly understood. Herein, we combined
-spatially resolved transcriptional profiling with single-cell RNA
-sequencing and image analyses to map human WAT composition and
-structure. This identified 18 cell classes with unique propensities to
-form spatially organized homo- and heterotypic clusters. Of these, three
-constituted mature adipocytes that were similar in size, but distinct in
-their spatial arrangements and transcriptional profiles. Based on marker
-genes, we termed these AdipoLEP, AdipoPLIN, and AdipoSAA. We confirmed,
-in independent datasets, that their respective gene profiles associated
-differently with both adipocyte and whole-body insulin sensitivity.
-Corroborating our observations, insulin stimulation in vivo by
-hyperinsulinemic-euglycemic clamp showed that only AdipoPLIN displayed a
-transcriptional response to insulin. Altogether, by mining this
-multimodal resource we identify that human WAT is composed of three
-classes of mature adipocytes, only one of which is insulin responsive.”
-(Bäckdahl 等, 2021, p. 1869)</p>
-<h2 id="results">Results</h2>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr1.jpg" /></p>
-<p>Figure 1 shows the basic analysis of ST and scRNA data.</p>
-<p>In the above figure, if the spot has 6 neighbors, its degree scores
-is 6.</p>
+    <h1 id="Spatial-mapping-reveals-human-adipocyte-subpopulations-with-distinct-sensitivities-to-insulin"><a href="#Spatial-mapping-reveals-human-adipocyte-subpopulations-with-distinct-sensitivities-to-insulin" class="headerlink" title="Spatial mapping reveals human adipocyte subpopulations with distinct sensitivities to insulin"></a>Spatial mapping reveals human adipocyte subpopulations with distinct sensitivities to insulin</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>“The contribution of cellular heterogeneity and architecture to white adipose tissue (WAT) function is poorly understood. Herein, we combined spatially resolved transcriptional profiling with single-cell RNA sequencing and image analyses to map human WAT composition and structure. This identified 18 cell classes with unique propensities to form spatially organized homo- and heterotypic clusters. Of these, three constituted mature adipocytes that were similar in size, but distinct in their spatial arrangements and transcriptional profiles. Based on marker genes, we termed these AdipoLEP, AdipoPLIN, and AdipoSAA. We confirmed, in independent datasets, that their respective gene profiles associated differently with both adipocyte and whole-body insulin sensitivity. Corroborating our observations, insulin stimulation in vivo by hyperinsulinemic-euglycemic clamp showed that only AdipoPLIN displayed a transcriptional response to insulin. Altogether, by mining this multimodal resource we identify that human WAT is composed of three classes of mature adipocytes, only one of which is insulin responsive.” (Bäckdahl 等, 2021, p. 1869)</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr1.jpg" alt=""></p>
+<p>Figure 1 shows the basic analysis of ST and scRNA data. </p>
+<p>In the above figure, if the spot has 6 neighbors, its degree scores is 6.</p>
 <p>How to calculate homotypic score?</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr2.jpg" /></p>
-<p>In the above figure, if the spot has 6 neighbors, its degree scores
-is 6.</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr2.jpg" alt=""></p>
+<p>In the above figure, if the spot has 6 neighbors, its degree scores is 6.</p>
 <p>How to calculate homotypic score?</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230629_fig1.png" /></p>
-<p>For each network, the arverage degree was calculated as <span
-class="math inline">\(\bar{k}=2 L / N\)</span>，where L and N,
-respectively, corresponds to the total number of edges and nodes (spots)
-in the network.</p>
-<p>But to evaluate the gap between real degree and expected degree and
-account for difference in network size, the authors choose the average
-degree was computed for random networks where the spots’ classifications
-had been shuffled within each sample. This process was repeated 50 times
-in order to obtain an ‘‘expected’’ average degree.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr3.jpg" /></p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230629_fig1.png" alt=""></p>
+<p>For each network, the arverage degree was calculated as $\bar{k}=2 L / N$，where L and N, respectively, corresponds to the total number of edges and nodes (spots) in the network.</p>
+<p>But to evaluate the gap between real degree and expected degree and account for difference in network size, the authors choose the average degree was computed for random networks where the spots’ classifications had been shuffled within each sample. This process was repeated 50 times in order to obtain an ‘‘expected’’ average degree.</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Figure%20thumbnail%20gr3.jpg" alt=""></p>
 <p>How to calculate Heterotypic score?</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230629_fig2.png" /></p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230629_fig2.png" alt=""></p>
 <p>If two classes are distinct, the score would be small.</p>
-<h2 id="reference">Reference</h2>
-<p>[1] <a
-target="_blank" rel="noopener" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(21)00363-6">Spatial
-mapping reveals human adipocyte subpopulations with distinct
-sensitivities to insulin</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(21">Spatial mapping reveals human adipocyte subpopulations with distinct sensitivities to insulin</a>00363-6)</p>
 
   </div>
   <div class="post-meta">
@@ -141,21 +99,5 @@ sensitivities to insulin</a></p>
 
 
     </div>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-</body>
+  </body>
 </html>

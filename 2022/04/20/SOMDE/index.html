@@ -54,108 +54,34 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#part1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#part2"><span class="toc-text">Part2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Part1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Part2"><span class="toc-text">Part2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>Recently, I read a paper to identify spatial variable genes named
-"<em>SOMDE: a scalable method for identifying spatially variable genes
-with self-organizing map</em>."</p>
-<h1 id="part1">Part1</h1>
-<p>As its abstract shows:</p>
+    <p>Recently, I read a paper to identify spatial variable genes named “<em>SOMDE: a scalable method for identifying spatially variable genes with self-organizing map</em>.”</p>
+<h1 id="Part1"><a href="#Part1" class="headerlink" title="Part1"></a>Part1</h1><p>As its abstract shows:</p>
 <blockquote>
-<p>We present SOMDE, an efficient method for identifying SVgenes in
-large-scale spatial expression data. SOMDE uses the self-organizing map
-to cluster neighboring cells into nodes and then uses a Gaussian process
-to fit the node-level spatial gene expression to identify SVgenes.
-Experiments show that SOMDE is about 5–50 times faster than existing
-methods with comparable results. The adjustable resolution of SOMDE
-makes it the only way to give results in 5 min in large datasets of more
-than 20 000 sequencing sites. SOMDE is available as a python package on
-PyPI at https://pypi.org/project/somde for educational use.</p>
+<p>We present SOMDE, an efficient method for identifying SVgenes in large-scale spatial expression data. SOMDE uses the self-organizing map to cluster neighboring cells into nodes and then uses a Gaussian process to fit the node-level spatial gene expression to identify SVgenes.  Experiments show that SOMDE is about 5–50 times faster than existing methods with comparable results. The adjustable resolution of SOMDE  makes it the only way to give results in  5 min in large datasets of more than 20 000 sequencing sites. SOMDE is available as a  python package on PyPI at <a target="_blank" rel="noopener" href="https://pypi.org/project/somde">https://pypi.org/project/somde</a> for educational use.</p>
 </blockquote>
 <p>So, what is the self-organizing map?</p>
-<p>A self-organizing map (SOM) is a type of <a
-target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Artificial_neural_network">artificial
-neural network</a> (ANN) that is trained using unsupervised learning to
-produce a low-dimensional (typically two-dimensional), discretized
-representation of the input space of the training samples, called a map,
-and is therefore, a method to make dimensionality reduction.
-Self-organizing maps differ from other artificial neural networks as
-they apply competitive learning instead of error-correction education
-(such as backpropagation with gradient descent) because they use a
-neighborhood function to preserve the topological properties of the
-input space.</p>
-<h1 id="part2">Part2</h1>
-<p>And, how does it work in the paper?</p>
+<p>A self-organizing map (SOM) is a type of <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Artificial_neural_network">artificial neural network</a> (ANN) that is trained using unsupervised learning to produce a low-dimensional (typically two-dimensional), discretized representation of the input space of the training samples, called a map, and is therefore, a method to make dimensionality reduction. Self-organizing maps differ from other artificial neural networks as they apply competitive learning instead of error-correction education (such as backpropagation with gradient descent) because they use a neighborhood function to preserve the topological properties of the input space.</p>
+<h1 id="Part2"><a href="#Part2" class="headerlink" title="Part2"></a>Part2</h1><p>And, how does it work in the paper?</p>
 <p>Let us see this figure.</p>
-<p><span class="math inline">\(N^2 \times k=C\)</span></p>
-<p>where C is a constant representing the total number of data sites,
-and k is the model parameter called the neighbor number, which denotes
-the expected average number of original data sites each SOM node
-represents. This parameter controls how condensed the learned SOM is. A
-larger k means higher condensation.</p>
-<p><img
-src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/somde.jpeg.jpg" /></p>
-<p>As it showed in (a), it initializes the value and dimension of SOM
-Node weight <span class="math inline">\(M=(m_1,m_2,m_{N*N})\)</span> ,
-like the orange spots. After initialization, SOM adjusts the weight of
-each node toward the tissue spatial topology through a repetitive
-training process using all spatial coordinates <span
-class="math inline">\(X=(X_1,X_2,X_3,X_C)\)</span> as tranining
-samples.</p>
-<p>Cycle after cycle. After training, each data site maps to a unique
-SOM node. Each SOM node represents the group of sites that are mapped to
-it. Node weights in the learned SOM can be treated as new spatial
-coordinates for the data sites. The new spatial locations <span
-class="math inline">\(X=\left(\tilde{x}_1, \tilde{x}_2, \ldots,
-\tilde{x}_{N \times N}\right)\)</span> compose the sparse topology of
-the original data</p>
-<p>In a SOM node, to define its gene expression as the linear
-combination of the max value and average value of the gene expression in
-the group of sites that the node represents. The reason for not using
-average value as a meta-expression is due to the high sparsity in
-large-scale data that could bias the result.</p>
-<p><span class="math inline">\(\tilde{\boldsymbol{Y}}_{i, j}=\gamma
-\cdot \max \left(y_{S 1}, y_{S 2}, \ldots\right)+(1-\gamma) \cdot
-\operatorname{avg}\left(y_{S 1}, y_{S 2}, \ldots\right)\)</span></p>
-<p>where <span class="math inline">\(y_{S 1}\)</span> is the expression
-value of the gene at the data site <span class="math inline">\(x_{S
-1}\)</span>. The combination ratio <span
-class="math inline">\(\gamma\)</span> balances the local maximum and
-mean gene expression. We use <span class="math inline">\(\gamma =
-0.5\)</span> as the default in current experiments.</p>
+<p>$N^2 \times k=C$</p>
+<p>where C is a constant representing the total number of data sites, and k is the model parameter called the neighbor number, which denotes the expected average number of original data sites each SOM node represents. This parameter controls how condensed the learned SOM is. A larger k means higher condensation.</p>
+<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/somde.jpeg.jpg" alt=""></p>
+<p>As it showed in (a), it initializes the value and dimension of SOM Node weight $M=(m<em>1,m_2,m</em>{N*N})$ , like the orange spots. After initialization, SOM adjusts the weight of each node toward the tissue spatial topology through a repetitive training process using all spatial coordinates $X=(X_1,X_2,X_3,X_C)$ as tranining samples. </p>
+<p>Cycle after cycle. After training, each data site maps to a unique SOM node. Each SOM node represents the group of sites that are mapped to it. Node weights in the learned SOM can be treated as new spatial coordinates for the data sites. The new spatial locations $X=\left(\tilde{x}<em>1, \tilde{x}_2, \ldots, \tilde{x}</em>{N \times N}\right)$ compose the sparse topology of the original data</p>
+<p>In a SOM node, to define its gene expression as the linear combination of the max value and average value of the gene expression in the group of sites that the node represents. The reason for not using average value as a meta-expression is due to the high sparsity in large-scale data that could bias the result.</p>
+<p>$\tilde{\boldsymbol{Y}}<em>{i, j}=\gamma \cdot \max \left(y</em>{S 1}, y<em>{S 2}, \ldots\right)+(1-\gamma) \cdot \operatorname{avg}\left(y</em>{S 1}, y_{S 2}, \ldots\right)$</p>
+<p>where $y<em>{S 1}$ is the expression value of the gene at the data site $x</em>{S 1}$. The combination ratio $\gamma$ balances the local maximum and mean gene expression. We use  $\gamma = 0.5$  as the default in current experiments.</p>
 <p>With this computational model, how to deduce SVGs?</p>
-<p><span class="math inline">\(p\left(\tilde{\boldsymbol{y}} \mid
-H_{\mathrm{G}}, \tilde{\boldsymbol{X}},
-\Theta\right)=\mathcal{N}\left(\tilde{\boldsymbol{y}} \mid \mu \cdot 1,
-\sigma_s^2 \cdot \boldsymbol{\Sigma}_{k(\tilde{\boldsymbol{x}},
-\widetilde{\boldsymbol{x}} \mid \theta)}+\delta \cdot
-\boldsymbol{I}\right)\)</span></p>
-<p>where <span class="math inline">\(\tilde{\boldsymbol{y}}\)</span>
-denotes one gene meta-expression in the SOM plane and <span
-class="math inline">\(\tilde{\boldsymbol{X}}\)</span> denotes SOM node
-locations.</p>
-<p><span class="math inline">\(\delta \cdot \boldsymbol{I}\)</span>
-indicates the non-spatial variance given by Gaussian distributed noise
-in all observed gene meta-expressions. <span
-class="math inline">\(\boldsymbol{\Sigma}_{k(\tilde{\boldsymbol{x}},
-\widetilde{\boldsymbol{x}} \mid \theta)}\)</span> captures the spatial
-variation by using a selected kernel function <span
-class="math inline">\(k(\cdot)\)</span></p>
-<p>Compared with the original Gaussian process model, model HG assumes
-one gene meta-expression at all spatial locations has the same mean
-value l so that the non-spatial variance cannot be regressed out. Thus
-the maximum likelihood value of HG mainly depends on spatial
-variance.</p>
-<h1 id="reference">Reference</h1>
-<ul>
-<li>[1] <a
-target="_blank" rel="noopener" href="https://medium.com/@abhinavr8/self-organizing-maps-ff5853a118d4">Self
-Organizing Maps</a></li>
-<li>[2] <a
-target="_blank" rel="noopener" href="https://academic.oup.com/bioinformatics/article/37/23/4392/6308937">SOMDE:
-a scalable method for identifying spatially variable genes with
-self-organizing map</a></li>
+<p>$p\left(\tilde{\boldsymbol{y}} \mid H<em>{\mathrm{G}}, \tilde{\boldsymbol{X}}, \Theta\right)=\mathcal{N}\left(\tilde{\boldsymbol{y}} \mid \mu \cdot 1, \sigma_s^2 \cdot \boldsymbol{\Sigma}</em>{k(\tilde{\boldsymbol{x}}, \widetilde{\boldsymbol{x}} \mid \theta)}+\delta \cdot \boldsymbol{I}\right)$</p>
+<p>where $\tilde{\boldsymbol{y}}$  denotes one gene meta-expression in the SOM plane and $\tilde{\boldsymbol{X}}$ denotes SOM node locations. </p>
+<p>$\delta \cdot \boldsymbol{I}$ indicates the non-spatial variance given by Gaussian distributed noise in all observed gene meta-expressions. $\boldsymbol{\Sigma}_{k(\tilde{\boldsymbol{x}}, \widetilde{\boldsymbol{x}} \mid \theta)}$ captures the spatial variation by using a selected kernel function $k(\cdot)$</p>
+<p>Compared with the original Gaussian process model, model HG assumes one gene meta-expression at all spatial locations has the same mean value l so that the non-spatial variance cannot be regressed out. Thus the maximum likelihood value of HG mainly depends on spatial variance.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>[1] <a target="_blank" rel="noopener" href="https://medium.com/@abhinavr8/self-organizing-maps-ff5853a118d4">Self Organizing Maps</a></li>
+<li>[2] <a target="_blank" rel="noopener" href="https://academic.oup.com/bioinformatics/article/37/23/4392/6308937">SOMDE: a scalable method for identifying spatially variable genes with self-organizing map</a></li>
 </ul>
 
   </div>
@@ -183,21 +109,5 @@ self-organizing map</a></li>
 
 
     </div>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-</body>
+  </body>
 </html>

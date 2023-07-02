@@ -54,36 +54,19 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>GO enrichment analysis is a prevalent method to characterize
-genesets' profiles.</p>
+    <p>GO enrichment analysis is a prevalent method to characterize genesets’ profiles. </p>
 <p>What does it mean?</p>
-<p>GO is the gene ontology, a structured, controlled vocabulary for
-classifying gene function at the molecular and cellular levels. It is
-divided into three separate sub-ontologies: biological process (e.g.,
-signal transduction), molecular function (e.g., ATPase activity), and
-cellular component (e.g., ribosome)[^1].</p>
+<p>GO is the gene ontology, a structured, controlled vocabulary for classifying gene function at the molecular and cellular levels. It is divided into three separate sub-ontologies: biological process (e.g., signal transduction), molecular function (e.g., ATPase activity), and cellular component (e.g., ribosome)<sup><a href="#fn_1" id="reffn_1">1</a></sup>.</p>
 <p>How to calculate GO term scores?</p>
 <p>To Calculate p-values through a hypergeometric distribution test.</p>
-<p>We have a geneset containing <em>n</em> and <em>k</em> genes in one
-specific GO term. All GO terms have <em>N</em> genes. For one particular
-GO term, there have K genes.</p>
-<p>The hypergeometric distribution measures precisely the probability of
-<strong>k</strong> successes in <strong>n</strong> draws, without
-replacement, from a finite population of size <strong>N</strong> that
-contains exactly <strong>K</strong> successful objects:</p>
-<p><span
-class="math inline">\(\mathrm{P}(\mathrm{X}=k)=\frac{\left(\begin{array}{l}K
-\\ k\end{array}\right)\left(\begin{array}{l}N-n \\
-K-k\end{array}\right)}{\left(\begin{array}{l}N \\
-n\end{array}\right)}\)</span></p>
-<p><span
-class="math inline">\(\mathrm{p-value}=1-\mathrm{P}(\mathrm{X}=k)\)</span></p>
-<h1 id="reference">Reference</h1>
-<p>[1]
-https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/goenrichment/tutorial.html</p>
+<p>We have a geneset containing <em>n</em> and <em>k</em> genes in one specific GO term. All GO terms have <em>N</em> genes. For one particular GO term, there have K genes.</p>
+<p>The hypergeometric distribution measures precisely the probability of <strong>k</strong> successes in <strong>n</strong> draws, without replacement, from a finite population of size <strong>N</strong> that contains exactly <strong>K</strong> successful objects:</p>
+<p>$\mathrm{P}(\mathrm{X}=k)=\frac{\left(\begin{array}{l}K \ k\end{array}\right)\left(\begin{array}{l}N-n \ K-k\end{array}\right)}{\left(\begin{array}{l}N \ n\end{array}\right)}$</p>
+<p>$\mathrm{p-value}=1-\mathrm{P}(\mathrm{X}=k)$</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] <a target="_blank" rel="noopener" href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/goenrichment/tutorial.html">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/goenrichment/tutorial.html</a></p>
 
   </div>
   <div class="post-meta">
@@ -110,21 +93,5 @@ https://training.galaxyproject.org/training-material/topics/transcriptomics/tuto
 
 
     </div>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-</body>
+  </body>
 </html>
