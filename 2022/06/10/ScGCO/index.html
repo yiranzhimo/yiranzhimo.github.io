@@ -54,24 +54,59 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Part1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Part1-1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Part2"><span class="toc-text">Part2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#part1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#part1-1"><span class="toc-text">Part1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#part2"><span class="toc-text">Part2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>Recently, I read a fantastic literature about finding SVGs through HMMF and graph cuts algorithm named <em>Identification of spatially variable genes with graph cuts</em>.</p>
-<h1 id="Part1"><a href="#Part1" class="headerlink" title="Part1"></a>Part1</h1><p>Firstly, we must figure out why finding SVGs is critical in spatial transcriptomics?</p>
-<p>Firstly, SVGs are defined as genes whose expression distributions display significant dependence on their spatial locations.</p>
-<h1 id="Part1-1"><a href="#Part1-1" class="headerlink" title="Part1"></a>Part1</h1><p>In this paper, it mentions three reasons:</p>
-<p>1、SVGs could demonstrate strong conservation in their spatial patterns, such that many SV genes display similar dependencies on spatial locations, resulting in similar trends in spatial patterns of their expression values.</p>
-<p>2、SVGs are often markers or essential regulators for tissue pattern formation and homeostasis.</p>
-<p>3、Although these methods demonstrated usefulness in identifying SV genes, they cannot illustrate the exact boundaries of regions demonstrating spatial dependence, which are often of biological interest, and more importantly, these algorithms have computational efficiency of O(n2)orworseandareunsuitable for analyzing large spatial transcriptomics datasets.</p>
-<h1 id="Part2"><a href="#Part2" class="headerlink" title="Part2"></a>Part2</h1><p>How does this paper identify SVGs？</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/ScGCO_Fig.%201.webp" alt=""></p>
-<p>As the above picture illustrated, firstly, to model the spatial gene expression data with HMRF, scGCO first employs Delaunay triangulation to transform spatial locations of measured cells/spots into an undirected graph, where each node represents a data point (a single cell or a spot measuring multiple cells, depending on the technologies utilized) in the spatial transcriptomics data.</p>
-<p>Secondly, scGCO utilizes Gaussian mixture modeling to separate a gene’s expression values into different bins, which represent different gene expression states. The float gene expression value associated with each node in the HMRF was then transformed into the corresponding bin number, and the resulting bin number was assigned to the node, creating an initial label assignment for the HMRF. </p>
-<p>Thirdly, The initialized HMRF was then optimized by the fast graph cuts algorithm of Boykov to learn the true hidden labels of the nodes in HMRF, which represent authentic gene expression states.</p>
-<p>Fourthly, the p-value for each gene was evaluated using the best segmentation under the complete spatial randomness (CSR) framework. Benjamini–Hochberg (BH) correction was utilized to identify spatially variable (SV) genes at the genome-scale.</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-022-33182-3">Identification of spatially variable genes with graph cuts</a></li>
+    <p>Recently, I read a fantastic literature about finding SVGs through
+HMMF and graph cuts algorithm named <em>Identification of spatially
+variable genes with graph cuts</em>.</p>
+<h1 id="part1">Part1</h1>
+<p>Firstly, we must figure out why finding SVGs is critical in spatial
+transcriptomics?</p>
+<p>Firstly, SVGs are defined as genes whose expression distributions
+display significant dependence on their spatial locations.</p>
+<h1 id="part1-1">Part1</h1>
+<p>In this paper, it mentions three reasons:</p>
+<p>1、SVGs could demonstrate strong conservation in their spatial
+patterns, such that many SV genes display similar dependencies on
+spatial locations, resulting in similar trends in spatial patterns of
+their expression values.</p>
+<p>2、SVGs are often markers or essential regulators for tissue pattern
+formation and homeostasis.</p>
+<p>3、Although these methods demonstrated usefulness in identifying SV
+genes, they cannot illustrate the exact boundaries of regions
+demonstrating spatial dependence, which are often of biological
+interest, and more importantly, these algorithms have computational
+efficiency of O(n2)orworseandareunsuitable for analyzing large spatial
+transcriptomics datasets.</p>
+<h1 id="part2">Part2</h1>
+<p>How does this paper identify SVGs？</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/ScGCO_Fig.%201.webp" /></p>
+<p>As the above picture illustrated, firstly, to model the spatial gene
+expression data with HMRF, scGCO first employs Delaunay triangulation to
+transform spatial locations of measured cells/spots into an undirected
+graph, where each node represents a data point (a single cell or a spot
+measuring multiple cells, depending on the technologies utilized) in the
+spatial transcriptomics data.</p>
+<p>Secondly, scGCO utilizes Gaussian mixture modeling to separate a
+gene’s expression values into different bins, which represent different
+gene expression states. The float gene expression value associated with
+each node in the HMRF was then transformed into the corresponding bin
+number, and the resulting bin number was assigned to the node, creating
+an initial label assignment for the HMRF.</p>
+<p>Thirdly, The initialized HMRF was then optimized by the fast graph
+cuts algorithm of Boykov to learn the true hidden labels of the nodes in
+HMRF, which represent authentic gene expression states.</p>
+<p>Fourthly, the p-value for each gene was evaluated using the best
+segmentation under the complete spatial randomness (CSR) framework.
+Benjamini–Hochberg (BH) correction was utilized to identify spatially
+variable (SV) genes at the genome-scale.</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-022-33182-3">Identification
+of spatially variable genes with graph cuts</a></li>
 </ul>
 
   </div>
@@ -99,5 +134,21 @@
 
 
     </div>
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>

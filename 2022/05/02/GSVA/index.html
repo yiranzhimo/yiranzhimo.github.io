@@ -54,28 +54,62 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
 
   <div class="post-content">
-    <p>Gene Set Variation Analysis is a method to calculate genesets pathway scores across different samples. </p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA_1.jpg" alt=""></p>
-<p>Firstly, there has an input gene expression matrix. We perform non-parametric kernel estimation of a specific gene’s cumulative density function.</p>
+    <p>Gene Set Variation Analysis is a method to calculate genesets pathway
+scores across different samples.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA_1.jpg" /></p>
+<p>Firstly, there has an input gene expression matrix. We perform
+non-parametric kernel estimation of a specific gene's cumulative density
+function.</p>
 <p>In the case of microarray data, a Gaussian kernel is used:</p>
-<p>$\widehat{F}<em>{h_i}\left(x</em>{i j}\right)=\frac{1}{n} \sum<em>{k=1}^n \int</em>{-\infty}^{\frac{x<em>{i j}-x</em>{i k}}{h_i}} \frac{1}{\sqrt{2 \Pi}} e^{-\frac{t^2}{2}} d t$</p>
-<p>In the case of RNA-seq data, a discrete Poisson kernel is employed:</p>
-<p>$\widehat{F}<em>r\left(x</em>{i j}\right)=\frac{1}{n} \sum<em>{k=1}^n \sum</em>{y=0}^{x<em>{i j}} \frac{e^{-\left(x</em>{i k}+r\right)}\left(x_{i k}+r\right)^y}{y !}$,</p>
-<p>The cumulative density function is estimated for every gene using all samples from the above distributions. In simpler terms, a CDF value is assigned to each gene in each sample.</p>
-<p>With the CDF of all genes in each sample, we sort them from largest to smallest.</p>
-<p>Secondly, we normalize the rank values. $r_i$ is the rank value of the gene $i$ in sample $S$, $p$ is the gene number. </p>
-<p> $z_{i j}=\left|\frac{p}{2}-r_i\right|$</p>
-<p>Thirdly, to calculate $ES(s)$ with sort  $z_{i j}$</p>
-<p>$\nu<em>{j k}(\ell)=\frac{\sum</em>{i=1}^{\ell}\left|r<em>{i j}\right|^\tau I\left(g</em>{(i)} \in \gamma<em>k\right)}{\sum</em>{i=1}^p\left|r<em>{i j}\right|^\tau I\left(g</em>{(i)} \in \gamma<em>k\right)}-\frac{\sum</em>{i=1}^{\ell} I\left(g_{(i)} \notin \gamma_k\right)}{p-\left|\gamma_k\right|}$,</p>
-<p>$E S<em>{j k}^{\text {diff }}=\left|E S</em>{j k}^{+}\right|-\left|E S<em>{j k}^{-}\right|=\max </em>{\ell=1, \ldots, p}\left(0, v<em>{j k}(\ell)\right)-\min </em>{\ell=1, \ldots, p}\left(0, v_{j k}(\ell)\right)$,</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA-2.webp" alt=""></p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://towardsdatascience.com/decoding-gene-set-variation-analysis-8193a0cfda3">Decoding Gene Set Variation Analysis</a></li>
-<li>[2] <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/47f9f0107ffe">GSA、GSEA、ssGSEA、GSVA的算法原理及它们的联系与区别</a></li>
-<li>[3] <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3618321/">GSVA: gene set variation analysis for microarray and RNA-Seq data</a></li>
+<p><span class="math inline">\(\widehat{F}_{h_i}\left(x_{i
+j}\right)=\frac{1}{n} \sum_{k=1}^n \int_{-\infty}^{\frac{x_{i j}-x_{i
+k}}{h_i}} \frac{1}{\sqrt{2 \Pi}} e^{-\frac{t^2}{2}} d t\)</span></p>
+<p>In the case of RNA-seq data, a discrete Poisson kernel is
+employed:</p>
+<p><span class="math inline">\(\widehat{F}_r\left(x_{i
+j}\right)=\frac{1}{n} \sum_{k=1}^n \sum_{y=0}^{x_{i j}}
+\frac{e^{-\left(x_{i k}+r\right)}\left(x_{i k}+r\right)^y}{y
+!}\)</span>,</p>
+<p>The cumulative density function is estimated for every gene using all
+samples from the above distributions. In simpler terms, a CDF value is
+assigned to each gene in each sample.</p>
+<p>With the CDF of all genes in each sample, we sort them from largest
+to smallest.</p>
+<p>Secondly, we normalize the rank values. <span
+class="math inline">\(r_i\)</span> is the rank value of the gene <span
+class="math inline">\(i\)</span> in sample <span
+class="math inline">\(S\)</span>, <span class="math inline">\(p\)</span>
+is the gene number.</p>
+<p><span class="math inline">\(z_{i
+j}=\left|\frac{p}{2}-r_i\right|\)</span></p>
+<p>Thirdly, to calculate <span class="math inline">\(ES(s)\)</span> with
+sort <span class="math inline">\(z_{i j}\)</span></p>
+<p><span class="math inline">\(\nu_{j
+k}(\ell)=\frac{\sum_{i=1}^{\ell}\left|r_{i j}\right|^\tau I\left(g_{(i)}
+\in \gamma_k\right)}{\sum_{i=1}^p\left|r_{i j}\right|^\tau
+I\left(g_{(i)} \in \gamma_k\right)}-\frac{\sum_{i=1}^{\ell}
+I\left(g_{(i)} \notin
+\gamma_k\right)}{p-\left|\gamma_k\right|}\)</span>,</p>
+<p><span class="math inline">\(E S_{j k}^{\text {diff }}=\left|E S_{j
+k}^{+}\right|-\left|E S_{j k}^{-}\right|=\max _{\ell=1, \ldots,
+p}\left(0, v_{j k}(\ell)\right)-\min _{\ell=1, \ldots, p}\left(0, v_{j
+k}(\ell)\right)\)</span>,</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA-2.webp" /></p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://towardsdatascience.com/decoding-gene-set-variation-analysis-8193a0cfda3">Decoding
+Gene Set Variation Analysis</a></li>
+<li>[2] <a
+target="_blank" rel="noopener" href="https://www.jianshu.com/p/47f9f0107ffe">GSA、GSEA、ssGSEA、GSVA的算法原理及它们的联系与区别</a></li>
+<li>[3] <a
+target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3618321/">GSVA: gene
+set variation analysis for microarray and RNA-Seq data</a></li>
 </ul>
 
   </div>
@@ -103,5 +137,21 @@
 
 
     </div>
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>

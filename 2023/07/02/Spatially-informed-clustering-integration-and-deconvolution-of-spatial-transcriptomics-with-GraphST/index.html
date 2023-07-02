@@ -10,7 +10,7 @@
   <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   
-  <meta name="keywords" content=tools,spatial transcriptomics>
+  <meta name="keywords" content=tools,spatial transcriptomics,research>
   
   
   
@@ -54,25 +54,74 @@
   </div>
 
   <!-- 文章目录 -->
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-GraphST"><span class="toc-text">Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results"><span class="toc-text">Results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure1"><span class="toc-text">Figure1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure2"><span class="toc-text">Figure2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure3"><span class="toc-text">Figure3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure4"><span class="toc-text">Figure4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure5"><span class="toc-text">Figure5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Figure6"><span class="toc-text">Figure6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-graphst"><span class="toc-text">Spatially
+informed clustering, integration, and deconvolution of spatial
+transcriptomics with GraphST</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#figure1"><span class="toc-text">Figure1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure2"><span class="toc-text">Figure2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure3"><span class="toc-text">Figure3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure4"><span class="toc-text">Figure4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure5"><span class="toc-text">Figure5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure6"><span class="toc-text">Figure6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
 
   <div class="post-content">
-    <h1 id="Spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-GraphST"><a href="#Spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-GraphST" class="headerlink" title="Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST"></a>Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>“Spatial transcriptomics technologies generate gene expression profiles with spatial context, requiring spatially informed analysis tools for three key tasks, spatial clustering, multisample integration, and cell-type deconvolution. We present GraphST, a graph self-supervised contrastive learning method that fully exploits spatial transcriptomics data to outperform existing methods. It combines graph neural networks with self-supervised contrastive learning to learn informative and discriminative spot representations by minimizing the embedding distance between spatially adjacent spots and vice versa. We demonstrated GraphST on multiple tissue types and technology platforms. GraphST achieved 10% higher clustering accuracy and better delineated finegrained tissue structures in brain and embryo tissues. GraphST is also the only method that can jointly analyze multiple tissue slices in vertical or horizontal integration while correcting batch effects. Lastly, GraphST demonstrated superior cell-type deconvolution to capture spatial niches like lymph node germinal centers and exhausted tumor infiltrating T cells in breast tumor tissue.” (Long 等, 2023, p. 1)</p>
-<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Figure1"><a href="#Figure1" class="headerlink" title="Figure1"></a>Figure1</h3><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure1.png" alt=""></p>
-<p>The overview of GraphST is presented in Figure 1, which includes three plots. Plot A displays the clustering method, Plot B illustrates the batch integration method, and Plot C shows the integration of spatial transcriptomics (ST) and single-cell RNA sequencing (scRNA-seq) data.</p>
-<h3 id="Figure2"><a href="#Figure2" class="headerlink" title="Figure2"></a>Figure2</h3><p>Here, I really care about its benching marking method.</p>
-<p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure2.png" alt=""></p>
-<p>There shows the comparisons between different tools in figure2. Plot A shows the adjusted rand index scores between different tools annotation results and manual annotation from the original study.</p>
-<h3 id="Figure3"><a href="#Figure3" class="headerlink" title="Figure3"></a>Figure3</h3><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure3.png" alt=""></p>
+    <h1
+id="spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-graphst">Spatially
+informed clustering, integration, and deconvolution of spatial
+transcriptomics with GraphST</h1>
+<h2 id="abstract">Abstract</h2>
+<p>“Spatial transcriptomics technologies generate gene expression
+profiles with spatial context, requiring spatially informed analysis
+tools for three key tasks, spatial clustering, multisample integration,
+and cell-type deconvolution. We present GraphST, a graph self-supervised
+contrastive learning method that fully exploits spatial transcriptomics
+data to outperform existing methods. It combines graph neural networks
+with self-supervised contrastive learning to learn informative and
+discriminative spot representations by minimizing the embedding distance
+between spatially adjacent spots and vice versa. We demonstrated GraphST
+on multiple tissue types and technology platforms. GraphST achieved 10%
+higher clustering accuracy and better delineated finegrained tissue
+structures in brain and embryo tissues. GraphST is also the only method
+that can jointly analyze multiple tissue slices in vertical or
+horizontal integration while correcting batch effects. Lastly, GraphST
+demonstrated superior cell-type deconvolution to capture spatial niches
+like lymph node germinal centers and exhausted tumor infiltrating T
+cells in breast tumor tissue.” (Long 等, 2023, p. 1)</p>
+<h2 id="results">Results</h2>
+<h3 id="figure1">Figure1</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure1.png" /></p>
+<p>The overview of GraphST is presented in Figure 1, which includes
+three plots. Plot A displays the clustering method, Plot B illustrates
+the batch integration method, and Plot C shows the integration of
+spatial transcriptomics (ST) and single-cell RNA sequencing (scRNA-seq)
+data.</p>
+<h3 id="figure2">Figure2</h3>
+<p>Here, I really care about its benching marking method.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure2.png" /></p>
+<p>There shows the comparisons between different tools in figure2. Plot
+A shows the adjusted rand index scores between different tools
+annotation results and manual annotation from the original study.</p>
+<h3 id="figure3">Figure3</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure3.png" /></p>
 <p>It shows how GraphST identify the spatial domains.</p>
-<h3 id="Figure4"><a href="#Figure4" class="headerlink" title="Figure4"></a>Figure4</h3><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure4.png" alt=""></p>
+<h3 id="figure4">Figure4</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure4.png" /></p>
 <p>Figure4 indicates the integration of ST data.</p>
-<h3 id="Figure5"><a href="#Figure5" class="headerlink" title="Figure5"></a>Figure5</h3><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure5.png" alt=""></p>
-<p>Figure5 presents the accuracy of different methods. Plot D shows the identification ability of methods through AUC score. See more on <a target="_blank" rel="noopener" href="https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5">https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5</a></p>
-<h3 id="Figure6"><a href="#Figure6" class="headerlink" title="Figure6"></a>Figure6</h3><p><img src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure6.png" alt=""></p>
-<p>GraphST enables comprehensive and accurate spatial mapping of scRNA-seq data in human breast cancer data.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36796-3">Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST</a></li>
+<h3 id="figure5">Figure5</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure5.png" /></p>
+<p>Figure5 presents the accuracy of different methods. Plot D shows the
+identification ability of methods through AUC score. See more on
+https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5</p>
+<h3 id="figure6">Figure6</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure6.png" /></p>
+<p>GraphST enables comprehensive and accurate spatial mapping of
+scRNA-seq data in human breast cancer data.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-023-36796-3">Spatially
+informed clustering, integration, and deconvolution of spatial
+transcriptomics with GraphST</a></li>
 </ul>
 
   </div>
@@ -82,7 +131,7 @@
 
   <div class="post-footer">
     
-      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/spatial-transcriptomics/" rel="tag">spatial transcriptomics</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/spatial-transcriptomics/" rel="tag">spatial transcriptomics</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
     
 
     <a href="#top" class="top">Back to Top</a>
@@ -100,5 +149,21 @@
 
 
     </div>
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>

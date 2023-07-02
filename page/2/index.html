@@ -52,6 +52,11 @@
   <ul class="post-archive">
     
       <li class="post-item">
+        <time class="post-date">2022-01-20</time>
+        <a class="post-title" href="/2022/01/20/SpatialDE/">SpatialDE</a>
+      </li>
+    
+      <li class="post-item">
         <time class="post-date">2022-01-01</time>
         <a class="post-title" href="/2022/01/01/GO%20enrichment/">GO enrichment</a>
       </li>
@@ -77,5 +82,21 @@
 
 
     </div>
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>

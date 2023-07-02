@@ -52,6 +52,11 @@
   <ul class="post-archive">
     
       <li class="post-item">
+        <time class="post-date">2023-02-01</time>
+        <a class="post-title" href="/2023/02/01/CESC%20and%20CC/">CESC and CC</a>
+      </li>
+    
+      <li class="post-item">
         <time class="post-date">2022-11-01</time>
         <a class="post-title" href="/2022/11/01/iSpatial/">iSpatial</a>
       </li>
@@ -96,11 +101,6 @@
         <a class="post-title" href="/2022/02/15/SCENIC/">SCENIC</a>
       </li>
     
-      <li class="post-item">
-        <time class="post-date">2022-01-20</time>
-        <a class="post-title" href="/2022/01/20/SpatialDE/">SpatialDE</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -117,5 +117,21 @@
 
 
     </div>
-  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
