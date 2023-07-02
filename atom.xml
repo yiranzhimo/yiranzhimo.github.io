@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-30T04:53:48.964Z</updated>
+  <updated>2023-07-02T06:56:43.193Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST</title>
+    <link href="http://example.com/2023/07/02/Spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-GraphST/"/>
+    <id>http://example.com/2023/07/02/Spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-GraphST/</id>
+    <published>2023-07-02T06:48:51.000Z</published>
+    <updated>2023-07-02T06:56:43.193Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-graphst">Spatiallyinformed clustering, integration, and deconvolution of spatialtranscriptomics with GraphST</h1><h2 id="abstract">Abstract</h2><p>“Spatial transcriptomics technologies generate gene expressionprofiles with spatial context, requiring spatially informed analysistools for three key tasks, spatial clustering, multisample integration,and cell-type deconvolution. We present GraphST, a graph self-supervisedcontrastive learning method that fully exploits spatial transcriptomicsdata to outperform existing methods. It combines graph neural networkswith self-supervised contrastive learning to learn informative anddiscriminative spot representations by minimizing the embedding distancebetween spatially adjacent spots and vice versa. We demonstrated GraphSTon multiple tissue types and technology platforms. GraphST achieved 10%higher clustering accuracy and better delineated finegrained tissuestructures in brain and embryo tissues. GraphST is also the only methodthat can jointly analyze multiple tissue slices in vertical orhorizontal integration while correcting batch effects. Lastly, GraphSTdemonstrated superior cell-type deconvolution to capture spatial nicheslike lymph node germinal centers and exhausted tumor infiltrating Tcells in breast tumor tissue.” (Long 等, 2023, p. 1)</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure1.png" /></p><p>The overview of GraphST is presented in Figure 1, which includesthree plots. Plot A displays the clustering method, Plot B illustratesthe batch integration method, and Plot C shows the integration ofspatial transcriptomics (ST) and single-cell RNA sequencing (scRNA-seq)data.</p><p>Here, I really care about its benching marking method.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure2.png" /></p><p>There shows the comparisons between different tools in figure2. PlotA shows the adjusted rand index scores between different toolsannotation results and manual annotation from the original study.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure3.png" /></p><p>It shows how GraphST identify the spatial domains.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure4.png" /></p><p>Figure4 indicates the integration of ST data.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure5.png" /></p><p>Figure5 presents the accuracy of different methods. Plot D shows theidentification ability of methods through AUC score. See more onhttps://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230702_figure6.png" /></p><p>GraphST enables comprehensive and accurate spatial mapping ofscRNA-seq data in human breast cancer data.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41467-023-36796-3">Spatiallyinformed clustering, integration, and deconvolution of spatialtranscriptomics with GraphST</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;spatially-informed-clustering-integration-and-deconvolution-of-spatial-transcriptomics-with-graphst&quot;&gt;Spatially
+informed clustering, </summary>
+      
+    
+    
+    
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+  </entry>
   
   <entry>
     <title>Single-cell spatial immune landscapes of primary and metastatic brain tumours</title>
@@ -317,9 +343,9 @@ enable </summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -485,9 +511,9 @@ in tumor spatial transcriptome.&lt;/p&gt;
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -517,9 +543,9 @@ src=&quot;https://r</summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -551,33 +577,6 @@ src=&quot;https://raw.githubusercontent</summary>
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GO enrichment</title>
-    <link href="http://example.com/2022/01/01/GO%20enrichment/"/>
-    <id>http://example.com/2022/01/01/GO%20enrichment/</id>
-    <published>2022-01-01T05:47:35.000Z</published>
-    <updated>2023-03-09T12:20:13.300Z</updated>
-    
-    <content type="html"><![CDATA[<p>GO enrichment analysis is a prevalent method to characterizegenesets' profiles.</p><p>What does it mean?</p><p>GO is the gene ontology, a structured, controlled vocabulary forclassifying gene function at the molecular and cellular levels. It isdivided into three separate sub-ontologies: biological process (e.g.,signal transduction), molecular function (e.g., ATPase activity), andcellular component (e.g., ribosome)[^1].</p><p>How to calculate GO term scores?</p><p>To Calculate p-values through a hypergeometric distribution test.</p><p>We have a geneset containing <em>n</em> and <em>k</em> genes in onespecific GO term. All GO terms have <em>N</em> genes. For one particularGO term, there have K genes.</p><p>The hypergeometric distribution measures precisely the probability of<strong>k</strong> successes in <strong>n</strong> draws, withoutreplacement, from a finite population of size <strong>N</strong> thatcontains exactly <strong>K</strong> successful objects:</p><p><spanclass="math inline">\(\mathrm{P}(\mathrm{X}=k)=\frac{\left(\begin{array}{l}K\\ k\end{array}\right)\left(\begin{array}{l}N-n \\K-k\end{array}\right)}{\left(\begin{array}{l}N \\n\end{array}\right)}\)</span></p><p><spanclass="math inline">\(\mathrm{p-value}=1-\mathrm{P}(\mathrm{X}=k)\)</span></p><h1 id="reference">Reference</h1><p>[1]https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/goenrichment/tutorial.html</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;GO enrichment analysis is a prevalent method to characterize
-genesets&#39; profiles.&lt;/p&gt;
-&lt;p&gt;What does it mean?&lt;/p&gt;
-&lt;p&gt;GO is the gene ontology</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
     
   </entry>
   
