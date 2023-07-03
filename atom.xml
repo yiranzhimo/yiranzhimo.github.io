@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-02T10:04:40.914Z</updated>
+  <updated>2023-07-03T06:23:32.309Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Single-Cell Map of Diverse Immune Phenotypes in the Breast Tumor Microenvironment</title>
+    <link href="http://example.com/2023/07/03/Single-Cell-Map-of-Diverse-Immune-Phenotypes-in-the-Breast-Tumor-Microenvironment/"/>
+    <id>http://example.com/2023/07/03/Single-Cell-Map-of-Diverse-Immune-Phenotypes-in-the-Breast-Tumor-Microenvironment/</id>
+    <published>2023-07-03T06:12:50.000Z</published>
+    <updated>2023-07-03T06:23:32.309Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="single-cell-map-of-diverse-immune-phenotypes-in-the-breast-tumor-microenvironment">Single-CellMap of Diverse Immune Phenotypes in the Breast TumorMicroenvironment</h1><h2 id="abstract">Abstract</h2><p>Knowledge of immune cell phenotypes in the tumor microenvironment isessential for understanding mechanisms of cancer progression andimmunotherapy response. We profiled 45,000 immune cells from eightbreast carcinomas, as well as matched normal breast tissue, blood, andlymph nodes, using single-cell RNA-seq. We developed a preprocessingpipeline, SEQC, and a Bayesian clustering and normalization method,Biscuit, to address computational challenges inherent to single-celldata. Despite significant similarity between normal and tumortissue-resident immune cells, we observed continuous phenotypicexpansions specific to the tumor microenvironment. Analysis of pairedsingle-cell RNA and T cell receptor (TCR) sequencing data from 27,000additional T cells revealed the combinatorial impact of TCR utilizationon phenotypic diversity. Our results support a model of continuousactivation in T cells and do not comport with the macrophagepolarization model in cancer. Our results have important implicationsfor characterizing tumor-infiltrating immune cells.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230703_figure1.jpg" /></p><p>Figure1 shows scRNA-seq basic data information .</p><p>Plot E indicates hallmark hypoxia signature scores, where the rightside shows heatmap of Z-scored mean expression of genes in signature andthe top side shows barplot of total expression of each gene, across allpatients.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230703_figure2.jpg" /></p><p>Figure2 indicates characterization of immune of patients.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230703_figure3.jpg" /></p><p>Figure3 shows impact of the Microenvironment on Breast ImmuneCells.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230703_figure5.jpg" /></p><p>Figure4 shows the detailed characterization of T cells.</p><p>Plot a shows the T cell’s trajectory.</p><h3 id="figure5">Figure5</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230703_figure5.jpg" /></p><p>Figure5 shows the identification of Treg clusters through conariancepatterns.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.cell.com/cell/fulltext/S0092-8674(18)30723-2">Single-CellMap of Diverse Immune Phenotypes in the Breast TumorMicroenvironment</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;single-cell-map-of-diverse-immune-phenotypes-in-the-breast-tumor-microenvironment&quot;&gt;Single-Cell
+Map of Diverse Immune Phenotypes in t</summary>
+      
+    
+    
+    
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
+  </entry>
   
   <entry>
     <title>Single-cell analysis of fate-mapped macrophages reveals heterogeneity, including stem-like properties, during atherosclerosis progression and regression</title>
@@ -37,9 +65,9 @@ id=&quot;single-cell-analysis-of-fate-mapped-macrophages-reveals-heterogeneity-i
     
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
-    <category term="Atherosclerosis" scheme="http://example.com/tags/Atherosclerosis/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="Atherosclerosis" scheme="http://example.com/tags/Atherosclerosis/"/>
     
   </entry>
   
@@ -93,9 +121,9 @@ spatial immune landscapes of primary and </summary>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
-    <category term="research" scheme="http://example.com/tags/research/"/>
-    
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
     
   </entry>
   
@@ -342,9 +370,9 @@ spatial expression with iSpatial&lt;/em&gt;, from which I learned a lot.&lt;/</s
     
     
     
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -370,9 +398,9 @@ enable </summary>
     
     
     
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
     
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
@@ -538,41 +566,9 @@ in tumor spatial transcriptome.&lt;/p&gt;
     
     
     
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SCENIC</title>
-    <link href="http://example.com/2022/02/15/SCENIC/"/>
-    <id>http://example.com/2022/02/15/SCENIC/</id>
-    <published>2022-02-15T10:47:35.000Z</published>
-    <updated>2023-03-09T12:18:39.063Z</updated>
-    
-    <content type="html"><![CDATA[<p>SCENIC is a computational method to deduce gene regulatorynetworks.</p><p>The main progress has three parts.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/scenic_1.webp" /></p><p>Part1. GENIE3</p><p>Through GENIE3 to identify genesets coexpressed with TF genes.</p><p>The method assumes that a specific gene expression depends on theother genes' expression in the network.</p><p>Denoting by <span class="math inline">\(x_k^{j-1}\)</span> the vectorcontaining the expression values in the <spanclass="math inline">\(k_{th}\)</span> the experiment of all genes exceptgene <em>j</em>:</p><p><span class="math inline">\(\mathbf{x}_k^{-j}=\left(x_k^1, \ldots,x_k^{j-1}, x_k^{j+1}, \ldots, x_k^p\right)^{\mathrm{T}}\)</span></p><p>Then,</p><p><spanclass="math inline">\(x_k^j=f_j\left(\mathbf{x}_k^{-j}\right)+\varepsilon_k,\forall k\)</span> , where <spanclass="math inline">\(\varepsilon_k\)</span> is a random noise with zeromeans (conditionally to <spanclass="math inline">\(\mathbf{x}_k^{-j}\)</span>)</p><p>For <em>j</em> = 1 to <em>p</em>:</p><ul><li>Generate the learning sample of input-output pairs for gene<em>j</em>:</li></ul><p><span class="math inline">\(L S^j=\left\{\left(\mathbf{x}_k^{-j},x_k^j\right), k=1, \ldots, N\right\}\)</span></p><ul><li><p>Use a feature selection technique on <spanclass="math inline">\(L S^j\)</span> to compute confidence levels <spanclass="math inline">\(w_{i, j}, \forall i \neq j\)</span>, for all genesexcept gene <em>j</em> itself.</p></li><li><p>Aggregate the <em>p</em> individual gene rankings to get a globalscale of all regulatory links.</p></li></ul><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GENIE3.png" /></p><p>Part2. RcisTarget</p><p>RcisTarget identifies enriched TF-binding motifs and candidatetranscription factors for a gene list.</p><p>In these two steps:</p><p>Step 1 selects DNA motifs significantly over-represented in thesurroundings of the transcription start site (TSS) of the genes in thegene set.</p><p>Step 2, RcisTarget predicts candidate target genes (i.e., genes inthe gene set that are ranked above the leading edge), like enrichmentanalysis.</p><p>Part3. AUCell</p><p>The input of AUCell is a regulon that contains TF and regulatedgenes.</p><p>AUCell calculates the enrichment of the regulon as an area under therecovery curve (AUC) across the ranking of all genes in a particularcell, whereby genes are ranked by their expression value.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://www.nature.com/articles/nmeth.4463">SCENIC</a></li><li>[2] <ahref="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">GENIE3</a></li><li>[3] <ahref="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000435">RcisTarget</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;SCENIC is a computational method to deduce gene regulatory
-networks.&lt;/p&gt;
-&lt;p&gt;The main progress has three parts.&lt;/p&gt;
-&lt;p&gt;&lt;img
-src=&quot;https://r</summary>
-      
-    
-    
-    
-    
     <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
