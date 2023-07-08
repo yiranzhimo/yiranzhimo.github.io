@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-03T06:23:32.309Z</updated>
+  <updated>2023-07-08T08:23:13.119Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Single-cell profiling to explore pancreatic cancer heterogeneity, plasticity and response to therapy</title>
+    <link href="http://example.com/2023/07/08/Single-cell-profiling-to-explore-pancreatic-cancer-heterogeneity-plasticity-and-response-to-therapy/"/>
+    <id>http://example.com/2023/07/08/Single-cell-profiling-to-explore-pancreatic-cancer-heterogeneity-plasticity-and-response-to-therapy/</id>
+    <published>2023-07-08T05:20:20.000Z</published>
+    <updated>2023-07-08T08:23:13.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="single-cell-profiling-to-explore-pancreatic-cancer-heterogeneity-plasticity-and-response-to-therapy">Single-cellprofiling to explore pancreatic cancer heterogeneity, plasticity andresponse to therapy</h1><h2 id="abstract">Abstract</h2><p>Pancreatic ductal adenocarcinoma (PDAC) is a highly lethal cancerentity characterized by a heterogeneous genetic landscape and animmunosuppressive tumor microenvironment. Recent advances inhigh-resolution single-cell sequencing and spatial transcriptomicstechnologies have enabled an in-depth characterization of both malignantand host cell types and increased our understanding of the heterogeneityand plasticity of PDAC in the steady state and under therapeuticperturbation. In this Review we outline single-cell analyses in PDAC,discuss their implications on our understanding of the disease andpresent future perspectives of multimodal approaches to elucidate itsbiology and response to therapy at the single-cell level.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230708_figure1.webp" /></p><p>Figure1 shows the pipeline to uncover pancreatic cancer heterogeneityand complexity.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230708_figure2.png" /></p><p>CITE-seq (Cellular Indexing of Transcriptomes and Epitopes bysequencing) is a method to detect the cell surface antibodies withsingle-cell level.</p><p>INs-seq is a new technology to record scRNA and intracellular proteinactivity.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230708_figure3.png" /></p><p>Figure3 is very interesting which shows various seq method to exploregenomics, transcriptomics, proteomics and epigenetics.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230708_figure3.png" /></p><p>Figure3 is very interesting which shows various seq method to exploregenomics, transcriptomics, proteomics and epigenetics.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s43018-023-00526-x">Single-cellprofiling to explore pancreatic cancer heterogeneity, plasticity andresponse to therapy</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;single-cell-profiling-to-explore-pancreatic-cancer-heterogeneity-plasticity-and-response-to-therapy&quot;&gt;Single-cell
+profiling to explor</summary>
+      
+    
+    
+    
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
+    
+    <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Benchmarking spatial and single-cell transcriptomics integration methods for transcript distribution prediction and cell type deconvolution</title>
+    <link href="http://example.com/2023/07/07/Benchmarking-spatial-and-single-cell-transcriptomics-integration-methods-for-transcript-distribution-prediction-and-cell-type-deconvolution/"/>
+    <id>http://example.com/2023/07/07/Benchmarking-spatial-and-single-cell-transcriptomics-integration-methods-for-transcript-distribution-prediction-and-cell-type-deconvolution/</id>
+    <published>2023-07-07T06:59:34.000Z</published>
+    <updated>2023-07-08T08:22:16.097Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="benchmarking-spatial-and-single-cell-transcriptomics-integration-methods-for-transcript-distribution-prediction-and-cell-type-deconvolution">Benchmarkingspatial and single-cell transcriptomics integration methods fortranscript distribution prediction and cell type deconvolution</h1><h2 id="abstract">Abstract</h2><p>Spatial transcriptomics approaches have substantially advanced ourcapacity to detect the spatial distribution of RNA transcripts intissues, yet it remains challenging to characterizewhole-transcriptome-level data for single cells in space. Addressingthis need, researchers have developed integration methods to combinespatial transcriptomic data with single-cell RNA-seq data to predict thespatial distribution of undetected transcripts and/or perform cell typedeconvolution of spots in histological sections. However, to date, noindependent studies have comparatively analyzed these integrationmethods to benchmark their performance. Here we present benchmarking of16 integration methods using 45 paired datasets (comprising both spatialtranscriptomics and scRNA-seq data) and 32 simulated datasets. We foundthat Tangram, gimVI, and SpaGE outperformed other integration methodsfor predicting the spatial distribution of RNA transcripts, whereasCell2location, SpatialDWLS, and RCTD are the top-performing methods forthe cell type deconvolution of spots. We provide a benchmark pipeline tohelp researchers select optimal integration methods to process theirdatasets.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230707_figure1.png" /></p><p>Figure1 shows benchmarking workflow and summary characteristics ofthe examined paired datasets.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230707_figure2.png" /></p><p>Figure2 shows how to compare the predicting result of integrationmethod and the real result through different arguments.</p><p>“(1) structural similarity index (SSIM), which combines mean value,variance, and covariance to measure the similarity between the predictedresult and the ground truth; (2) root mean square error (RMSE), theabsolute error between the predicted distribution and the ground truth;and (3) Jensen–Shannon divergence (JS), which uses relative informationentropy to gauge the difference between two distributions.” (Li 等,2022, p. 663)</p><p>“For one gene, a higher PCC/SSIM or lower RMSE/JS value indicatesbetter prediction accuracy. We also defined an accuracy score (AS) byaggregating the four metrics (Methods) to simplify the evaluation of theaccuracy of each integration method (a higher AS value indicates betterperformance).” (Li 等, 2022, p. 663)</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230707_figure3.png" /></p><p>Figure3 compares the accuracy of the eight integration methods forsparse spatial expression matrices down-sampled from the originaldatasets.</p><p>Plot a shows the PCC scores of the spatial distribution oftranscripts predicted from the original data and down-sampled data fromdataset 4. The PCC values of the red-colored transcripts are greaterthan 0.5 for both the original and the down-sampled data.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230707_figure4.png" /></p><p>Figure4 compares the performance of the 12 integration methodscapable of deconvoluting cell types of each histological spot.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41592-022-01480-9">Benchmarkingspatial and single-cell transcriptomics integration methods fortranscript distribution prediction and cell type deconvolution</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;benchmarking-spatial-and-single-cell-transcriptomics-integration-methods-for-transcript-distribution-prediction-and-cell-type-deconv</summary>
+      
+    
+    
+    
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="benchmarking" scheme="http://example.com/tags/benchmarking/"/>
+    
+    <category term="method" scheme="http://example.com/tags/method/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fast, sensitive and accurate integration of single-cell data with Harmony</title>
+    <link href="http://example.com/2023/07/06/Fast-sensitive-and-accurate-integration-of-single-cell-data-with-Harmony/"/>
+    <id>http://example.com/2023/07/06/Fast-sensitive-and-accurate-integration-of-single-cell-data-with-Harmony/</id>
+    <published>2023-07-06T08:14:29.000Z</published>
+    <updated>2023-07-08T08:22:07.121Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="fast-sensitive-and-accurate-integration-of-single-cell-data-with-harmony">Fast,sensitive and accurate integration of single-cell data with Harmony</h1><h2 id="abstract">Abstract</h2><p>The emerging diversity of single-cell RNA-seq datasets allows for thefull transcriptional characterization of cell types across a widevariety of biological and clinical conditions. However, it ischallenging to analyze them together, particularly when datasets areassayed with different technologies, because biological and technicaldifferences are interspersed. We present Harmony(https://github.com/immunogenomics/harmony), an algorithm that projectscells into a shared embedding in which cells group by cell type ratherthan dataset-specific conditions. Harmony simultaneously accounts formultiple experimental and biological factors. In six analyses, wedemonstrate the superior performance of Harmony to previously publishedalgorithms while requiring fewer computational resources. Harmonyenables the integration of ~106 cells on a personal computer. We applyHarmony to peripheral blood mononuclear cells from datasets with largeexperimental differences, five studies of pancreatic islet cells, mouseembryogenesis datasets and the integration of scRNA-seq with spatialtranscriptomics data.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure1.webp" /></p><p>Figure1 shows overview of Harmony algorithm.</p><p>“a, Harmony uses fuzzy clustering to assign each cell to multipleclusters, while a penalty term ensures that the diversity of datasetswithin each cluster is maximized. b, Harmony calculates a globalcentroid for each cluster, as well as dataset-specific centroids foreach cluster. c, Within each cluster, Harmony calculates a correctionfactor for each dataset based on the centroids. d, Finally, Harmonycorrects each cell with a cell-specific factor: a linear combination ofdataset correction factors weighted by the cell’s soft clusterassignments made in step a. Harmony repeats steps a to d untilconvergence. The dependence between cluster assignment and datasetdiminishes with each round. Datasets are represented with colors, celltypes with different shapes.” (Korsunsky 等, 2019, p. 1290)</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure2.webp" /></p><p>“the local inverse Simpson’s Index (LISI” (Korsunsky 等, 2019, p.1290)</p><p>Figure2 use deformation of Simpson’s Diversity Index to measureintegration ability.</p><p>See more details on Simpson’s Diversity Index:https://www.statology.org/simpsons-diversity-index/</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure3.webp" /></p><p>Figure3 compares the computational efficiency between differentmethods.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure4.webp" /></p><p>Figure4 shows fine-grained subpopulation identification in PBMCsacross technologies.</p><h3 id="figure5">Figure5</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure5.webp" /></p><p>Figure5 indicates the integration performance by donor andtechnology.</p><h3 id="figure6">Figure6</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure6.webp" /></p><p>Figure6 shows harmony integrate spatially resolved transcriptomicswith scRNA-seq data.</p><p>But I don’t think Plot b is informative. If they presents theloctaion overlap of scRNA and ST, which would be convincible.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41592-019-0619-0">Fast, sensitiveand accurate integration of single-cell data with Harmony</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;fast-sensitive-and-accurate-integration-of-single-cell-data-with-harmony&quot;&gt;Fast,
+sensitive and accurate integration of single-cell da</summary>
+      
+    
+    
+    
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="benchmarking" scheme="http://example.com/tags/benchmarking/"/>
+    
+  </entry>
   
   <entry>
     <title>Single-Cell Map of Diverse Immune Phenotypes in the Breast Tumor Microenvironment</title>
@@ -38,9 +123,9 @@ Map of Diverse Immune Phenotypes in t</summary>
     
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
-    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
   </entry>
   
@@ -93,9 +178,9 @@ informed clustering, </summary>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
   </entry>
   
@@ -119,11 +204,11 @@ spatial immune landscapes of primary and </summary>
     
     
     
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
-    
-    <category term="research" scheme="http://example.com/tags/research/"/>
     
   </entry>
   
@@ -149,11 +234,11 @@ and applications for single-cell and spatial multi-omics&lt;/</summary>
     
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
+    <category term="method" scheme="http://example.com/tags/method/"/>
+    
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="review" scheme="http://example.com/tags/review/"/>
-    
-    <category term="method" scheme="http://example.com/tags/method/"/>
     
   </entry>
   
@@ -177,9 +262,9 @@ mapping reveals human adipocy</summary>
     
     
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="WAT" scheme="http://example.com/tags/WAT/"/>
     
@@ -370,9 +455,9 @@ spatial expression with iSpatial&lt;/em&gt;, from which I learned a lot.&lt;/</s
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -398,9 +483,9 @@ enable </summary>
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="principle" scheme="http://example.com/tags/principle/"/>
     
@@ -482,91 +567,6 @@ va</summary>
     
     
     
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>What is cancer metabolism?</title>
-    <link href="http://example.com/2022/05/02/GSVA/"/>
-    <id>http://example.com/2022/05/02/GSVA/</id>
-    <published>2022-05-02T07:47:35.000Z</published>
-    <updated>2023-03-09T12:19:06.027Z</updated>
-    
-    <content type="html"><![CDATA[<p>Gene Set Variation Analysis is a method to calculate genesets pathwayscores across different samples.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA_1.jpg" /></p><p>Firstly, there has an input gene expression matrix. We performnon-parametric kernel estimation of a specific gene's cumulative densityfunction.</p><p>In the case of microarray data, a Gaussian kernel is used:</p><p><span class="math inline">\(\widehat{F}_{h_i}\left(x_{ij}\right)=\frac{1}{n} \sum_{k=1}^n \int_{-\infty}^{\frac{x_{i j}-x_{ik}}{h_i}} \frac{1}{\sqrt{2 \Pi}} e^{-\frac{t^2}{2}} d t\)</span></p><p>In the case of RNA-seq data, a discrete Poisson kernel isemployed:</p><p><span class="math inline">\(\widehat{F}_r\left(x_{ij}\right)=\frac{1}{n} \sum_{k=1}^n \sum_{y=0}^{x_{i j}}\frac{e^{-\left(x_{i k}+r\right)}\left(x_{i k}+r\right)^y}{y!}\)</span>,</p><p>The cumulative density function is estimated for every gene using allsamples from the above distributions. In simpler terms, a CDF value isassigned to each gene in each sample.</p><p>With the CDF of all genes in each sample, we sort them from largestto smallest.</p><p>Secondly, we normalize the rank values. <spanclass="math inline">\(r_i\)</span> is the rank value of the gene <spanclass="math inline">\(i\)</span> in sample <spanclass="math inline">\(S\)</span>, <span class="math inline">\(p\)</span>is the gene number.</p><p><span class="math inline">\(z_{ij}=\left|\frac{p}{2}-r_i\right|\)</span></p><p>Thirdly, to calculate <span class="math inline">\(ES(s)\)</span> withsort <span class="math inline">\(z_{i j}\)</span></p><p><span class="math inline">\(\nu_{jk}(\ell)=\frac{\sum_{i=1}^{\ell}\left|r_{i j}\right|^\tau I\left(g_{(i)}\in \gamma_k\right)}{\sum_{i=1}^p\left|r_{i j}\right|^\tauI\left(g_{(i)} \in \gamma_k\right)}-\frac{\sum_{i=1}^{\ell}I\left(g_{(i)} \notin\gamma_k\right)}{p-\left|\gamma_k\right|}\)</span>,</p><p><span class="math inline">\(E S_{j k}^{\text {diff }}=\left|E S_{jk}^{+}\right|-\left|E S_{j k}^{-}\right|=\max _{\ell=1, \ldots,p}\left(0, v_{j k}(\ell)\right)-\min _{\ell=1, \ldots, p}\left(0, v_{jk}(\ell)\right)\)</span>,</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/GSVA-2.webp" /></p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://towardsdatascience.com/decoding-gene-set-variation-analysis-8193a0cfda3">DecodingGene Set Variation Analysis</a></li><li>[2] <ahref="https://www.jianshu.com/p/47f9f0107ffe">GSA、GSEA、ssGSEA、GSVA的算法原理及它们的联系与区别</a></li><li>[3] <ahref="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3618321/">GSVA: geneset variation analysis for microarray and RNA-Seq data</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Gene Set Variation Analysis is a method to calculate genesets pathway
-scores across different samples.&lt;/p&gt;
-&lt;p&gt;&lt;img
-src=&quot;https://raw.githu</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SOMDE</title>
-    <link href="http://example.com/2022/04/20/SOMDE/"/>
-    <id>http://example.com/2022/04/20/SOMDE/</id>
-    <published>2022-04-20T02:23:35.000Z</published>
-    <updated>2023-03-18T13:40:08.312Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I read a paper to identify spatial variable genes named"<em>SOMDE: a scalable method for identifying spatially variable geneswith self-organizing map</em>."</p><h1 id="part1">Part1</h1><p>As its abstract shows:</p><blockquote><p>We present SOMDE, an efficient method for identifying SVgenes inlarge-scale spatial expression data. SOMDE uses the self-organizing mapto cluster neighboring cells into nodes and then uses a Gaussian processto fit the node-level spatial gene expression to identify SVgenes.Experiments show that SOMDE is about 5–50 times faster than existingmethods with comparable results. The adjustable resolution of SOMDEmakes it the only way to give results in 5 min in large datasets of morethan 20 000 sequencing sites. SOMDE is available as a python package onPyPI at https://pypi.org/project/somde for educational use.</p></blockquote><p>So, what is the self-organizing map?</p><p>A self-organizing map (SOM) is a type of <ahref="https://en.wikipedia.org/wiki/Artificial_neural_network">artificialneural network</a> (ANN) that is trained using unsupervised learning toproduce a low-dimensional (typically two-dimensional), discretizedrepresentation of the input space of the training samples, called a map,and is therefore, a method to make dimensionality reduction.Self-organizing maps differ from other artificial neural networks asthey apply competitive learning instead of error-correction education(such as backpropagation with gradient descent) because they use aneighborhood function to preserve the topological properties of theinput space.</p><h1 id="part2">Part2</h1><p>And, how does it work in the paper?</p><p>Let us see this figure.</p><p><span class="math inline">\(N^2 \times k=C\)</span></p><p>where C is a constant representing the total number of data sites,and k is the model parameter called the neighbor number, which denotesthe expected average number of original data sites each SOM noderepresents. This parameter controls how condensed the learned SOM is. Alarger k means higher condensation.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/somde.jpeg.jpg" /></p><p>As it showed in (a), it initializes the value and dimension of SOMNode weight <span class="math inline">\(M=(m_1,m_2,m_{N*N})\)</span> ,like the orange spots. After initialization, SOM adjusts the weight ofeach node toward the tissue spatial topology through a repetitivetraining process using all spatial coordinates <spanclass="math inline">\(X=(X_1,X_2,X_3,X_C)\)</span> as traniningsamples.</p><p>Cycle after cycle. After training, each data site maps to a uniqueSOM node. Each SOM node represents the group of sites that are mapped toit. Node weights in the learned SOM can be treated as new spatialcoordinates for the data sites. The new spatial locations <spanclass="math inline">\(X=\left(\tilde{x}_1, \tilde{x}_2, \ldots,\tilde{x}_{N \times N}\right)\)</span> compose the sparse topology ofthe original data</p><p>In a SOM node, to define its gene expression as the linearcombination of the max value and average value of the gene expression inthe group of sites that the node represents. The reason for not usingaverage value as a meta-expression is due to the high sparsity inlarge-scale data that could bias the result.</p><p><span class="math inline">\(\tilde{\boldsymbol{Y}}_{i, j}=\gamma\cdot \max \left(y_{S 1}, y_{S 2}, \ldots\right)+(1-\gamma) \cdot\operatorname{avg}\left(y_{S 1}, y_{S 2}, \ldots\right)\)</span></p><p>where <span class="math inline">\(y_{S 1}\)</span> is the expressionvalue of the gene at the data site <span class="math inline">\(x_{S1}\)</span>. The combination ratio <spanclass="math inline">\(\gamma\)</span> balances the local maximum andmean gene expression. We use <span class="math inline">\(\gamma =0.5\)</span> as the default in current experiments.</p><p>With this computational model, how to deduce SVGs?</p><p><span class="math inline">\(p\left(\tilde{\boldsymbol{y}} \midH_{\mathrm{G}}, \tilde{\boldsymbol{X}},\Theta\right)=\mathcal{N}\left(\tilde{\boldsymbol{y}} \mid \mu \cdot 1,\sigma_s^2 \cdot \boldsymbol{\Sigma}_{k(\tilde{\boldsymbol{x}},\widetilde{\boldsymbol{x}} \mid \theta)}+\delta \cdot\boldsymbol{I}\right)\)</span></p><p>where <span class="math inline">\(\tilde{\boldsymbol{y}}\)</span>denotes one gene meta-expression in the SOM plane and <spanclass="math inline">\(\tilde{\boldsymbol{X}}\)</span> denotes SOM nodelocations.</p><p><span class="math inline">\(\delta \cdot \boldsymbol{I}\)</span>indicates the non-spatial variance given by Gaussian distributed noisein all observed gene meta-expressions. <spanclass="math inline">\(\boldsymbol{\Sigma}_{k(\tilde{\boldsymbol{x}},\widetilde{\boldsymbol{x}} \mid \theta)}\)</span> captures the spatialvariation by using a selected kernel function <spanclass="math inline">\(k(\cdot)\)</span></p><p>Compared with the original Gaussian process model, model HG assumesone gene meta-expression at all spatial locations has the same meanvalue l so that the non-spatial variance cannot be regressed out. Thusthe maximum likelihood value of HG mainly depends on spatialvariance.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://medium.com/@abhinavr8/self-organizing-maps-ff5853a118d4">SelfOrganizing Maps</a></li><li>[2] <ahref="https://academic.oup.com/bioinformatics/article/37/23/4392/6308937">SOMDE:a scalable method for identifying spatially variable genes withself-organizing map</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I read a paper to identify spatial variable genes named
-&quot;&lt;em&gt;SOMDE: a scalable method for identifying spatially variable genes
-</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hotspot</title>
-    <link href="http://example.com/2022/03/01/Hotspot/"/>
-    <id>http://example.com/2022/03/01/Hotspot/</id>
-    <published>2022-03-01T08:47:35.000Z</published>
-    <updated>2023-03-09T12:18:57.402Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hotspot is a useful tools to find gene expression module, especiallyin tumor spatial transcriptome.</p><p>Now, I want to introduce its work principle.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hotspot_1.jpg" /></p><p>To compute gene modules, Hotspot uses a three-step procedure:</p><p>1、Find informative genes with high local autocorrelation</p><p>Firstly, to compute cells similarity map through KNN graph or spatialposition or development lineage.</p><p>For an interested gene <span class="math inline">\(x\)</span>, tocalculate its <span class="math inline">\(H_x\)</span>. <spanclass="math display">\[H_x=\sum_j \sum_{j \neq i} w_{i j} x_i x_j\]</span> If cell <span class="math inline">\(i\)</span> and cell <spanclass="math inline">\(j\)</span> are nearest neighbors, then weight<span class="math inline">\(w_{ij}\)</span> is higher then dissimilarcells. If cell <span class="math inline">\(i\)</span> and cell <spanclass="math inline">\(j\)</span> are denifitely different, then weight<span class="math inline">\(w_{ij}\)</span> is equal to 0.</p><p><span class="math inline">\(x_i\)</span> and <spanclass="math inline">\(x_j\)</span> are gene <spanclass="math inline">\(x\)</span> expression value in cell <spanclass="math inline">\(i\)</span> and cell <spanclass="math inline">\(j\)</span> . Notably, whether <spanclass="math inline">\(x_i\)</span> or <spanclass="math inline">\(x_j\)</span> is standardized expression value(such that <span class="math display">\[E\left[x_i\right]=0\]</span>，<span class="math display">\[E\left[x_i^2\right]=1\]</span>).</p><p>But, how to evaluate <span class="math inline">\(H_x\)</span> anddetect informative genes?</p><p>For each gene, to define a null model in which the expression valuesare drawn independently from some assumed distribution and transfer<span class="math inline">\(H_x\)</span> to <em>Z-score</em> to eveluatestatistically significant. <span class="math display">\[\hat{Z}=\frac{\widehat{H}-\mathrm{E}[\hat{H}]}{\operatorname{var}(\widehat{H})^{\frac{1}{2}}}=\frac{\sum_i\sum_j w_{i j} \widehat{X_i} \widehat{X}_j}{\left(\sum_i \sum_j w_{ij}^2\right)^{\frac{1}{2}}}\]</span> Through this formula, the method measures cell’s expression byits local neighborhood in the graph. Finally, <spanclass="math inline">\(\hat{Z}\)</span> represents gene expressionvalue.</p><p>2、Evaluate pair-wise local correlations between genes</p><p>In the first step, we can identify informative genes. <spanclass="math display">\[H_{x y}=\sum_i \sum_{j \neq i} w_{i j}\left(x_i y_j+y_i x_j\right)\]</span> Here, the <span class="math inline">\(i\)</span>, <spanclass="math inline">\(j\)</span> indices represent individual cells and<span class="math inline">\(x_i\)</span> and <spanclass="math inline">\(y_i\)</span> are the standardized expressionvalues in cell <span class="math inline">\(i\)</span> for genes <spanclass="math inline">\(x\)</span> and <spanclass="math inline">\(y\)</span>, respectively. Weights <spanclass="math inline">\(w_{ij}\)</span> are defined as before based on thecell similarity map. As with <span class="math inline">\(H_{x}\)</span>,the null model is again used to convert <spanclass="math inline">\(H_{xy}\)</span> values into <spanclass="math inline">\(Z\)</span> scores. <span class="math display">\[\mathrm{E}\left[H_{x y}^2\right]=\sum_i^N\left(\sum_{j \in N(i)} w_{i j}\hat{x}_j\right)^2\]</span></p><p>3、Cluster the resulting gene-gene affinity matrix</p><p>Through applying a bottom-up clustering procedure with two parameters<em>min_cluster_genes</em>, and <em>fdr_threshold</em> to cluster thesegenes into module.</p><p>If a module accumulates more than <em>min_cluster_genes</em>, then itis assigned a label.</p><p>The <em>fdr_threshold</em> parameter is used to set a minimumsignificant <em>Z-score</em>. If at any point in the above mergingmodule procedure the maximal Z-score falls below this threshold, theprocedure halts as further gene assignments fall below the significancethreshold and are therefore ambiguous.</p><h1 id="reference">Reference:</h1><ul><li>[1] <ahref="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00114-9">Hotspotidentifies informative gene modules across modalities of single-cellgenomics</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Hotspot is a useful tools to find gene expression module, especially
-in tumor spatial transcriptome.&lt;/p&gt;
-&lt;p&gt;Now, I want to introduce its </summary>
-      
-    
-    
-    
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="tools" scheme="http://example.com/tags/tools/"/>
     

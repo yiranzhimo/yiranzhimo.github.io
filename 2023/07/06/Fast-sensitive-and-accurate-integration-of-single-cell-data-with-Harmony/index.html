@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>Fast, sensitive and accurate integration of single-cell data with Harmony - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=tools,research,benchmarking>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">Fast, sensitive and accurate integration of single-cell data with Harmony</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fast-sensitive-and-accurate-integration-of-single-cell-data-with-harmony"><span class="toc-text">Fast,
+sensitive and accurate integration of single-cell data with Harmony</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-text">Results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#figure1"><span class="toc-text">Figure1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure2"><span class="toc-text">Figure2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure3"><span class="toc-text">Figure3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure4"><span class="toc-text">Figure4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure5"><span class="toc-text">Figure5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure6"><span class="toc-text">Figure6</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
+
+  <div class="post-content">
+    <h1
+id="fast-sensitive-and-accurate-integration-of-single-cell-data-with-harmony">Fast,
+sensitive and accurate integration of single-cell data with Harmony</h1>
+<h2 id="abstract">Abstract</h2>
+<p>The emerging diversity of single-cell RNA-seq datasets allows for the
+full transcriptional characterization of cell types across a wide
+variety of biological and clinical conditions. However, it is
+challenging to analyze them together, particularly when datasets are
+assayed with different technologies, because biological and technical
+differences are interspersed. We present Harmony
+(https://github.com/immunogenomics/harmony), an algorithm that projects
+cells into a shared embedding in which cells group by cell type rather
+than dataset-specific conditions. Harmony simultaneously accounts for
+multiple experimental and biological factors. In six analyses, we
+demonstrate the superior performance of Harmony to previously published
+algorithms while requiring fewer computational resources. Harmony
+enables the integration of ~106 cells on a personal computer. We apply
+Harmony to peripheral blood mononuclear cells from datasets with large
+experimental differences, five studies of pancreatic islet cells, mouse
+embryogenesis datasets and the integration of scRNA-seq with spatial
+transcriptomics data.</p>
+<h2 id="results">Results</h2>
+<h3 id="figure1">Figure1</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure1.webp" /></p>
+<p>Figure1 shows overview of Harmony algorithm.</p>
+<p>“a, Harmony uses fuzzy clustering to assign each cell to multiple
+clusters, while a penalty term ensures that the diversity of datasets
+within each cluster is maximized. b, Harmony calculates a global
+centroid for each cluster, as well as dataset-specific centroids for
+each cluster. c, Within each cluster, Harmony calculates a correction
+factor for each dataset based on the centroids. d, Finally, Harmony
+corrects each cell with a cell-specific factor: a linear combination of
+dataset correction factors weighted by the cell’s soft cluster
+assignments made in step a. Harmony repeats steps a to d until
+convergence. The dependence between cluster assignment and dataset
+diminishes with each round. Datasets are represented with colors, cell
+types with different shapes.” (Korsunsky 等, 2019, p. 1290)</p>
+<h3 id="figure2">Figure2</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure2.webp" /></p>
+<p>“the local inverse Simpson’s Index (LISI” (Korsunsky 等, 2019, p.
+1290)</p>
+<p>Figure2 use deformation of Simpson’s Diversity Index to measure
+integration ability.</p>
+<p>See more details on Simpson’s Diversity Index:
+https://www.statology.org/simpsons-diversity-index/</p>
+<h3 id="figure3">Figure3</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure3.webp" /></p>
+<p>Figure3 compares the computational efficiency between different
+methods.</p>
+<h3 id="figure4">Figure4</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure4.webp" /></p>
+<p>Figure4 shows fine-grained subpopulation identification in PBMCs
+across technologies.</p>
+<h3 id="figure5">Figure5</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure5.webp" /></p>
+<p>Figure5 indicates the integration performance by donor and
+technology.</p>
+<h3 id="figure6">Figure6</h3>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230706_figure6.webp" /></p>
+<p>Figure6 shows harmony integrate spatially resolved transcriptomics
+with scRNA-seq data.</p>
+<p>But I don’t think Plot b is informative. If they presents the
+loctaion overlap of scRNA and ST, which would be convincible.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://www.nature.com/articles/s41592-019-0619-0">Fast, sensitive
+and accurate integration of single-cell data with Harmony</a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-07-06</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/benchmarking/" rel="tag">benchmarking</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>
