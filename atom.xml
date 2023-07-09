@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-08T08:23:13.119Z</updated>
+  <updated>2023-07-09T12:08:35.778Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gene regulatory network inference in the era of single-cell multi-omics</title>
+    <link href="http://example.com/2023/07/09/Gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics/"/>
+    <id>http://example.com/2023/07/09/Gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics/</id>
+    <published>2023-07-09T12:01:13.000Z</published>
+    <updated>2023-07-09T12:08:35.778Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics">Generegulatory network inference in the era of single-cell multi-omics</h1><h2 id="abstract">Abstract</h2><p>The interplay between chromatin, transcription factors and genesgenerates complex regulatory circuits that can be represented as generegulatory networks (GRNs). The study of GRNs is useful to understandhow cellular identity is established, maintained and disrupted indisease. GRNs can be inferred from experimental data — historically,bulk omics data — and/or from the literature. The advent of single-cellmulti-omics technologies has led to the development of novelcomputational methods that leverage genomic, transcriptomic andchromatin accessibility information to infer GRNs at an unprecedentedresolution. Here, we review the key principles of inferring GRNs thatencompass transcription factor–gene interactions from transcriptomicsand chromatin accessibility data. We focus on the comparison andclassification of methods that use singlecell multimodal data. Wehighlight challenges in GRN inference, in particular with respect tobenchmarking, and potential further developments using additional datamodalities.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure1.webp" /></p><p>Figure1 shows principles of gene regulatory network.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure2.png" /></p><p>Figure2 shows the flow chart of methods for gene regulatorynetwork.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure3.png" /></p><p>Figure3 shows applications of gene regulatory network.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure4.png" /></p><p>Figure4 shows experimental assessment of gene regulatorynetworks.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41576-023-00618-5">Generegulatory network inference in the era of single-cellmulti-omics</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics&quot;&gt;Gene
+regulatory network inference in the era of single-cell</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Single-cell profiling to explore pancreatic cancer heterogeneity, plasticity and response to therapy</title>
@@ -121,9 +143,9 @@ Map of Diverse Immune Phenotypes in t</summary>
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -148,9 +170,9 @@ id=&quot;single-cell-analysis-of-fate-mapped-macrophages-reveals-heterogeneity-i
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="Atherosclerosis" scheme="http://example.com/tags/Atherosclerosis/"/>
     
@@ -232,9 +254,9 @@ and applications for single-cell and spatial multi-omics&lt;/</summary>
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="method" scheme="http://example.com/tags/method/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -535,34 +557,6 @@ href=&quot;http://github.com/theislab/anndata&quot;&gt;gith</summary>
       
     <summary type="html">&lt;p&gt;Recently, I read a toolbox &lt;em&gt;Giotto&lt;/em&gt; to characterize spatial
 transcriptomics data. It focus on three parts: 1) characterizing tissu</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scGCO</title>
-    <link href="http://example.com/2022/06/10/ScGCO/"/>
-    <id>http://example.com/2022/06/10/ScGCO/</id>
-    <published>2022-06-10T00:47:35.000Z</published>
-    <updated>2023-03-30T03:17:32.576Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I read a fantastic literature about finding SVGs throughHMMF and graph cuts algorithm named <em>Identification of spatiallyvariable genes with graph cuts</em>.</p><h1 id="part1">Part1</h1><p>Firstly, we must figure out why finding SVGs is critical in spatialtranscriptomics?</p><p>Firstly, SVGs are defined as genes whose expression distributionsdisplay significant dependence on their spatial locations.</p><h1 id="part1-1">Part1</h1><p>In this paper, it mentions three reasons:</p><p>1、SVGs could demonstrate strong conservation in their spatialpatterns, such that many SV genes display similar dependencies onspatial locations, resulting in similar trends in spatial patterns oftheir expression values.</p><p>2、SVGs are often markers or essential regulators for tissue patternformation and homeostasis.</p><p>3、Although these methods demonstrated usefulness in identifying SVgenes, they cannot illustrate the exact boundaries of regionsdemonstrating spatial dependence, which are often of biologicalinterest, and more importantly, these algorithms have computationalefficiency of O(n2)orworseandareunsuitable for analyzing large spatialtranscriptomics datasets.</p><h1 id="part2">Part2</h1><p>How does this paper identify SVGs？</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/ScGCO_Fig.%201.webp" /></p><p>As the above picture illustrated, firstly, to model the spatial geneexpression data with HMRF, scGCO first employs Delaunay triangulation totransform spatial locations of measured cells/spots into an undirectedgraph, where each node represents a data point (a single cell or a spotmeasuring multiple cells, depending on the technologies utilized) in thespatial transcriptomics data.</p><p>Secondly, scGCO utilizes Gaussian mixture modeling to separate agene’s expression values into different bins, which represent differentgene expression states. The float gene expression value associated witheach node in the HMRF was then transformed into the corresponding binnumber, and the resulting bin number was assigned to the node, creatingan initial label assignment for the HMRF.</p><p>Thirdly, The initialized HMRF was then optimized by the fast graphcuts algorithm of Boykov to learn the true hidden labels of the nodes inHMRF, which represent authentic gene expression states.</p><p>Fourthly, the p-value for each gene was evaluated using the bestsegmentation under the complete spatial randomness (CSR) framework.Benjamini–Hochberg (BH) correction was utilized to identify spatiallyvariable (SV) genes at the genome-scale.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://www.nature.com/articles/s41467-022-33182-3">Identificationof spatially variable genes with graph cuts</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I read a fantastic literature about finding SVGs through
-HMMF and graph cuts algorithm named &lt;em&gt;Identification of spatially
-va</summary>
       
     
     
