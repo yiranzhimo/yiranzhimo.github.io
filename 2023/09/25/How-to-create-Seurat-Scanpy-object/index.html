@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>How to create Seurat/Scanpy object? - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=Seurat,Scanpy>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">How to create Seurat/Scanpy object?</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <p>Firstly, how to generate Seurat object?</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">object <span class="operator">&lt;-</span> CreateSeuratObject<span class="punctuation">(</span>counts<span class="operator">=</span>simSRT1<span class="operator">@</span>simCounts<span class="punctuation">,</span>assay<span class="operator">=</span><span class="string">&quot;Spatial&quot;</span><span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image <span class="operator">&lt;-</span> new<span class="punctuation">(</span>Class<span class="operator">=</span><span class="string">&quot;SlideSeq&quot;</span><span class="punctuation">,</span>assay<span class="operator">=</span><span class="string">&quot;Spatial&quot;</span><span class="punctuation">,</span>key<span class="operator">=</span><span class="string">&quot;image_&quot;</span><span class="punctuation">,</span></span><br><span class="line">coordinates<span class="operator">=</span>as.data.frame<span class="punctuation">(</span>as.matrix<span class="punctuation">(</span>simSRT1<span class="operator">@</span>simcolData<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>x <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span>object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>x<span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>y <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span>object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>y<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>Also, Seurat has offered convenient argument to generate seurat
+object?</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">expression</span> <span class="operator">&lt;-</span> Read10X<span class="punctuation">(</span>data.dir <span class="operator">=</span> datadir<span class="punctuation">)</span></span><br><span class="line">object <span class="operator">&lt;-</span> CreateSeuratObject<span class="punctuation">(</span>counts <span class="operator">=</span> <span class="built_in">expression</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>Secondly, how to create Scanpy object?</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">counts<span class="operator">=</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim_counts.csv&quot;</span></span><br><span class="line">location<span class="operator">=</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim_position.csv&quot;</span></span><br><span class="line">df <span class="operator">=</span> pd.read_csv<span class="punctuation">(</span>counts<span class="punctuation">,</span>sep<span class="operator">=</span><span class="string">&quot;\t&quot;</span><span class="punctuation">,</span>index_col<span class="operator">=</span><span class="number">0</span><span class="punctuation">)</span></span><br><span class="line">obs <span class="operator">=</span> pd.DataFrame<span class="punctuation">(</span>index<span class="operator">=</span>df.columns<span class="punctuation">)</span></span><br><span class="line">obs<span class="punctuation">[</span><span class="string">&#x27;sample&#x27;</span><span class="punctuation">]</span> <span class="operator">=</span> df.columns</span><br><span class="line">var_names <span class="operator">=</span> df.index</span><br><span class="line">var <span class="operator">=</span> pd.DataFrame<span class="punctuation">(</span>index<span class="operator">=</span>var_names<span class="punctuation">)</span></span><br><span class="line">var<span class="punctuation">[</span><span class="string">&quot;gene_ids&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> var.index</span><br><span class="line">X <span class="operator">=</span> df.T.values</span><br><span class="line">adata <span class="operator">=</span> anndata.AnnData<span class="punctuation">(</span>X<span class="punctuation">,</span> obs<span class="operator">=</span>obs<span class="punctuation">,</span> var<span class="operator">=</span>var<span class="punctuation">,</span>dtype<span class="operator">=</span><span class="string">&#x27;int32&#x27;</span><span class="punctuation">)</span></span><br><span class="line">adata.var_names_make_unique<span class="punctuation">(</span><span class="punctuation">)</span> </span><br><span class="line">loc <span class="operator">=</span> pd.read_csv<span class="punctuation">(</span>location<span class="punctuation">,</span>sep<span class="operator">=</span><span class="string">&quot;\t&quot;</span><span class="punctuation">,</span>index_col<span class="operator">=</span><span class="number">0</span><span class="punctuation">)</span></span><br><span class="line">adata.obs<span class="punctuation">[</span><span class="string">&quot;group&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[</span><span class="string">&quot;group&quot;</span><span class="punctuation">]</span></span><br><span class="line">adata.obs<span class="punctuation">[</span><span class="string">&quot;foldchange&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[</span><span class="string">&quot;foldchange&quot;</span><span class="punctuation">]</span></span><br><span class="line">adata.obsm<span class="punctuation">[</span><span class="string">&quot;spatial&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[[</span><span class="string">&quot;x&quot;</span><span class="punctuation">,</span><span class="string">&quot;y&quot;</span><span class="punctuation">]</span><span class="punctuation">]</span>.to_numpy<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">adata</span><br><span class="line">adata.write<span class="punctuation">(</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim.h5ad&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>This code is a little boring as Scanpy has offered different kinds of
+arguments to finish the process of constructing anndata object.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata <span class="operator">=</span> sc.read_10x_mtx<span class="punctuation">(</span>datafolder<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>If we would like to create ST object based on Scanpy, this is the
+code:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata <span class="operator">=</span> sc.read_visium<span class="punctuation">(</span>datafolder<span class="punctuation">,</span> count_file<span class="operator">=</span>h5<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>And we should offer files like this :</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230925_fig1.png" /></p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://scanpy.readthedocs.io/en/latest/generated/scanpy.read_visium.html">scanpy.read_visium</a></li>
+<li>[2] <a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/1iXc8eO8MrwHxkWIF61aMg">答读者问(10)：解决Scanpy和Seurat对象的转换问题</a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-09-25</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/Scanpy/" rel="tag">Scanpy</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/Seurat/" rel="tag">Seurat</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

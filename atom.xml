@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-09T12:08:35.778Z</updated>
+  <updated>2023-09-25T09:33:19.054Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,114 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>correlation analysis</title>
+    <link href="http://example.com/2023/09/25/correlation-analysis/"/>
+    <id>http://example.com/2023/09/25/correlation-analysis/</id>
+    <published>2023-09-25T08:59:54.000Z</published>
+    <updated>2023-09-25T09:33:19.054Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pearson-correlation-coefficient"><em>Pearson</em> correlationcoefficient</h2><p><span class="math inline">\(\rho_{X, Y}=\frac{\operatorname{cov}(X,Y)}{\sigma_X\sigma_Y}=\frac{E\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\sigma_X\sigma_Y}\)</span></p><p>So <span class="math inline">\(\sigma_X\)</span> or <spanclass="math inline">\(\sigma_Y\)</span> coudn't be equal to 0.</p><h2 id="spearmans-rank-correlation-coefficient">Spearman’s RankCorrelation Coefficient</h2><p>For a sample of size <em>n</em>, the <em>n</em> raw scores <spanclass="math inline">\(X_{i},Y_{i}\)</span> are converted to ranksR⁡(<span class="math inline">\(X_{i}\)</span>) R⁡(<spanclass="math inline">\(Y_{i}\)</span>) , and <spanclass="math inline">\(r_s\)</span> is computed as</p><p><span class="math inline">\(r_s=\rho_{\mathrm{R}(X),\mathrm{R}(Y)}=\frac{\operatorname{cov}(\mathrm{R}(X),\mathrm{R}(Y))}{\sigma_{\mathrm{R}(X)}\sigma_{\mathrm{R}(Y)}}\)</span></p><p>Only if all <em>n</em> ranks are <em>distinct integers</em>, it canbe computed using the popular formula</p><p><span class="math inline">\(r_s=1-\frac{6 \sumd_i^2}{n\left(n^2-1\right)}\)</span></p><table><colgroup><col style="width: 11%" /><col style="width: 11%" /><col style="width: 11%" /><col style="width: 11%" /><col style="width: 17%" /><col style="width: 17%" /><col style="width: 8%" /><col style="width: 11%" /></colgroup><thead><tr class="header"><th>Value X</th><th>Value Y</th><th>X Order</th><th>Y Order</th><th>X Rank</th><th>Y Rank</th><th><span class="math inline">\(d_i\)</span></th><th><span class="math inline">\(d_i^2\)</span></th></tr></thead><tbody><tr class="odd"><td>10</td><td>12</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr class="even"><td>9</td><td>11</td><td>2</td><td>2</td><td>(2+3)/2=2.5</td><td>2</td><td>0.5</td><td>0.25</td></tr><tr class="odd"><td>9</td><td>10</td><td>3</td><td>3</td><td>(2+3)/2=2.5</td><td>(3+4)/2=3.5</td><td>-1</td><td>1</td></tr><tr class="even"><td>8</td><td>10</td><td>4</td><td>4</td><td>4</td><td>(3+4)/2=3.5</td><td>-0..5</td><td>0.25</td></tr></tbody></table><p><span class="math inline">\(\sum d_i^2= 1.5\)</span></p><p><span class="math inline">\(\rho=1-\frac{6 \sumd_i^2}{n\left(n^2-1\right)}\)</span></p><p><span class="math inline">\(\rho = 0.25\)</span></p><p>So, we can see that there must have same number X and Y.</p><h2 id="reference">Reference</h2><ul><li>[1] <a href=""></a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;pearson-correlation-coefficient&quot;&gt;&lt;em&gt;Pearson&lt;/em&gt; correlation
+coefficient&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;\(\rho_{X, Y}=\frac{\ope</summary>
+      
+    
+    
+    
+    
+    <category term="correlation" scheme="http://example.com/tags/correlation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>addmodulescore</title>
+    <link href="http://example.com/2023/09/25/addmodulescore/"/>
+    <id>http://example.com/2023/09/25/addmodulescore/</id>
+    <published>2023-09-25T08:03:07.000Z</published>
+    <updated>2023-09-25T08:46:26.490Z</updated>
+    
+    <content type="html"><![CDATA[<p>Addmodulescore is a built-in functions in Seurat.</p><p>How it works?</p><p>The first step is to cut all genes in ==nbin== groups.</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pool <span class="operator">&lt;-</span> pool <span class="operator">%||%</span> rownames<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">data.avg <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>rowMeans<span class="punctuation">(</span>x <span class="operator">=</span> assay.data<span class="punctuation">[</span>pool<span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line">data.avg <span class="operator">&lt;-</span> data.avg<span class="punctuation">[</span>order<span class="punctuation">(</span>data.avg<span class="punctuation">)</span><span class="punctuation">]</span></span><br><span class="line">data.cut <span class="operator">&lt;-</span> cut_number<span class="punctuation">(</span>x <span class="operator">=</span> data.avg <span class="operator">+</span> rnorm<span class="punctuation">(</span>n <span class="operator">=</span> <span class="built_in">length</span><span class="punctuation">(</span>data.avg<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">/</span><span class="number">1e30</span><span class="punctuation">,</span> n <span class="operator">=</span> nbin<span class="punctuation">,</span> labels <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span> right <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span> </span><br></pre></td></tr></table></figure><p>The second step is to build background genes.</p><p>Firstly, to subset the ctrl number genes from same featuresgroup;</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ctrl.use <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;list&quot;</span><span class="punctuation">,</span> <span class="built_in">length</span> <span class="operator">=</span> cluster.length<span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span>cluster.length<span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> features<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    <span class="keyword">for</span> <span class="punctuation">(</span>j <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>x <span class="operator">=</span> features.use<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">      ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span></span><br><span class="line">        ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="built_in">names</span><span class="punctuation">(</span>x <span class="operator">=</span> sample<span class="punctuation">(</span></span><br><span class="line">          x <span class="operator">=</span> data.cut<span class="punctuation">[</span>which<span class="punctuation">(</span>x <span class="operator">=</span> data.cut <span class="operator">==</span> data.cut<span class="punctuation">[</span>features.use<span class="punctuation">[</span>j<span class="punctuation">]</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">          size <span class="operator">=</span> ctrl<span class="punctuation">,</span></span><br><span class="line">          replace <span class="operator">=</span> <span class="literal">FALSE</span></span><br><span class="line">        <span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">      <span class="punctuation">)</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>Secondly, to calculate each control case's gene averageexpression.</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ctrl.use <span class="operator">&lt;-</span> lapply<span class="punctuation">(</span>X <span class="operator">=</span> ctrl.use<span class="punctuation">,</span> FUN <span class="operator">=</span> unique<span class="punctuation">)</span></span><br><span class="line">ctrl.scores <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span></span><br><span class="line">    data <span class="operator">=</span> numeric<span class="punctuation">(</span><span class="built_in">length</span> <span class="operator">=</span> <span class="number">1L</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    nrow <span class="operator">=</span> <span class="built_in">length</span><span class="punctuation">(</span>x <span class="operator">=</span> ctrl.use<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    ncol <span class="operator">=</span> ncol<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>ctrl.use<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    ctrl.scores<span class="punctuation">[</span>i<span class="punctuation">,</span> <span class="punctuation">]</span> <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>colMeans<span class="punctuation">(</span>x <span class="operator">=</span> assay.data<span class="punctuation">[</span>features.use<span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>The third step is to calculate each geneset's features meanexpression scores. The final geneset's score is from features.scoresminus ctrl.scores.</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">features.scores <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span></span><br><span class="line">    data <span class="operator">=</span> numeric<span class="punctuation">(</span><span class="built_in">length</span> <span class="operator">=</span> <span class="number">1L</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    nrow <span class="operator">=</span> cluster.length<span class="punctuation">,</span></span><br><span class="line">    ncol <span class="operator">=</span> ncol<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br><span class="line">  <span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span>cluster.length<span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> features<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    data.use <span class="operator">&lt;-</span> assay.data<span class="punctuation">[</span>features.use<span class="punctuation">,</span> <span class="punctuation">,</span> drop <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">]</span></span><br><span class="line">    features.scores<span class="punctuation">[</span>i<span class="punctuation">,</span> <span class="punctuation">]</span> <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>colMeans<span class="punctuation">(</span>x <span class="operator">=</span> data.use<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">features.scores.use <span class="operator">&lt;-</span> features.scores <span class="operator">-</span> ctrl.scores</span><br></pre></td></tr></table></figure><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://github.com/satijalab/seurat/blob/master/R/utilities.R">Addmodulescore</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Addmodulescore is a built-in functions in Seurat.&lt;/p&gt;
+&lt;p&gt;How it works?&lt;/p&gt;
+&lt;p&gt;The first step is to cut all genes in ==nbin== groups.&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Seurat" scheme="http://example.com/tags/Seurat/"/>
+    
+    <category term="addmodulescore" scheme="http://example.com/tags/addmodulescore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to create Seurat/Scanpy object?</title>
+    <link href="http://example.com/2023/09/25/How-to-create-Seurat-Scanpy-object/"/>
+    <id>http://example.com/2023/09/25/How-to-create-Seurat-Scanpy-object/</id>
+    <published>2023-09-25T06:53:46.000Z</published>
+    <updated>2023-09-25T07:21:44.179Z</updated>
+    
+    <content type="html"><![CDATA[<p>Firstly, how to generate Seurat object?</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">object <span class="operator">&lt;-</span> CreateSeuratObject<span class="punctuation">(</span>counts<span class="operator">=</span>simSRT1<span class="operator">@</span>simCounts<span class="punctuation">,</span>assay<span class="operator">=</span><span class="string">&quot;Spatial&quot;</span><span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image <span class="operator">&lt;-</span> new<span class="punctuation">(</span>Class<span class="operator">=</span><span class="string">&quot;SlideSeq&quot;</span><span class="punctuation">,</span>assay<span class="operator">=</span><span class="string">&quot;Spatial&quot;</span><span class="punctuation">,</span>key<span class="operator">=</span><span class="string">&quot;image_&quot;</span><span class="punctuation">,</span></span><br><span class="line">coordinates<span class="operator">=</span>as.data.frame<span class="punctuation">(</span>as.matrix<span class="punctuation">(</span>simSRT1<span class="operator">@</span>simcolData<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>x <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span>object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>x<span class="punctuation">)</span></span><br><span class="line">object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>y <span class="operator">&lt;-</span> <span class="built_in">as.numeric</span><span class="punctuation">(</span>object<span class="operator">@</span>images<span class="operator">$</span>image<span class="operator">@</span>coordinates<span class="operator">$</span>y<span class="punctuation">)</span></span><br></pre></td></tr></table></figure><p>Also, Seurat has offered convenient argument to generate seuratobject?</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">expression</span> <span class="operator">&lt;-</span> Read10X<span class="punctuation">(</span>data.dir <span class="operator">=</span> datadir<span class="punctuation">)</span></span><br><span class="line">object <span class="operator">&lt;-</span> CreateSeuratObject<span class="punctuation">(</span>counts <span class="operator">=</span> <span class="built_in">expression</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure><p>Secondly, how to create Scanpy object?</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">counts<span class="operator">=</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim_counts.csv&quot;</span></span><br><span class="line">location<span class="operator">=</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim_position.csv&quot;</span></span><br><span class="line">df <span class="operator">=</span> pd.read_csv<span class="punctuation">(</span>counts<span class="punctuation">,</span>sep<span class="operator">=</span><span class="string">&quot;\t&quot;</span><span class="punctuation">,</span>index_col<span class="operator">=</span><span class="number">0</span><span class="punctuation">)</span></span><br><span class="line">obs <span class="operator">=</span> pd.DataFrame<span class="punctuation">(</span>index<span class="operator">=</span>df.columns<span class="punctuation">)</span></span><br><span class="line">obs<span class="punctuation">[</span><span class="string">&#x27;sample&#x27;</span><span class="punctuation">]</span> <span class="operator">=</span> df.columns</span><br><span class="line">var_names <span class="operator">=</span> df.index</span><br><span class="line">var <span class="operator">=</span> pd.DataFrame<span class="punctuation">(</span>index<span class="operator">=</span>var_names<span class="punctuation">)</span></span><br><span class="line">var<span class="punctuation">[</span><span class="string">&quot;gene_ids&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> var.index</span><br><span class="line">X <span class="operator">=</span> df.T.values</span><br><span class="line">adata <span class="operator">=</span> anndata.AnnData<span class="punctuation">(</span>X<span class="punctuation">,</span> obs<span class="operator">=</span>obs<span class="punctuation">,</span> var<span class="operator">=</span>var<span class="punctuation">,</span>dtype<span class="operator">=</span><span class="string">&#x27;int32&#x27;</span><span class="punctuation">)</span></span><br><span class="line">adata.var_names_make_unique<span class="punctuation">(</span><span class="punctuation">)</span> </span><br><span class="line">loc <span class="operator">=</span> pd.read_csv<span class="punctuation">(</span>location<span class="punctuation">,</span>sep<span class="operator">=</span><span class="string">&quot;\t&quot;</span><span class="punctuation">,</span>index_col<span class="operator">=</span><span class="number">0</span><span class="punctuation">)</span></span><br><span class="line">adata.obs<span class="punctuation">[</span><span class="string">&quot;group&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[</span><span class="string">&quot;group&quot;</span><span class="punctuation">]</span></span><br><span class="line">adata.obs<span class="punctuation">[</span><span class="string">&quot;foldchange&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[</span><span class="string">&quot;foldchange&quot;</span><span class="punctuation">]</span></span><br><span class="line">adata.obsm<span class="punctuation">[</span><span class="string">&quot;spatial&quot;</span><span class="punctuation">]</span> <span class="operator">=</span> loc<span class="punctuation">[[</span><span class="string">&quot;x&quot;</span><span class="punctuation">,</span><span class="string">&quot;y&quot;</span><span class="punctuation">]</span><span class="punctuation">]</span>.to_numpy<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">adata</span><br><span class="line">adata.write<span class="punctuation">(</span><span class="string">&quot;/pathowh01/disk1/liqian/01deconvolution/05SRTsim/00data/01.SRTsim.h5ad&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure><p>This code is a little boring as Scanpy has offered different kinds ofarguments to finish the process of constructing anndata object.</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata <span class="operator">=</span> sc.read_10x_mtx<span class="punctuation">(</span>datafolder<span class="punctuation">)</span></span><br></pre></td></tr></table></figure><p>If we would like to create ST object based on Scanpy, this is thecode:</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata <span class="operator">=</span> sc.read_visium<span class="punctuation">(</span>datafolder<span class="punctuation">,</span> count_file<span class="operator">=</span>h5<span class="punctuation">)</span></span><br></pre></td></tr></table></figure><p>And we should offer files like this :</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230925_fig1.png" /></p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://scanpy.readthedocs.io/en/latest/generated/scanpy.read_visium.html">scanpy.read_visium</a></li><li>[2] <ahref="https://mp.weixin.qq.com/s/1iXc8eO8MrwHxkWIF61aMg">答读者问(10)：解决Scanpy和Seurat对象的转换问题</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Firstly, how to generate Seurat object?&lt;/p&gt;
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br</summary>
+      
+    
+    
+    
+    
+    <category term="Seurat" scheme="http://example.com/tags/Seurat/"/>
+    
+    <category term="Scanpy" scheme="http://example.com/tags/Scanpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Single-cell RNA sequencing highlights intratumor heterogeneity and intercellular network featuredin adamantinomatous craniopharyngioma</title>
+    <link href="http://example.com/2023/07/11/Single-cell-RNAsequencing-highlights-intratumor-heterogeneity-andintercellular-network-featuredin-adamantinomatous-craniopharyngioma/"/>
+    <id>http://example.com/2023/07/11/Single-cell-RNAsequencing-highlights-intratumor-heterogeneity-andintercellular-network-featuredin-adamantinomatous-craniopharyngioma/</id>
+    <published>2023-07-10T19:07:16.000Z</published>
+    <updated>2023-07-11T07:15:27.506Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="single-cell-rna-sequencing-highlights-intratumor-heterogeneity-and-intercellular-network-featured-in-adamantinomatous-craniopharyngioma">Single-cellRNA sequencing highlights intratumor heterogeneity and intercellularnetwork featured in adamantinomatous craniopharyngioma</h1><h2 id="abstract">Abstract</h2><p>Despite improvements in microscopically neurosurgical techniques madein recent years, the prognosis of adamantinomatous craniopharyngioma(ACP) is still unsatisfactory. Little is known about cellular atlas andbiological features of ACP. Here, we carried out integrative analysis of44,038 single-cell transcriptome profiles to characterize the landscapeof intratumoral heterogeneity and tumor microenvironment (TME) in ACP.Four major neoplastic cell states with distinctive expression signatureswere defined, which further revealed the histopathological features andelucidated unknown cellular atlas of ACP. Pseudotime analyses suggestedpotential evolutionary trajectories between specific neoplastic cellstates. Notably, a distinct oligodendrocyte lineage was identified inACP, which was associated with immunological infiltration and neuraldamage. In addition, we described a tumor-centric regulatory networkbased on intercellular communication in TME. Together, our findingsrepresent a unique resource for deciphering tumor heterogeneity of ACP,which will improve clinical diagnosis and treatment strategies.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230710_figure1.jpg" /></p><p>Figure1 shows basic profile of scRNA data.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230710_figure2.jpg" /></p><p>Figure2 shows genes expression pattern of different clusters.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230710_figure3.jpg" /></p><p>Figure3 shows evolutionary trajectory of neoplastic cells in ACP.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230710_figure4.jpg" /></p><p>Figure4 shows functional state of tumor immune cells.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.science.org/doi/10.1126/sciadv.adc8933">Single-cellRNA sequencing highlights intratumor heterogeneity and intercellularnetwork featured in adamantinomatous craniopharyngioma</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;single-cell-rna-sequencing-highlights-intratumor-heterogeneity-and-intercellular-network-featured-in-adamantinomatous-craniopharyngi</summary>
+      
+    
+    
+    
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gene regulatory network inference in the era of single-cell multi-omics</title>
     <link href="http://example.com/2023/07/09/Gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics/"/>
     <id>http://example.com/2023/07/09/Gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics/</id>
     <published>2023-07-09T12:01:13.000Z</published>
-    <updated>2023-07-09T12:08:35.778Z</updated>
+    <updated>2023-09-25T06:55:25.169Z</updated>
     
     <content type="html"><![CDATA[<h1id="gene-regulatory-network-inference-in-the-era-of-single-cell-multi-omics">Generegulatory network inference in the era of single-cell multi-omics</h1><h2 id="abstract">Abstract</h2><p>The interplay between chromatin, transcription factors and genesgenerates complex regulatory circuits that can be represented as generegulatory networks (GRNs). The study of GRNs is useful to understandhow cellular identity is established, maintained and disrupted indisease. GRNs can be inferred from experimental data — historically,bulk omics data — and/or from the literature. The advent of single-cellmulti-omics technologies has led to the development of novelcomputational methods that leverage genomic, transcriptomic andchromatin accessibility information to infer GRNs at an unprecedentedresolution. Here, we review the key principles of inferring GRNs thatencompass transcription factor–gene interactions from transcriptomicsand chromatin accessibility data. We focus on the comparison andclassification of methods that use singlecell multimodal data. Wehighlight challenges in GRN inference, in particular with respect tobenchmarking, and potential further developments using additional datamodalities.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure1.webp" /></p><p>Figure1 shows principles of gene regulatory network.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure2.png" /></p><p>Figure2 shows the flow chart of methods for gene regulatorynetwork.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure3.png" /></p><p>Figure3 shows applications of gene regulatory network.</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230709_figure4.png" /></p><p>Figure4 shows experimental assessment of gene regulatorynetworks.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.nature.com/articles/s41576-023-00618-5">Generegulatory network inference in the era of single-cellmulti-omics</a></li></ul>]]></content>
     
@@ -35,6 +138,12 @@ regulatory network inference in the era of single-cell</summary>
     
     
     
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="GRNs" scheme="http://example.com/tags/GRNs/"/>
     
   </entry>
   
@@ -60,9 +169,9 @@ profiling to explor</summary>
     
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -143,9 +252,9 @@ Map of Diverse Immune Phenotypes in t</summary>
     
     
     
-    <category term="research" scheme="http://example.com/tags/research/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -170,9 +279,9 @@ id=&quot;single-cell-analysis-of-fate-mapped-macrophages-reveals-heterogeneity-i
     
     
     
-    <category term="research" scheme="http://example.com/tags/research/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
     
     <category term="Atherosclerosis" scheme="http://example.com/tags/Atherosclerosis/"/>
     
@@ -254,13 +363,13 @@ and applications for single-cell and spatial multi-omics&lt;/</summary>
     
     
     
-    <category term="method" scheme="http://example.com/tags/method/"/>
-    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="review" scheme="http://example.com/tags/review/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
-    <category term="review" scheme="http://example.com/tags/review/"/>
+    <category term="method" scheme="http://example.com/tags/method/"/>
     
   </entry>
   
@@ -341,9 +450,9 @@ s</summary>
     
     
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -455,118 +564,6 @@ Therapy</summary>
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="tumor" scheme="http://example.com/tags/tumor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iSpatial</title>
-    <link href="http://example.com/2022/11/01/iSpatial/"/>
-    <id>http://example.com/2022/11/01/iSpatial/</id>
-    <published>2022-11-01T13:44:35.000Z</published>
-    <updated>2023-03-09T11:55:05.851Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I read a paper named <em>Accurate inference of genome-widespatial expression with iSpatial</em>, from which I learned a lot.</p><p>iSpatial is used to infer expression patterns of all genes at highspatial resolution by integrating scRNA-seq and ST data. In the processof single-cell RNA sequencing, it can capture more genes as possible itcan. In this paper, the authors try to recover all genes' spatialinformation of the spatial transcriptomics data based on scRNA.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Accurate%20inference%20of%20genome-wide%20spatial%20expression%20with%20iSpatial%20Figure1.png" /></p><p>How do they infer spatial information?</p><p>In the first step, it needs to integrate scRNA and spatialtranscriptomics datasets. The core function is a weighted KNN graph. Foreach cell t in spatial transcriptome data, iSpatial searches the KNNs(<em>KNNt,k</em>).</p><p>Each gene's expression of cell t was calculated by the followingformula:</p><p><span class="math inline">\(K N N_{t, k}:\left\{K N N_{t, 1}, K NN_{t, 2}, \ldots, K N N_{t, k}\right\}\)</span></p><p>β is an argument to balance the expression from the spatialtranscriptome and scRNA-seq. ω is the weight factor that shows thedistance between cell t and other KNN neighbor cells. Through the belowformula, we can see the most similar neighbor cell, its weight factor issmaller.</p><p><span class="math inline">\(\widehat{E_t}=(1-\beta)E_t+\beta\left(\sum_k \omega_{t, k} E_{\mathrm{KNN}_{t,k}^{\prime}}\right)\)</span></p><p><span class="math inline">\(\operatorname{dist}\left(E_t,E_{\mathrm{KNN}_{t, k}^t}\right)=1-\operatorname{cor}\left(E_t,E_{\mathrm{KNN}_{t, k}^{\prime}}\right)\)</span></p><p><span class="math inline">\(d_{t, k}=\operatorname{dist}\left(E_t,E_{\mathrm{KNN}_{t, k}}\right)\)</span></p><p><span class="math inline">\(\omega_{t, k}=\frac{d_{t, k}^2}{\sum_kd_{t, k}^2}\)</span></p><p>But I think this method requires high quality of fitness betweenscRNA and spatial transcriptomics datasets.</p><p>And, the paper has developed a way to identify spatial variablegenes(SVGs). First, it divides the two-dimensional space into n x ngrids and calculates the gene mean expression level. Second, it randomlysamples the spatial location and calculates the mean gene expressionlevel once more. Finally, to compare whether there have significantdifferences between the two values.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I read a paper named &lt;em&gt;Accurate inference of genome-wide
-spatial expression with iSpatial&lt;/em&gt;, from which I learned a lot.&lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hdWGCNA</title>
-    <link href="http://example.com/2022/09/22/hdWGCNA/"/>
-    <id>http://example.com/2022/09/22/hdWGCNA/</id>
-    <published>2022-09-22T09:40:25.000Z</published>
-    <updated>2023-03-30T15:28:12.545Z</updated>
-    
-    <content type="html"><![CDATA[<p>How to deduce gene coexpression network is worth thinking.</p><p>I read the paper named "High dimensional co-expression networksenable discovery of transcriptomic drivers in complex biologicalsystems" which focus on gene co-expression networks.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/hdWGCNA_1.png" /></p><p>the signed correlation：</p><p><span class="math inline">\(a_{i,j}=\frac{1+\operatorname{cor}\left(x_i, x_j\right)}{2}\)</span></p><p>In order to emphasize strong correlations, we raise the elements of Ato a power β, and we refer to this as soft power thresholding.</p><p><span class="math inline">\(\begin{array}{r}\alpha_{i, j}=\left(a_{i,j}\right)^\beta \\ \tilde{\alpha}_{i, j}=\alpha_{i, j} \times\operatorname{sign}\left(\operatorname{cor}\left(x_i,x_j\right)\right)\end{array}\)</span></p><p>Now we have the gene-gene correlation raised to a power β, and analternative metric ̃ αi,j which also retains the sign of the correlationbetween these genes. The final co-expression network is then computed asa signed topological overlap matrix (TOM). The TOM describes sharedneighbors between the a pair of genes (i, j). We define the signed TOMas</p><p><span class="math inline">\(\operatorname{TOM}_{i, j}^{\text {signed}}=\frac{\left|\alpha_{i, j}+\sum_{u \neq i, j} \tilde{\alpha}_{i, u}\tilde{\alpha}_{u, j}\right|}{\min \left(k_i,k_j\right)+1-\left|\alpha_{i, j}\right|}\)</span></p><h1 id="reference">Reference</h1><ul><li><p>[1] <ahref="https://www.biorxiv.org/content/10.1101/2022.09.22.509094v1">hdWGCNA</a></p></li><li><p>[2] <ahref="http://rstudio-pubs-static.s3.amazonaws.com/554864_6e0f44cdc1474b8ba2c5f8326559bbe4.html">基因共表达网络WGCNA</a></p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;How to deduce gene coexpression network is worth thinking.&lt;/p&gt;
-&lt;p&gt;I read the paper named &quot;High dimensional co-expression networks
-enable </summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-    <category term="co-expression" scheme="http://example.com/tags/co-expression/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Anndata</title>
-    <link href="http://example.com/2022/08/24/Anndata/"/>
-    <id>http://example.com/2022/08/24/Anndata/</id>
-    <published>2022-08-24T04:44:35.000Z</published>
-    <updated>2023-03-09T12:18:04.153Z</updated>
-    
-    <content type="html"><![CDATA[<p>Anndata is a Python package for handling annotated data matrices inmemory and on disk (<ahref="http://github.com/theislab/anndata">github.com/theislab/anndata</a>),positioned between pandas and xarray.</p><h1 id="anndata-object">Anndata object</h1><p>What's its structure?</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/anndata_structure.svg" /></p><p>The AnnData object is a collection of arrays aligned to the commondimensions of observations (obs) and variables (var).</p><p>As we can see, color is used to denote elements of the object, with"orange" colors selected for elements aligned to the observations and"blue" colors for elements aligned to variables. The object is centeredaround the main data matrix X, whose two dimensions correspond toobservations and variables respectively. Primary labels for each ofthese dimensions are stored as obs_names and var_names. If needed,layers stores matrices of the exact same shape as X. One-dimensionalannotations for each dimension are stored in pandas DataFrames obs andvar. Multi-dimensional annotations are stored in obsm and varm. Pairwiserelationships are stored in obsp and varp. Unstructured data whichdoesn’t fit this model, but should stay associated to the dataset arestored in</p><h1 id="how-to-transfer-a-dataframe-to-anndata-object">How to transfer adataframe to anndata object</h1><p>Let's see an example.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/dataframe_example.png" /></p><p>This is a gene expression matrix, and I want to transfer it to ananndata object for analysis.</p><p>The first step is to read the dataframe file.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&quot;./Rep11_MOB_count_matrix-1.tsv&quot;</span>,sep=<span class="string">&quot;\t&quot;</span>,index_col=<span class="number">0</span>)</span><br><span class="line">df = df.T</span><br></pre></td></tr></table></figure><p>In an anndata object, obs and var are data frames. So, in the secondstep, we try to construct this elements.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">obs = pd.DataFrame()</span><br><span class="line">obs[<span class="string">&#x27;sample&#x27;</span>] = df.columns</span><br><span class="line">obs.index = <span class="string">&quot;mob_&quot;</span>+df.columns</span><br><span class="line">var_names = df.index</span><br><span class="line">var = pd.DataFrame(index=var_names)</span><br><span class="line">var[<span class="string">&quot;gene_ids&quot;</span>] = var.index</span><br><span class="line">X = df.T.values</span><br><span class="line">adata = anndata.AnnData(X, obs=obs, var=var,dtype=<span class="string">&#x27;int32&#x27;</span>)</span><br><span class="line">adata.var_names_make_unique() </span><br><span class="line">adata</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spa = pd.DataFrame(index=df.columns)</span><br><span class="line">spa[[<span class="string">&quot;x&quot;</span>,<span class="string">&quot;y&quot;</span>]] = spa.index.to_series().<span class="built_in">str</span>.split(<span class="string">&#x27;x&#x27;</span>, expand=<span class="literal">True</span>)</span><br><span class="line">adata.obsm[<span class="string">&quot;spatial&quot;</span>] = spa.to_numpy()</span><br><span class="line">adata</span><br></pre></td></tr></table></figure><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://www.biorxiv.org/content/10.1101/2021.12.16.473007v1.full">anndata:Annotated data</a></li><li>[2] <ahref="https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html">Gettingstarted with anndata</a></li><li>[3] <ahref="https://chanzuckerberg.github.io/scRNA-python-workshop/preprocessing/00-tabula-muris.html?utm_source=pocket_saves#Building-an-AnnData-object">Buildingan AnnData object</a></li><li>[4] <a href="https://www.biostars.org/p/9482750/">Pandas dataframeto H5ad file</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Anndata is a Python package for handling annotated data matrices in
-memory and on disk (&lt;a
-href=&quot;http://github.com/theislab/anndata&quot;&gt;gith</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="python" scheme="http://example.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitto</title>
-    <link href="http://example.com/2022/07/21/Giotto/"/>
-    <id>http://example.com/2022/07/21/Giotto/</id>
-    <published>2022-07-21T00:47:35.000Z</published>
-    <updated>2023-03-09T12:18:18.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I read a toolbox <em>Giotto</em> to characterize spatialtranscriptomics data. It focus on three parts: 1) characterizing tissuecomposition; 2) spatial expression patterns; 3) cellularinteractions.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/Giotto_Fig.%201.webp" /></p><p>In this literature, what interests me lost is these threeaspects.</p><h1 id="coherent-gene-expression">1、coherent gene expression</h1><p>In Giotto, it depends on two functions <em>detectSpatialCorGenes andclusterSpatialCorGenes.</em> The first function spatially smooths geneexpression through a grid averaging or k-nearest neighbor approach andthen calculates the gene-to-gene correlation (default = Pearson) scores.The second function performs hierarchical clustering to cluster thegene-to-gene co-expression network into modules and creates metagenescores by averaging all the genes for each identified co-expressionmodule</p><p>For my perspective, I don't approve the genes found by this methodare belong to gene co-expression relationship. I think they just havegene expression correlation.</p><h1 id="spatial-domain-detection">2、spatial domain detection</h1><p>Firstly, HMRF infers the state of each cell as the joint probabilityof the cell’s intrinsic state (inferred from the cell’s own geneexpression vector), and the cell’s extrinsic state, which is based onthe distribution of the states of the cell’s neighbors.</p><p>The neighborhood graph defines the extent of the neighbor cellinfluence, together with the parameter beta that defines the strength ofthe interaction of cells.</p><p>At the end, HMRF assigns each cell to one of k spatial domains (k tobe defined by the user).</p><h1 id="spatial-variable-genes">3、spatial variable genes</h1><p>For SVGs, the toolbox integrate methods such like SpatialDE, SPARK,Trendsceek and BinSpect.</p><h1 id="cell-cell-communication">4、cell-cell communication</h1><p>This is implemented in the function <em>spatCellCellcom.</em></p><p><span class="math inline">\(\overline{S(L, R, A, B)}=\frac{1}{n}\sum_{i=1}^n L_i+\frac{1}{m} \sum_{j=1}^m R_j\)</span></p><p>where <span class="math inline">\(n\)</span> represents the number ofA-type cells that interact with B-type cells, <spanclass="math inline">\(m\)</span> represents the number of B-type cellsthat interact with A-type cells, <spanclass="math inline">\(L_{i}\)</span> represents the expression level ofthe ligand in the ith A-type cell, and <spanclass="math inline">\(R_{j}\)</span> represents the expression level ofthe receptor in the jth B-type cell.</p><p>And how to do the statistic test?</p><p>This background distribution is created by shuffling cell locationswithin the same cell type for A and B for 1000 (= default) times. Ineach round, a permutation score Sp is calculated using the same formula.Associated p values were calculated as the probability of Sp to begreater or smaller than the actual observed score S.Thep values for allligand-receptor pairs in all cell-type pairs were subsequently adjustedfor multiple hypothesis testing.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02286-2">Giotto</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I read a toolbox &lt;em&gt;Giotto&lt;/em&gt; to characterize spatial
-transcriptomics data. It focus on three parts: 1) characterizing tissu</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="principle" scheme="http://example.com/tags/principle/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
   </entry>
   

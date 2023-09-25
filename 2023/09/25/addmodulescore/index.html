@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>addmodulescore - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=Seurat,addmodulescore>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">addmodulescore</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <p>Addmodulescore is a built-in functions in Seurat.</p>
+<p>How it works?</p>
+<p>The first step is to cut all genes in ==nbin== groups.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pool <span class="operator">&lt;-</span> pool <span class="operator">%||%</span> rownames<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">data.avg <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>rowMeans<span class="punctuation">(</span>x <span class="operator">=</span> assay.data<span class="punctuation">[</span>pool<span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line">data.avg <span class="operator">&lt;-</span> data.avg<span class="punctuation">[</span>order<span class="punctuation">(</span>data.avg<span class="punctuation">)</span><span class="punctuation">]</span></span><br><span class="line">data.cut <span class="operator">&lt;-</span> cut_number<span class="punctuation">(</span>x <span class="operator">=</span> data.avg <span class="operator">+</span> rnorm<span class="punctuation">(</span>n <span class="operator">=</span> <span class="built_in">length</span><span class="punctuation">(</span>data.avg<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">/</span><span class="number">1e30</span><span class="punctuation">,</span> n <span class="operator">=</span> nbin<span class="punctuation">,</span> labels <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span> right <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span> </span><br></pre></td></tr></table></figure>
+<p>The second step is to build background genes.</p>
+<p>Firstly, to subset the ctrl number genes from same features
+group;</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ctrl.use <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;list&quot;</span><span class="punctuation">,</span> <span class="built_in">length</span> <span class="operator">=</span> cluster.length<span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span>cluster.length<span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> features<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    <span class="keyword">for</span> <span class="punctuation">(</span>j <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>x <span class="operator">=</span> features.use<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">      ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span></span><br><span class="line">        ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="built_in">names</span><span class="punctuation">(</span>x <span class="operator">=</span> sample<span class="punctuation">(</span></span><br><span class="line">          x <span class="operator">=</span> data.cut<span class="punctuation">[</span>which<span class="punctuation">(</span>x <span class="operator">=</span> data.cut <span class="operator">==</span> data.cut<span class="punctuation">[</span>features.use<span class="punctuation">[</span>j<span class="punctuation">]</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">          size <span class="operator">=</span> ctrl<span class="punctuation">,</span></span><br><span class="line">          replace <span class="operator">=</span> <span class="literal">FALSE</span></span><br><span class="line">        <span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">      <span class="punctuation">)</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>Secondly, to calculate each control case's gene average
+expression.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ctrl.use <span class="operator">&lt;-</span> lapply<span class="punctuation">(</span>X <span class="operator">=</span> ctrl.use<span class="punctuation">,</span> FUN <span class="operator">=</span> unique<span class="punctuation">)</span></span><br><span class="line">ctrl.scores <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span></span><br><span class="line">    data <span class="operator">=</span> numeric<span class="punctuation">(</span><span class="built_in">length</span> <span class="operator">=</span> <span class="number">1L</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    nrow <span class="operator">=</span> <span class="built_in">length</span><span class="punctuation">(</span>x <span class="operator">=</span> ctrl.use<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    ncol <span class="operator">=</span> ncol<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>ctrl.use<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> ctrl.use<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    ctrl.scores<span class="punctuation">[</span>i<span class="punctuation">,</span> <span class="punctuation">]</span> <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>colMeans<span class="punctuation">(</span>x <span class="operator">=</span> assay.data<span class="punctuation">[</span>features.use<span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>The third step is to calculate each geneset's features mean
+expression scores. The final geneset's score is from features.scores
+minus ctrl.scores.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">features.scores <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span></span><br><span class="line">    data <span class="operator">=</span> numeric<span class="punctuation">(</span><span class="built_in">length</span> <span class="operator">=</span> <span class="number">1L</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    nrow <span class="operator">=</span> cluster.length<span class="punctuation">,</span></span><br><span class="line">    ncol <span class="operator">=</span> ncol<span class="punctuation">(</span>x <span class="operator">=</span> object<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">)</span></span><br><span class="line">  <span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">1</span><span class="operator">:</span>cluster.length<span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">    features.use <span class="operator">&lt;-</span> features<span class="punctuation">[[</span>i<span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">    data.use <span class="operator">&lt;-</span> assay.data<span class="punctuation">[</span>features.use<span class="punctuation">,</span> <span class="punctuation">,</span> drop <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">]</span></span><br><span class="line">    features.scores<span class="punctuation">[</span>i<span class="punctuation">,</span> <span class="punctuation">]</span> <span class="operator">&lt;-</span> Matrix<span class="operator">::</span>colMeans<span class="punctuation">(</span>x <span class="operator">=</span> data.use<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">features.scores.use <span class="operator">&lt;-</span> features.scores <span class="operator">-</span> ctrl.scores</span><br></pre></td></tr></table></figure>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] <a
+target="_blank" rel="noopener" href="https://github.com/satijalab/seurat/blob/master/R/utilities.R">Addmodulescore</a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-09-25</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/Seurat/" rel="tag">Seurat</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/addmodulescore/" rel="tag">addmodulescore</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

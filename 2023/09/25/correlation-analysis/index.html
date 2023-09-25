@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>correlation analysis - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=correlation>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">correlation analysis</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pearson-correlation-coefficient"><span class="toc-text">Pearson correlation
+coefficient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spearmans-rank-correlation-coefficient"><span class="toc-text">Spearman’s Rank
+Correlation Coefficient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol>
+
+  <div class="post-content">
+    <h2 id="pearson-correlation-coefficient"><em>Pearson</em> correlation
+coefficient</h2>
+<p><span class="math inline">\(\rho_{X, Y}=\frac{\operatorname{cov}(X,
+Y)}{\sigma_X
+\sigma_Y}=\frac{E\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\sigma_X
+\sigma_Y}\)</span></p>
+<p>So <span class="math inline">\(\sigma_X\)</span> or <span
+class="math inline">\(\sigma_Y\)</span> coudn't be equal to 0.</p>
+<h2 id="spearmans-rank-correlation-coefficient">Spearman’s Rank
+Correlation Coefficient</h2>
+<p>For a sample of size <em>n</em>, the <em>n</em> raw scores <span
+class="math inline">\(X_{i},Y_{i}\)</span> are converted to ranks
+R⁡(<span class="math inline">\(X_{i}\)</span>) R⁡(<span
+class="math inline">\(Y_{i}\)</span>) , and <span
+class="math inline">\(r_s\)</span> is computed as</p>
+<p><span class="math inline">\(r_s=\rho_{\mathrm{R}(X),
+\mathrm{R}(Y)}=\frac{\operatorname{cov}(\mathrm{R}(X),
+\mathrm{R}(Y))}{\sigma_{\mathrm{R}(X)}
+\sigma_{\mathrm{R}(Y)}}\)</span></p>
+<p>Only if all <em>n</em> ranks are <em>distinct integers</em>, it can
+be computed using the popular formula</p>
+<p><span class="math inline">\(r_s=1-\frac{6 \sum
+d_i^2}{n\left(n^2-1\right)}\)</span></p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 8%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Value X</th>
+<th>Value Y</th>
+<th>X Order</th>
+<th>Y Order</th>
+<th>X Rank</th>
+<th>Y Rank</th>
+<th><span class="math inline">\(d_i\)</span></th>
+<th><span class="math inline">\(d_i^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>12</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>11</td>
+<td>2</td>
+<td>2</td>
+<td>(2+3)/2=2.5</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.25</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>10</td>
+<td>3</td>
+<td>3</td>
+<td>(2+3)/2=2.5</td>
+<td>(3+4)/2=3.5</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>10</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>(3+4)/2=3.5</td>
+<td>-0..5</td>
+<td>0.25</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\sum d_i^2= 1.5\)</span></p>
+<p><span class="math inline">\(\rho=1-\frac{6 \sum
+d_i^2}{n\left(n^2-1\right)}\)</span></p>
+<p><span class="math inline">\(\rho = 0.25\)</span></p>
+<p>So, we can see that there must have same number X and Y.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>[1] <a href=""></a></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-09-25</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/correlation/" rel="tag">correlation</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>
