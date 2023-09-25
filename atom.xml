@@ -111,9 +111,9 @@ id=&quot;single-cell-rna-sequencing-highlights-intratumor-heterogeneity-and-inte
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -252,9 +252,9 @@ Map of Diverse Immune Phenotypes in t</summary>
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -279,9 +279,9 @@ id=&quot;single-cell-analysis-of-fate-mapped-macrophages-reveals-heterogeneity-i
     
     
     
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
     <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="Atherosclerosis" scheme="http://example.com/tags/Atherosclerosis/"/>
     
@@ -363,13 +363,13 @@ and applications for single-cell and spatial multi-omics&lt;/</summary>
     
     
     
+    <category term="method" scheme="http://example.com/tags/method/"/>
+    
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
     <category term="review" scheme="http://example.com/tags/review/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-    <category term="method" scheme="http://example.com/tags/method/"/>
     
   </entry>
   
