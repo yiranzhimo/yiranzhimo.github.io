@@ -93,6 +93,36 @@ coefficient&lt;/h2&gt;
   </entry>
   
   <entry>
+    <title>Characterization of altered molecular mechanisms in Parkinson’sdisease through celltype–resolved multiomics analyses</title>
+    <link href="http://example.com/2023/07/28/Characterization-of-altered-molecular-mechanisms-in-Parkinson%E2%80%99sdisease-through-celltype%E2%80%93r-esolved-multiomics-analyses/"/>
+    <id>http://example.com/2023/07/28/Characterization-of-altered-molecular-mechanisms-in-Parkinson%E2%80%99sdisease-through-celltype%E2%80%93r-esolved-multiomics-analyses/</id>
+    <published>2023-07-28T08:20:33.000Z</published>
+    <updated>2023-09-25T11:12:19.353Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="abstract">Abstract</h2><p>Parkinson’s disease (PD) is a progressive neurodegenerative disorder.However, cell type–dependent transcriptional regulatory programsresponsible for PD pathogenesis remain elusive. Here, we establishtranscriptomic and epigenomic landscapes of the substantia nigra byprofiling 113,207 nuclei obtained from healthy controls and patientswith PD. Our multiomics data integration provides cell type annotationof 128,724 cis-regulatory elements (cREs) and uncovers celltype–specific dysregulations in cREs with a strong transcriptionalinfluence on genes implicated in PD. The establishment ofhigh-resolution three-dimensional chromatin contact maps identifies 656target genes of dysregulated cREs and genetic risk loci, uncovering bothpotential and known PD risk genes. Notably, these candidate genesexhibit modular gene expression patterns with unique molecularsignatures in distinct cell types, highlighting altered molecularmechanisms in dopaminergic neurons and glial cells includingoligodendrocytes and microglia. Together, our single-cell transcriptomeand epigenome reveal cell type–specific disruption in transcriptionalregulations related to PD.</p><h2 id="results">Results</h2><h3 id="figure1">Figure1</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig1.jpg" /></p><p>Figure1 shows single-nucleus profiling of transcriptomic andepigenomic landscape in the human SN.</p><h3 id="figure2">Figure2</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig2.jpg" /></p><p>Figure2 shows dysregulation of cREs shaping PD-specific geneexpression.</p><h3 id="figure3">Figure3</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig4.jpg" /></p><p>Figure3 shows target gene inference for noncoding regulatorysequences through 3D chromatin contacts</p><h3 id="figure4">Figure4</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig3.jpg" /></p><p>Figure4 shows the characterization of PD “WAS-SNPs based oncelltype–resolved epigenomic landscape.</p><h3 id="figure5">Figure5</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig5.jpg" /></p><p>Figure5 shows altered motif binding affinity for active TFs in the PDGWAS-SNP–containing cREs.</p><h3 id="figure6">Figure6</h3><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20230728_fig6.jpg" /></p><p>Figure6 shows analysis of modular gene expression patterns acrossputative PD genes.</p><h2 id="reference">Reference</h2><ul><li>[1] <ahref="https://www.science.org/doi/10.1126/sciadv.abo2467">Characterizationof altered molecular mechanisms in Parkinson’s disease through celltype–resolved multiomics analyses</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Parkinson’s disease (PD) is a progressive neurodegenerative disorder.
+However, cell type–dependent transc</summary>
+      
+    
+    
+    
+    
+    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
+    
+    <category term="reseach" scheme="http://example.com/tags/reseach/"/>
+    
+    <category term="PD" scheme="http://example.com/tags/PD/"/>
+    
+    <category term="Disease" scheme="http://example.com/tags/Disease/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Single-cell RNA sequencing highlights intratumor heterogeneity and intercellular network featuredin adamantinomatous craniopharyngioma</title>
     <link href="http://example.com/2023/07/11/Single-cell-RNAsequencing-highlights-intratumor-heterogeneity-andintercellular-network-featuredin-adamantinomatous-craniopharyngioma/"/>
     <id>http://example.com/2023/07/11/Single-cell-RNAsequencing-highlights-intratumor-heterogeneity-andintercellular-network-featuredin-adamantinomatous-craniopharyngioma/</id>
@@ -144,6 +174,32 @@ regulatory network inference in the era of single-cell</summary>
     <category term="review" scheme="http://example.com/tags/review/"/>
     
     <category term="GRNs" scheme="http://example.com/tags/GRNs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use of “default” parameter settings when analyzing single cell RNA sequencing data using Seurat a biologist’s perspective</title>
+    <link href="http://example.com/2023/07/09/Use-of-%E2%80%9Cdefault%E2%80%9D-parameter-settings-when-analyzing-single-cell-RNA-sequencing-data-using-Seurat-a-biologist%E2%80%99s-perspective/"/>
+    <id>http://example.com/2023/07/09/Use-of-%E2%80%9Cdefault%E2%80%9D-parameter-settings-when-analyzing-single-cell-RNA-sequencing-data-using-Seurat-a-biologist%E2%80%99s-perspective/</id>
+    <published>2023-07-09T09:39:32.000Z</published>
+    <updated>2023-09-25T11:11:49.661Z</updated>
+    
+    <content type="html"><![CDATA[<h1id="use-of-default-parameter-settings-when-analyzing-single-cell-rna-sequencing-data-using-seurat-a-biologists-perspective">Useof “default” parameter settings when analyzing single cell RNAsequencing data using Seurat: a biologist’s perspective</h1><h2 id="abstract">Abstract</h2><p>Analysis of large datasets has become integral to biological studiesdue to the advent of high throughput technologies such as nextgeneration sequencing. Techniques for analyzing these large datasets arenormally developed by bioinformaticists and statisticians, with inputfrom biologists. Frequently, the end-user does not have the training orknowledge to make informed decisions on input parameter settingsrequired to implement the analyses pipelines. Instead, the end-userrelies on “default” settings present within the software packages,consultations with in-house bioinformaticists, or on methods describedin previous publications. The aim of this study was to explore theeffects of altering default parameters on the cell clustering solutionsgenerated by a common pipeline implemented in the Seurat R package thatis used to cluster cells based on single cell RNA sequencing (scRNAseq)data.</p><h2 id="review">Review</h2><p>However, its thinking way of default parameters could help us widenour horizons. Acturally, we are not supposed to be confined to Seurat,there has many other packages and algorithms to use. Also, thecomparison of result is too easy.</p><h2 id="reference">Reference</h2><ul><li>[1] <a href="https://jtggjournal.com/article/view/3809">Use of“default” parameter settings when analyzing single cell RNA sequencingdata using Seurat: a biologist's perspective</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1
+id=&quot;use-of-default-parameter-settings-when-analyzing-single-cell-rna-sequencing-data-using-seurat-a-biologists-perspective&quot;&gt;Use
+of “defa</summary>
+      
+    
+    
+    
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
+    
+    <category term="method" scheme="http://example.com/tags/method/"/>
     
   </entry>
   
@@ -512,58 +568,6 @@ src=&quot;https://raw.githubusercontent.com/yiranzh</summary>
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PDAC</title>
-    <link href="http://example.com/2023/02/15/PDAC/"/>
-    <id>http://example.com/2023/02/15/PDAC/</id>
-    <published>2023-02-15T00:47:35.000Z</published>
-    <updated>2023-03-09T12:12:53.803Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I read a new paper about <ahref="https://www.nature.com/articles/s41467-023-36296-4?utm_source=pocket_saves">pancreaticductal adenocarcinoma</a> (PDAC), published in <em>naturecommunication</em>.</p><p>It mainly studies human PDAC and applies scRNA sequencing on freshlycollected human PDAC samples before or after chemotherapy. The abstracthas three main results: 1) They find a heterogeneous mixture of basaland classical cancer cell subtypes, along with distinctcancer-associated fibroblast and macrophage subpopulations. 2) Classicaland basal-like cancer cells exhibit similar transcriptional responses tochemotherapy and do not demonstrate a shift towards a basal-liketranscriptional program among treated samples. 3) Ligand-receptorsdecrease interactions in treated samples, particularly between TIGIT onCD8 + T cells and its receptor on cancer cells, and identify TIGIT asthe significant inhibitory checkpoint molecule of CD8 + T cells.</p><p>Let us see how they analyze the three results.</p><p>One、How to judge the cut-off between basal and classical cancer cellsubtypes?</p><p>Here, the researchers found there is no difference between uponconditions.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_1.png" /></p><p>All samples but one were comprised of a mixture of basal andclassical cancer cells in varying proportions.</p><blockquote><p>Although we did not observe this specific intermediate state genesignature (the number of samples in each dataset may limit thegeneralizability of such a signature), we did discover cancer cells innumerous patient samples that expressed both basal and classicalhistological markers to varying degrees.</p></blockquote><p>Two 、How to detect Classical and basal-like cancer cells exhibitingsimilar transcriptional responses?</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_3.png" /></p><p>Through gene sets score, they found two groups' cells are mostlyoverlapped.</p><p>Three、How to ensure ligand-receptors decreased interactions intreated samples?</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/PDAC_2.png" /></p><p>They employed CellPhoneDB to infer potential ligand-receptorinteractions (LRIs) between malignant epithelial cells, TAM and CAFsubpopulations, CD8 +and CD4 + T cells, MDSCs, and DCs in naïve andtreated samples and found a general decrease of cell-cell interactionsin the chemotherapy-treated group by fold change value.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I read a new paper about &lt;a
-href=&quot;https://www.nature.com/articles/s41467-023-36296-4?utm_source=pocket_saves&quot;&gt;pancreatic
-ductal</summary>
-      
-    
-    
-    
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
-    <category term="tumor" scheme="http://example.com/tags/tumor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CESC and CC</title>
-    <link href="http://example.com/2023/02/01/CESC%20and%20CC/"/>
-    <id>http://example.com/2023/02/01/CESC%20and%20CC/</id>
-    <published>2023-02-01T00:47:35.000Z</published>
-    <updated>2023-03-09T12:13:50.469Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently, I have read two papers from one team and published in<em>Science Advance</em> and <em>Signal Transduction and TargetedTherapy</em>. one is named <em>Single-cell RNA-sequencing reveals radiochemotherapy-induced innate immune activation and MHC-II upregulation incervical cancer. The other is called </em>Single-cell dissection ofcellular and molecular features underlying human cervical squamous cellcarcinoma initiation and progression*. As we can see, these two papersstudy cervical squamous cell carcinoma (CESC) and cervical cancer (CC),both of which are based on single-cell sequencing technology.</p><p>From research ideas, they are similar, and both apply comparison todifferent conditions. For CESC, they sampled 13 human cervical tissuesat various stages of malignancy. For CC, they tested pre-RCT andpost-RCT tumor biopsies from patients with cervical cancer and adjacentnormal cervical tissues. I think this is an excellent performance ofmeasurement of variables on the experiment design.</p><p>On the analysis methods, they focus on the comparison betweenpre-condition and post-condition, such as, to test the percentage ofepithelia. Most importantly, these two papers' logic is constant or notdiverged, which is what I have learned.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Recently, I have read two papers from one team and published in
-&lt;em&gt;Science Advance&lt;/em&gt; and &lt;em&gt;Signal Transduction and Targeted
-Therapy</summary>
-      
-    
-    
-    
-    
-    <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
-    
-    <category term="tumor" scheme="http://example.com/tags/tumor/"/>
     
   </entry>
   
