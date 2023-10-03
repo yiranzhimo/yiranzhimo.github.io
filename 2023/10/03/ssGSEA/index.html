@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>ssGSEA - Qian&#39;s blog</title>
+  <link rel="icon" href="https://i.imgur.com/SrZt9VU.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=tools,principle>
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Qian&#39;s blog" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Qian&#39;s blog</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/CV" class="menu-item-link">CV</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/atom.xml" class="menu-item-link">RSS</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">ssGSEA</h1>
+  </div>
+
+  <!-- 文章目录 -->
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#how-does-gsea-and-ssgsea-work"><span class="toc-text">How does GSEA and ssGSEA
+work?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#gsea"><span class="toc-text">GSEA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sort-all-genes"><span class="toc-text">Sort all genes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start-to-calculate"><span class="toc-text">Start to calculate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#estimate-of-significance-level-of-es"><span class="toc-text">Estimate of Significance
+Level of ES</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssgsea"><span class="toc-text">ssGSEA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
+
+  <div class="post-content">
+    <h1 id="how-does-gsea-and-ssgsea-work">How does GSEA and ssGSEA
+work?</h1>
+<h2 id="gsea">GSEA</h2>
+<h3 id="sort-all-genes">Sort all genes</h3>
+<p>The first step is to sort all genes according to log(fc) from two
+groups.</p>
+<h3 id="start-to-calculate">Start to calculate</h3>
+<p><strong>L</strong>: entire genes</p>
+<p><strong>S</strong>: targetted geneset</p>
+<p>The score is calculated by walking down the list <em>L</em>,
+increasing a running-sum statistic when we encounter a gene in
+<em>S</em> and decreasing it when we encounter genes not in
+<em>S</em>.</p>
+<figure>
+<img
+src="https://www.pnas.org/cms/10.1073/pnas.0506580102/asset/c5e213a9-4247-4506-bae4-908054152f97/assets/graphic/zpq0370595180001.jpeg"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>The enrichment score is the maximum deviation from zero encountered
+in the random walk.</p>
+<p>However, it's noted that every gene in <em>S</em> has specific
+weightes and genes in <em>L-S</em> are same weights.</p>
+<h3 id="estimate-of-significance-level-of-es">Estimate of Significance
+Level of ES</h3>
+<p>The significance of an observed <em>ES</em> by comparing it with the
+set of scores <em>ES</em>NULL computed with randomly assigned
+phenotypes.</p>
+<ol type="1">
+<li><p>Randomly assign the original phenotype labels to samples, reorder
+genes, and re-compute <em>ES</em>(<em>S</em>).</p></li>
+<li><p>Repeat step 1 for 1,000 permutations, and create a histogram of
+the corresponding enrichment scores <em>ES</em>NULL.</p></li>
+<li><p>Estimate nominal <em>P</em> value for <em>S</em> from
+<em>ES</em>NULL by using the positive or negative portion of the
+distribution corresponding to the sign of the observed
+<em>ES</em>(<em>S</em>).</p></li>
+</ol>
+<h2 id="ssgsea">ssGSEA</h2>
+<p>The first difference is also to sort all the genes but through
+absolute expression.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20231003_fig1.png" /></p>
+<p>The second difference is the weighted values. For a given signature
+<em>G</em> of size <span class="math inline">\(N_G\)</span> and single
+sample <em>S</em>, of the data set of <em>N</em> genes, the genes are
+replaced by their ranks according the their absolute expression from
+high to low. Note that the exponent of this quantity (<em>α</em>) is set
+to 1/4, and adds a modest weight to the rank.</p>
+<p><img
+src="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20231003_fig2.png" /></p>
+<p>The third difference is the enrichment score
+ES(<em>G</em>,<em>S</em>) is obtained by a sum (integration) of the
+difference between a weighted ECDF of the genes in the signature <span
+class="math inline">\(P_G^w\)</span> and the ECDF of the remaining genes
+<span class="math inline">\(P_{N_G}\)</span> .</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><p>[1] <a
+target="_blank" rel="noopener" href="https://www.nature.com/articles/nature08460#Sec3">Systematic RNA
+interference reveals that oncogenic <em>KRAS</em>-driven cancers require
+TBK1</a></p></li>
+<li><p>[2] <a
+target="_blank" rel="noopener" href="https://www.pnas.org/doi/10.1073/pnas.0506580102">Gene set
+enrichment analysis: a knowledge-based approach for interpreting
+genome-wide expression profiles</a></p></li>
+<li><p>[3] <a
+target="_blank" rel="noopener" href="https://www.jianshu.com/p/47f9f0107ffe">GSA、GSEA、ssGSEA、GSVA的算法原理及它们的联系与区别</a></p></li>
+</ul>
+
+  </div>
+  <div class="post-meta">
+    <span class="post-time" style="color:#646060;font-size:13px">2023-10-03</span>
+  </div>
+
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/principle/" rel="tag">principle</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+
+<!-- 评论插件 -->
+
+<footer>
+  2023
+  <span class="author">
+    Qian Li
+  </span>
+</footer>
+
+
+    </div>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

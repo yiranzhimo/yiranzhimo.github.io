@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-25T09:42:25.881Z</updated>
+  <updated>2023-10-03T09:48:54.264Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssGSEA</title>
+    <link href="http://example.com/2023/10/03/ssGSEA/"/>
+    <id>http://example.com/2023/10/03/ssGSEA/</id>
+    <published>2023-10-03T08:46:48.000Z</published>
+    <updated>2023-10-03T09:48:54.264Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="how-does-gsea-and-ssgsea-work">How does GSEA and ssGSEAwork?</h1><h2 id="gsea">GSEA</h2><h3 id="sort-all-genes">Sort all genes</h3><p>The first step is to sort all genes according to log(fc) from twogroups.</p><h3 id="start-to-calculate">Start to calculate</h3><p><strong>L</strong>: entire genes</p><p><strong>S</strong>: targetted geneset</p><p>The score is calculated by walking down the list <em>L</em>,increasing a running-sum statistic when we encounter a gene in<em>S</em> and decreasing it when we encounter genes not in<em>S</em>.</p><figure><imgsrc="https://www.pnas.org/cms/10.1073/pnas.0506580102/asset/c5e213a9-4247-4506-bae4-908054152f97/assets/graphic/zpq0370595180001.jpeg"alt="img" /><figcaption aria-hidden="true">img</figcaption></figure><p>The enrichment score is the maximum deviation from zero encounteredin the random walk.</p><p>However, it's noted that every gene in <em>S</em> has specificweightes and genes in <em>L-S</em> are same weights.</p><h3 id="estimate-of-significance-level-of-es">Estimate of SignificanceLevel of ES</h3><p>The significance of an observed <em>ES</em> by comparing it with theset of scores <em>ES</em>NULL computed with randomly assignedphenotypes.</p><ol type="1"><li><p>Randomly assign the original phenotype labels to samples, reordergenes, and re-compute <em>ES</em>(<em>S</em>).</p></li><li><p>Repeat step 1 for 1,000 permutations, and create a histogram ofthe corresponding enrichment scores <em>ES</em>NULL.</p></li><li><p>Estimate nominal <em>P</em> value for <em>S</em> from<em>ES</em>NULL by using the positive or negative portion of thedistribution corresponding to the sign of the observed<em>ES</em>(<em>S</em>).</p></li></ol><h2 id="ssgsea">ssGSEA</h2><p>The first difference is also to sort all the genes but throughabsolute expression.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20231003_fig1.png" /></p><p>The second difference is the weighted values. For a given signature<em>G</em> of size <span class="math inline">\(N_G\)</span> and singlesample <em>S</em>, of the data set of <em>N</em> genes, the genes arereplaced by their ranks according the their absolute expression fromhigh to low. Note that the exponent of this quantity (<em>α</em>) is setto 1/4, and adds a modest weight to the rank.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/20231003_fig2.png" /></p><p>The third difference is the enrichment scoreES(<em>G</em>,<em>S</em>) is obtained by a sum (integration) of thedifference between a weighted ECDF of the genes in the signature <spanclass="math inline">\(P_G^w\)</span> and the ECDF of the remaining genes<span class="math inline">\(P_{N_G}\)</span> .</p><h2 id="reference">Reference</h2><ul><li><p>[1] <ahref="https://www.nature.com/articles/nature08460#Sec3">Systematic RNAinterference reveals that oncogenic <em>KRAS</em>-driven cancers requireTBK1</a></p></li><li><p>[2] <ahref="https://www.pnas.org/doi/10.1073/pnas.0506580102">Gene setenrichment analysis: a knowledge-based approach for interpretinggenome-wide expression profiles</a></p></li><li><p>[3] <ahref="https://www.jianshu.com/p/47f9f0107ffe">GSA、GSEA、ssGSEA、GSVA的算法原理及它们的联系与区别</a></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;how-does-gsea-and-ssgsea-work&quot;&gt;How does GSEA and ssGSEA
+work?&lt;/h1&gt;
+&lt;h2 id=&quot;gsea&quot;&gt;GSEA&lt;/h2&gt;
+&lt;h3 id=&quot;sort-all-genes&quot;&gt;Sort all genes&lt;/h</summary>
+      
+    
+    
+    
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="principle" scheme="http://example.com/tags/principle/"/>
+    
+  </entry>
   
   <entry>
     <title>correlation analysis</title>
@@ -225,9 +252,9 @@ profiling to explor</summary>
     
     <category term="scRNA" scheme="http://example.com/tags/scRNA/"/>
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -280,11 +307,11 @@ sensitive and accurate integration of single-cell da</summary>
     
     
     
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
     <category term="research" scheme="http://example.com/tags/research/"/>
     
     <category term="benchmarking" scheme="http://example.com/tags/benchmarking/"/>
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
     
   </entry>
   
@@ -363,9 +390,9 @@ informed clustering, </summary>
     
     
     
-    <category term="research" scheme="http://example.com/tags/research/"/>
-    
     <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="research" scheme="http://example.com/tags/research/"/>
     
     <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
@@ -423,9 +450,9 @@ and applications for single-cell and spatial multi-omics&lt;/</summary>
     
     <category term="method" scheme="http://example.com/tags/method/"/>
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
   </entry>
   
@@ -506,9 +533,9 @@ s</summary>
     
     
     
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
     <category term="review" scheme="http://example.com/tags/review/"/>
+    
+    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
     
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
@@ -539,35 +566,6 @@ s</summary>
     <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
     <category term="metabolism" scheme="http://example.com/tags/metabolism/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpaCST</title>
-    <link href="http://example.com/2023/02/28/SpaCST/"/>
-    <id>http://example.com/2023/02/28/SpaCST/</id>
-    <published>2023-02-28T13:44:35.000Z</published>
-    <updated>2023-03-09T12:18:46.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>SpaCET is a toolbox mainly focused on cancer areas in spatialtranscriptomics.</p><p><imgsrc="https://raw.githubusercontent.com/yiranzhimo/Pictures/master/spacet_figure1.webp" /></p><p>First, SpaCET estimates malignant cell fractions based on a genepattern dictionary of copy number alterations (CNA) and malignanttranscriptome signatures across common tumor types.</p><p>Second, SpaCET deconvolves nonmalignant cell fractions and adjustscell densities under a unified linear model. Using scRNA-seq datasetsfrom diverse cancer types, we defined reference expression profiles ofimmune and stromal cells in a hierarchical lineage</p><p>Third, SpaCET infers intercellular interactions based on cellcolocalization and ligand–receptor co-expression analysis.</p><p>What interest me most is cell interaction analysis.</p><p>For a spot, an L–R network score is defined as the sum of expressionproducts between all L–R pairs, divided by the average random value from1000 randomized networks. P values were calculated with the empiricalnull distribution generated from network scores of randomizedL–Rinteractions.</p><p>Network Score <span class="math inline">\((\mathrm{NS})=\frac{\sum_iE_{L i} \times E_{R i}}{\left\langle\sum_i E_{L i} \times E_{Ri}\right\rangle}, P\)</span> value <spanclass="math inline">\(=P_r\left(\mathrm{NS}_{\text {random }} \geq\mathrm{NS}\right)\)</span></p><p><span class="math inline">\(E_{Li}\)</span> and <spanclass="math inline">\(E_{Ri}\)</span> donate the expression of ligandand receptor from the ith L–R pair, respectively. The <spanclass="math inline">\(&lt;&gt;\)</span> represents averaging the productsums from 1000 random networks.</p><h1 id="reference">Reference</h1><ul><li>[1] <ahref="https://www.nature.com/articles/s41467-023-36062-6#Sec11">Estimationof cell lineages in tumors from spatial transcriptomics data</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;SpaCET is a toolbox mainly focused on cancer areas in spatial
-transcriptomics.&lt;/p&gt;
-&lt;p&gt;&lt;img
-src=&quot;https://raw.githubusercontent.com/yiranzh</summary>
-      
-    
-    
-    
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
-    
-    <category term="spatial transcriptomics" scheme="http://example.com/tags/spatial-transcriptomics/"/>
-    
-    <category term="cancer" scheme="http://example.com/tags/cancer/"/>
     
   </entry>
   
